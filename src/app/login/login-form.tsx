@@ -8,10 +8,20 @@ export function LoginForm() {
   return (
     <form action={action} className="card space-y-4 p-5">
       <div>
-        <label htmlFor="email" className="label">
-          Correo
+        <label htmlFor="username" className="label">
+          Usuario
         </label>
-        <input id="email" name="email" type="email" autoComplete="email" required className="field" />
+        <input
+          id="username"
+          name="username"
+          type="text"
+          autoComplete="username"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
+          required
+          className="field"
+        />
       </div>
       <div>
         <label htmlFor="password" className="label">

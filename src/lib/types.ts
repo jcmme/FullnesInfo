@@ -21,6 +21,7 @@ export type MediaResult = {
 
 export type Profile = {
   id: string;
+  username: string | null;
   timezone: string;
   cutoff_hour: number;
   min_words: number;

@@ -10,7 +10,7 @@ Hecho con Next.js 16, Supabase y Vercel. Se instala en iPhone, iPad y Mac como a
 
 1. En [supabase.com](https://supabase.com) crea un proyecto nuevo. Región: la más cercana (por ejemplo `us-east-1`).
 2. Ve a **SQL Editor**, pega todo el contenido de [`supabase/migrations/0001_init.sql`](supabase/migrations/0001_init.sql) y ejecútalo.
-3. Ve a **Authentication > Users > Add user > Create new user**. Pon tu correo y una contraseña, y marca **Auto Confirm User**.
+3. Ve a **Authentication > Users > Add user > Create new user**. Pon tu correo y una contraseña, y marca **Auto Confirm User**. Luego ejecuta [`0002_username.sql`](supabase/migrations/0002_username.sql) y ponle nombre de usuario a tu perfil: `update profiles set username = 'tu_usuario';`. En la app entras con ese usuario.
 4. Ve a **Authentication > Sign In / Providers** y desactiva **Allow new users to sign up**. Así nadie más puede crear cuenta.
 5. En **Project Settings > API Keys** copia:
    - la URL del proyecto,

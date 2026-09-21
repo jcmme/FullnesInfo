@@ -21,14 +21,13 @@ function Steps({ items }: { items: React.ReactNode[] }) {
 const B = ({ children }: { children: React.ReactNode }) => <strong className="font-semibold text-ink">{children}</strong>;
 
 export default async function SettingsPage() {
-  const { profile, supabase } = await getSession();
-  const { data: auth } = await supabase.auth.getClaims();
+  const { profile } = await getSession();
   const h = await headers();
   const origin = `${h.get("x-forwarded-proto") ?? "https"}://${h.get("host")}`;
 
   return (
     <>
-      <PageHeader title="Ajustes" subtitle={typeof auth?.claims?.email === "string" ? auth.claims.email : undefined} />
+      <PageHeader title="Ajustes" subtitle={profile.username ? `Usuario: ${profile.username}` : undefined} />
 
       <Section title="Reglas del juego">
         <div className="card p-5">
