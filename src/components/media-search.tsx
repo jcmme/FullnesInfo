@@ -2,8 +2,8 @@
 
 import { CheckCircle, MagnifyingGlass } from "@phosphor-icons/react";
 import { useEffect, useRef, useState } from "react";
-import type { SearchSource } from "@/lib/media";
-import { formatDuration } from "@/lib/format";
+import { extractYouTubeId, type SearchSource } from "@/lib/media";
+import { formatDuration, formatTimestamp } from "@/lib/format";
 import type { ItemKind, MediaResult } from "@/lib/types";
 import { Thumb } from "./media";
 
@@ -12,6 +12,238 @@ const SOURCE_KIND: Record<SearchSource, ItemKind> = { youtube: "video", podcast:
 
 export function sourceForKind(kind: ItemKind): SearchSource {
   return kind === "libro" ? "libro" : kind === "podcast" ? "podcast" : "youtube";
+}
+
+/** Búsquedas ya hechas en esta visita: repetir una consulta no gasta cuota de YouTube. */
+const searchCache = new Map<string, MediaResult[]>();
+
+function cacheKey(source: SearchSource, query: string) {
+  return `${source}:${query.trim().toLowerCase()}`;
+}
+
+async function fetchResults(source: SearchSource, query: string, signal?: AbortSignal): Promise<MediaResult[]> {
+  const key = cacheKey(source, query);
+  const hit = searchCache.get(key);
+  if (hit) return hit;
+  const res = await fetch(`/api/search?source=${source}&q=${encodeURIComponent(query.trim())}`, { signal });
+  const data = (await res.json()) as { results?: MediaResult[]; error?: string };
+  if (!res.ok) throw new Error(data.error ?? "Falló la búsqueda.");
+  const results = data.results ?? [];
+  searchCache.set(key, results);
+  return results;
+}
+
+/* Búsqueda automática ------------------------------------------------------ */
+
+/** Espera a que dejes de escribir: cada búsqueda en YouTube gasta cuota (unas 100 al día gratis). */
+const AUTO_DELAY_MS = 800;
+const AUTO_MIN_CHARS = 3;
+export const AUTO_VISIBLE = 4;
+
+function autoKey(query: string, source: SearchSource): string | null {
+  const q = query.trim();
+  if (q.length < AUTO_MIN_CHARS) return null;
+  // Un link de Instagram o TikTok no encuentra nada en YouTube; solo se busca un link de YouTube.
+  if (/^https?:\/\//i.test(q) && !(source === "youtube" && extractYouTubeId(q))) return null;
+  return cacheKey(source, q);
+}
+
+type AutoState = { key: string; results: MediaResult[] | null; error: string | null };
+
+export type AutoSearch = {
+  /** Hay una consulta válida que buscar. */
+  active: boolean;
+  /** Esperando a que termines de escribir o a la respuesta. */
+  pending: boolean;
+  /** Los resultados mostrados son de la consulta anterior. */
+  stale: boolean;
+  results: MediaResult[] | null;
+  resultsKey: string | null;
+  error: string | null;
+  /** Busca ya, sin esperar (tecla Buscar del teclado). */
+  flush: () => void;
+};
+
+export function useAutoSearch(query: string, source: SearchSource, enabled: boolean): AutoSearch {
+  const q = query.trim();
+  const key = enabled ? autoKey(q, source) : null;
+  const [state, setState] = useState<AutoState | null>(null);
+  const [flushed, setFlushed] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (!key) return;
+    const ctrl = new AbortController();
+    const delay = searchCache.has(key) || flushed === key ? 0 : AUTO_DELAY_MS;
+    const timer = setTimeout(() => {
+      fetchResults(source, q, ctrl.signal).then(
+        (results) => setState({ key, results, error: null }),
+        (err: unknown) => {
+          if (ctrl.signal.aborted) return;
+          setState({ key, results: null, error: err instanceof Error ? err.message : "Falló la búsqueda." });
+        },
+      );
+    }, delay);
+    return () => {
+      clearTimeout(timer);
+      ctrl.abort();
+    };
+  }, [key, flushed, source, q]);
+
+  const current = key && state?.key === key ? state : null;
+  // Mientras llega la nueva búsqueda se quedan los resultados anteriores (de la misma fuente).
+  const previous = key && !current && state?.results && state.key.startsWith(`${source}:`) ? state : null;
+  const shown = current ?? previous;
+  return {
+    active: key !== null,
+    pending: key !== null && !current,
+    stale: previous !== null,
+    results: shown?.results ?? null,
+    resultsKey: shown?.key ?? null,
+    error: current?.error ?? null,
+    flush: () => {
+      if (key) setFlushed(key);
+    },
+  };
+}
+
+/** Tarjeta con miniatura grande para reconocer el original de un vistazo. */
+export function ResultTile({
+  result,
+  selected,
+  onSelect,
+}: {
+  result: MediaResult;
+  selected?: boolean;
+  onSelect: () => void;
+}) {
+  const meta = [result.author, result.published ? result.published.slice(0, 4) : null].filter(Boolean).join(" · ");
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      aria-pressed={selected}
+      className={`press flex h-full w-full flex-col rounded-card p-1.5 text-left transition-colors ${
+        selected ? "bg-tint-soft ring-2 ring-tint" : "hover:bg-surface-2"
+      }`}
+    >
+      <span className="relative block w-full">
+        <Thumb src={result.thumbnail} kind="video" className="aspect-video w-full" rounded="rounded-[14px]" />
+        {result.durationSeconds ? (
+          <span className="caption absolute bottom-1.5 right-1.5 rounded-md bg-black/75 px-1.5 font-semibold tabular-nums text-white">
+            {formatTimestamp(result.durationSeconds)}
+          </span>
+        ) : null}
+        {selected && (
+          <CheckCircle
+            size={28}
+            weight="fill"
+            className="absolute left-1.5 top-1.5 rounded-full bg-surface text-tint-ink"
+            aria-hidden
+          />
+        )}
+      </span>
+      <span className="block px-1.5 pb-1 pt-2">
+        <span className="footnote line-clamp-2 font-semibold text-ink">{result.title}</span>
+        {meta && <span className="caption mt-0.5 line-clamp-1 block text-ink-2">{meta}</span>}
+      </span>
+    </button>
+  );
+}
+
+const FOUND_NOUN: Record<SearchSource, string> = { youtube: "videos", podcast: "episodios", libro: "libros" };
+
+/**
+ * Resultados de la búsqueda automática: los 4 más parecidos y el resto a un toque.
+ * Videos en cuadrícula de miniaturas; podcasts y libros en lista.
+ */
+export function AutoResults({
+  search,
+  source,
+  selectedId,
+  onPick,
+}: {
+  search: AutoSearch;
+  source: SearchSource;
+  selectedId?: string | null;
+  onPick: (result: MediaResult) => void;
+}) {
+  const [expandedFor, setExpandedFor] = useState<string | null>(null);
+  const { results, pending, stale, error, resultsKey } = search;
+  const grid = source === "youtube";
+
+  if (!search.active) {
+    return (
+      <p className="footnote px-1 text-ink-2">
+        Escribe el nombre arriba y aquí aparecen los {AUTO_VISIBLE} {FOUND_NOUN[source]} más parecidos.
+      </p>
+    );
+  }
+
+  if (error) {
+    return (
+      <p role="alert" className="rounded-control bg-bad-soft px-4 py-3 footnote text-bad">
+        {error}
+      </p>
+    );
+  }
+
+  if (!results) {
+    return (
+      <ul aria-label="Buscando" className={grid ? "grid grid-cols-2 gap-2" : "space-y-2"}>
+        {Array.from({ length: AUTO_VISIBLE }, (_, i) =>
+          grid ? (
+            <li key={i} className="p-1.5">
+              <div className="aspect-video w-full rounded-[14px] bg-surface-2 motion-safe:animate-pulse" />
+              <div className="mt-2.5 h-3.5 w-11/12 rounded bg-surface-2 motion-safe:animate-pulse" />
+              <div className="mt-2 h-3 w-1/2 rounded bg-surface-2 motion-safe:animate-pulse" />
+            </li>
+          ) : (
+            <li key={i} className="flex items-center gap-3 p-2">
+              <div className="size-20 shrink-0 rounded-[10px] bg-surface-2 motion-safe:animate-pulse" />
+              <div className="flex-1 space-y-2">
+                <div className="h-4 w-4/5 rounded bg-surface-2 motion-safe:animate-pulse" />
+                <div className="h-3 w-2/5 rounded bg-surface-2 motion-safe:animate-pulse" />
+              </div>
+            </li>
+          ),
+        )}
+      </ul>
+    );
+  }
+
+  if (results.length === 0) {
+    return pending ? null : (
+      <p className="footnote px-1 text-ink-2">Sin resultados. Prueba con el nombre del invitado, del canal o una frase del clip.</p>
+    );
+  }
+
+  const expanded = expandedFor !== null && expandedFor === resultsKey;
+  const shown = expanded ? results : results.slice(0, AUTO_VISIBLE);
+  const hidden = results.length - shown.length;
+
+  return (
+    <div aria-busy={pending} className={`transition-opacity duration-200 ${stale ? "opacity-50" : ""}`}>
+      <p className="sr-only" aria-live="polite">
+        {pending ? "Buscando" : `${results.length} resultados`}
+      </p>
+      <ul className={grid ? "grid grid-cols-2 gap-2" : "space-y-1"}>
+        {shown.map((r) => (
+          <li key={`${r.provider}-${r.id}`}>
+            {grid ? (
+              <ResultTile result={r} selected={selectedId === r.id} onSelect={() => onPick(r)} />
+            ) : (
+              <ResultRow result={r} selected={selectedId === r.id} onSelect={() => onPick(r)} />
+            )}
+          </li>
+        ))}
+      </ul>
+      {hidden > 0 && (
+        <button type="button" onClick={() => setExpandedFor(resultsKey)} className="btn btn-ghost mt-1 px-3">
+          Ver {hidden} más
+        </button>
+      )}
+    </div>
+  );
 }
 
 export function ResultRow({
@@ -86,10 +318,7 @@ export function MediaSearch({
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`/api/search?source=${s}&q=${encodeURIComponent(q.trim())}`);
-      const data = (await res.json()) as { results?: MediaResult[]; error?: string };
-      if (!res.ok) throw new Error(data.error ?? "Falló la búsqueda.");
-      setResults(data.results ?? []);
+      setResults((await fetchResults(s, q)).slice(0, 6));
     } catch (err) {
       setError(err instanceof Error ? err.message : "Falló la búsqueda.");
       setResults(null);

@@ -115,8 +115,11 @@ export async function getYouTubeVideos(ids: string[]): Promise<{ result: MediaRe
     .map((v) => ({ result: toResult(v), chapters: parseChapters(v.snippet.description) }));
 }
 
+/** Hasta 3 minutos se considera clip o Short. */
+const CLIP_MAX_SECONDS = 180;
+
 /** Busca videos largos primero: el objetivo es encontrar el original, no otro clip. */
-export async function searchYouTube(query: string, max = 6): Promise<MediaResult[]> {
+export async function searchYouTube(query: string, max = 8): Promise<MediaResult[]> {
   const direct = extractYouTubeId(query);
   if (direct) return (await getYouTubeVideos([direct])).map((v) => v.result);
 
@@ -127,7 +130,10 @@ export async function searchYouTube(query: string, max = 6): Promise<MediaResult
     q: query,
   });
   const ids = search.items.map((i) => i.id.videoId).filter((id): id is string => Boolean(id));
-  return (await getYouTubeVideos(ids)).map((v) => v.result);
+  const results = (await getYouTubeVideos(ids)).map((v) => v.result);
+  // Mantiene el orden de relevancia, pero los clips cortos van al final.
+  const isClip = (r: MediaResult) => r.durationSeconds !== null && r.durationSeconds <= CLIP_MAX_SECONDS;
+  return [...results.filter((r) => !isClip(r)), ...results.filter(isClip)];
 }
 
 /* Libros: Open Library (sin llave) ---------------------------------------- */
@@ -141,7 +147,7 @@ type OlDoc = {
   number_of_pages_median?: number;
 };
 
-export async function searchBooks(query: string, max = 6): Promise<MediaResult[]> {
+export async function searchBooks(query: string, max = 8): Promise<MediaResult[]> {
   const qs = new URLSearchParams({
     q: query,
     limit: String(max),
@@ -179,7 +185,7 @@ type ItunesEpisode = {
   releaseDate?: string;
 };
 
-export async function searchPodcasts(query: string, max = 6): Promise<MediaResult[]> {
+export async function searchPodcasts(query: string, max = 8): Promise<MediaResult[]> {
   const qs = new URLSearchParams({
     term: query,
     media: "podcast",
