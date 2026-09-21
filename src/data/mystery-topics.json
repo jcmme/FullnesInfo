@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "galeon-de-manila",
+    "title": "El Galeón de Manila",
+    "hook": "¿Cómo la plata de Zacatecas terminó pagando la seda de Beijing durante 250 años?",
+    "why": "Muestra que la globalización no nació con internet: Asia, América y Europa ya estaban conectadas por plata desde el siglo XVI.",
+    "area": "historia",
+    "rarity": "legendaria",
+    "searchQuery": "galeón de Manila historia plata Acapulco",
+    "questions": [
+      "¿Qué productos y culturas se mezclaron gracias a esta ruta comercial?",
+      "¿Por qué la plata mexicana terminó siendo la moneda más usada en Asia durante siglos?",
+      "¿Qué conexiones globales de hoy en tu vida diaria se parecen a esta red comercial antigua?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "peste-negra-feudalismo",
+    "title": "La Peste Negra y el fin del feudalismo",
+    "hook": "¿Cómo una plaga que mató a un tercio de Europa terminó dándoles poder a los campesinos?",
+    "why": "Enseña que las crisis catastróficas pueden reordenar el poder económico de formas que nadie planeó.",
+    "area": "historia",
+    "rarity": "legendaria",
+    "searchQuery": "peste negra consecuencias económicas feudalismo",
+    "questions": [
+      "¿Por qué la escasez de trabajadores después de la peste les dio más poder de negociación a los campesinos?",
+      "¿Qué otras crisis en la historia reciente han reordenado quién tiene poder económico?",
+      "¿En qué momento de tu vida una crisis inesperada terminó abriéndote una oportunidad?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "revolucion-haitiana",
+    "title": "La Revolución Haitiana",
+    "hook": "¿Cómo un país de esclavos venció a Napoleón y fundó la primera república negra libre del mundo?",
+    "why": "Recuerda que la historia oficial suele silenciar las revoluciones que más incomodan al poder.",
+    "area": "historia",
+    "rarity": "rara",
+    "searchQuery": "revolución haitiana Toussaint Louverture historia",
+    "questions": [
+      "¿Por qué la revolución haitiana es tan poco enseñada comparada con la francesa o la estadounidense?",
+      "¿Qué precio pagó Haití después de su independencia y cómo sigue afectando al país hoy?",
+      "¿Qué logros importantes en tu entorno han sido minimizados injustamente por la historia oficial?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "colapso-edad-de-bronce",
+    "title": "El colapso de la Edad de Bronce",
+    "hook": "¿Por qué varias civilizaciones poderosas se derrumbaron casi al mismo tiempo hace 3200 años?",
+    "why": "Muestra cómo sistemas muy interconectados pueden colapsar en cadena cuando fallan varios puntos a la vez.",
+    "area": "historia",
+    "rarity": "rara",
+    "searchQuery": "colapso Edad de Bronce civilizaciones documental",
+    "questions": [
+      "¿Qué combinación de factores explica este colapso simultáneo de tantas civilizaciones?",
+      "¿Qué paralelismos ves entre esa red comercial antigua y la economía global actual?",
+      "¿Qué tan dependiente es tu vida de sistemas interconectados que podrían fallar en cadena?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "mansa-musa-mali",
+    "title": "Mansa Musa y el Imperio de Malí",
+    "hook": "¿Cómo un rey africano regaló tanto oro en un viaje que devaluó la moneda de Egipto por años?",
+    "why": "Reescribe la idea de que la riqueza extrema y el poder global solo existieron en Europa o Asia.",
+    "area": "historia",
+    "rarity": "rara",
+    "searchQuery": "Mansa Musa imperio de Malí oro historia",
+    "questions": [
+      "¿Qué tan grande era realmente la riqueza de Mansa Musa comparada con figuras históricas actuales?",
+      "¿Por qué este imperio africano es tan poco conocido fuera de África?",
+      "¿Qué otras historias de riqueza o poder fuera de Europa desconoces por falta de exposición cultural?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "pax-mongolica",
+    "title": "La Pax Mongólica de Gengis Kan",
+    "hook": "¿Cómo el imperio más temido de la historia terminó protegiendo el comercio entre Europa y Asia?",
+    "why": "Muestra cómo el poder militar extremo a veces produce, sin querer, épocas de intercambio y tolerancia religiosa.",
+    "area": "historia",
+    "rarity": "rara",
+    "searchQuery": "Pax Mongólica imperio mongol comercio Ruta de la Seda",
+    "questions": [
+      "¿Cómo lograron los mongoles unificar rutas comerciales entre culturas tan distintas?",
+      "¿Qué tolerancia religiosa practicaban y por qué les convenía políticamente?",
+      "¿Qué aprendes de este contraste entre un poder brutal y sus consecuencias constructivas inesperadas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "intercambio-colombino",
+    "title": "El intercambio colombino",
+    "hook": "¿Sabías que la papa, el chocolate y el tomate no existían en Europa antes de 1492?",
+    "why": "Cambia tu forma de ver la comida tradicional de cada país: casi nada es tan antiguo como crees.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "intercambio colombino alimentos historia",
+    "questions": [
+      "¿Qué alimentos que crees típicos de tu país en realidad vinieron de otro continente?",
+      "¿Qué consecuencias tuvo este intercambio en enfermedades y población, no solo en comida?",
+      "¿Qué otra idea sobre lo tradicional en tu vida podría no ser tan antigua como piensas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "caminos-incas",
+    "title": "El Qhapaq Ñan, los caminos incas",
+    "hook": "¿Cómo un imperio sin ruedas ni caballos construyó una red de caminos de 30 mil kilómetros?",
+    "why": "Demuestra que la innovación no depende de una sola tecnología, sino de resolver el problema con lo que tienes.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "Qhapaq Ñan camino inca imperio documental",
+    "questions": [
+      "¿Qué sistemas de comunicación y logística usaban los incas sin escritura ni rueda?",
+      "¿Cómo lograban gobernar un territorio tan extenso y diverso geográficamente?",
+      "¿Qué recursos limitados en tu vida podrías resolver siendo más creativo, como hicieron ellos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "sakoku-japon",
+    "title": "El Sakoku, el aislamiento de Japón",
+    "hook": "¿Por qué Japón se cerró casi por completo al mundo exterior durante más de 200 años?",
+    "why": "Muestra que el aislamiento puede preservar una cultura, pero también atrasarla frente a un mundo que cambia rápido.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "sakoku Japón aislamiento periodo Edo historia",
+    "questions": [
+      "¿Qué ganó y qué perdió Japón al aislarse del comercio y las ideas extranjeras?",
+      "¿Qué pasó cuando Estados Unidos forzó la apertura de Japón en el siglo XIX?",
+      "¿En qué áreas de tu vida el aislarte te protege pero también te atrasa?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "apartheid-verdad-reconciliacion",
+    "title": "El apartheid y la Comisión de la Verdad",
+    "hook": "¿Cómo Sudáfrica eligió perdonar en público en vez de vengarse tras décadas de segregación legal?",
+    "why": "Ofrece un modelo real de cómo una sociedad puede sanar heridas colectivas sin borrar la memoria ni estallar en venganza.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "apartheid comisión verdad y reconciliación Sudáfrica",
+    "questions": [
+      "¿Por qué Sudáfrica eligió la verdad pública y el perdón en vez de juicios masivos?",
+      "¿Qué límites tuvo este proceso y qué heridas quedaron sin resolver?",
+      "¿Qué conflicto en tu vida podría beneficiarse de un proceso honesto de verdad antes que de castigo?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "caida-constantinopla",
+    "title": "La caída de Constantinopla",
+    "hook": "¿Cómo un cañón gigante terminó con mil años de historia del Imperio Bizantino en 1453?",
+    "why": "Marca simbólicamente el fin de la Edad Media y muestra cómo la tecnología militar puede cambiar el mapa del mundo de golpe.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "caída de Constantinopla 1453 historia",
+    "questions": [
+      "¿Qué avances tecnológicos hicieron posible que los otomanos tomaran una ciudad inexpugnable?",
+      "¿Cómo cambió este evento las rutas comerciales y forzó a Europa a buscar nuevas rutas marítimas?",
+      "¿Qué murallas en tu vida crees inexpugnables que en realidad son vulnerables a un cambio de enfoque?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "imperio-otomano-millet",
+    "title": "El Imperio Otomano y el sistema millet",
+    "hook": "¿Cómo un imperio islámico gobernó durante siglos a cristianos y judíos dejándolos regirse por sus propias leyes?",
+    "why": "Muestra un modelo histórico de convivencia entre religiones distintas dentro de un mismo Estado.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "imperio otomano sistema millet tolerancia religiosa",
+    "questions": [
+      "¿Cómo funcionaba en la práctica la autonomía religiosa dentro del imperio?",
+      "¿Qué tensiones y límites tenía este sistema de convivencia?",
+      "¿Qué aprendes de este modelo para convivir con personas de creencias distintas a las tuyas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "descolonizacion-africa",
+    "title": "La descolonización de África",
+    "hook": "¿Por qué las fronteras de casi todo un continente se decidieron en una sala en Europa sin africanos presentes?",
+    "why": "Explica por qué muchos conflictos actuales en África tienen raíces directas en decisiones coloniales del siglo XIX y XX.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "descolonización de África historia siglo XX",
+    "questions": [
+      "¿Cómo se trazaron las fronteras africanas y qué consecuencias tuvo eso para los pueblos divididos?",
+      "¿Qué países lograron independencias relativamente pacíficas y cuáles no, y por qué?",
+      "¿Qué decisiones heredadas en tu propia vida siguen generando conflictos hoy?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "revolucion-mexicana",
+    "title": "La Revolución Mexicana",
+    "hook": "¿Cómo un país con puros generales terminó escribiendo una de las constituciones más avanzadas de su época?",
+    "why": "Muestra cómo un conflicto caótico y violento puede terminar sentando las bases legales de derechos sociales modernos.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "Revolución Mexicana causas y consecuencias documental",
+    "questions": [
+      "¿Qué diferencias de objetivos tenían Zapata, Villa, Carranza y Madero?",
+      "¿Qué derechos sociales de la Constitución de 1917 eran radicales para su época?",
+      "¿Qué parte de la identidad de tu país o familia viene directamente de este periodo?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "reino-de-axum",
+    "title": "El reino de Axum en Etiopía",
+    "hook": "¿Sabías que un reino africano acuñó su propia moneda y adoptó el cristianismo antes que el Imperio Romano?",
+    "why": "Desafía la idea de que las grandes civilizaciones antiguas solo estuvieron en Europa, Asia o Egipto.",
+    "area": "historia",
+    "rarity": "comun",
+    "searchQuery": "reino de Axum Etiopía historia antigua",
+    "questions": [
+      "¿Qué evidencia muestra que Axum era una potencia comercial y religiosa relevante en su época?",
+      "¿Por qué este reino es tan poco mencionado en la historia mundial que se enseña habitualmente?",
+      "¿Qué otra región del mundo crees que estás subestimando por falta de información?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "seleccion-natural-darwin",
+    "title": "La selección natural de Darwin",
+    "hook": "¿Cómo llegó Darwin a una idea tan simple que explica toda la diversidad de la vida en la Tierra?",
+    "why": "Te da el modelo más poderoso para entender el cambio: pequeñas variaciones más tiempo más presión selectiva.",
+    "area": "ciencia",
+    "rarity": "legendaria",
+    "searchQuery": "selección natural Darwin explicación evolución",
+    "questions": [
+      "¿Qué observaciones del viaje del Beagle llevaron a Darwin a su teoría?",
+      "¿Por qué la selección natural no tiene dirección ni propósito, solo consecuencias?",
+      "¿Dónde ves procesos de selección parecidos en tu trabajo, tus hábitos o tus relaciones?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "entropia-segunda-ley",
+    "title": "La entropía y la flecha del tiempo",
+    "hook": "¿Por qué puedes romper un vaso en un segundo pero nunca lo has visto reconstruirse solo?",
+    "why": "Explica por qué el desorden crece de forma natural en todo, y por qué mantener el orden siempre cuesta energía.",
+    "area": "ciencia",
+    "rarity": "legendaria",
+    "searchQuery": "entropía segunda ley termodinámica explicación simple",
+    "questions": [
+      "¿Por qué la entropía le da una dirección al tiempo que percibimos?",
+      "¿Qué significa que el universo tiende siempre hacia más desorden?",
+      "¿En qué áreas de tu vida ves esta tendencia natural al desorden si no inviertes energía?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "miller-urey-origen-vida",
+    "title": "El experimento de Miller-Urey",
+    "hook": "¿Se puede fabricar en un laboratorio la chispa que creó la vida en la Tierra primitiva?",
+    "why": "Muestra cómo la ciencia intenta responder preguntas enormes con experimentos sorprendentemente simples.",
+    "area": "ciencia",
+    "rarity": "rara",
+    "searchQuery": "experimento Miller Urey origen de la vida",
+    "questions": [
+      "¿Qué condiciones de la Tierra primitiva intentaron recrear Miller y Urey?",
+      "¿Qué límites tiene este experimento para explicar realmente el origen de la vida?",
+      "¿Qué otra pregunta imposible de tu vida podrías atacar con un experimento pequeño y simple?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "extincion-permico",
+    "title": "La Gran Mortandad del Pérmico",
+    "hook": "¿Qué evento mató al 90% de las especies del planeta, mucho peor que el que acabó con los dinosaurios?",
+    "why": "Pone en perspectiva qué tan frágil es la vida a escala geológica y qué tan rápido puede desmoronarse un ecosistema.",
+    "area": "ciencia",
+    "rarity": "rara",
+    "searchQuery": "extinción masiva del Pérmico gran mortandad",
+    "questions": [
+      "¿Qué combinación de erupciones volcánicas y cambio climático causó esta extinción?",
+      "¿Cuánto tiempo tardó la vida en el planeta en recuperar su diversidad después?",
+      "¿Qué lecciones sobre el cambio climático actual te deja conocer esta extinción antigua?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "doble-rendija-cuantica",
+    "title": "El experimento de la doble rendija",
+    "hook": "¿Por qué una partícula se comporta distinto cuando sabes que la estás observando?",
+    "why": "Te asoma a una de las rarezas más profundas de la física: el acto de medir puede cambiar lo que mides.",
+    "area": "ciencia",
+    "rarity": "rara",
+    "searchQuery": "experimento de la doble rendija mecánica cuántica explicación",
+    "questions": [
+      "¿Qué diferencia de comportamiento se observa cuando hay un detector midiendo el camino de la partícula?",
+      "¿Por qué este experimento sigue siendo debatido filosóficamente y no solo científicamente?",
+      "¿Qué opinas de la idea de que observar algo puede cambiar su comportamiento, aplicada a personas que sabes que estás observando?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "extremofilos-vida-extrema",
+    "title": "Los extremófilos y la vida extrema",
+    "hook": "¿Cómo existen organismos que viven felices en ácido hirviendo o en el hielo de la Antártida?",
+    "why": "Amplía tu idea de qué es posible: la vida es mucho más adaptable de lo que imaginamos, y eso cambia dónde buscamos vida en otros planetas.",
+    "area": "ciencia",
+    "rarity": "rara",
+    "searchQuery": "extremófilos organismos vida extrema documental",
+    "questions": [
+      "¿Qué tipos de ambientes extremos toleran estos organismos y cómo lo logran a nivel celular?",
+      "¿Por qué su existencia cambia la búsqueda de vida en otros planetas o lunas?",
+      "¿Qué límites que creías fijos en tu vida podrían ser más flexibles de lo que piensas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "como-funcionan-vacunas",
+    "title": "Cómo funcionan las vacunas",
+    "hook": "¿Cómo le enseñas a tu sistema inmune a reconocer a un enemigo que nunca ha visto?",
+    "why": "Te da un modelo claro de cómo el cuerpo aprende, útil para entender inmunidad, salud pública y decisiones médicas informadas.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "cómo funcionan las vacunas sistema inmune explicación",
+    "questions": [
+      "¿Qué diferencia hay entre inmunidad natural e inmunidad por vacuna en términos de riesgo?",
+      "¿Por qué algunas vacunas requieren refuerzos y otras no?",
+      "¿Qué otra amenaza en tu vida podrías prevenir mejor si te preparas antes de que ocurra, como hace una vacuna?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "tectonica-de-placas",
+    "title": "La tectónica de placas",
+    "hook": "¿Sabías que los continentes se mueven varios centímetros al año, como uñas que crecen?",
+    "why": "Explica por qué existen terremotos, volcanes y montañas, y te da una escala de tiempo distinta para pensar cambios lentos pero imparables.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "tectónica de placas explicación documental",
+    "questions": [
+      "¿Cómo se descubrió que los continentes alguna vez estuvieron unidos en un solo bloque?",
+      "¿Por qué ciertas zonas del mundo concentran terremotos y volcanes?",
+      "¿Qué cambios lentos en tu vida, casi imperceptibles día a día, están moviendo algo grande con el tiempo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "efecto-invernadero-explicado",
+    "title": "El efecto invernadero explicado bien",
+    "hook": "¿Por qué el mismo gas que te mantiene vivo respirando también puede recalentar todo el planeta?",
+    "why": "Te da las bases reales del cambio climático más allá de titulares, para poder evaluar información con criterio propio.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "efecto invernadero cambio climático explicación científica",
+    "questions": [
+      "¿Qué diferencia hay entre el efecto invernadero natural, que es necesario, y el causado por actividad humana?",
+      "¿Qué gases contribuyen más y de dónde vienen principalmente?",
+      "¿Qué decisión cotidiana tuya, sumada a la de millones más, tiene más impacto real en esto de lo que crees?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "fotosintesis-ciclo-carbono",
+    "title": "La fotosíntesis y el ciclo del carbono",
+    "hook": "¿Cómo convierte una planta luz solar en el oxígeno que respiras ahora mismo?",
+    "why": "Te muestra el proceso que sostiene casi toda la vida en la Tierra y cómo el carbono se recicla entre plantas, animales y atmósfera.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "fotosíntesis ciclo del carbono explicación",
+    "questions": [
+      "¿Qué papel juegan los océanos, además de las plantas, en absorber carbono?",
+      "¿Por qué la deforestación rompe este ciclo de forma tan significativa?",
+      "¿Qué ciclos en tu vida dependen de un equilibrio parecido al del carbono?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "descubrimiento-penicilina",
+    "title": "El descubrimiento accidental de la penicilina",
+    "hook": "¿Cómo un experimento arruinado por moho terminó salvando cientos de millones de vidas?",
+    "why": "Es un caso real de cómo la curiosidad ante un error puede convertirse en uno de los mayores avances médicos de la historia.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "descubrimiento de la penicilina Alexander Fleming historia",
+    "questions": [
+      "¿Qué hizo Fleming distinto a otros científicos que también vieron moho contaminando cultivos?",
+      "¿Cuánto tiempo pasó entre el descubrimiento y su uso médico masivo, y por qué tardó tanto?",
+      "¿Qué error reciente en tu vida podrías mirar de nuevo con curiosidad en vez de solo frustración?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "datacion-carbono-14",
+    "title": "La datación por carbono 14",
+    "hook": "¿Cómo sabemos con precisión que un hueso o una momia tienen exactamente miles de años?",
+    "why": "Te da una herramienta mental para entender cómo la ciencia mide cosas que nadie presenció directamente.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "datación carbono 14 cómo funciona",
+    "questions": [
+      "¿Por qué el carbono 14 es útil solo para medir edades de hasta unos 50 mil años y no más?",
+      "¿Qué otros métodos de datación existen para objetos más antiguos?",
+      "¿Qué tan seguido confías en una medición indirecta en tu vida sin cuestionar cómo se obtuvo?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "agujeros-negros",
+    "title": "Los agujeros negros",
+    "hook": "¿Qué hay dentro de un lugar del que ni siquiera la luz puede escapar?",
+    "why": "Expande tu intuición sobre el espacio, el tiempo y los límites de lo que la física puede explicar hoy.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "agujeros negros explicación documental",
+    "questions": [
+      "¿Cómo se detecta algo que por definición no emite luz?",
+      "¿Qué le pasa al tiempo cerca del horizonte de eventos de un agujero negro?",
+      "¿Qué preguntas sin respuesta en tu propia vida te generan la misma fascinación incómoda que un agujero negro?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "microbioma-salud",
+    "title": "El microbioma y tu salud",
+    "hook": "¿Sabías que llevas más células bacterianas que humanas en tu propio cuerpo?",
+    "why": "Cambia la idea de que tu cuerpo es solo tuyo: eres, literalmente, un ecosistema compartido.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "microbioma humano salud explicación",
+    "questions": [
+      "¿Qué funciones cumplen las bacterias intestinales más allá de la digestión?",
+      "¿Qué factores alteran más este ecosistema interno: dieta, antibióticos o estrés?",
+      "¿Qué hábito diario tuyo podría estar afectando a este ecosistema sin que lo notes?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "crispr-edicion-genetica",
+    "title": "CRISPR y la edición genética",
+    "hook": "¿Cómo una defensa bacteriana contra virus se convirtió en unas tijeras para editar el ADN?",
+    "why": "Te introduce a la herramienta que redefine qué enfermedades genéticas podríamos curar en tu propia vida.",
+    "area": "ciencia",
+    "rarity": "comun",
+    "searchQuery": "CRISPR edición genética explicación simple",
+    "questions": [
+      "¿De dónde viene originalmente el sistema CRISPR en la naturaleza?",
+      "¿Qué diferencia hay entre editar genes en células humanas normales y en células reproductivas?",
+      "¿Qué dilema ético te genera a ti personalmente la posibilidad de editar enfermedades futuras?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "obediencia-milgram",
+    "title": "El experimento de Milgram",
+    "hook": "¿Por qué personas comunes aplicaron lo que creían descargas letales solo porque alguien con bata se los pidió?",
+    "why": "Revela cuánto pesa la autoridad percibida sobre tu propio juicio moral, algo útil para reconocer presión en tu vida real.",
+    "area": "psicologia",
+    "rarity": "legendaria",
+    "searchQuery": "experimento de Milgram obediencia a la autoridad",
+    "questions": [
+      "¿Qué porcentaje de participantes llegó hasta el nivel máximo de descarga y qué te dice eso?",
+      "¿Qué condiciones del experimento hacían más o menos probable que alguien desobedeciera?",
+      "¿En qué situación reciente obedeciste una instrucción cuestionable solo por venir de alguien con autoridad?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "disonancia-cognitiva",
+    "title": "La disonancia cognitiva",
+    "hook": "¿Por qué te justificas después de tomar una mala decisión en vez de simplemente admitir el error?",
+    "why": "Te da el modelo clave para detectar cuándo te estás mintiendo a ti mismo para que tus creencias y tus actos cuadren.",
+    "area": "psicologia",
+    "rarity": "legendaria",
+    "searchQuery": "disonancia cognitiva Festinger explicación",
+    "questions": [
+      "¿Qué experimento clásico de Festinger demostró este fenómeno por primera vez?",
+      "¿Por qué es más fácil cambiar tu creencia que cambiar tu comportamiento ya realizado?",
+      "¿Qué decisión tuya reciente podrías estar justificando de más solo para no sentirte mal contigo mismo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "prision-de-stanford-controversia",
+    "title": "La prisión de Stanford, ¿ciencia o montaje?",
+    "hook": "¿Por qué uno de los experimentos más famosos de la psicología resultó estar manipulado por su propio autor?",
+    "why": "Enseña a leer con escepticismo hasta los estudios más citados, y muestra cómo el contexto influye más de lo que el estudio original afirmó.",
+    "area": "psicologia",
+    "rarity": "rara",
+    "searchQuery": "experimento de la prisión de Stanford controversia crítica",
+    "questions": [
+      "¿Qué evidencia salió a la luz sobre cómo Zimbardo dirigió el comportamiento de los guardias?",
+      "¿Qué conclusiones sí siguen siendo útiles a pesar de las fallas metodológicas del estudio?",
+      "¿Qué otra verdad popular que has repetido nunca verificaste directamente en la fuente?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "marshmallow-test-controversia",
+    "title": "El test del malvavisco, revisitado",
+    "hook": "¿De verdad el autocontrol infantil predice el éxito, o el estudio olvidó preguntar por el dinero en casa?",
+    "why": "Muestra cómo un factor no medido, como la pobreza, puede explicar mejor un resultado que la variable que todos celebraron.",
+    "area": "psicologia",
+    "rarity": "rara",
+    "searchQuery": "marshmallow test replicación crítica contexto socioeconómico",
+    "questions": [
+      "¿Qué encontró la réplica posterior al controlar el nivel socioeconómico de las familias?",
+      "¿Por qué esperar la recompensa depende también de si confías en que la promesa se va a cumplir?",
+      "¿Qué decisión tuya de falta de autocontrol podría en realidad ser una respuesta razonable a tu contexto?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "efecto-espectador",
+    "title": "El efecto espectador",
+    "hook": "¿Por qué es menos probable que te ayuden si hay 20 testigos que si hay solo uno?",
+    "why": "Te da una herramienta concreta: si necesitas ayuda en un grupo, señala a una persona específica en vez de pedir ayuda al aire.",
+    "area": "psicologia",
+    "rarity": "rara",
+    "searchQuery": "efecto espectador bystander effect psicología",
+    "questions": [
+      "¿Qué papel juega la difusión de responsabilidad en que nadie actúe en una emergencia con testigos?",
+      "¿Qué tan exacta resultó ser realmente la historia original del caso que popularizó este efecto?",
+      "¿Cómo pedirías ayuda de forma distinta la próxima vez que estés en un grupo grande y la necesites?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "paradoja-de-la-eleccion",
+    "title": "La paradoja de la elección",
+    "hook": "¿Por qué tener más opciones para elegir a veces te hace sentir peor, no mejor?",
+    "why": "Te ayuda a simplificar decisiones cotidianas reduciendo opciones en vez de maximizar alternativas sin fin.",
+    "area": "psicologia",
+    "rarity": "rara",
+    "searchQuery": "paradoja de la elección Barry Schwartz explicación",
+    "questions": [
+      "¿Qué diferencia hay entre ser maximizador y ser satisfactor al tomar decisiones?",
+      "¿Por qué demasiadas opciones aumentan el arrepentimiento después de decidir?",
+      "¿En qué decisión reciente el exceso de opciones te paralizó o te hizo dudar más?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "dunning-kruger",
+    "title": "El efecto Dunning-Kruger",
+    "hook": "¿Por qué la gente con menos conocimiento de un tema suele sentirse más segura al hablar de él?",
+    "why": "Te da una alarma interna útil: la confianza extrema en un tema nuevo suele ser señal de que sabes menos de lo que crees.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "efecto Dunning-Kruger explicación",
+    "questions": [
+      "¿Por qué la falta de habilidad también dificulta reconocer la propia falta de habilidad?",
+      "¿Qué pasa con la confianza de una persona a medida que realmente se vuelve experta en algo?",
+      "¿En qué tema reciente sentiste una confianza que, viéndolo ahora, no estaba tan justificada?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "sesgo-de-confirmacion",
+    "title": "El sesgo de confirmación",
+    "hook": "¿Por qué buscas noticias que confirman lo que ya piensas y evitas las que te contradicen?",
+    "why": "Te da una forma de vigilar tu propio pensamiento antes de que se vuelva una cámara de eco personal.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "sesgo de confirmación psicología explicación",
+    "questions": [
+      "¿Qué estrategias existen para buscar activamente información que contradiga tus creencias?",
+      "¿Cómo afecta este sesgo a discusiones políticas o familiares que se vuelven imposibles de resolver?",
+      "¿Cuál es una creencia tuya que casi nunca pones a prueba con información contraria?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "apego-bowlby",
+    "title": "La teoría del apego",
+    "hook": "¿Por qué la forma en que te cuidaron de bebé sigue apareciendo en cómo amas de adulto?",
+    "why": "Te da un mapa para entender patrones repetidos en tus relaciones y por qué a veces reaccionas de forma desproporcionada.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "teoría del apego Bowlby estilos de apego",
+    "questions": [
+      "¿Cuáles son los estilos de apego principales y qué comportamientos adultos se asocian a cada uno?",
+      "¿Qué tan modificable es tu estilo de apego con trabajo consciente en la adultez?",
+      "¿Qué patrón de tus relaciones actuales reconoces que viene de cómo te cuidaron de niño?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "efecto-placebo",
+    "title": "El efecto placebo",
+    "hook": "¿Cómo una pastilla sin ningún ingrediente activo puede realmente quitarte el dolor?",
+    "why": "Muestra el poder real que tiene la expectativa sobre tu cuerpo, y por qué la mente y la biología no están tan separadas.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "efecto placebo cómo funciona explicación",
+    "questions": [
+      "¿Qué mecanismos biológicos reales se activan cuando alguien cree que un tratamiento va a funcionar?",
+      "¿Por qué el efecto placebo es más fuerte en algunas condiciones, como el dolor o la ansiedad, que en otras?",
+      "¿En qué área de tu vida tu propia expectativa ha cambiado el resultado real?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "pensamiento-de-grupo",
+    "title": "El pensamiento de grupo",
+    "hook": "¿Por qué equipos llenos de gente inteligente a veces toman decisiones desastrosas juntos?",
+    "why": "Te ayuda a detectar cuándo un grupo está evitando el conflicto en vez de buscar la mejor decisión.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "pensamiento de grupo groupthink ejemplos históricos",
+    "questions": [
+      "¿Qué señales indican que un equipo está cayendo en pensamiento de grupo?",
+      "¿Qué decisiones históricas o corporativas famosas se atribuyen a este fenómeno?",
+      "¿En qué reunión o decisión grupal reciente callaste una duda razonable solo por no romper el consenso?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "procrastinacion-yo-futuro",
+    "title": "La procrastinación y tu yo futuro",
+    "hook": "¿Por qué tratas a la persona que serás mañana casi como si fuera un desconocido?",
+    "why": "Te da una razón concreta para procrastinar menos: tu cerebro literalmente percibe a tu yo futuro como a otra persona.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "procrastinación yo futuro psicología explicación",
+    "questions": [
+      "¿Qué muestran los estudios de neuroimagen sobre cómo pensamos en nuestro yo futuro?",
+      "¿Qué técnicas ayudan a sentir más cercano y real a ese yo futuro para decidir mejor hoy?",
+      "¿Qué tarea estás postergando ahora mismo que tu yo de la próxima semana va a agradecer o lamentar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "efecto-zeigarnik",
+    "title": "El efecto Zeigarnik",
+    "hook": "¿Por qué una tarea sin terminar te ocupa más la mente que una que ya cerraste?",
+    "why": "Te explica por qué anotar pendientes libera espacio mental, y te da una técnica simple para dejar de darle vueltas a todo.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "efecto Zeigarnik tareas inconclusas memoria",
+    "questions": [
+      "¿Qué experimento original llevó a descubrir que recordamos mejor lo inconcluso?",
+      "¿Por qué simplemente escribir un plan, sin terminarlo, reduce la ansiedad sobre una tarea pendiente?",
+      "¿Qué pendiente sin cerrar te está ocupando la cabeza ahora mismo y qué pasaría si lo anotaras y soltaras?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "profecia-autocumplida",
+    "title": "La profecía autocumplida",
+    "hook": "¿Puede una expectativa falsa sobre alguien terminar volviéndose realidad solo por cómo lo tratas?",
+    "why": "Te muestra cómo tus expectativas sobre otros pueden moldear su comportamiento real, para bien o para mal.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "profecía autocumplida efecto Pigmalión psicología",
+    "questions": [
+      "¿Qué mecanismos concretos hacen que una expectativa influya en el comportamiento real de otra persona?",
+      "¿En qué contextos, como la educación o el trabajo, se ha estudiado más este efecto?",
+      "¿Qué expectativa que tienes sobre alguien cercano podrías estar reforzando sin darte cuenta?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "resiliencia-crecimiento-postraumatico",
+    "title": "La resiliencia y el crecimiento postraumático",
+    "hook": "¿Por qué algunas personas no solo se recuperan de una tragedia, sino que salen transformadas para bien?",
+    "why": "Ofrece un modelo realista de cómo procesar el dolor sin idealizarlo ni negarlo, útil para tus propias crisis.",
+    "area": "psicologia",
+    "rarity": "comun",
+    "searchQuery": "crecimiento postraumático resiliencia psicología",
+    "questions": [
+      "¿Qué diferencia hay entre simplemente recuperarse de una crisis y experimentar un crecimiento postraumático real?",
+      "¿Qué factores, como el apoyo social o el sentido, favorecen este tipo de crecimiento?",
+      "¿Qué dificultad pasada en tu vida, vista con distancia, terminó cambiándote para mejor?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "interes-compuesto",
+    "title": "El interés compuesto",
+    "hook": "¿Por qué Einstein habría llamado al interés compuesto la fuerza más poderosa del universo?",
+    "why": "Te da el modelo matemático detrás de cómo el dinero, y también el aprendizaje o los hábitos, crecen exponencialmente con el tiempo.",
+    "area": "economia",
+    "rarity": "legendaria",
+    "searchQuery": "interés compuesto explicación cómo funciona",
+    "questions": [
+      "¿Qué diferencia real de resultado hay entre empezar a ahorrar a los 25 y a los 35 años?",
+      "¿Por qué el tiempo importa más que el monto inicial en el crecimiento compuesto?",
+      "¿Qué otra área de tu vida podría beneficiarse de pensar en términos de interés compuesto?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "tragedia-de-los-comunes",
+    "title": "La tragedia de los comunes",
+    "hook": "¿Por qué un recurso compartido tiende a destruirse aunque a nadie le convenga que eso pase?",
+    "why": "Te da un modelo clave para entender desde la pesca excesiva hasta por qué nadie lava los platos en una casa compartida.",
+    "area": "economia",
+    "rarity": "legendaria",
+    "searchQuery": "tragedia de los comunes explicación ejemplos",
+    "questions": [
+      "¿Qué ejemplos reales existen de comunidades que sí lograron gestionar bien un recurso compartido?",
+      "¿Qué papel juegan las reglas claras y la confianza para evitar esta tragedia?",
+      "¿Qué recurso compartido en tu casa, trabajo o ciudad está sufriendo este mismo problema?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "efecto-cobra",
+    "title": "El efecto Cobra",
+    "hook": "¿Por qué pagar por cada cobra muerta terminó llenando Delhi de más cobras que antes?",
+    "why": "Muestra cómo un incentivo mal diseñado puede empeorar exactamente el problema que quería resolver.",
+    "area": "economia",
+    "rarity": "rara",
+    "searchQuery": "efecto cobra incentivos perversos economía",
+    "questions": [
+      "¿Qué hicieron los habitantes de Delhi al descubrir que podían ganar dinero criando cobras?",
+      "¿Qué otros ejemplos modernos de incentivos que salieron mal conoces en empresas o gobiernos?",
+      "¿Qué recompensa que has puesto en tu vida o trabajo podría estar incentivando el comportamiento equivocado?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "hiperinflacion-weimar",
+    "title": "La hiperinflación de Weimar",
+    "hook": "¿Cómo terminó Alemania usando billetes como papel tapiz porque valían menos que el papel mismo?",
+    "why": "Explica de forma visceral por qué la confianza en una moneda, y no solo el oro que la respalda, es lo que sostiene una economía.",
+    "area": "economia",
+    "rarity": "rara",
+    "searchQuery": "hiperinflación República de Weimar Alemania historia",
+    "questions": [
+      "¿Qué decisiones económicas y políticas llevaron a esta hiperinflación extrema?",
+      "¿Cómo afectó esta crisis a los ahorros de la clase media alemana y sus consecuencias políticas posteriores?",
+      "¿Qué tan protegidos están tus propios ahorros frente a una pérdida de confianza en la moneda?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "dilema-del-prisionero",
+    "title": "El dilema del prisionero",
+    "hook": "¿Por qué dos personas racionales pueden terminar traicionándose aunque cooperar les convenga más a ambas?",
+    "why": "Te da el modelo básico detrás de guerras de precios, carreras armamentistas y hasta peleas familiares sobre quién cede primero.",
+    "area": "economia",
+    "rarity": "rara",
+    "searchQuery": "dilema del prisionero teoría de juegos explicación",
+    "questions": [
+      "¿Por qué la estrategia dominante individual no siempre coincide con el mejor resultado para ambos?",
+      "¿Qué cambia cuando el juego se repite muchas veces en vez de jugarse una sola vez?",
+      "¿En qué relación o negociación de tu vida estás atrapado en una lógica de traicionar antes de que me traicionen?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "escasez-artificial-diamantes",
+    "title": "La escasez artificial de los diamantes",
+    "hook": "¿Por qué los diamantes son raros si en realidad hay bodegas enteras llenas de ellos sin vender?",
+    "why": "Muestra cómo el valor percibido de algo puede ser construido por marketing y control de oferta, no por su rareza real.",
+    "area": "economia",
+    "rarity": "rara",
+    "searchQuery": "monopolio De Beers diamantes escasez artificial historia",
+    "questions": [
+      "¿Cómo logró una sola empresa controlar durante décadas la oferta mundial de diamantes?",
+      "¿Qué papel jugó la publicidad en convencer a generaciones enteras de que un diamante es para siempre?",
+      "¿Qué otro producto o símbolo de estatus en tu vida podría tener un valor más inventado que real?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "mano-invisible-adam-smith",
+    "title": "La mano invisible de Adam Smith",
+    "hook": "¿Cómo puede el egoísmo individual de millones de personas terminar beneficiando a toda la sociedad?",
+    "why": "Te da la idea fundacional detrás del libre mercado y también sus límites, útiles para entender debates económicos actuales.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "la mano invisible Adam Smith explicación",
+    "questions": [
+      "¿En qué situaciones reales funciona bien esta idea y en cuáles falla claramente?",
+      "¿Qué papel debe jugar entonces el Estado si el mercado no siempre se autorregula bien?",
+      "¿En qué decisión de compra reciente actuaste solo por tu interés y terminó beneficiando a alguien más también?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "inflacion-y-ahorro",
+    "title": "La inflación y tu dinero",
+    "hook": "¿Por qué el dinero guardado bajo el colchón pierde valor aunque nadie te lo robe?",
+    "why": "Te da las bases para entender por qué ahorrar sin invertir puede ser, en la práctica, perder dinero poco a poco.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "qué es la inflación y cómo te afecta explicación",
+    "questions": [
+      "¿Qué causa que los precios suban de forma generalizada en una economía?",
+      "¿Qué opciones existen para proteger tus ahorros del efecto de la inflación con el tiempo?",
+      "¿Cuánto ha subido el costo de tu canasta básica en el último año comparado con tu ingreso?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "costo-de-oportunidad",
+    "title": "El costo de oportunidad",
+    "hook": "¿Por qué gratis casi nunca es realmente gratis, ni siquiera cuando no pagas dinero?",
+    "why": "Te da la herramienta más básica para tomar mejores decisiones: todo lo que eliges tiene el costo de lo que dejaste de elegir.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "costo de oportunidad economía explicación ejemplos",
+    "questions": [
+      "¿Qué ejemplo cotidiano ilustra mejor un costo de oportunidad que casi nadie considera?",
+      "¿Por qué el tiempo también tiene costo de oportunidad, no solo el dinero?",
+      "¿Qué decisión reciente tomaste sin pensar en lo que realmente estabas dejando de hacer o tener?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "oferta-y-demanda",
+    "title": "La oferta y la demanda",
+    "hook": "¿Por qué el mismo vaso de agua puede no valer nada en tu casa y valer una fortuna en el desierto?",
+    "why": "Te da el modelo más básico de por qué los precios suben y bajan, útil para entender casi cualquier mercado.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "oferta y demanda explicación economía básica",
+    "questions": [
+      "¿Qué pasa con el precio cuando la oferta se mantiene fija pero la demanda sube de golpe?",
+      "¿Qué ejemplos recientes de escasez o exceso de algún producto has vivido tú mismo?",
+      "¿Dónde has visto este principio operar en tu propio trabajo o negocio?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "burbujas-economicas",
+    "title": "Las burbujas económicas",
+    "hook": "¿Cómo llegó la gente a pagar el precio de una casa por un solo bulbo de tulipán?",
+    "why": "Te muestra el patrón que se repite en cada burbuja financiera: euforia colectiva que ignora el valor real de las cosas.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "burbujas económicas historia tulipanes punto com",
+    "questions": [
+      "¿Qué patrón psicológico se repite en la burbuja de los tulipanes, la del punto com y la inmobiliaria de 2008?",
+      "¿Cómo puedes distinguir un crecimiento real de uno especulativo antes de que explote?",
+      "¿Alguna vez invertiste tiempo o dinero en algo solo porque todo el mundo lo estaba haciendo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "microcredito-yunus",
+    "title": "El microcrédito de Muhammad Yunus",
+    "hook": "¿Cómo préstamos de apenas unos dólares terminaron sacando a miles de familias de la pobreza?",
+    "why": "Muestra un modelo alternativo de banca que confía en la palabra de quienes el sistema financiero tradicional ignora.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "microcrédito Muhammad Yunus Grameen Bank historia",
+    "questions": [
+      "¿Por qué los bancos tradicionales no prestaban a estas personas antes del microcrédito?",
+      "¿Qué críticas y límites ha tenido este modelo con el tiempo?",
+      "¿Qué pequeño empujón de confianza podría cambiar la trayectoria de alguien que conoces?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "tigres-asiaticos",
+    "title": "El milagro de los tigres asiáticos",
+    "hook": "¿Cómo pasaron Corea del Sur, Taiwán, Singapur y Hong Kong de la pobreza a potencias económicas en una generación?",
+    "why": "Ofrece un caso de estudio real sobre qué combinación de educación, exportación e inversión puede transformar un país rápido.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "milagro económico tigres asiáticos historia",
+    "questions": [
+      "¿Qué políticas específicas compartieron estos países para lograr un crecimiento tan acelerado?",
+      "¿Qué papel jugó la inversión en educación en este proceso?",
+      "¿Qué inversión en ti mismo podría tener el mismo efecto multiplicador en tu propia vida a largo plazo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "deuda-y-el-interes",
+    "title": "La deuda y el interés",
+    "hook": "¿Por qué pedir prestado puede hacerte rico o pobre dependiendo de en qué lo uses?",
+    "why": "Te da un criterio claro para distinguir deuda que construye futuro de deuda que solo financia el presente.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "deuda buena y deuda mala finanzas personales",
+    "questions": [
+      "¿Qué diferencia hay entre endeudarte para generar ingresos futuros y endeudarte para consumo inmediato?",
+      "¿Cómo cambia el costo real de una deuda dependiendo de la tasa de interés y el plazo?",
+      "¿Qué deuda actual tuya entra en la categoría de construye futuro y cuál en la de solo gasta presente?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "bretton-woods-patron-oro",
+    "title": "Bretton Woods y el fin del patrón oro",
+    "hook": "¿Por qué el dólar dejó de estar respaldado por oro de un día para otro en 1971?",
+    "why": "Explica por qué el dinero moderno vale lo que vale solo por confianza colectiva, no por un metal detrás de él.",
+    "area": "economia",
+    "rarity": "comun",
+    "searchQuery": "Bretton Woods fin del patrón oro explicación",
+    "questions": [
+      "¿Qué acuerdo se rompió exactamente cuando Estados Unidos abandonó la convertibilidad del dólar a oro?",
+      "¿Qué ventajas y riesgos trae un sistema monetario basado en confianza y no en un respaldo físico?",
+      "¿Qué tan consciente eres de que el valor de tu dinero depende, en el fondo, de una confianza colectiva?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "alegoria-de-la-caverna",
+    "title": "La alegoría de la caverna de Platón",
+    "hook": "¿Y si todo lo que crees la realidad fueran solo sombras proyectadas en una pared?",
+    "why": "Te da una imagen permanente para cuestionar tus propias certezas y considerar que hay niveles de comprensión más profundos.",
+    "area": "filosofia",
+    "rarity": "legendaria",
+    "searchQuery": "alegoría de la caverna Platón explicación",
+    "questions": [
+      "¿Qué representa cada elemento de la alegoría: las sombras, las cadenas, la salida de la cueva?",
+      "¿Por qué los que regresan a contar lo que vieron afuera suelen ser rechazados por los demás prisioneros?",
+      "¿Qué sombras podrías estar confundiendo con la realidad completa en tu vida actual?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "velo-de-la-ignorancia-rawls",
+    "title": "El velo de la ignorancia de Rawls",
+    "hook": "¿Cómo diseñarías las reglas de la sociedad si no supieras si vas a nacer rico, pobre, hombre o mujer?",
+    "why": "Te da una herramienta práctica para juzgar si una regla o decisión es realmente justa, más allá de tu posición actual.",
+    "area": "filosofia",
+    "rarity": "legendaria",
+    "searchQuery": "velo de la ignorancia John Rawls justicia explicación",
+    "questions": [
+      "¿Qué tipo de sociedad crees que diseñarías detrás de este velo de la ignorancia?",
+      "¿Qué críticas se le han hecho a este experimento mental como base para la justicia social?",
+      "¿Qué decisión reciente en tu trabajo o comunidad cambiarías si la evaluaras desde este velo de la ignorancia?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "problema-del-tranvia",
+    "title": "El problema del tranvía",
+    "hook": "¿Es correcto matar a una persona si con eso salvas a cinco, incluso si tú tienes que empujarla?",
+    "why": "Expone la diferencia entre juzgar consecuencias e intenciones, algo que usas sin saberlo en decisiones éticas cotidianas.",
+    "area": "filosofia",
+    "rarity": "rara",
+    "searchQuery": "problema del tranvía dilema ético trolley problem",
+    "questions": [
+      "¿Por qué la mayoría de la gente responde distinto según tenga que jalar una palanca o empujar a alguien con sus manos?",
+      "¿Qué dice esta diferencia sobre cómo separamos causar daño de permitir que ocurra?",
+      "¿En qué decisión difícil de tu vida el cómo llegaste al resultado te importó tanto como el resultado mismo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "barco-de-teseo",
+    "title": "El barco de Teseo",
+    "hook": "¿Si cambias cada pieza de un barco una por una, sigue siendo el mismo barco al final?",
+    "why": "Te da un marco para pensar en la identidad propia: ¿sigues siendo tú después de cambiar casi todas tus ideas y hábitos?",
+    "area": "filosofia",
+    "rarity": "rara",
+    "searchQuery": "paradoja del barco de Teseo identidad explicación",
+    "questions": [
+      "¿Qué posturas filosóficas distintas existen para resolver esta paradoja de identidad?",
+      "¿Qué pasa si construyes un segundo barco con todas las piezas viejas que fuiste reemplazando: cuál es el original?",
+      "¿Cuánto de la persona que eras hace diez años sigue realmente presente en quién eres hoy?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "navaja-hanlon-ockham",
+    "title": "La navaja de Hanlon y la de Ockham",
+    "hook": "¿Por qué la explicación más simple suele ser la correcta, y por qué casi nunca es porque me odian?",
+    "why": "Te da dos reglas prácticas para pensar con más claridad: preferir explicaciones simples y no asumir malicia donde basta la torpeza.",
+    "area": "filosofia",
+    "rarity": "rara",
+    "searchQuery": "navaja de Ockham navaja de Hanlon explicación",
+    "questions": [
+      "¿En qué situaciones reales usar la navaja de Ockham te llevaría a una conclusión equivocada?",
+      "¿Por qué asumir malicia en vez de torpeza suele dañar más las relaciones de lo necesario?",
+      "¿Qué conflicto reciente tuyo se resolvería distinto si aplicaras la navaja de Hanlon antes de reaccionar?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "duda-cartesiana",
+    "title": "La duda cartesiana de Descartes",
+    "hook": "¿Cómo sabes que no estás soñando ahora mismo, o que el mundo entero no es una ilusión?",
+    "why": "Te enseña a distinguir entre lo que asumes por costumbre y lo que realmente puedes sostener con certeza.",
+    "area": "filosofia",
+    "rarity": "rara",
+    "searchQuery": "duda cartesiana Descartes pienso luego existo",
+    "questions": [
+      "¿Por qué Descartes concluye que lo único indudable es que él mismo está pensando?",
+      "¿Qué diferencia hay entre dudar de todo por escepticismo y dudar de todo como método para encontrar certezas?",
+      "¿Qué creencia sobre ti mismo das por hecha sin haberla cuestionado nunca a fondo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "estoicismo-dicotomia-de-control",
+    "title": "El estoicismo y la dicotomía de control",
+    "hook": "¿Por qué preocuparte por cosas que no controlas es, según los estoicos, la raíz de casi todo tu sufrimiento?",
+    "why": "Te da una regla práctica de dos mil años para separar lo que puedes cambiar de lo que solo puedes aceptar.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "estoicismo dicotomía de control Epicteto",
+    "questions": [
+      "¿Qué ejemplos daba Epicteto de cosas que sí y que no están bajo tu control?",
+      "¿Por qué confundir estas dos categorías genera ansiedad innecesaria según los estoicos?",
+      "¿Qué preocupación actual tuya cae claramente fuera de tu control y podrías empezar a soltar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "existencialismo-sartre",
+    "title": "El existencialismo de Sartre",
+    "hook": "¿Y si no naciste con un propósito, sino que tienes que inventarlo tú mismo con cada decisión?",
+    "why": "Te devuelve la responsabilidad total sobre quién eres, lo cual puede ser aterrador y liberador al mismo tiempo.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "existencialismo Sartre la existencia precede a la esencia",
+    "questions": [
+      "¿Qué significa exactamente la frase la existencia precede a la esencia?",
+      "¿Por qué Sartre considera que la libertad total también es una carga, no solo un regalo?",
+      "¿Qué parte de tu identidad has estado tratando como algo dado en vez de algo que estás eligiendo activamente?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "mito-de-sisifo-camus",
+    "title": "El mito de Sísifo de Camus",
+    "hook": "¿Cómo puedes imaginar feliz a un hombre condenado a empujar una roca cuesta arriba para siempre?",
+    "why": "Te ofrece una forma de encontrar sentido en tareas repetitivas o aparentemente absurdas de tu propia rutina.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "el mito de Sísifo Camus explicación absurdo",
+    "questions": [
+      "¿Qué significa para Camus el concepto de lo absurdo en la existencia humana?",
+      "¿Por qué concluye que hay que imaginar a Sísifo feliz en lugar de trágico?",
+      "¿Qué tarea repetitiva de tu vida diaria podrías empezar a mirar con esta misma actitud?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "taoismo-wu-wei",
+    "title": "El taoísmo y el wu wei",
+    "hook": "¿Cómo puede no forzar nada ser en realidad la forma más eficaz de lograr las cosas?",
+    "why": "Te ofrece un contrapeso a la cultura del esfuerzo constante: a veces avanzar significa dejar de resistir la corriente.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "taoísmo wu wei explicación filosofía china",
+    "questions": [
+      "¿Qué significa realmente wu wei y por qué no es simplemente no hacer nada?",
+      "¿Qué ejemplos de la naturaleza usa el taoísmo para ilustrar esta idea, como el agua?",
+      "¿En qué área de tu vida estás forzando algo que fluiría mejor si dejaras de resistirte?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "confucianismo-armonia-social",
+    "title": "El confucianismo y la armonía social",
+    "hook": "¿Puede el respeto a los rituales cotidianos, más que las leyes, mantener unida a toda una sociedad?",
+    "why": "Ofrece un modelo distinto al occidental sobre cómo se construye el orden social: desde las relaciones y los roles, no solo desde las normas.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "confucianismo armonía social explicación filosofía china",
+    "questions": [
+      "¿Qué papel juegan las relaciones jerárquicas en la ética confuciana?",
+      "¿Cómo influyó esta filosofía en la estructura social y educativa de varios países asiáticos hasta hoy?",
+      "¿Qué rituales cotidianos en tu vida sostienen relaciones más de lo que notas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "etica-del-cuidado",
+    "title": "La ética del cuidado",
+    "hook": "¿Y si la base de la moral no fueran las reglas frías, sino las relaciones y el cuidado mutuo?",
+    "why": "Te da una perspectiva ética alternativa a la de reglas abstractas, centrada en el contexto y los vínculos reales entre personas.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "ética del cuidado filosofía moral Carol Gilligan",
+    "questions": [
+      "¿En qué se diferencia esta ética de las teorías basadas en reglas universales o en el cálculo de consecuencias?",
+      "¿Qué críticas ha recibido este enfoque y qué respuestas se le han dado?",
+      "¿En qué decisión moral reciente pesó más para ti una relación concreta que un principio abstracto?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "nihilismo-eterno-retorno",
+    "title": "El nihilismo y el eterno retorno de Nietzsche",
+    "hook": "¿Vivirías tu vida exactamente igual si supieras que la vas a repetir infinitas veces, tal cual?",
+    "why": "Te da una pregunta radical para evaluar si de verdad estás viviendo según lo que valoras, o solo por inercia.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "eterno retorno Nietzsche explicación",
+    "questions": [
+      "¿Qué busca provocar Nietzsche exactamente con esta pregunta sobre repetir tu vida infinitamente?",
+      "¿Cómo se relaciona esta idea con su crítica al nihilismo y a los valores heredados sin cuestionar?",
+      "¿Qué cambiarías hoy mismo si tomaras en serio la pregunta de repetir esta jornada para siempre?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "filosofia-ubuntu",
+    "title": "La filosofía ubuntu africana",
+    "hook": "¿Y si tu identidad no existiera sin la de los demás: yo soy porque nosotros somos?",
+    "why": "Ofrece una visión de la persona como ser fundamentalmente comunitario, un contrapeso útil al individualismo extremo.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "filosofía ubuntu africana yo soy porque nosotros somos",
+    "questions": [
+      "¿Cómo influyó esta filosofía en procesos políticos reales, como la reconciliación en Sudáfrica?",
+      "¿Qué diferencia práctica implicaría vivir según ubuntu frente a vivir según un individualismo estricto?",
+      "¿En qué decisión reciente pensaste solo en ti sin considerar cómo afectaba a tu comunidad cercana?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "utilitarismo-bentham-mill",
+    "title": "El utilitarismo de Bentham y Mill",
+    "hook": "¿Es correcta una acción simplemente si genera la mayor felicidad para el mayor número de personas?",
+    "why": "Te da una regla de decisión poderosa pero también sus trampas, útil para políticas públicas y decisiones grupales.",
+    "area": "filosofia",
+    "rarity": "comun",
+    "searchQuery": "utilitarismo Bentham Mill explicación ética",
+    "questions": [
+      "¿Qué diferencia proponía Mill entre placeres superiores e inferiores frente a la versión original de Bentham?",
+      "¿Qué situaciones límite muestran que maximizar la felicidad total puede justificar cosas injustas para una minoría?",
+      "¿En qué decisión de tu trabajo o comunidad el bienestar de la mayoría chocó con el de unos pocos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "dilema-del-innovador",
+    "title": "El dilema del innovador",
+    "hook": "¿Por qué las empresas más exitosas del mundo suelen ser las que más tardan en adaptarse a lo que las va a destruir?",
+    "why": "Te da un modelo para entender por qué hacer bien tu trabajo actual puede ser justo lo que te ciega ante el cambio que se aproxima.",
+    "area": "tecnologia",
+    "rarity": "legendaria",
+    "searchQuery": "dilema del innovador Clayton Christensen explicación",
+    "questions": [
+      "¿Por qué las empresas líderes suelen ignorar tecnologías nuevas que parecen inferiores al principio?",
+      "¿Qué ejemplos reales de empresas fueron desplazadas por innovaciones que subestimaron?",
+      "¿Qué tecnología inferior en tu campo de trabajo podrías estar subestimando ahora mismo?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "ley-de-moore-exponencial",
+    "title": "La ley de Moore y el pensamiento exponencial",
+    "hook": "¿Por qué te cuesta tanto imaginar lo rápido que algo puede crecer cuando se duplica cada cierto tiempo?",
+    "why": "Te entrena para pensar en crecimiento exponencial, la trampa mental detrás de subestimar pandemias, deudas o avances tecnológicos.",
+    "area": "tecnologia",
+    "rarity": "legendaria",
+    "searchQuery": "ley de Moore crecimiento exponencial explicación",
+    "questions": [
+      "¿Por qué el cerebro humano tiende a subestimar sistemáticamente el crecimiento exponencial?",
+      "¿Qué consecuencias prácticas ha tenido esta ley en el precio y poder de la tecnología que usas hoy?",
+      "¿Qué otra cosa en tu vida podría estar creciendo exponencialmente sin que lo notes?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "efecto-red",
+    "title": "El efecto red",
+    "hook": "¿Por qué una red social vale más entre más personas la usan, aunque la tecnología detrás no cambie?",
+    "why": "Explica por qué en tecnología el ganador se lleva casi todo y por qué es tan difícil competir contra una plataforma ya establecida.",
+    "area": "tecnologia",
+    "rarity": "rara",
+    "searchQuery": "efecto red network effect explicación",
+    "questions": [
+      "¿Por qué es tan difícil para una nueva red social competir contra una ya establecida, aunque sea mejor?",
+      "¿Qué tipos de efecto red existen más allá de las redes sociales, como el dinero o los idiomas?",
+      "¿En qué red profesional o social te conviene invertir tiempo ahora porque su valor crecerá con el tiempo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "algoritmos-camaras-de-eco",
+    "title": "Los algoritmos y las cámaras de eco",
+    "hook": "¿Por qué el mismo tema te muestra un mundo distinto en tu celular que en el de tu vecino?",
+    "why": "Te da conciencia de cómo la personalización algorítmica puede encerrarte en una versión distorsionada de la realidad sin que lo notes.",
+    "area": "tecnologia",
+    "rarity": "rara",
+    "searchQuery": "algoritmos de recomendación cámaras de eco explicación",
+    "questions": [
+      "¿Qué datos usa un algoritmo de recomendación para decidir qué contenido mostrarte?",
+      "¿Qué estrategias existen para salir deliberadamente de tu propia cámara de eco digital?",
+      "¿Qué tan distinto crees que es tu feed del de alguien con ideas opuestas a las tuyas, y qué implica eso?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "paradoja-de-jevons",
+    "title": "La paradoja de Jevons",
+    "hook": "¿Por qué hacer un motor más eficiente puede terminar aumentando el consumo total de combustible?",
+    "why": "Te ayuda a cuestionar la idea de que la eficiencia siempre reduce el consumo, algo clave para pensar sostenibilidad con realismo.",
+    "area": "tecnologia",
+    "rarity": "rara",
+    "searchQuery": "paradoja de Jevons eficiencia energética explicación",
+    "questions": [
+      "¿Por qué una mejora en eficiencia puede terminar abaratando tanto un recurso que se usa más, no menos?",
+      "¿Qué ejemplos modernos, como la eficiencia energética o el consumo de datos, ilustran esta paradoja?",
+      "¿En qué área de tu vida ahorrar tiempo con una herramienta terminó haciéndote usar más tiempo, no menos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "problema-y2k",
+    "title": "El error del año 2000 (Y2K)",
+    "hook": "¿Por qué el mundo entero temió que los aviones cayeran del cielo solo por un error de dos dígitos en el código?",
+    "why": "Es un caso real de gestión de riesgo sistémico: muestra cómo prevenir bien un desastre a veces hace que parezca que nunca existió.",
+    "area": "tecnologia",
+    "rarity": "rara",
+    "searchQuery": "error del año 2000 Y2K qué pasó realmente",
+    "questions": [
+      "¿Qué error técnico concreto causaba el problema del año 2000 en los sistemas antiguos?",
+      "¿Por qué después de que no pasó nada grave, mucha gente concluyó que el miedo había sido exagerado desde el inicio?",
+      "¿Qué riesgo en tu vida u organización estás previniendo bien hoy, aunque eso signifique que nadie va a notar el esfuerzo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "cifrado-extremo-a-extremo",
+    "title": "El cifrado de extremo a extremo",
+    "hook": "¿Cómo puede una app leer tus mensajes para entregarlos, pero jurar que no puede leerlos?",
+    "why": "Te da las bases reales de tu privacidad digital para decidir con criterio qué apps usar para qué tipo de información.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "cifrado de extremo a extremo cómo funciona explicación",
+    "questions": [
+      "¿Qué diferencia hay entre que un mensaje esté cifrado en tránsito y cifrado de extremo a extremo?",
+      "¿Qué información sigue siendo visible para la empresa aunque el contenido del mensaje esté cifrado?",
+      "¿Qué tan consciente eres de qué apps usas realmente protegen tus conversaciones más sensibles?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "aprendizaje-profundo-redes-neuronales",
+    "title": "Cómo aprenden las redes neuronales",
+    "hook": "¿Cómo puede una computadora aprender a reconocer un gato sin que nadie le diga explícitamente qué es un gato?",
+    "why": "Te da una base real, no mágica, para entender la inteligencia artificial que ya está tomando decisiones sobre tu vida diaria.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "cómo aprenden las redes neuronales explicación simple",
+    "questions": [
+      "¿Qué papel juegan los datos de entrenamiento y los errores corregidos en este proceso de aprendizaje?",
+      "¿Qué diferencia hay entre que una IA entienda algo y que solo reconozca patrones estadísticos?",
+      "¿En qué decisión reciente un algoritmo de este tipo influyó sin que lo pensaras?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "internet-tcp-ip",
+    "title": "Cómo viaja la información por internet",
+    "hook": "¿Cómo llega un mensaje tuyo desde tu celular hasta el otro lado del mundo en menos de un segundo?",
+    "why": "Te da un modelo mental de la infraestructura invisible que usas cientos de veces al día sin pensar en ella.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "cómo funciona internet TCP IP explicación simple",
+    "questions": [
+      "¿Qué significa que la información viaje fragmentada en paquetes y por qué eso hace más robusta a la red?",
+      "¿Qué infraestructura física hace posible que internet funcione globalmente?",
+      "¿Qué tan frágil o robusta crees que es tu propia dependencia diaria de esta infraestructura invisible?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "obsolescencia-programada",
+    "title": "La obsolescencia programada",
+    "hook": "¿Es casualidad que tu celular empiece a fallar justo cuando sale el modelo nuevo?",
+    "why": "Te da herramientas para consumir tecnología con más criterio y cuestionar el ciclo de reemplazo constante.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "obsolescencia programada historia y ejemplos",
+    "questions": [
+      "¿Qué caso histórico, como el cartel de las bombillas Phoebus, muestra que esto no es solo una teoría?",
+      "¿Qué diferencia hay entre obsolescencia programada real y simplemente el progreso tecnológico natural?",
+      "¿Qué aparato tuyo actual sospechas que fue diseñado para durar menos de lo que técnicamente podría?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "blockchain-criptomonedas",
+    "title": "Blockchain y criptomonedas explicadas simple",
+    "hook": "¿Cómo puede un grupo de desconocidos confiar en un registro de dinero sin que nadie esté a cargo?",
+    "why": "Te da las bases reales para entender esta tecnología más allá del hype, y decidir con criterio propio si te interesa o no.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "qué es blockchain y criptomonedas explicación simple",
+    "questions": [
+      "¿Qué problema concreto resuelve un registro descentralizado frente a uno controlado por un solo banco o gobierno?",
+      "¿Qué riesgos reales, como la volatilidad o el fraude, conlleva esta tecnología hoy?",
+      "¿Qué tan informado te sientes realmente antes de opinar sobre este tema en una conversación?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "software-libre-open-source",
+    "title": "El software libre y el open source",
+    "hook": "¿Cómo un sistema operativo hecho gratis por voluntarios terminó corriendo la mayoría de los servidores del mundo?",
+    "why": "Muestra un modelo de colaboración masiva sin jerarquía central que hoy sostiene buena parte de la tecnología que usas.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "historia del software libre Linux open source",
+    "questions": [
+      "¿Qué motivó a Linus Torvalds y a otros desarrolladores a regalar su trabajo en vez de venderlo?",
+      "¿Qué industrias y productos que usas a diario dependen, sin que lo sepas, de software de código abierto?",
+      "¿Qué proyecto colaborativo sin jerarquía clara has visto funcionar o fallar en tu propia vida?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "automatizacion-futuro-del-trabajo",
+    "title": "La automatización y el futuro del trabajo",
+    "hook": "¿Qué tan cierto es que una máquina podría hacer tu trabajo mejor que tú en los próximos años?",
+    "why": "Te ayuda a separar el pánico mediático de los datos reales sobre qué tipos de trabajo cambian, desaparecen o se transforman.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "automatización futuro del trabajo qué dicen los estudios",
+    "questions": [
+      "¿Qué diferencia hay entre tareas automatizables y trabajos completos que desaparecen por completo?",
+      "¿Qué habilidades han mostrado los estudios que son más difíciles de automatizar a corto plazo?",
+      "¿Qué parte específica de tu trabajo actual es más automatizable, y qué podrías hacer con ese tiempo si se automatiza?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "energia-solar-fotovoltaica",
+    "title": "La energía solar y las celdas fotovoltaicas",
+    "hook": "¿Cómo convierte un panel simple la luz del sol directamente en electricidad sin partes móviles?",
+    "why": "Te da las bases de la tecnología que más rápido está abaratando la energía limpia en el mundo.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "cómo funcionan los paneles solares fotovoltaicos",
+    "questions": [
+      "¿Qué papel juega el silicio y el efecto fotoeléctrico en convertir luz en electricidad?",
+      "¿Por qué el costo de esta tecnología ha bajado tan drásticamente en las últimas dos décadas?",
+      "¿Qué tan viable sería para ti reducir tu dependencia de la red eléctrica tradicional en los próximos años?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "satelites-gps",
+    "title": "Los satélites y el GPS",
+    "hook": "¿Cómo saben tu ubicación exacta unos satélites que están a 20 mil kilómetros de distancia?",
+    "why": "Te muestra cómo la relatividad de Einstein, no solo la ingeniería, es necesaria para que tu mapa no falle cada día.",
+    "area": "tecnologia",
+    "rarity": "comun",
+    "searchQuery": "cómo funciona el GPS satélites explicación",
+    "questions": [
+      "¿Por qué el GPS necesita corregir efectos de la relatividad de Einstein para ser preciso?",
+      "¿Cuántos satélites mínimo necesita tu celular ver para calcular tu posición exacta?",
+      "¿Qué tan dependiente te has vuelto de esta tecnología para orientarte sin ella?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "sistema-inmune-yo-no-yo",
+    "title": "El sistema inmune: yo contra no-yo",
+    "hook": "¿Cómo distingue tu cuerpo entre una célula tuya y un virus, y qué pasa cuando se equivoca?",
+    "why": "Te da el modelo de fondo para entender alergias, enfermedades autoinmunes y por qué a veces tu propio cuerpo se ataca a sí mismo.",
+    "area": "cuerpo",
+    "rarity": "legendaria",
+    "searchQuery": "sistema inmunológico explicación cómo funciona",
+    "questions": [
+      "¿Qué mecanismos usa el sistema inmune para recordar una amenaza que ya enfrentó antes?",
+      "¿Qué pasa exactamente en el cuerpo cuando el sistema inmune confunde tejido propio con una amenaza externa?",
+      "¿Qué hábitos tuyos sabes que afectan directamente la fuerza de tu sistema inmune?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "eje-intestino-cerebro",
+    "title": "El eje intestino-cerebro",
+    "hook": "¿Puede lo que comes hoy cambiar literalmente tu estado de ánimo de mañana?",
+    "why": "Cambia la idea de que la mente y el cuerpo son sistemas separados: tus bacterias intestinales conversan directamente con tu cerebro.",
+    "area": "cuerpo",
+    "rarity": "legendaria",
+    "searchQuery": "eje intestino cerebro microbiota estado de ánimo",
+    "questions": [
+      "¿Qué evidencia científica conecta la composición de la microbiota intestinal con la ansiedad o el ánimo?",
+      "¿Qué mecanismos, como el nervio vago, explican esta comunicación entre intestino y cerebro?",
+      "¿Qué cambio reciente en tu alimentación notaste que coincidió con un cambio en tu estado de ánimo o energía?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "neuroplasticidad",
+    "title": "La neuroplasticidad",
+    "hook": "¿Cómo puede el cerebro de un adulto reorganizarse por completo después de una lesión grave?",
+    "why": "Te demuestra que tu cerebro no es fijo: hábitos nuevos, aprendizaje y práctica literalmente reconstruyen sus conexiones.",
+    "area": "cuerpo",
+    "rarity": "rara",
+    "searchQuery": "neuroplasticidad cerebral explicación casos",
+    "questions": [
+      "¿Qué casos documentados muestran a una persona recuperando funciones cerebrales que parecían perdidas para siempre?",
+      "¿Qué condiciones favorecen más esta capacidad de reorganización del cerebro?",
+      "¿Qué habilidad te gustaría reconectar en tu cerebro con práctica constante, aunque hoy sientas que ya es tarde?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "sueno-consolidacion-memoria",
+    "title": "El sueño y la consolidación de la memoria",
+    "hook": "¿Por qué dormir mal una noche puede borrar parte de lo que aprendiste el día anterior?",
+    "why": "Te da una razón concreta, no solo de sentido común, para proteger tu sueño como parte esencial de aprender y decidir bien.",
+    "area": "cuerpo",
+    "rarity": "rara",
+    "searchQuery": "sueño y consolidación de la memoria explicación",
+    "questions": [
+      "¿Qué pasa en el cerebro durante el sueño profundo que ayuda a fijar recuerdos nuevos?",
+      "¿Qué diferencia hay entre el papel del sueño REM y el sueño profundo en este proceso?",
+      "¿Qué decisión importante tomaste alguna vez tras dormir mal que, viéndola ahora, habrías tomado distinto descansado?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "epigenetica-ambiente-genes",
+    "title": "La epigenética",
+    "hook": "¿Cómo puede tu entorno encender o apagar genes sin cambiar ni una sola letra de tu ADN?",
+    "why": "Te muestra que tu biología no es un destino fijo: el ambiente, el estrés y los hábitos influyen en cómo se expresan tus genes.",
+    "area": "cuerpo",
+    "rarity": "rara",
+    "searchQuery": "epigenética explicación cómo el ambiente afecta los genes",
+    "questions": [
+      "¿Qué mecanismos concretos usa el cuerpo para silenciar o activar un gen sin alterar su secuencia?",
+      "¿Qué estudios muestran que experiencias de una generación pueden dejar marcas epigenéticas en la siguiente?",
+      "¿Qué hábito diario tuyo podría estar hablándole a tus genes de una forma que no habías considerado?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "telomeros-envejecimiento",
+    "title": "Los telómeros y el envejecimiento celular",
+    "hook": "¿Por qué tus células tienen una especie de reloj que cuenta cuántas veces más se pueden dividir?",
+    "why": "Te da una base real, sin caer en pseudociencia, para entender qué acelera o retrasa el envejecimiento biológico.",
+    "area": "cuerpo",
+    "rarity": "rara",
+    "searchQuery": "telómeros envejecimiento celular explicación",
+    "questions": [
+      "¿Qué función cumplen los telómeros en los extremos de los cromosomas y por qué se acortan con cada división celular?",
+      "¿Qué factores de estilo de vida se han asociado, con evidencia real, a un desgaste más lento de los telómeros?",
+      "¿Qué hábito de estrés crónico en tu vida podría estar acelerando este proceso más de lo que crees?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "sistema-nervioso-autonomo",
+    "title": "El sistema nervioso autónomo",
+    "hook": "¿Por qué tu cuerpo puede pasar de pánico a calma total sin que tú decidas conscientemente nada?",
+    "why": "Te da un mapa práctico de por qué a veces reaccionas de forma exagerada, y cómo puedes ayudar a tu cuerpo a calmarse a propósito.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "sistema nervioso autónomo simpático parasimpático explicación",
+    "questions": [
+      "¿Qué diferencia hay entre el sistema simpático, de lucha o huida, y el parasimpático, de descanso y digestión?",
+      "¿Qué técnicas respiratorias activan de forma comprobada el sistema parasimpático para calmarte?",
+      "¿En qué situación reciente tu cuerpo reaccionó en modo alarma ante algo que en realidad no era una amenaza física?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "ciclo-circadiano-luz",
+    "title": "El ciclo circadiano y la luz",
+    "hook": "¿Por qué tu cuerpo sabe que es de noche incluso con las luces encendidas, y por qué eso te está pasando factura?",
+    "why": "Te da las bases para entender por qué la luz artificial de pantallas puede estar saboteando tu sueño y tu energía diaria.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "ciclo circadiano ritmo biológico luz explicación",
+    "questions": [
+      "¿Qué papel juega la luz solar de la mañana en sincronizar tu reloj biológico interno?",
+      "¿Qué efecto tiene la luz azul de las pantallas en la producción de melatonina por la noche?",
+      "¿Qué cambio simple en tu exposición a la luz podría mejorar la calidad de tu sueño esta semana?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "cortisol-estres-cronico",
+    "title": "El cortisol y el estrés crónico",
+    "hook": "¿Por qué una hormona diseñada para salvarte la vida en una emergencia puede enfermarte si nunca se apaga?",
+    "why": "Te ayuda a entender por qué el estrés sostenido, y no solo los eventos puntuales, es lo que más desgasta a tu cuerpo.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "cortisol estrés crónico efectos en el cuerpo",
+    "questions": [
+      "¿Qué diferencia hay entre una respuesta de estrés puntual, útil, y una respuesta de estrés crónica, dañina?",
+      "¿Qué órganos y sistemas del cuerpo se ven más afectados por niveles altos y sostenidos de cortisol?",
+      "¿Qué fuente de estrés en tu vida se ha vuelto crónica sin que hayas hecho nada activo para resolverla o soltarla?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "genetica-mendel-adn",
+    "title": "De los chícharos de Mendel a tu ADN",
+    "hook": "¿Cómo descubrió un monje jardinero las reglas básicas de la herencia sin saber que existía el ADN?",
+    "why": "Te da el modelo original y más simple para entender por qué te pareces a tus padres en unas cosas y no en otras.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "leyes de Mendel herencia genética explicación",
+    "questions": [
+      "¿Qué experimentos con chícharos le permitieron a Mendel deducir patrones de herencia sin ver nunca un gen?",
+      "¿Qué diferencia hay entre un rasgo dominante y uno recesivo en términos prácticos?",
+      "¿Qué rasgo tuyo puedes rastrear claramente hasta uno de tus padres o abuelos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "cerebro-y-dolor-cronico",
+    "title": "Cómo el cerebro amplifica el dolor crónico",
+    "hook": "¿Puede tu cerebro seguir generando dolor real mucho después de que el cuerpo ya sanó?",
+    "why": "Te da un modelo que cambia cómo entiendes el dolor persistente: no siempre es daño activo, a veces es el sistema nervioso atascado.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "dolor crónico cerebro sensibilización explicación",
+    "questions": [
+      "¿Qué es la sensibilización central y por qué hace que el cuerpo sienta dolor sin daño tisular activo?",
+      "¿Qué tratamientos actuales trabajan directamente sobre el cerebro y no solo sobre la zona del dolor?",
+      "¿Conoces a alguien, o eres tú mismo, cuyo dolor podría estar más relacionado con el sistema nervioso que con daño físico actual?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "ejercicio-neurogenesis",
+    "title": "El ejercicio y el nacimiento de nuevas neuronas",
+    "hook": "¿Puede correr o caminar rápido literalmente hacer crecer nuevas neuronas en tu cerebro?",
+    "why": "Te da una razón biológica concreta, más allá de verte bien, para mover tu cuerpo como inversión directa en tu mente.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "ejercicio neurogénesis BDNF cerebro explicación",
+    "questions": [
+      "¿Qué tipo de ejercicio ha mostrado mayor efecto en estimular el crecimiento de nuevas neuronas?",
+      "¿Qué papel juega el BDNF, la proteína que el ejercicio ayuda a liberar, en la memoria y el ánimo?",
+      "¿Qué tan constante ha sido tu actividad física en el último mes, y qué relación ves con tu claridad mental?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "fiebre-arma-del-cuerpo",
+    "title": "La fiebre, un arma del cuerpo",
+    "hook": "¿Por qué tu cuerpo sube su propia temperatura a propósito cuando estás enfermo?",
+    "why": "Cambia la idea de que la fiebre es solo un síntoma malo: es una estrategia activa del cuerpo para combatir infecciones.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "para qué sirve la fiebre explicación inmunidad",
+    "questions": [
+      "¿Cómo ayuda una temperatura corporal más alta a que tu sistema inmune combata mejor una infección?",
+      "¿En qué casos bajar la fiebre de forma agresiva podría ser contraproducente y en cuáles sí es necesario?",
+      "¿Qué tan rápido sueles medicarte ante una fiebre leve sin dejar que el cuerpo intente resolverlo primero?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "ayuno-y-autofagia",
+    "title": "El ayuno y la autofagia",
+    "hook": "¿Puede tu cuerpo literalmente reciclar sus propias células dañadas cuando pasas varias horas sin comer?",
+    "why": "Te da una versión sin exageraciones de qué sabe realmente la ciencia sobre el ayuno, separando lo comprobado de la moda.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "ayuno intermitente autofagia qué dice la ciencia",
+    "questions": [
+      "¿Qué es exactamente la autofagia y qué evidencia real existe sobre sus beneficios en humanos, no solo en ratones?",
+      "¿Qué afirmaciones sobre el ayuno intermitente están sobrevendidas por la moda del bienestar y cuáles sí tienen respaldo?",
+      "¿Has probado alguna forma de ayuno y qué notaste realmente en tu energía o claridad mental?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "cerebro-adolescente",
+    "title": "El cerebro adolescente y el riesgo",
+    "hook": "¿Por qué el cerebro de un adolescente busca riesgo e intensidad mucho más que el de un adulto?",
+    "why": "Te da un marco para entender, y no solo juzgar, el comportamiento propio de esa etapa, útil si convives con adolescentes o recuerdas la tuya.",
+    "area": "cuerpo",
+    "rarity": "comun",
+    "searchQuery": "desarrollo del cerebro adolescente explicación neurociencia",
+    "questions": [
+      "¿Qué parte del cerebro madura más tarde y por qué eso explica decisiones impulsivas en la adolescencia?",
+      "¿Qué ventajas evolutivas pudo tener esta búsqueda de riesgo e intensidad en la adolescencia humana?",
+      "¿Qué decisión arriesgada de tu propia adolescencia entiendes distinto ahora que conoces esto sobre el cerebro?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "pensamiento-de-segundo-orden",
+    "title": "El pensamiento de segundo orden",
+    "hook": "¿Y si la solución obvia a tu problema crea un problema todavía peor tres pasos después?",
+    "why": "Te entrena para preguntarte siempre y luego qué pasa antes de tomar una decisión aparentemente simple.",
+    "area": "modelos-mentales",
+    "rarity": "legendaria",
+    "searchQuery": "pensamiento de segundo orden explicación ejemplos",
+    "questions": [
+      "¿Qué diferencia hay entre evaluar solo el efecto inmediato de una decisión y evaluar sus efectos en cadena?",
+      "¿Qué ejemplo histórico o de negocios conoces donde ignorar los efectos de segundo orden salió muy caro?",
+      "¿Qué decisión reciente tomaste evaluando solo el primer efecto, sin pensar qué pasaría después de eso?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "pensamiento-invertido",
+    "title": "La inversión, pensar al revés",
+    "hook": "¿Y si en vez de preguntarte cómo tener éxito, te preguntaras primero cómo garantizar el fracaso?",
+    "why": "Te da una técnica simple y poderosa: a veces es más fácil evitar lo que te hunde que buscar directamente lo que te hace ganar.",
+    "area": "modelos-mentales",
+    "rarity": "legendaria",
+    "searchQuery": "pensamiento invertido inversión Charlie Munger explicación",
+    "questions": [
+      "¿Por qué identificar las causas seguras de fracaso suele ser más claro que identificar las causas de éxito?",
+      "¿En qué áreas, como negocios, salud o relaciones, se ha usado con éxito esta forma de pensar al revés?",
+      "¿Qué tres cosas garantizarían el fracaso en tu proyecto o meta actual, y ya las estás evitando o no?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "circulo-de-competencia",
+    "title": "El círculo de competencia",
+    "hook": "¿Por qué saber exactamente qué NO sabes puede ser más valioso que saber mucho de todo un poco?",
+    "why": "Te ayuda a decidir en qué áreas confiar en tu propio juicio y en cuáles mejor buscar ayuda experta antes de actuar.",
+    "area": "modelos-mentales",
+    "rarity": "rara",
+    "searchQuery": "círculo de competencia Warren Buffett explicación",
+    "questions": [
+      "¿Cómo defines de forma honesta los límites reales de tu propio círculo de competencia?",
+      "¿Qué riesgos corres al tomar decisiones importantes fuera de ese círculo sin reconocerlo?",
+      "¿En qué decisión reciente actuaste como experto en un tema donde en realidad no lo eras?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "mapa-no-es-el-territorio",
+    "title": "El mapa no es el territorio",
+    "hook": "¿Por qué confundes tan seguido tu idea de la realidad con la realidad misma?",
+    "why": "Te recuerda que toda explicación, teoría o creencia es una simplificación útil, nunca la cosa completa que representa.",
+    "area": "modelos-mentales",
+    "rarity": "rara",
+    "searchQuery": "el mapa no es el territorio explicación mental model",
+    "questions": [
+      "¿Qué ejemplos cotidianos muestran que confundimos una representación simplificada con la realidad completa?",
+      "¿Qué riesgos trae aferrarte a un mapa viejo cuando el territorio real ya cambió?",
+      "¿Qué creencia tuya sobre otra persona podría ser un mapa desactualizado de quién es realmente hoy?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "ley-de-goodhart",
+    "title": "La ley de Goodhart",
+    "hook": "¿Por qué cuando una medida se convierte en objetivo deja de medir lo que importaba?",
+    "why": "Te ayuda a detectar cuándo estás optimizando el número (likes, calificaciones, horas) en lugar de lo que ese número representaba.",
+    "area": "modelos-mentales",
+    "rarity": "rara",
+    "searchQuery": "ley de Goodhart explicación ejemplos métricas",
+    "questions": [
+      "¿Qué pasó en casos reales donde una institución premió una métrica y la gente aprendió a inflarla?",
+      "¿Cómo se diseña una medición que sea más difícil de manipular?",
+      "¿Qué número de tu vida estás persiguiendo que quizá ya no mide lo que querías mejorar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "pensamiento-probabilistico",
+    "title": "El pensamiento probabilístico",
+    "hook": "¿Por qué decir esto va a pasar es casi siempre peor que decir esto tiene un 70% de probabilidad de pasar?",
+    "why": "Te entrena a tomar mejores decisiones bajo incertidumbre, en vez de pensar en blanco y negro sobre el futuro.",
+    "area": "modelos-mentales",
+    "rarity": "rara",
+    "searchQuery": "pensamiento probabilístico toma de decisiones explicación",
+    "questions": [
+      "¿Por qué pensar en porcentajes de probabilidad, en vez de certezas absolutas, mejora tus decisiones a largo plazo?",
+      "¿Qué errores comunes cometemos al estimar probabilidades de forma intuitiva sin datos?",
+      "¿Qué decisión importante próxima podrías replantear en términos de probabilidades en vez de sí o no?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "principio-de-pareto",
+    "title": "El principio de Pareto (80/20)",
+    "hook": "¿Por qué el 20% de lo que haces probablemente genera el 80% de tus resultados reales?",
+    "why": "Te da una herramienta práctica para identificar qué pocas acciones importan de verdad y dejar de repartir tu energía por igual en todo.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "principio de Pareto 80 20 explicación aplicaciones",
+    "questions": [
+      "¿En qué áreas de tu trabajo o vida personal se cumple claramente esta proporción desigual de esfuerzo y resultado?",
+      "¿Qué riesgo tiene aplicar este principio de forma demasiado rígida en decisiones humanas complejas?",
+      "¿Cuál es ese 20% de tus actividades semanales que genera la mayoría de tu progreso real?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "costos-hundidos",
+    "title": "Los costos hundidos",
+    "hook": "¿Por qué sigues en algo que ya no te conviene solo porque ya invertiste mucho tiempo o dinero en ello?",
+    "why": "Te da la señal de alarma clásica para detectar cuándo estás decidiendo por el pasado en vez de por lo que te conviene hacia adelante.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "falacia de los costos hundidos explicación ejemplos",
+    "questions": [
+      "¿Por qué el dinero o tiempo ya invertido no debería influir en una decisión racional sobre el futuro?",
+      "¿Qué ejemplos de negocios o gobiernos conoces donde seguir porque ya se invirtió tanto salió carísimo?",
+      "¿En qué relación, proyecto o gasto actual sigues solo por lo ya invertido, no por lo que realmente conviene ahora?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "rendimientos-decrecientes",
+    "title": "La ley de los rendimientos decrecientes",
+    "hook": "¿Por qué la primera hora de estudio te rinde mucho más que la quinta hora seguida?",
+    "why": "Te ayuda a identificar el punto exacto donde seguir invirtiendo esfuerzo en algo empieza a darte cada vez menos a cambio.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "ley de rendimientos decrecientes explicación economía",
+    "questions": [
+      "¿Por qué agregar más de un mismo recurso eventualmente produce cada vez menos beneficio adicional?",
+      "¿En qué actividades de tu vida notas claramente este punto donde más deja de ayudar tanto?",
+      "¿Qué actividad podrías redistribuir mejor en vez de seguir invirtiendo todo el esfuerzo en un solo lugar?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "efecto-ancla",
+    "title": "El efecto ancla",
+    "hook": "¿Por qué el primer número que ves en una negociación termina influyendo en todo lo que decides después?",
+    "why": "Te da una defensa útil contra negociaciones y precios manipulados: reconocer el ancla antes de que te arrastre.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "efecto ancla sesgo cognitivo negociación",
+    "questions": [
+      "¿Qué experimentos clásicos demuestran cuánto puede influir un número arbitrario en tu estimación final?",
+      "¿Qué estrategias existen para evitar quedar anclado en una negociación de precio?",
+      "¿En qué compra o negociación reciente el primer número que te dieron terminó definiendo tu percepción de justo?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "regresion-a-la-media",
+    "title": "La regresión a la media",
+    "hook": "¿Por qué un resultado extraordinario suele ir seguido de uno más normal, sin que nadie haga nada distinto?",
+    "why": "Te ayuda a no sacar conclusiones falsas sobre causa y efecto cuando en realidad solo estás viendo variación estadística normal.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "regresión a la media explicación estadística ejemplos",
+    "questions": [
+      "¿Por qué confundimos tan seguido la regresión a la media con un efecto real de una intervención?",
+      "¿Qué ejemplo deportivo o educativo conoces donde esto lleva a conclusiones equivocadas sobre qué funcionó?",
+      "¿En qué momento reciente atribuiste una mejora a algo que hiciste, cuando pudo ser solo variación normal?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "sesgo-de-disponibilidad",
+    "title": "El sesgo de disponibilidad",
+    "hook": "¿Por qué le temes más a un ataque de tiburón que a resbalarte en la ducha, aunque lo segundo mata más gente?",
+    "why": "Te ayuda a notar cuándo estás juzgando un riesgo por lo memorable que es, no por lo probable que realmente es.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "sesgo de disponibilidad heurística explicación",
+    "questions": [
+      "¿Por qué los eventos más recientes o dramáticos en los medios distorsionan tu percepción real del riesgo?",
+      "¿Qué decisiones de salud, seguridad o dinero se ven más afectadas por este sesgo?",
+      "¿Qué miedo tuyo actual podría estar más inflado por lo memorable del evento que por su probabilidad real?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "primeros-principios",
+    "title": "El pensamiento de primeros principios",
+    "hook": "¿Y si en vez de copiar cómo todos hacen algo, lo reconstruyeras desde cero preguntando qué es verdad aquí?",
+    "why": "Te da una forma de romper con siempre se ha hecho así y encontrar soluciones que la simple imitación nunca te daría.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "pensamiento de primeros principios explicación ejemplos",
+    "questions": [
+      "¿Qué diferencia hay entre razonar por analogía y razonar desde primeros principios?",
+      "¿Qué ejemplo conoces de una industria o producto que se reinventó por completo al hacer esta pregunta?",
+      "¿Qué suposición sobre cómo debe hacerse algo en tu trabajo nunca has cuestionado a fondo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "paradoja-de-simpson",
+    "title": "La paradoja de Simpson",
+    "hook": "¿Cómo puede un tratamiento verse peor en cada grupo por separado pero mejor cuando juntas todos los datos?",
+    "why": "Te enseña a desconfiar de estadísticas agregadas y a preguntar siempre cómo se dividieron los datos antes de creerlas.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "paradoja de Simpson estadística explicación ejemplos",
+    "questions": [
+      "¿Qué ejemplo real, médico, deportivo o educativo, ilustra mejor cómo cambia la conclusión al desagregar los datos?",
+      "¿Qué variable oculta suele ser la causante de este tipo de reversión en los resultados agregados?",
+      "¿En qué estadística que escuchaste recientemente aceptaste la conclusión sin preguntar cómo se agruparon los datos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "efecto-lindy",
+    "title": "El efecto Lindy",
+    "hook": "¿Por qué un libro que lleva 200 años publicado probablemente sobrevivirá más que uno que salió el mes pasado?",
+    "why": "Te da un filtro rápido para decidir en qué ideas, libros o tecnologías vale la pena invertir tu tiempo limitado.",
+    "area": "modelos-mentales",
+    "rarity": "comun",
+    "searchQuery": "efecto Lindy explicación ejemplos",
+    "questions": [
+      "¿Por qué la supervivencia pasada de algo no tecnológico predice mejor su futuro que una moda reciente?",
+      "¿Qué tipo de cosas no aplica bien este efecto, como la tecnología que sí caduca rápido?",
+      "¿Qué contenido de moda que consumes hoy probablemente nadie recordará en cinco años, y qué podrías leer en su lugar?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "alfabeto-fenicio",
+    "title": "El alfabeto fenicio",
+    "hook": "¿Cómo un grupo de comerciantes creó la escritura de la que vienen casi todos los alfabetos del mundo?",
+    "why": "Te muestra que una sola innovación práctica, hecha por necesidad comercial, puede transformar el conocimiento humano para siempre.",
+    "area": "cultura",
+    "rarity": "legendaria",
+    "searchQuery": "alfabeto fenicio origen de la escritura historia",
+    "questions": [
+      "¿Qué ventaja práctica tenía el alfabeto fenicio frente a sistemas anteriores como los jeroglíficos?",
+      "¿Cómo se fue transformando este alfabeto en el griego, el latino y el árabe con el tiempo?",
+      "¿Qué tan distinto sería tu día a día si la escritura nunca se hubiera simplificado de esta manera?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "imprenta-gutenberg",
+    "title": "La imprenta de Gutenberg",
+    "hook": "¿Cómo una máquina para prensar vino terminó multiplicando el conocimiento humano como nunca antes?",
+    "why": "Muestra cómo democratizar el acceso a la información puede acelerar de golpe la ciencia, la religión y la política de toda una época.",
+    "area": "cultura",
+    "rarity": "legendaria",
+    "searchQuery": "imprenta de Gutenberg historia impacto",
+    "questions": [
+      "¿Qué tan caro y raro era un libro antes de la imprenta, y cómo cambió eso su distribución?",
+      "¿Qué movimientos históricos, como la Reforma o la ciencia moderna, se aceleraron gracias a la imprenta?",
+      "¿Qué tecnología actual crees que está teniendo un efecto democratizador del conocimiento comparable a este?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "realismo-magico-latinoamericano",
+    "title": "El realismo mágico latinoamericano",
+    "hook": "¿Por qué mezclaron escritores latinoamericanos lo mágico con lo cotidiano para contar verdades políticas?",
+    "why": "Muestra cómo una forma literaria puede ser también una estrategia para hablar de violencia y poder cuando decirlo directo es peligroso.",
+    "area": "cultura",
+    "rarity": "rara",
+    "searchQuery": "realismo mágico latinoamericano García Márquez historia",
+    "questions": [
+      "¿Qué realidades políticas o sociales concretas se esconden detrás de los elementos mágicos en estas obras?",
+      "¿Por qué este estilo surgió con tanta fuerza específicamente en América Latina y no en otras regiones?",
+      "¿Qué evento de tu propia familia o país contarías distinto si lo narraras con un toque de realismo mágico?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "hipotesis-sapir-whorf",
+    "title": "La hipótesis de Sapir-Whorf",
+    "hook": "¿El idioma que hablas realmente cambia cómo percibes el tiempo, el espacio o hasta los colores?",
+    "why": "Te da una forma matizada de entender cuánto, y cuán poco, tu lengua moldea tu pensamiento, sin caer en mitos exagerados.",
+    "area": "cultura",
+    "rarity": "rara",
+    "searchQuery": "hipótesis Sapir-Whorf relatividad lingüística explicación",
+    "questions": [
+      "¿Qué evidencia real apoya una versión moderada de esta hipótesis, más allá de la versión extrema ya descartada?",
+      "¿Qué ejemplos de idiomas con formas distintas de describir espacio o tiempo se usan para estudiar esto?",
+      "¿Qué palabra o expresión en otro idioma que conoces no tiene traducción exacta y qué idea distinta captura?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "jazz-improvisacion-colectiva",
+    "title": "El jazz y la improvisación colectiva",
+    "hook": "¿Cómo puede un grupo de músicos crear algo coherente sin partitura, decidiendo en tiempo real?",
+    "why": "Te da un modelo de cómo la creatividad grupal necesita reglas compartidas mínimas, no ausencia total de estructura.",
+    "area": "cultura",
+    "rarity": "rara",
+    "searchQuery": "historia del jazz improvisación explicación",
+    "questions": [
+      "¿Qué estructuras mínimas permiten que la improvisación en jazz no se vuelva caos total?",
+      "¿Cómo nació el jazz como fusión de tradiciones africanas y europeas en el contexto de Nueva Orleans?",
+      "¿En qué proyecto de equipo podrías aplicar esta idea de estructura mínima, libertad máxima en vez de controlar todo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "bauhaus-diseno-vida-cotidiana",
+    "title": "La Bauhaus y el diseño de lo cotidiano",
+    "hook": "¿Por qué una escuela de arte alemana de los años 20 sigue definiendo cómo se ven tus muebles y tipografías hoy?",
+    "why": "Muestra cómo una idea sobre unir arte y función puede cambiar silenciosamente el aspecto del mundo entero, décadas después.",
+    "area": "cultura",
+    "rarity": "rara",
+    "searchQuery": "Bauhaus escuela de diseño historia influencia",
+    "questions": [
+      "¿Qué principio central de la Bauhaus unía el arte, la artesanía y la función práctica de los objetos?",
+      "¿Por qué el régimen nazi cerró la escuela y qué pasó con sus profesores y su influencia después?",
+      "¿Qué objeto cotidiano a tu alrededor reconoces ahora que tiene influencia directa de este movimiento?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "origen-del-kpop",
+    "title": "El origen del K-pop",
+    "hook": "¿Cómo convirtió Corea del Sur al pop en una estrategia deliberada de exportación cultural nacional?",
+    "why": "Es un caso real de cómo un país puede construir influencia global a través de la cultura y no solo de la economía o el ejército.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "historia del K-pop industria musical Corea del Sur",
+    "questions": [
+      "¿Qué papel jugó el gobierno surcoreano en impulsar la industria del entretenimiento después de su crisis económica de los 90?",
+      "¿Qué modelo de formación de artistas hace tan distinta a esta industria de la occidental?",
+      "¿Qué producto cultural de tu país crees que tiene potencial de influencia global si se impulsara de forma similar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "grafiti-arte-callejero",
+    "title": "El grafiti y el arte callejero",
+    "hook": "¿Cómo pasó el grafiti de ser vandalismo perseguido a exhibirse en los museos más prestigiosos del mundo?",
+    "why": "Muestra cómo el arte marginal puede convertirse en la forma más honesta de denunciar lo que el arte oficial evita tocar.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "historia del grafiti arte callejero político",
+    "questions": [
+      "¿Qué diferencia hay entre el grafiti como firma personal y el arte callejero como mensaje político?",
+      "¿Qué artistas o movimientos lograron cruzar del espacio urbano ilegal a las galerías reconocidas?",
+      "¿Qué mensaje pintarías en un muro de tu ciudad si supieras que todos lo verían mañana?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "griots-africa-occidental",
+    "title": "Los griots de África occidental",
+    "hook": "¿Cómo puede una sola persona ser, a la vez, historiador, músico y archivo viviente de todo un pueblo?",
+    "why": "Te muestra una forma de preservar la historia y la identidad completamente distinta a los libros: la memoria oral entrenada durante generaciones.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "griots África occidental tradición oral historia",
+    "questions": [
+      "¿Cómo se entrena a un griot desde niño para memorizar generaciones enteras de historia familiar y política?",
+      "¿Qué papel jugaban los griots en resolver conflictos y legitimar el poder de los gobernantes?",
+      "¿Qué historia familiar tuya se perdería si nadie la contara en voz alta a la siguiente generación?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "tango-arrabales-buenos-aires",
+    "title": "El tango y su origen en los arrabales",
+    "hook": "¿Cómo un baile de los barrios marginales de Buenos Aires se volvió símbolo cultural mundial?",
+    "why": "Muestra cómo la cultura popular más despreciada en su origen puede terminar siendo el orgullo nacional de un país entero.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "origen del tango Buenos Aires historia",
+    "questions": [
+      "¿Qué mezcla de culturas dio origen al tango en el Río de la Plata?",
+      "¿Por qué el tango fue mal visto por las clases altas argentinas antes de triunfar en Europa?",
+      "¿Qué expresión cultural de tu propio entorno hoy es despreciada pero podría ser valorada en el futuro?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "bossa-nova-brasil",
+    "title": "La Bossa Nova y el encuentro con el jazz",
+    "hook": "¿Cómo un ritmo suave nacido en las playas de Río terminó conquistando los clubes de jazz de Nueva York?",
+    "why": "Es un ejemplo claro de cómo la fusión cultural genuina puede crear algo nuevo que ninguna de las dos tradiciones originales tenía sola.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "historia de la Bossa Nova Brasil jazz",
+    "questions": [
+      "¿Qué elementos del samba tradicional cambió la Bossa Nova para crear su sonido característico?",
+      "¿Cómo se dio el encuentro entre músicos brasileños y estadounidenses que popularizó este género?",
+      "¿Qué combinación poco obvia de dos cosas que ya conoces podrías intentar fusionar en tu propio trabajo o hobby?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "manga-anime-espejo-posguerra",
+    "title": "El manga y el anime como espejo de Japón",
+    "hook": "¿Por qué tantas historias japonesas de posguerra hablan de destrucción, robots gigantes y reconstrucción?",
+    "why": "Te muestra cómo el arte popular de un país procesa traumas históricos colectivos de forma indirecta pero profunda.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "manga anime posguerra Japón historia cultural",
+    "questions": [
+      "¿Qué relación existe entre las bombas atómicas y la obsesión de tantas historias japonesas con la destrucción masiva?",
+      "¿Cómo cambió la industria del manga y el anime desde la posguerra hasta convertirse en un producto cultural global?",
+      "¿Qué historia, película o serie de tu cultura crees que procesa un trauma colectivo sin decirlo directamente?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "muralismo-mexicano",
+    "title": "El movimiento muralista mexicano",
+    "hook": "¿Por qué el gobierno mexicano posrevolucionario decidió llenar edificios públicos de arte en vez de solo estatuas?",
+    "why": "Muestra cómo el arte puede usarse deliberadamente para construir una identidad nacional compartida después de una crisis profunda.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "muralismo mexicano Rivera Siqueiros Orozco historia",
+    "questions": [
+      "¿Qué mensaje político e histórico buscaban transmitir Rivera, Siqueiros y Orozco en sus murales?",
+      "¿Por qué el gobierno mexicano decidió financiar este arte público justo después de la Revolución?",
+      "¿Qué mural o imagen pública de tu ciudad conoces bien y qué historia real cuenta detrás?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "camino-de-santiago",
+    "title": "El Camino de Santiago",
+    "hook": "¿Por qué una ruta de peregrinación medieval sigue atrayendo a cientos de miles de caminantes no religiosos hoy?",
+    "why": "Muestra cómo una tradición nacida de la fe puede transformarse en un ritual universal de transición personal para cualquier persona.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "historia del Camino de Santiago peregrinación",
+    "questions": [
+      "¿Qué motivos religiosos y políticos originaron esta ruta de peregrinación en la Edad Media?",
+      "¿Por qué tantas personas hoy lo caminan sin ningún motivo religioso, sino por razones personales?",
+      "¿Qué camino simbólico atravesarías tú si necesitaras un ritual de transición en tu vida ahora?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "emojis-nueva-escritura-visual",
+    "title": "Los emojis y la nueva escritura visual",
+    "hook": "¿Estamos volviendo, sin darnos cuenta, a comunicarnos con símbolos parecidos a los jeroglíficos antiguos?",
+    "why": "Te invita a pensar el lenguaje digital como una evolución real de la comunicación humana, no solo como una moda pasajera.",
+    "area": "cultura",
+    "rarity": "comun",
+    "searchQuery": "historia de los emojis comunicación visual",
+    "questions": [
+      "¿Qué necesidad de comunicación resolvían los emojis que el texto plano no lograba transmitir bien?",
+      "¿Qué paralelismos y diferencias reales existen entre los emojis y sistemas de escritura pictográfica antiguos?",
+      "¿Qué malentendido reciente tuviste, o evitaste, gracias a un emoji que aclaró el tono de un mensaje?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "sorticion-atenas",
+    "title": "La sortición en la Atenas antigua",
+    "hook": "¿Y si en vez de votar, eligiéramos a nuestros gobernantes por sorteo, como se hacía en la democracia original?",
+    "why": "Cuestiona una idea que dabas por hecha: que democracia siempre significó elegir por voto, no por azar entre iguales.",
+    "area": "sociedad",
+    "rarity": "legendaria",
+    "searchQuery": "sortición democracia ateniense sorteo cargos públicos",
+    "questions": [
+      "¿Por qué los atenienses desconfiaban de las elecciones por voto y preferían el sorteo para muchos cargos?",
+      "¿Qué experimentos modernos de asambleas ciudadanas han retomado esta idea de la sortición hoy en día?",
+      "¿Confiarías en decisiones importantes de tu comunidad tomadas por un grupo de ciudadanos elegidos al azar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "teoria-ventanas-rotas",
+    "title": "La teoría de las ventanas rotas",
+    "hook": "¿Cómo una idea sobre el desorden urbano terminó justificando políticas policiales agresivas en todo el mundo?",
+    "why": "Muestra cómo una teoría razonable puede aplicarse mal y generar consecuencias que sus propios autores no previeron.",
+    "area": "sociedad",
+    "rarity": "legendaria",
+    "searchQuery": "teoría de las ventanas rotas broken windows crítica",
+    "questions": [
+      "¿Qué proponía originalmente la teoría de las ventanas rotas sobre el desorden y el crimen?",
+      "¿Qué críticas y evidencia contraria han surgido sobre su aplicación policial real en distintas ciudades?",
+      "¿Qué ventana rota pequeña en tu entorno podrías arreglar antes de que se normalice el desorden mayor?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "modelo-prisiones-noruego",
+    "title": "El modelo de prisiones noruego",
+    "hook": "¿Cómo logra Noruega una reincidencia tan baja tratando a los presos casi como personas libres?",
+    "why": "Ofrece evidencia real de que castigar más duro no siempre reduce más el crimen, y que el enfoque puede ser rediseñado por completo.",
+    "area": "sociedad",
+    "rarity": "rara",
+    "searchQuery": "sistema penitenciario noruego Halden reincidencia",
+    "questions": [
+      "¿Qué elementos concretos del diseño de estas prisiones buscan preparar al preso para la vida en libertad?",
+      "¿Qué datos reales de reincidencia comparan este modelo con sistemas más punitivos de otros países?",
+      "¿Qué opinas de rediseñar el castigo pensando primero en la reinserción y no solo en el sufrimiento del culpable?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "supermanzanas-barcelona",
+    "title": "Las supermanzanas de Barcelona",
+    "hook": "¿Se puede rediseñar una ciudad entera para devolverle las calles a las personas y quitárselas a los autos?",
+    "why": "Muestra un experimento urbano real que cambia cómo piensas el espacio público: no es neutral, siempre favorece a alguien.",
+    "area": "sociedad",
+    "rarity": "rara",
+    "searchQuery": "supermanzanas Barcelona urbanismo explicación",
+    "questions": [
+      "¿Cómo funciona exactamente el diseño de una supermanzana para reducir el tráfico de paso sin eliminar el acceso local?",
+      "¿Qué resistencia y qué beneficios reales ha mostrado este modelo en la calidad de vida de los vecinos?",
+      "¿Qué calle o espacio de tu ciudad rediseñarías si pudieras priorizar a las personas sobre los autos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "tragedia-de-los-anticomunes",
+    "title": "La tragedia de los anticomunes",
+    "hook": "¿Puede tener demasiados dueños un recurso ser tan malo como no tener ninguno?",
+    "why": "Te da el reverso de la tragedia de los comunes: a veces el problema no es la falta de reglas, sino el exceso de vetos que paraliza todo.",
+    "area": "sociedad",
+    "rarity": "rara",
+    "searchQuery": "tragedia de los anticomunes explicación ejemplos",
+    "questions": [
+      "¿Qué ejemplo real, como patentes médicas o terrenos, ilustra cómo demasiados dueños paralizan un recurso útil?",
+      "¿Qué diferencia hay entre proteger derechos individuales y crear tantos vetos que nada avanza?",
+      "¿En qué proyecto o decisión familiar demasiadas personas con poder de veto han terminado paralizando algo que todos querían?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "estado-bienestar-nordico",
+    "title": "El estado de bienestar nórdico",
+    "hook": "¿Por qué los países con impuestos más altos del mundo también aparecen entre los más felices?",
+    "why": "Te da un caso real para pensar la relación entre impuestos, servicios públicos y bienestar colectivo sin caer en clichés políticos.",
+    "area": "sociedad",
+    "rarity": "rara",
+    "searchQuery": "estado de bienestar nórdico impuestos felicidad explicación",
+    "questions": [
+      "¿En qué servicios públicos concretos se traduce ese nivel alto de impuestos en los países nórdicos?",
+      "¿Qué condiciones históricas y culturales hicieron posible este modelo en esos países específicamente?",
+      "¿Qué servicio público pagarías con gusto con más impuestos si supieras que funcionaría bien de verdad?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "separacion-de-poderes",
+    "title": "La separación de poderes",
+    "hook": "¿Por qué dividir el poder de un gobierno en tres partes que se vigilan entre sí evita que uno se vuelva absoluto?",
+    "why": "Te da el modelo básico para entender por qué las instituciones democráticas modernas están diseñadas para desconfiar del poder concentrado.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "separación de poderes Montesquieu explicación",
+    "questions": [
+      "¿Qué problema histórico concreto buscaba resolver Montesquieu al proponer esta división de poderes?",
+      "¿Qué pasa en la práctica cuando uno de los tres poderes logra debilitar el control de los otros dos?",
+      "¿Ves algún equivalente de frenos y contrapesos útil en tu propia vida, familia o trabajo, donde nadie tenga todo el poder?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "sistema-de-castas-india",
+    "title": "El sistema de castas en la India",
+    "hook": "¿Cómo puede una jerarquía social de hace miles de años seguir influyendo en oportunidades reales hoy en día?",
+    "why": "Te muestra cómo las estructuras sociales heredadas pueden sobrevivir mucho después de perder su legitimidad legal o religiosa.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "sistema de castas India historia actualidad",
+    "questions": [
+      "¿Qué origen religioso y social tiene este sistema y cómo se mantiene informalmente a pesar de estar prohibido por ley?",
+      "¿Qué políticas se han implementado en la India para intentar reducir esta desigualdad heredada?",
+      "¿Qué jerarquía invisible pero real reconoces que sigue operando en tu propio entorno?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "renta-basica-universal",
+    "title": "La renta básica universal",
+    "hook": "¿Qué pasa realmente cuando le das dinero a la gente sin condiciones, en vez de programas complicados de ayuda?",
+    "why": "Te da evidencia real de experimentos ya hechos, no solo teoría, para formarte una opinión propia sobre esta propuesta tan debatida.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "renta básica universal experimentos resultados",
+    "questions": [
+      "¿Qué resultados concretos mostraron los experimentos reales de renta básica en distintos países?",
+      "¿Qué diferencia hay entre una renta básica universal y los programas de ayuda condicionada tradicionales?",
+      "¿Qué harías tú de forma distinta en tu vida si tuvieras un ingreso base garantizado sin condiciones?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "gentrificacion-derecho-a-la-ciudad",
+    "title": "La gentrificación y el derecho a la ciudad",
+    "hook": "¿Por qué revitalizar un barrio pobre casi siempre termina expulsando a la gente que lo hizo interesante primero?",
+    "why": "Te da un marco para entender un conflicto que probablemente ya viste en tu propia ciudad: mejora urbana versus desplazamiento.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "gentrificación derecho a la ciudad explicación",
+    "questions": [
+      "¿Qué ciclo de eventos suele repetirse cuando un barrio popular se vuelve atractivo para nuevas inversiones?",
+      "¿Qué políticas han intentado algunas ciudades para evitar el desplazamiento de los residentes originales?",
+      "¿Has visto este proceso ocurrir en algún barrio de tu ciudad? ¿Qué cambió, quién se quedó y quién se fue?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "union-europea-soberania-compartida",
+    "title": "La Unión Europea, soberanía compartida",
+    "hook": "¿Cómo lograron países que se estuvieron matando por siglos ceder parte de su soberanía a un proyecto común?",
+    "why": "Es un caso real de cooperación a gran escala entre antiguos enemigos, útil para pensar en resolver conflictos propios de largo plazo.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "historia Unión Europea integración explicación",
+    "questions": [
+      "¿Qué motivación original, después de dos guerras mundiales, impulsó esta integración económica y política?",
+      "¿Qué tensiones surgen cuando países ceden soberanía a cambio de beneficios compartidos?",
+      "¿En qué relación o proyecto tuyo cederías algo de control individual a cambio de un beneficio colectivo mayor?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "zapatismo-autonomia-indigena",
+    "title": "El movimiento zapatista en Chiapas",
+    "hook": "¿Cómo logró un movimiento indígena armado construir autonomía real sin tomar el poder del Estado?",
+    "why": "Ofrece un modelo distinto de resistencia y autogobierno, útil para pensar formas de organización comunitaria fuera de la política tradicional.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "movimiento zapatista Chiapas autonomía historia",
+    "questions": [
+      "¿Qué diferencia hace a este movimiento distinto de otras guerrillas latinoamericanas de su época?",
+      "¿Cómo funcionan hoy los caracoles y las juntas de buen gobierno en las zonas autónomas zapatistas?",
+      "¿Qué forma de organización comunitaria de tu propio entorno resuelve problemas sin depender del gobierno?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "sufragio-femenino-sufragistas",
+    "title": "El sufragio femenino y las sufragistas",
+    "hook": "¿Qué tan reciente es, en realidad, el derecho de las mujeres a votar en la mayoría de los países del mundo?",
+    "why": "Te da perspectiva real sobre cuánto de lo que hoy parece obvio en derechos fue una batalla larga y reciente, no algo dado desde siempre.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "historia del sufragio femenino sufragistas",
+    "questions": [
+      "¿Qué estrategias usaron las sufragistas para lograr visibilidad y presión política en distintos países?",
+      "¿En qué año obtuvieron el voto las mujeres en tu propio país, y qué tan reciente es comparado con lo que imaginabas?",
+      "¿Qué derecho que das hoy por sentado podría, en realidad, haber sido una conquista reciente y frágil?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "burocracia-max-weber",
+    "title": "La burocracia según Max Weber",
+    "hook": "¿Por qué las reglas impersonales y los trámites, que tanto odias, fueron pensados como una forma de justicia?",
+    "why": "Te da una perspectiva distinta sobre la burocracia: no siempre es solo ineficiencia, también es un intento de tratar a todos por igual.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "burocracia Max Weber teoría institucional explicación",
+    "questions": [
+      "¿Qué problema buscaba resolver Weber al proponer reglas impersonales en vez de decisiones arbitrarias de una autoridad?",
+      "¿En qué punto la burocracia deja de proteger la igualdad y se convierte en puro obstáculo ineficiente?",
+      "¿Qué trámite reciente que te frustró podrías ver distinto si pensaras en qué injusticia intenta evitar, aunque falle en la práctica?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "justicia-restaurativa",
+    "title": "La justicia restaurativa",
+    "hook": "¿Y si en vez de solo castigar un delito, se buscara reparar el daño real entre la víctima y quien lo causó?",
+    "why": "Te da un modelo alternativo de justicia centrado en reparar vínculos y daño concreto, más allá de la idea tradicional de castigo.",
+    "area": "sociedad",
+    "rarity": "comun",
+    "searchQuery": "justicia restaurativa explicación casos",
+    "questions": [
+      "¿En qué se diferencia un proceso de justicia restaurativa de un juicio penal tradicional?",
+      "¿Qué tipo de delitos o conflictos se prestan mejor, y cuáles peor, para este enfoque?",
+      "¿Qué conflicto no resuelto en tu propia vida podría beneficiarse de un proceso de reparación directa en vez de solo ganar o perder?"
+    ],
+    "minutes": 20
+  }
+]
