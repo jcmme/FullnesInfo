@@ -4,7 +4,6 @@ import { redirect } from "next/navigation";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { createClient } from "@/lib/supabase/server";
 
-const INVALID = { error: "Usuario o contraseña incorrectos." };
 
 /** Supabase entra con correo; el usuario escribe su nombre de usuario y aquí se traduce. */
 async function emailFor(identifier: string): Promise<string | null> {
@@ -16,17 +15,20 @@ async function emailFor(identifier: string): Promise<string | null> {
   return data.user?.email ?? null;
 }
 
-export async function signIn(_prev: { error?: string } | undefined, formData: FormData) {
+export type SignInState = { error?: string; username?: string } | undefined;
+
+export async function signIn(_prev: SignInState, formData: FormData): Promise<SignInState> {
   const identifier = String(formData.get("username") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
-  if (!identifier || !password) return { error: "Escribe tu usuario y tu contraseña." };
+  const invalid = { error: "Usuario o contraseña incorrectos.", username: identifier };
+  if (!identifier || !password) return { error: "Escribe tu usuario y tu contraseña.", username: identifier };
 
   const email = await emailFor(identifier);
-  if (!email) return INVALID;
+  if (!email) return invalid;
 
   const supabase = await createClient();
   const { error } = await supabase.auth.signInWithPassword({ email, password });
-  if (error) return INVALID;
+  if (error) return invalid;
   redirect("/");
 }
 

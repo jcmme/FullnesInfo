@@ -125,7 +125,7 @@
   }
 
   ::selection {
-    background: color-mix(in oklch, var(--tint) 30%, transparent);
+    background: color-mix(in oklab, var(--tint) 30%, transparent);
     color: var(--ink);
   }
 
@@ -242,14 +242,14 @@
     color: var(--on-tint);
   }
   .btn-primary:hover:not(:disabled) {
-    background: color-mix(in oklch, var(--tint) 90%, var(--ink));
+    background: color-mix(in oklab, var(--tint) 90%, var(--ink));
   }
   .btn-secondary {
     background: var(--surface-2);
     color: var(--ink);
   }
   .btn-secondary:hover:not(:disabled) {
-    background: color-mix(in oklch, var(--surface-2) 85%, var(--ink));
+    background: color-mix(in oklab, var(--surface-2) 85%, var(--ink));
   }
   .btn-danger {
     background: var(--bad);

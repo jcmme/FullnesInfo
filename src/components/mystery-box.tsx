@@ -33,7 +33,7 @@ function Box({ shaking, locked }: { shaking: boolean; locked: boolean }) {
       </div>
       <motion.div
         className="absolute inset-x-2 top-14 h-12 rounded-[16px] shadow-card"
-        style={{ background: "color-mix(in oklch, var(--tint) 82%, white)" }}
+        style={{ background: "color-mix(in oklab, var(--tint) 82%, white)" }}
         exit={reduce ? { opacity: 0 } : { y: -150, x: 40, rotate: 28, opacity: 0, transition: { type: "spring", bounce: 0.2, duration: 0.7 } }}
       >
         <div className="absolute inset-y-0 left-1/2 w-8 -translate-x-1/2 bg-on-tint/90" />

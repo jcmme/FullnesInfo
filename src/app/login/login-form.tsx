@@ -15,6 +15,7 @@ export function LoginForm() {
           id="username"
           name="username"
           type="text"
+          defaultValue={state?.username}
           autoComplete="username"
           autoCapitalize="none"
           autoCorrect="off"
