@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Fire, Gift, Lock, Snowflake, WarningCircle } from "@phosphor-icons/react/ssr";
+import { ArrowRight, CheckCircle, Fire, Gift, Lock, PencilSimple, Plus, Snowflake, WarningCircle } from "@phosphor-icons/react/ssr";
 import { Countdown } from "@/components/countdown";
+import { DayRings } from "@/components/day-rings";
 import { FreezeTodayButton } from "@/components/freeze-button";
 import { Heatmap } from "@/components/heatmap";
 import { ItemRow, ItemTile } from "@/components/item-cards";
@@ -42,16 +43,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
 
   return (
     <>
-      <PageHeader
-        title="Hoy"
-        subtitle={
-          <>
-            <span className="first-letter:uppercase">{formatDayLong(overview.today)}</span>
-            {" · "}
-            <Countdown timezone={profile.timezone} cutoffHour={profile.cutoff_hour} done={overview.todayDone || overview.todayFrozen} />
-          </>
-        }
-      />
+      <PageHeader title="Hoy" subtitle={<span className="first-letter:uppercase">{formatDayLong(overview.today)}</span>} />
 
       <div className="md:grid md:grid-cols-[minmax(0,1fr)_20rem] md:gap-2 lg:grid-cols-[minmax(0,1fr)_23rem]">
         <div className="min-w-0">
@@ -72,71 +64,97 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
             </Section>
           )}
 
-          <Section className={failures.length ? "mt-3" : ""}>
-            <div className="card p-5">
-              <div className="flex items-start justify-between gap-4">
-                <div className="min-w-0">
-                  {overview.todayDone ? (
-                    <p className="flex items-center gap-2 headline text-ok">
-                      <CheckCircle size={22} weight="fill" aria-hidden />
-                      Día cumplido
-                    </p>
-                  ) : overview.todayFrozen ? (
-                    <p className="flex items-center gap-2 headline text-rare">
-                      <Snowflake size={22} weight="bold" aria-hidden />
-                      Hoy usaste comodín
-                    </p>
-                  ) : (
-                    <p className="headline">Falta tu registro de hoy</p>
-                  )}
-                  <p className="footnote mt-1 max-w-[36ch] text-ink-2 text-pretty">
-                    {overview.todayDone
-                      ? `Escribiste ${formatNumber(overview.todayWords)} palabras. Mañana sigue.`
-                      : overview.todayFrozen
-                        ? "Este día no rompe tu racha. Aun así puedes registrar algo."
-                        : overview.todayWords > 0
-                          ? `Llevas ${formatNumber(overview.todayWords)} de ${profile.min_words} palabras. Todas tus notas del día suman.`
-                          : `Consume algo que te haga crecer y escribe al menos ${profile.min_words} palabras sobre ello.`}
-                  </p>
-                </div>
-                <div className="shrink-0 text-right">
-                  <p className="flex items-center justify-end gap-1 text-[3rem] text-tint-ink">
-                    <Fire size={30} weight="fill" aria-hidden />
-                    <StreakNumber value={overview.streak} celebrate={cumplido === "1"} />
-                  </p>
-                  <p className="caption text-ink-2">
-                    {overview.streak === 1 ? "día seguido" : "días seguidos"}
-                    <br />
-                    Récord: {overview.best}
-                  </p>
-                </div>
+          <Section className={failures.length ? "mt-6" : "mt-2"}>
+            <div className="flex flex-col items-center gap-3">
+              <DayRings
+                words={overview.todayWords}
+                minWords={profile.min_words}
+                timezone={profile.timezone}
+                cutoffHour={profile.cutoff_hour}
+              />
+              <div className="flex flex-wrap justify-center gap-x-5 gap-y-1 footnote">
+                <span className="flex items-center gap-1.5">
+                  <span className="size-2.5 rounded-full bg-tint" aria-hidden />
+                  Tus palabras
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <span className="size-2.5 rounded-full bg-[var(--ring-2)]" aria-hidden />
+                  <Countdown timezone={profile.timezone} cutoffHour={profile.cutoff_hour} done={overview.todayDone || overview.todayFrozen} />
+                </span>
               </div>
+              <div className="text-center">
+                {overview.todayDone ? (
+                  <p className="flex items-center justify-center gap-1.5 headline text-ok">
+                    <CheckCircle size={20} weight="fill" aria-hidden />
+                    Día cumplido
+                  </p>
+                ) : overview.todayFrozen ? (
+                  <p className="flex items-center justify-center gap-1.5 headline text-rare">
+                    <Snowflake size={20} weight="bold" aria-hidden />
+                    Hoy usaste comodín
+                  </p>
+                ) : (
+                  <p className="headline">
+                    {overview.todayWords > 0
+                      ? `Te faltan ${formatNumber(profile.min_words - overview.todayWords)} palabras`
+                      : "Falta tu nota de hoy"}
+                  </p>
+                )}
+                <p className="footnote mt-0.5 text-ink-2">
+                  {overview.todayDone
+                    ? "Mañana sigue. Si escribes más, también cuenta."
+                    : overview.todayFrozen
+                      ? "Este día no rompe tu racha."
+                      : "Todas tus notas del día suman."}
+                </p>
+              </div>
+            </div>
 
-              {entries.length > 0 && (
-                <ul className="mt-4 divide-y hairline border-t">
+            <div className="mt-5 flex flex-col items-center gap-1">
+              <Link
+                href={entries.length ? `/registrar?nota=${entries[entries.length - 1].id}` : "/registrar"}
+                className={`btn btn-lg w-full ${overview.todayDone ? "btn-secondary" : "btn-primary"}`}
+              >
+                <PencilSimple size={20} aria-hidden />
+                {entries.length ? "Seguir escribiendo" : "Escribir mi nota"}
+              </Link>
+              {!overview.todayDone && !overview.todayFrozen && <FreezeTodayButton left={overview.freezesLeft} />}
+            </div>
+
+            <div className="mt-3 grid grid-cols-2 gap-3">
+              <div className="rounded-card bg-surface p-4">
+                <p className="numeral flex items-center gap-1.5 text-[2.125rem] text-tint-ink">
+                  <Fire size={24} weight="fill" aria-hidden />
+                  <StreakNumber value={overview.streak} celebrate={cumplido === "1"} />
+                </p>
+                <p className="footnote mt-1 text-ink-2">{overview.streak === 1 ? "día seguido" : "días seguidos"}</p>
+              </div>
+              <div className="rounded-card bg-surface p-4">
+                <p className="numeral text-[2.125rem]">{overview.best}</p>
+                <p className="footnote mt-1 text-ink-2">tu récord</p>
+              </div>
+            </div>
+
+            {entries.length > 0 && (
+              <div className="mt-4 rounded-card bg-surface px-4">
+                <h2 className="sr-only">Tus notas de hoy</h2>
+                <ul className="divide-y hairline">
                   {entries.map((e) => (
-                    <li key={e.id} className="flex items-baseline justify-between gap-3 py-2.5">
-                      <span className="footnote min-w-0 truncate">{e.title}</span>
-                      <span
-                        className={`caption shrink-0 tabular ${e.word_count >= profile.min_words ? "text-ok" : "text-ink-2"}`}
-                      >
-                        {e.word_count} palabras
-                      </span>
+                    <li key={e.id}>
+                      <Link href={`/registrar?nota=${e.id}`} className="press flex min-h-12 items-center gap-3 py-2.5">
+                        <span className="footnote min-w-0 flex-1 truncate">{e.title}</span>
+                        <span className="caption shrink-0 tabular text-ink-2">{e.word_count} palabras</span>
+                        <span className="caption shrink-0 font-semibold text-tint-ink">Seguir</span>
+                      </Link>
                     </li>
                   ))}
                 </ul>
-              )}
-
-              <div className="mt-5 flex flex-wrap items-center gap-2">
-                <Link
-                  href="/registrar"
-                  className={`btn btn-lg flex-1 ${overview.todayDone ? "btn-secondary" : "btn-primary"}`}
-                >
-                  {overview.todayDone ? "Agregar otra nota" : "Registrar lo de hoy"}
+                <Link href="/registrar?nuevo=1" className="press flex min-h-12 items-center gap-2 border-t hairline footnote font-semibold text-tint-ink">
+                  <Plus size={16} weight="bold" aria-hidden />
+                  Escribir sobre algo más
                 </Link>
-                {!overview.todayDone && !overview.todayFrozen && <FreezeTodayButton left={overview.freezesLeft} />}
               </div>
-            </div>
+            )}
           </Section>
 
           {punishments.length > 0 && (

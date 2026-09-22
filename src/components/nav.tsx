@@ -27,17 +27,20 @@ function Badge({ count }: { count: number }) {
   );
 }
 
-/** Tab bar translúcida en iPhone; barra lateral en iPad y Mac. */
+/** Barra de pestañas flotante de vidrio en iPhone; barra lateral en iPad y Mac. */
 export function Nav({ punishmentCount }: { punishmentCount: number }) {
   const pathname = usePathname();
+  // Al escribir la nota la barra se esconde, como en las pantallas de redactar de iOS: más espacio para el texto.
+  const composing = pathname.startsWith("/registrar");
 
   return (
     <>
       <nav
         aria-label="Secciones"
-        className="material fixed inset-x-0 bottom-0 z-40 border-t hairline pb-safe md:hidden"
+        hidden={composing}
+        className="tabbar material fixed inset-x-4 bottom-[var(--tabbar-gap)] z-40 mx-auto h-[var(--tabbar-h)] max-w-md rounded-full md:hidden"
       >
-        <ul className="mx-auto grid max-w-lg grid-cols-5">
+        <ul className="grid h-full grid-cols-5 items-center">
           {TABS.map(({ href, label, icon: Icon }) => {
             const active = isActive(pathname, href);
             return (
@@ -45,15 +48,15 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
                 <Link
                   href={href}
                   aria-current={active ? "page" : undefined}
-                  className={`press flex min-h-[3.25rem] flex-col items-center justify-center gap-0.5 pt-1.5 ${
-                    active ? "text-tint-ink" : "text-ink-3"
+                  className={`press flex min-h-12 flex-col items-center justify-center gap-0.5 font-display ${
+                    active ? "text-tint-ink" : "text-ink-2"
                   }`}
                 >
                   <span className="relative">
                     <Icon size={26} weight={active ? "fill" : "regular"} aria-hidden />
                     {href === "/castigos" && <Badge count={punishmentCount} />}
                   </span>
-                  <span className="text-[0.6875rem] font-medium leading-none">{label}</span>
+                  <span className="text-[0.6875rem] font-semibold leading-none">{label}</span>
                 </Link>
               </li>
             );

@@ -1,24 +1,29 @@
 @import "tailwindcss";
 
 /*
- * FullnesInfo: sistema de diseño. Ver DESIGN.md.
- * Neutros fríos, un solo tinte (brasa) y tres colores de estado.
- * Radios: tarjetas 20px, controles 12px, chips y segmentados en píldora.
+ * FullnesInfo: sistema de diseño "Anillos". Ver DESIGN.md.
+ * Negro puro en oscuro, grises de iOS en claro, un solo tinte (brasa) y tres colores de estado.
+ * Radios: tarjetas 20px, campos 12px; botones, chips y segmentados en píldora.
  */
 
 :root {
-  --bg: oklch(0.972 0.003 265);
-  --surface: oklch(0.995 0.001 265);
-  --surface-2: oklch(0.945 0.004 265);
-  --line: oklch(0.895 0.005 265);
-  --ink: oklch(0.22 0.012 265);
-  --ink-2: oklch(0.44 0.012 265);
-  --ink-3: oklch(0.54 0.01 265);
+  --bg: oklch(0.967 0.004 286);
+  --surface: oklch(1 0 0);
+  --surface-2: oklch(0.94 0.004 286);
+  --line: oklch(0.885 0.005 286);
+  --ink: oklch(0.2 0.006 286);
+  --ink-2: oklch(0.45 0.01 286);
+  --ink-3: oklch(0.53 0.01 286);
 
-  --tint: oklch(0.575 0.18 38);
+  --tint: oklch(0.565 0.185 42);
   --on-tint: oklch(0.99 0.005 60);
-  --tint-ink: oklch(0.54 0.17 38);
-  --tint-soft: oklch(0.95 0.035 45);
+  --tint-ink: oklch(0.525 0.17 40);
+  --tint-soft: oklch(0.94 0.04 50);
+
+  /* Anillos de Hoy: palabras (brasa) y tiempo del día (neutro). */
+  --ring-1-track: oklch(0.91 0.05 52);
+  --ring-2: oklch(0.32 0.008 286);
+  --ring-2-track: oklch(0.9 0.004 286);
 
   --ok: oklch(0.52 0.13 152);
   --ok-soft: oklch(0.95 0.035 152);
@@ -27,29 +32,37 @@
   --rare: oklch(0.52 0.16 262);
   --legend: oklch(0.53 0.11 75);
 
-  --bar: oklch(0.985 0.002 265 / 0.78);
+  --bar: oklch(0.99 0.002 286 / 0.72);
   --wheel-alt: oklch(0.9 0.05 48);
   --wheel-rim: oklch(0.24 0.012 265);
   --shadow: 0 1px 2px oklch(0.3 0.02 265 / 0.06), 0 8px 24px -12px oklch(0.3 0.02 265 / 0.18);
   --shadow-lift: 0 2px 4px oklch(0.3 0.02 265 / 0.08), 0 24px 48px -20px oklch(0.3 0.03 265 / 0.3);
+
+  --tabbar-h: 4rem;
+  --tabbar-gap: max(0.75rem, calc(env(safe-area-inset-bottom) - 0.5rem));
+  --tabbar-space: calc(var(--tabbar-h) + var(--tabbar-gap));
 
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: oklch(0.155 0.006 265);
-    --surface: oklch(0.205 0.008 265);
-    --surface-2: oklch(0.25 0.009 265);
-    --line: oklch(0.31 0.01 265);
-    --ink: oklch(0.955 0.003 265);
-    --ink-2: oklch(0.76 0.008 265);
-    --ink-3: oklch(0.66 0.008 265);
+    --bg: oklch(0 0 0);
+    --surface: oklch(0.195 0.004 286);
+    --surface-2: oklch(0.255 0.005 286);
+    --line: oklch(0.3 0.006 286);
+    --ink: oklch(0.985 0 0);
+    --ink-2: oklch(0.74 0.01 286);
+    --ink-3: oklch(0.62 0.01 286);
 
-    --tint: oklch(0.72 0.165 45);
-    --on-tint: oklch(0.2 0.03 40);
-    --tint-ink: oklch(0.76 0.15 48);
-    --tint-soft: oklch(0.3 0.06 42);
+    --tint: oklch(0.74 0.17 50);
+    --on-tint: oklch(0.2 0.04 45);
+    --tint-ink: oklch(0.78 0.15 52);
+    --tint-soft: oklch(0.27 0.07 45);
+
+    --ring-1-track: oklch(0.27 0.07 45);
+    --ring-2: oklch(0.93 0.004 286);
+    --ring-2-track: oklch(0.27 0.005 286);
 
     --ok: oklch(0.76 0.15 152);
     --ok-soft: oklch(0.29 0.05 152);
@@ -58,7 +71,7 @@
     --rare: oklch(0.74 0.12 258);
     --legend: oklch(0.83 0.13 85);
 
-    --bar: oklch(0.19 0.007 265 / 0.72);
+    --bar: oklch(0.22 0.005 286 / 0.72);
     --wheel-alt: oklch(0.34 0.07 42);
     --wheel-rim: oklch(0.3 0.01 265);
     --shadow: 0 1px 2px oklch(0 0 0 / 0.3), 0 8px 24px -12px oklch(0 0 0 / 0.5);
@@ -88,7 +101,7 @@
   --color-legend: var(--legend);
 
   --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
-  --font-display: var(--font-bricolage), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-display: ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
 
   --radius-card: 1.25rem;
   --radius-control: 0.75rem;
@@ -163,22 +176,22 @@
     font-family: var(--font-display);
     font-size: 2.125rem;
     line-height: 1.1;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    font-optical-sizing: auto;
+    font-weight: 800;
+    letter-spacing: -0.02em;
   }
   .title-1 {
     font-family: var(--font-display);
     font-size: 1.625rem;
     line-height: 1.15;
-    font-weight: 650;
-    letter-spacing: -0.02em;
+    font-weight: 750;
+    letter-spacing: -0.015em;
   }
   .title-2 {
+    font-family: var(--font-display);
     font-size: 1.25rem;
     line-height: 1.25;
-    font-weight: 650;
-    letter-spacing: -0.012em;
+    font-weight: 750;
+    letter-spacing: -0.01em;
   }
   .headline {
     font-size: 1.0625rem;
@@ -199,9 +212,9 @@
   .numeral {
     font-family: var(--font-display);
     font-variant-numeric: tabular-nums;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 800;
   }
 
   .card {
@@ -225,8 +238,9 @@
     gap: 0.5rem;
     min-height: 2.75rem;
     padding: 0 1.125rem;
-    border-radius: var(--radius-control);
-    font-weight: 600;
+    border-radius: 999px;
+    font-family: var(--font-display);
+    font-weight: 700;
     white-space: nowrap;
     transition: transform 100ms ease-out, background-color 150ms ease-out, opacity 150ms ease-out;
   }
@@ -262,7 +276,7 @@
     background: var(--tint-soft);
   }
   .btn-lg {
-    min-height: 3.25rem;
+    min-height: 3.375rem;
     font-size: 1.0625rem;
     padding: 0 1.5rem;
   }
@@ -313,6 +327,12 @@
     background: var(--bar);
     backdrop-filter: blur(24px) saturate(180%);
     -webkit-backdrop-filter: blur(24px) saturate(180%);
+  }
+
+  /* Barra de pestañas flotante: borde de luz arriba y sombra suave para despegarla del contenido. */
+  .tabbar {
+    border: 1px solid color-mix(in oklab, var(--ink) 10%, transparent);
+    box-shadow: 0 10px 30px -8px oklch(0 0 0 / 0.35), 0 2px 6px oklch(0 0 0 / 0.12);
   }
 
   .status-scrim {

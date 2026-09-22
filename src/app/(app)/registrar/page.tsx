@@ -1,17 +1,23 @@
 import Link from "next/link";
 import { CaretLeft } from "@phosphor-icons/react/ssr";
-import { EntryForm } from "@/components/entry-form";
+import { EntryForm, type MysteryToday, type TodayNote } from "@/components/entry-form";
+import { todayKey } from "@/lib/engine";
 import { getTopic } from "@/lib/mystery";
 import { getSession } from "@/lib/session";
-import type { Item } from "@/lib/types";
+import type { Entry, Item } from "@/lib/types";
 
-export const metadata = { title: "Registrar" };
+export const metadata = { title: "Tu nota" };
 
-export default async function RegisterPage({ searchParams }: { searchParams: Promise<{ item?: string; mystery?: string }> }) {
-  const { supabase, userId, profile } = await getSession();
+export default async function RegisterPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ item?: string; mystery?: string; nota?: string; nuevo?: string }>;
+}) {
+  const { supabase, userId, profile, now } = await getSession();
   const params = await searchParams;
+  const today = todayKey(profile, new Date(now));
 
-  const [itemsRes, mysteryRes] = await Promise.all([
+  const [itemsRes, entriesRes, mysteryRes] = await Promise.all([
     supabase
       .from("items")
       .select("*")
@@ -19,9 +25,8 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pro
       .in("status", ["en_curso", "pendiente", "terminado"])
       .order("updated_at", { ascending: false })
       .limit(20),
-    params.mystery
-      ? supabase.from("mystery_opens").select("*").eq("user_id", userId).eq("id", params.mystery).maybeSingle()
-      : Promise.resolve({ data: null }),
+    supabase.from("entries").select("*").eq("user_id", userId).eq("day", today).order("created_at"),
+    supabase.from("mystery_opens").select("*").eq("user_id", userId).eq("day", today).maybeSingle(),
   ]);
 
   let items = (itemsRes.data ?? []) as Item[];
@@ -29,10 +34,35 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pro
     const { data } = await supabase.from("items").select("*").eq("user_id", userId).eq("id", params.item).maybeSingle();
     if (data) items = [data as Item, ...items];
   }
-  if (params.item) items = [...items.filter((i) => i.id === params.item), ...items.filter((i) => i.id !== params.item)];
+
+  const entries = (entriesRes.data ?? []) as Entry[];
+  const todayNotes: TodayNote[] = entries.map((e) => ({
+    id: e.id,
+    itemId: e.item_id,
+    mysteryId: e.mystery_id,
+    title: e.title,
+    note: e.note,
+    words: e.word_count,
+  }));
+  const todayWords = todayNotes.reduce((sum, n) => sum + n.words, 0);
 
   const topic = mysteryRes.data ? getTopic(mysteryRes.data.topic_id) : undefined;
-  const mystery = topic && mysteryRes.data ? { id: mysteryRes.data.id as string, title: topic.title, questions: topic.questions } : null;
+  const mystery: MysteryToday | null =
+    topic && mysteryRes.data ? { id: mysteryRes.data.id as string, title: topic.title, questions: topic.questions } : null;
+
+  // ?nota= continúa esa nota; ?item= y ?mystery= abren ese tema; ?nuevo= empieza una sobre otra cosa.
+  const fromNote = params.nota ? todayNotes.find((n) => n.id === params.nota) : undefined;
+  const noteKey = fromNote
+    ? fromNote.itemId
+      ? `item:${fromNote.itemId}`
+      : fromNote.mysteryId
+        ? `caja:${fromNote.mysteryId}`
+        : `otro:${fromNote.id}`
+    : null;
+  const initialKey = params.nuevo
+    ? "otro:nuevo"
+    : (noteKey ??
+      (params.item ? `item:${params.item}` : params.mystery && mystery?.id === params.mystery ? `caja:${mystery.id}` : null));
 
   return (
     <div className="mx-auto max-w-2xl pt-safe">
@@ -43,11 +73,17 @@ export default async function RegisterPage({ searchParams }: { searchParams: Pro
         </Link>
       </div>
       <div className="px-4 md:px-8">
-        <h1 className="title-large mt-1">{mystery ? "Lo que investigaste" : "Registrar"}</h1>
-        <p className="footnote mb-6 mt-1 text-ink-2">
-          {mystery ? `Caja misteriosa: ${mystery.title}` : "Lo que consumiste hoy y lo que te llevas."}
-        </p>
-        <EntryForm minWords={profile.min_words} items={items} initialItemId={params.item ?? null} mystery={mystery} />
+        <h1 className="title-large mt-1">Tu nota</h1>
+        <p className="footnote mb-6 mt-1 text-ink-2">Lo que viste hoy y lo que te llevas. Todo lo que escribas hoy suma.</p>
+        <EntryForm
+          minWords={profile.min_words}
+          items={items}
+          mystery={mystery}
+          todayNotes={todayNotes}
+          todayWords={todayWords}
+          initialKey={initialKey}
+          initialNoteId={fromNote?.id ?? null}
+        />
       </div>
     </div>
   );

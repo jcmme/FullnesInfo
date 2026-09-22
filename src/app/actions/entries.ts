@@ -8,10 +8,16 @@ import { requireUser } from "@/lib/supabase/server";
 
 export type EntryFormState = { error?: string } | undefined;
 
-export async function createEntry(_prev: EntryFormState, formData: FormData): Promise<EntryFormState> {
+/**
+ * Guarda la nota del día. Con `entryId` continúa una nota de hoy (reemplaza su texto
+ * por el nuevo, que ya incluye lo anterior); sin él crea una. Las palabras de todas
+ * las notas del día suman para cumplirlo.
+ */
+export async function saveEntry(_prev: EntryFormState, formData: FormData): Promise<EntryFormState> {
   const { supabase, userId } = await requireUser();
   const profile = await getProfile(supabase, userId);
 
+  const entryId = String(formData.get("entryId") ?? "") || null;
   const itemId = String(formData.get("itemId") ?? "") || null;
   const mysteryId = String(formData.get("mysteryId") ?? "") || null;
   const kind = String(formData.get("kind") ?? "otro");
@@ -21,26 +27,37 @@ export async function createEntry(_prev: EntryFormState, formData: FormData): Pr
   const minutes = Number.isFinite(minutesRaw) && minutesRaw > 0 ? Math.min(1440, Math.round(minutesRaw)) : null;
   const finished = formData.get("finished") === "on";
 
-  if (!title) return { error: "Ponle nombre a lo que consumiste." };
+  if (!title) return { error: "Escribe sobre qué es tu nota." };
   if (!note) return { error: "Escribe tu nota. Es lo que hace que cuente." };
 
   const day = todayKey(profile);
   const wordCount = countWords(note);
 
   const { data: before } = await supabase.from("day_totals").select("words").eq("user_id", userId).eq("day", day).maybeSingle();
-  const wasDone = (before?.words ?? 0) >= profile.min_words;
+  const wordsBefore = before?.words ?? 0;
 
-  const { error } = await supabase.from("entries").insert({
-    user_id: userId,
-    day,
-    item_id: itemId,
-    mystery_id: mysteryId,
-    kind,
-    title: title.slice(0, 300),
-    note,
-    word_count: wordCount,
-    minutes,
-  });
+  // Solo se continúan notas de hoy: un día que ya cerró no cambia.
+  const { data: existing } = entryId
+    ? await supabase.from("entries").select("id, word_count, minutes").eq("id", entryId).eq("user_id", userId).eq("day", day).maybeSingle()
+    : { data: null };
+
+  const { error } = existing
+    ? await supabase
+        .from("entries")
+        .update({ title: title.slice(0, 300), note, word_count: wordCount, minutes: minutes ?? existing.minutes })
+        .eq("id", existing.id)
+        .eq("user_id", userId)
+    : await supabase.from("entries").insert({
+        user_id: userId,
+        day,
+        item_id: itemId,
+        mystery_id: mysteryId,
+        kind,
+        title: title.slice(0, 300),
+        note,
+        word_count: wordCount,
+        minutes,
+      });
   if (error) return { error: "No se pudo guardar. Revisa tu conexión e intenta otra vez." };
 
   if (itemId) {
@@ -53,10 +70,12 @@ export async function createEntry(_prev: EntryFormState, formData: FormData): Pr
     if (finished) {
       update.status = "terminado";
       update.finished_at = new Date().toISOString();
-    } else {
-      update.status = "en_curso";
     }
     await supabase.from("items").update(update).eq("id", itemId).eq("user_id", userId);
+    // Escribir sobre algo pendiente lo pone en curso; uno ya terminado se queda terminado.
+    if (!finished) {
+      await supabase.from("items").update({ status: "en_curso" }).eq("id", itemId).eq("user_id", userId).eq("status", "pendiente");
+    }
   }
 
   if (mysteryId) {
@@ -64,7 +83,8 @@ export async function createEntry(_prev: EntryFormState, formData: FormData): Pr
   }
 
   revalidatePath("/", "layout");
-  const nowDone = !wasDone && wordCount >= profile.min_words;
+  const wordsAfter = wordsBefore - (existing?.word_count ?? 0) + wordCount;
+  const nowDone = wordsBefore < profile.min_words && wordsAfter >= profile.min_words;
   redirect(nowDone ? "/?cumplido=1" : "/");
 }
 

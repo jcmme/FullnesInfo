@@ -63,7 +63,7 @@ npm run dev
 ## Cómo funcionan las reglas
 
 - **El día cierra a las 2:30 AM** (la hora y la zona horaria se cambian en Ajustes). Lo que registres a las 2:00 AM cuenta para el día anterior.
-- **Cumplir el día** = al menos una nota con el mínimo de palabras (50 por defecto).
+- **Cumplir el día** = sumar el mínimo de palabras (50 por defecto) entre todas tus notas del día. Una nota de hoy se puede abrir y continuar.
 - **Fallar un día** crea una ruleta. Si no la giras, en 24 h se gira sola. Cada día fallado seguido sube el nivel (1 a 4).
 - **Castigos de ventana** (lagartijas, sentadillas, burpees, plancha, abdominales, zancadas, fondos): tienes 48 h para empezar; al empezar corre su ventana, por ejemplo 100 lagartijas en 4 h.
 - **Castigo de distancia**: km caminando o trotando en varios días; el plazo corre desde que se asigna.

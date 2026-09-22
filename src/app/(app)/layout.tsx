@@ -20,7 +20,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
       <div aria-hidden className="status-scrim md:hidden" />
       <ViewportGuard />
       <Nav punishmentCount={pending} />
-      <main className="min-w-0 flex-1 pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-12">{children}</main>
+      <main className="min-w-0 flex-1 pb-[calc(var(--tabbar-space)+1.5rem)] md:pb-12">{children}</main>
     </div>
   );
 }

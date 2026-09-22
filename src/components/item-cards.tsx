@@ -20,12 +20,18 @@ function remainingText(item: Item) {
 export function ItemTile({ item }: { item: Item }) {
   const progress = progressOf(item);
   return (
-    <Link href={`/guardados/${item.id}`} className="press group block w-60 shrink-0 snap-start md:w-64">
-      <Thumb src={item.thumbnail_url} kind={item.kind} className="aspect-video shadow-card" />
-      <div className="mt-2.5 space-y-1.5">
-        <p className="headline line-clamp-2 text-pretty">{item.media_title ?? item.title}</p>
+    <Link href={`/guardados/${item.id}`} className="press group block w-64 shrink-0 snap-start md:w-72">
+      <div className="relative">
+        <Thumb src={item.thumbnail_url} kind={item.kind} className="aspect-video shadow-card" rounded="rounded-[18px]" />
+        {progress > 0 && progress < 1 && (
+          <div className="absolute inset-x-3 bottom-2.5 h-1 overflow-hidden rounded-full bg-white/35">
+            <div className="h-full rounded-full bg-tint" style={{ width: `${Math.round(progress * 100)}%` }} />
+          </div>
+        )}
+      </div>
+      <div className="mt-2.5 space-y-1 px-0.5">
+        <p className="headline line-clamp-2 font-display font-bold text-pretty">{item.media_title ?? item.title}</p>
         <p className="footnote text-ink-2">{remainingText(item)}</p>
-        {progress > 0 && <ProgressBar value={progress} label="Avance" />}
       </div>
     </Link>
   );
