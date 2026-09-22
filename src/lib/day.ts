@@ -1,7 +1,7 @@
 /**
  * Un "día" de FullnesInfo no termina a medianoche: termina a la hora de corte
- * (1:00 AM por defecto). Registrar a las 00:40 cuenta para el día anterior.
- * Los días se representan como claves "YYYY-MM-DD".
+ * (2:30 AM por defecto; admite medias horas, 2.5 = 2:30). Registrar a las 2:00
+ * cuenta para el día anterior. Los días se representan como claves "YYYY-MM-DD".
  */
 
 const HOUR = 3_600_000;
@@ -46,8 +46,16 @@ export function minutesUntilCutoff(now: Date, timezone: string, cutoffHour: numb
   }).formatToParts(now);
   const h = Number(parts.find((p) => p.type === "hour")?.value ?? 0);
   const m = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
-  const diff = (cutoffHour * 60 - (h * 60 + m) + 1440) % 1440;
+  const diff = (Math.round(cutoffHour * 60) - (h * 60 + m) + 1440) % 1440;
   return diff === 0 ? 1440 : diff;
+}
+
+/** 2.5 -> "2:30 AM"; 0 -> "12:00 AM". */
+export function formatCutoff(cutoffHour: number): string {
+  const total = Math.round(cutoffHour * 60);
+  const h = Math.floor(total / 60);
+  const m = total % 60;
+  return `${h === 0 ? 12 : h}:${String(m).padStart(2, "0")} AM`;
 }
 
 const longDate = (timezone: string) =>

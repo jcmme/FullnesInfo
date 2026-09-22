@@ -8,7 +8,7 @@ import { ProgressBar } from "@/components/media";
 import { PageHeader, Section } from "@/components/page-header";
 import { StreakNumber } from "@/components/streak";
 import { formatDayLong, formatDayShort } from "@/lib/day";
-import { getOverview } from "@/lib/engine";
+import { getOverview, todayKey } from "@/lib/engine";
 import { formatNumber, formatRemaining } from "@/lib/format";
 import { getTopic, RARITY_LABEL } from "@/lib/mystery";
 import { getSession } from "@/lib/session";
@@ -17,15 +17,17 @@ import type { Entry, Failure, Item, MysteryOpen, Punishment } from "@/lib/types"
 export default async function TodayPage({ searchParams }: { searchParams: Promise<{ cumplido?: string }> }) {
   const { supabase, userId, profile, now } = await getSession();
   const { cumplido } = await searchParams;
-  const overview = await getOverview(supabase, profile);
+  const today = todayKey(profile, new Date(now));
 
-  const [failuresRes, punishmentsRes, inProgressRes, toLinkRes, mysteryRes, entriesRes] = await Promise.all([
+  const [overview, failuresRes, punishmentsRes, inProgressRes, toLinkRes, mysteryRes, entriesRes, allItemsRes] = await Promise.all([
+    getOverview(supabase, profile),
     supabase.from("failures").select("*").eq("user_id", userId).eq("status", "pendiente").order("day"),
     supabase.from("punishments").select("*").eq("user_id", userId).in("status", ["asignado", "en_curso"]).order("created_at"),
     supabase.from("items").select("*").eq("user_id", userId).in("status", ["en_curso", "pendiente"]).order("updated_at", { ascending: false }).limit(10),
     supabase.from("items").select("*").eq("user_id", userId).eq("status", "por_vincular").order("created_at", { ascending: false }).limit(4),
-    supabase.from("mystery_opens").select("*").eq("user_id", userId).eq("day", overview.today).maybeSingle(),
-    supabase.from("entries").select("*").eq("user_id", userId).eq("day", overview.today).order("created_at"),
+    supabase.from("mystery_opens").select("*").eq("user_id", userId).eq("day", today).maybeSingle(),
+    supabase.from("entries").select("*").eq("user_id", userId).eq("day", today).order("created_at"),
+    supabase.from("items").select("id", { count: "exact", head: true }).eq("user_id", userId),
   ]);
 
   const failures = (failuresRes.data ?? []) as Failure[];
@@ -193,16 +195,33 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
 
           {items.length === 0 && toLink.length === 0 && (
             <Section title="Tu biblioteca">
-              <div className="card p-5">
-                <p className="headline">Aquí aparece lo que guardas</p>
-                <p className="footnote mt-1 max-w-[46ch] text-ink-2">
-                  Escribe el nombre del video que viste en Instagram y FullnesInfo busca el original en YouTube, con su
-                  miniatura, duración y capítulos.
-                </p>
-                <Link href="/guardados/nuevo" className="btn btn-secondary mt-4">
-                  Guardar el primero
-                </Link>
-              </div>
+              {(allItemsRes.count ?? 0) > 0 ? (
+                <div className="card p-5">
+                  <p className="headline">Terminaste todo lo que guardaste</p>
+                  <p className="footnote mt-1 max-w-[46ch] text-ink-2">
+                    Cuando veas otro clip que valga la pena, guárdalo y busco el original.
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <Link href="/guardados/nuevo" className="btn btn-secondary">
+                      Guardar otro
+                    </Link>
+                    <Link href="/guardados?estado=terminado" className="btn btn-ghost px-3">
+                      Ver terminados
+                    </Link>
+                  </div>
+                </div>
+              ) : (
+                <div className="card p-5">
+                  <p className="headline">Aquí aparece lo que guardas</p>
+                  <p className="footnote mt-1 max-w-[46ch] text-ink-2">
+                    Escribe el nombre del video que viste en Instagram y FullnesInfo busca el original en YouTube, con su
+                    miniatura, duración y capítulos.
+                  </p>
+                  <Link href="/guardados/nuevo" className="btn btn-secondary mt-4">
+                    Guardar el primero
+                  </Link>
+                </div>
+              )}
             </Section>
           )}
         </div>

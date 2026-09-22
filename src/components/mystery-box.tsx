@@ -72,16 +72,19 @@ function TopicCard({ topic, open, animate }: { topic: MysteryTopic; open: Myster
     <motion.div
       className="relative"
       initial={animate ? (reduce ? { opacity: 0 } : { opacity: 0, y: 70, scale: 0.9, filter: "blur(10px)" }) : false}
-      animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+      animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)", transitionEnd: { filter: "none" } }}
       transition={reduce ? { duration: 0.25 } : { type: "spring", bounce: 0.18, duration: 0.8, delay: 0.25 }}
     >
       {animate && !reduce && (
         <motion.div
           aria-hidden
           className={`absolute -inset-6 -z-10 rounded-[2rem] ${style.wash}`}
-          initial={{ clipPath: "circle(0% at 50% 60%)" }}
-          animate={{ clipPath: "circle(75% at 50% 50%)" }}
-          transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+          initial={{ clipPath: "circle(0% at 50% 60%)", opacity: 1 }}
+          animate={{ clipPath: "circle(75% at 50% 50%)", opacity: 0 }}
+          transition={{
+            clipPath: { duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 },
+            opacity: { duration: 0.6, ease: "easeOut", delay: 1.1 },
+          }}
         />
       )}
       <article className={`card p-6 md:p-8 ${style.ring}`}>
@@ -122,7 +125,12 @@ function TopicCard({ topic, open, animate }: { topic: MysteryTopic; open: Myster
             {saving ? (
               <p className="footnote text-ink-2">Guardando…</p>
             ) : (
-              <MediaSearch initialQuery={topic.searchQuery} autoSearch onPick={save} />
+              <MediaSearch
+                initialQuery={topic.searchQuery}
+                sourceQueries={{ libro: topic.title, podcast: topic.title }}
+                autoSearch
+                onPick={save}
+              />
             )}
           </div>
         )}
@@ -135,10 +143,12 @@ export function MysteryBox({
   initialOpen,
   initialTopic,
   locked,
+  cutoffLabel,
 }: {
   initialOpen: MysteryOpen | null;
   initialTopic: MysteryTopic | null;
   locked: boolean;
+  cutoffLabel: string;
 }) {
   const [open, setOpen] = useState<MysteryOpen | null>(initialOpen);
   const [topic, setTopic] = useState<MysteryTopic | null>(initialTopic);
@@ -193,7 +203,7 @@ export function MysteryBox({
         ) : (
           <motion.div key="topic" initial={false}>
             <TopicCard topic={topic} open={open} animate={justOpened} />
-            <p className="caption mt-4 text-center text-ink-2">Mañana después de la 1:00 AM hay otra caja.</p>
+            <p className="caption mt-4 text-center text-ink-2">Mañana después de las {cutoffLabel} hay otra caja.</p>
           </motion.div>
         )}
       </AnimatePresence>

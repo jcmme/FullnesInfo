@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { minutesUntilCutoff } from "@/lib/day";
 
-/** "Cierra en 5 h 12 min": minutos que faltan para el corte (1:00 AM). */
+/** "Cierra en 5 h 12 min": minutos que faltan para el corte del día. */
 export function Countdown({ timezone, cutoffHour, done }: { timezone: string; cutoffHour: number; done: boolean }) {
   const [minutes, setMinutes] = useState<number | null>(null);
 

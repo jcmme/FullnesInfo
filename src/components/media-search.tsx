@@ -152,6 +152,12 @@ export function ResultTile({
 
 const FOUND_NOUN: Record<SearchSource, string> = { youtube: "videos", podcast: "episodios", libro: "libros" };
 
+const EMPTY_HINT: Record<SearchSource, string> = {
+  youtube: "Sin resultados. Prueba con el nombre del invitado, del canal o una frase del clip.",
+  podcast: "Sin resultados. Prueba con el nombre del programa o del invitado.",
+  libro: "Sin resultados. Prueba solo con el título o el autor.",
+};
+
 /**
  * Resultados de la búsqueda automática: los 4 más parecidos y el resto a un toque.
  * Videos en cuadrícula de miniaturas; podcasts y libros en lista.
@@ -212,9 +218,7 @@ export function AutoResults({
   }
 
   if (results.length === 0) {
-    return pending ? null : (
-      <p className="footnote px-1 text-ink-2">Sin resultados. Prueba con el nombre del invitado, del canal o una frase del clip.</p>
-    );
+    return pending ? null : <p className="footnote px-1 text-ink-2">{EMPTY_HINT[source]}</p>;
   }
 
   const expanded = expandedFor !== null && expandedFor === resultsKey;
@@ -290,8 +294,8 @@ export function ResultRow({
 }
 
 /**
- * Buscador con resultados visuales. No busca mientras escribes: cada búsqueda
- * en YouTube gasta cuota (unas 100 al día gratis), así que busca al confirmar.
+ * Buscador "Con botón": busca al confirmar, con pestañas de fuente y lista de
+ * resultados. La búsqueda mientras escribes está en useAutoSearch.
  */
 export function MediaSearch({
   initialQuery = "",
@@ -299,16 +303,21 @@ export function MediaSearch({
   selectedId,
   onPick,
   autoSearch = false,
+  sourceQueries,
 }: {
   initialQuery?: string;
   initialSource?: SearchSource;
   selectedId?: string | null;
   onPick: (result: MediaResult) => void;
   autoSearch?: boolean;
+  /** Consulta sugerida por fuente (p. ej. el título del tema para libros); se usa mientras no edites el texto. */
+  sourceQueries?: Partial<Record<SearchSource, string>>;
 }) {
   const [query, setQuery] = useState(initialQuery);
+  const [edited, setEdited] = useState(false);
   const [source, setSource] = useState<SearchSource>(initialSource);
   const [results, setResults] = useState<MediaResult[] | null>(null);
+  const [resultsSource, setResultsSource] = useState<SearchSource>(initialSource);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const didAuto = useRef(false);
@@ -319,6 +328,7 @@ export function MediaSearch({
     setError(null);
     try {
       setResults((await fetchResults(s, q)).slice(0, 6));
+      setResultsSource(s);
     } catch (err) {
       setError(err instanceof Error ? err.message : "Falló la búsqueda.");
       setResults(null);
@@ -329,8 +339,10 @@ export function MediaSearch({
 
   useEffect(() => {
     if (!autoSearch || didAuto.current || !initialQuery) return;
-    didAuto.current = true;
-    const t = setTimeout(() => void run(initialQuery, initialSource), 0);
+    const t = setTimeout(() => {
+      didAuto.current = true;
+      void run(initialQuery, initialSource);
+    }, 0);
     return () => clearTimeout(t);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -345,8 +357,10 @@ export function MediaSearch({
             role="radio"
             aria-checked={source === s}
             onClick={() => {
+              const q = edited ? query : (sourceQueries?.[s] ?? initialQuery);
               setSource(s);
-              if (results) void run(query, s);
+              setQuery(q);
+              if (results) void run(q, s);
             }}
             className={`press min-h-9 rounded-full footnote font-semibold transition-colors ${
               source === s ? "bg-surface text-ink shadow-card" : "text-ink-2"
@@ -365,7 +379,10 @@ export function MediaSearch({
             type="search"
             enterKeyHint="search"
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setEdited(true);
+            }}
             onKeyDown={(e) => {
               if (e.key === "Enter") {
                 e.preventDefault();
@@ -387,26 +404,24 @@ export function MediaSearch({
         </p>
       )}
 
-      {loading && (
+      {loading && !results?.length && (
         <ul className="space-y-2" aria-label="Buscando">
           {[0, 1, 2].map((i) => (
             <li key={i} className="flex items-center gap-3 p-2">
-              <div className="aspect-video w-32 shrink-0 animate-pulse rounded-[10px] bg-surface-2 sm:w-40" />
+              <div className="aspect-video w-32 shrink-0 rounded-[10px] bg-surface-2 motion-safe:animate-pulse sm:w-40" />
               <div className="flex-1 space-y-2">
-                <div className="h-4 w-4/5 animate-pulse rounded bg-surface-2" />
-                <div className="h-3 w-2/5 animate-pulse rounded bg-surface-2" />
+                <div className="h-4 w-4/5 rounded bg-surface-2 motion-safe:animate-pulse" />
+                <div className="h-3 w-2/5 rounded bg-surface-2 motion-safe:animate-pulse" />
               </div>
             </li>
           ))}
         </ul>
       )}
 
-      {!loading && results && results.length === 0 && (
-        <p className="footnote px-2 py-4 text-ink-2">Sin resultados. Prueba con el nombre del invitado, del canal o una frase del clip.</p>
-      )}
+      {!loading && results && results.length === 0 && <p className="footnote px-2 py-4 text-ink-2">{EMPTY_HINT[resultsSource]}</p>}
 
-      {!loading && results && results.length > 0 && (
-        <ul className="space-y-1">
+      {results && results.length > 0 && (
+        <ul aria-busy={loading} className={`space-y-1 transition-opacity duration-200 ${loading ? "opacity-50" : ""}`}>
           {results.map((r) => (
             <li key={`${r.provider}-${r.id}`}>
               <ResultRow result={r} selected={selectedId === r.id} onSelect={() => onPick(r)} />

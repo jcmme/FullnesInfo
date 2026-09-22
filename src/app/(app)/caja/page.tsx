@@ -1,6 +1,6 @@
 import { PageHeader, Section } from "@/components/page-header";
 import { MysteryBox } from "@/components/mystery-box";
-import { formatDayShort } from "@/lib/day";
+import { formatCutoff, formatDayShort } from "@/lib/day";
 import { todayKey } from "@/lib/engine";
 import { AREAS, getTopic, RARITY_LABEL, TOPICS } from "@/lib/mystery";
 import { getSession } from "@/lib/session";
@@ -35,6 +35,7 @@ export default async function MysteryPage() {
             initialOpen={todayOpen}
             initialTopic={todayOpen ? getTopic(todayOpen.topic_id) ?? null : null}
             locked={(failuresRes.count ?? 0) > 0 && !todayOpen}
+            cutoffLabel={formatCutoff(profile.cutoff_hour)}
           />
         </div>
       </Section>

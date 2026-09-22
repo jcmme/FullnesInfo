@@ -1,6 +1,6 @@
 # FullnesInfo
 
-Panel personal de crecimiento: guardas lo que viste en Instagram o TikTok y la app encuentra el video original en YouTube; cada día registras lo que aprendiste; si no cumples antes de la 1:00 AM, gira la ruleta de castigos físicos. Además, una caja misteriosa con un tema nuevo para investigar cada día.
+Panel personal de crecimiento: guardas lo que viste en Instagram o TikTok y la app encuentra el video original en YouTube; cada día registras lo que aprendiste; si no cumples antes de las 2:30 AM, gira la ruleta de castigos físicos. Además, una caja misteriosa con un tema nuevo para investigar cada día.
 
 Hecho con Next.js 16, Supabase y Vercel. Se instala en iPhone, iPad y Mac como app (PWA).
 
@@ -62,7 +62,7 @@ npm run dev
 
 ## Cómo funcionan las reglas
 
-- **El día cierra a la 1:00 AM** (zona horaria configurable en Ajustes). Lo que registres a las 00:40 cuenta para el día anterior.
+- **El día cierra a las 2:30 AM** (la hora y la zona horaria se cambian en Ajustes). Lo que registres a las 2:00 AM cuenta para el día anterior.
 - **Cumplir el día** = al menos una nota con el mínimo de palabras (50 por defecto).
 - **Fallar un día** crea una ruleta. Si no la giras, en 24 h se gira sola. Cada día fallado seguido sube el nivel (1 a 4).
 - **Castigos de ventana** (lagartijas, sentadillas, burpees, plancha, abdominales, zancadas, fondos): tienes 48 h para empezar; al empezar corre su ventana, por ejemplo 100 lagartijas en 4 h.

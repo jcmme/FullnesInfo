@@ -3,6 +3,10 @@
 import { Check, Copy, Eye, EyeSlash } from "@phosphor-icons/react";
 import { useActionState, useState, useTransition } from "react";
 import { regenerateToken, updateSettings } from "@/app/actions/settings";
+import { formatCutoff } from "@/lib/day";
+
+/** De 12:00 a 5:00 AM en medias horas. */
+const CUTOFFS = Array.from({ length: 11 }, (_, i) => i / 2);
 
 const TIMEZONES = [
   "America/Mexico_City",
@@ -20,7 +24,17 @@ const TIMEZONES = [
   "Europe/Madrid",
 ];
 
-export function RulesForm({ minWords, freezes, timezone }: { minWords: number; freezes: number; timezone: string }) {
+export function RulesForm({
+  minWords,
+  freezes,
+  timezone,
+  cutoffHour,
+}: {
+  minWords: number;
+  freezes: number;
+  timezone: string;
+  cutoffHour: number;
+}) {
   const [state, action, pending] = useActionState(updateSettings, undefined);
   const zones = TIMEZONES.includes(timezone) ? TIMEZONES : [timezone, ...TIMEZONES];
   return (
@@ -47,17 +61,31 @@ export function RulesForm({ minWords, freezes, timezone }: { minWords: number; f
           />
         </div>
       </div>
-      <div>
-        <label htmlFor="timezone" className="label">
-          Zona horaria
-        </label>
-        <select id="timezone" name="timezone" defaultValue={timezone} className="field">
-          {zones.map((z) => (
-            <option key={z} value={z}>
-              {z.replace(/_/g, " ").replace("America/", "")}
-            </option>
-          ))}
-        </select>
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div>
+          <label htmlFor="cutoff_hour" className="label">
+            El día cierra a las
+          </label>
+          <select id="cutoff_hour" name="cutoff_hour" defaultValue={String(cutoffHour)} className="field tabular">
+            {CUTOFFS.map((c) => (
+              <option key={c} value={String(c)}>
+                {formatCutoff(c)}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div>
+          <label htmlFor="timezone" className="label">
+            Zona horaria
+          </label>
+          <select id="timezone" name="timezone" defaultValue={timezone} className="field">
+            {zones.map((z) => (
+              <option key={z} value={z}>
+                {z.replace(/_/g, " ").replace("America/", "")}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
       <div className="flex items-center gap-3">
         <button type="submit" disabled={pending} className="btn btn-primary">

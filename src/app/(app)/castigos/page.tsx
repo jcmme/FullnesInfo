@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, XCircle } from "@phosphor-icons/react/ssr";
 import { ProgressBar } from "@/components/media";
 import { PageHeader, Section } from "@/components/page-header";
 import { Roulette } from "@/components/roulette";
-import { formatDayLong, formatDayShort, monthOf } from "@/lib/day";
+import { formatCutoff, formatDayLong, formatDayShort, monthOf } from "@/lib/day";
 import { formatNumber, formatRemaining } from "@/lib/format";
 import { getSession } from "@/lib/session";
 import type { Failure, Punishment } from "@/lib/types";
@@ -100,7 +100,7 @@ export default async function PunishmentsPage() {
               <CheckCircle size={22} weight="fill" aria-hidden />
               Sin deudas
             </p>
-            <p className="footnote mt-1 max-w-[52ch] text-ink-2">Mientras registres cada día antes de la 1:00 AM, esta pantalla se queda así.</p>
+            <p className="footnote mt-1 max-w-[52ch] text-ink-2">Mientras registres cada día antes de las {formatCutoff(profile.cutoff_hour)}, esta pantalla se queda así.</p>
           </div>
         </Section>
       )}

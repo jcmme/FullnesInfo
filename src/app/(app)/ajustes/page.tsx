@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import { signOut } from "@/app/actions/auth";
 import { PageHeader, Section } from "@/components/page-header";
 import { RulesForm, TokenPanel } from "@/components/settings-forms";
+import { formatCutoff } from "@/lib/day";
 import { getSession } from "@/lib/session";
 
 export const metadata = { title: "Ajustes" };
@@ -31,9 +32,14 @@ export default async function SettingsPage() {
 
       <Section title="Reglas del juego">
         <div className="card p-5">
-          <RulesForm minWords={profile.min_words} freezes={profile.freezes_per_month} timezone={profile.timezone} />
+          <RulesForm
+            minWords={profile.min_words}
+            freezes={profile.freezes_per_month}
+            timezone={profile.timezone}
+            cutoffHour={profile.cutoff_hour}
+          />
           <p className="caption mt-4 text-ink-2">
-            El día cierra a la {profile.cutoff_hour}:00 AM. Lo que registres antes de esa hora cuenta para el día anterior.
+            Lo que registres después de medianoche y antes de las {formatCutoff(profile.cutoff_hour)} cuenta para el día anterior.
           </p>
         </div>
       </Section>

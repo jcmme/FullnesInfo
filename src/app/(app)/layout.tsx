@@ -1,4 +1,5 @@
 import { Nav } from "@/components/nav";
+import { ViewportGuard } from "@/components/viewport-guard";
 import { getSession } from "@/lib/session";
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
@@ -15,6 +16,9 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="flex min-h-dvh">
+      {/* En la app instalada el contenido pasa bajo la hora y la batería: esta franja lo cubre. */}
+      <div aria-hidden className="status-scrim md:hidden" />
+      <ViewportGuard />
       <Nav punishmentCount={pending} />
       <main className="min-w-0 flex-1 pb-[calc(5rem+env(safe-area-inset-bottom))] md:pb-12">{children}</main>
     </div>

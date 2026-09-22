@@ -138,6 +138,19 @@ export async function searchYouTube(query: string, max = 8): Promise<MediaResult
 
 /* Libros: Open Library (sin llave) ---------------------------------------- */
 
+const STOPWORDS = new Set(
+  "el la los las un una unos unas de del al a y e o u en con sin por para sobre que qué cómo como fin su sus lo le se es the of and".split(" "),
+);
+
+/** Open Library exige todas las palabras: quita las de relleno y los signos. */
+export function simplifyQuery(query: string): string[] {
+  return query
+    .toLowerCase()
+    .replace(/[¿?¡!,.:;()"“”]/g, " ")
+    .split(/\s+/)
+    .filter((w) => w && !STOPWORDS.has(w));
+}
+
 type OlDoc = {
   key: string;
   title: string;
@@ -148,6 +161,14 @@ type OlDoc = {
 };
 
 export async function searchBooks(query: string, max = 8): Promise<MediaResult[]> {
+  const words = simplifyQuery(query);
+  const results = await fetchBooks(words.join(" ") || query, max);
+  // Sin resultados con todas las palabras: reintenta con las dos primeras (suelen ser el tema).
+  if (!results.length && words.length > 2) return fetchBooks(words.slice(0, 2).join(" "), max);
+  return results;
+}
+
+async function fetchBooks(query: string, max: number): Promise<MediaResult[]> {
   const qs = new URLSearchParams({
     q: query,
     limit: String(max),

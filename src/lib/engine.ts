@@ -15,7 +15,7 @@ const MAX_BACKLOG_DAYS = 60;
 export async function getProfile(supabase: SupabaseClient, userId: string): Promise<Profile> {
   const { data, error } = await supabase.from("profiles").select("*").eq("id", userId).single();
   if (error || !data) throw new Error("No encontré tu perfil. ¿Corriste la migración de Supabase?");
-  return data as Profile;
+  return { ...data, cutoff_hour: Number(data.cutoff_hour) } as Profile;
 }
 
 export function todayKey(profile: Profile, now = new Date()): string {
@@ -24,8 +24,7 @@ export function todayKey(profile: Profile, now = new Date()): string {
 
 export async function syncState(supabase: SupabaseClient, profile: Profile, now = new Date()) {
   await evaluateClosedDays(supabase, profile, now);
-  await autoAssignStaleFailures(supabase, profile.id, now);
-  await expirePunishments(supabase, profile.id, now);
+  await Promise.all([autoAssignStaleFailures(supabase, profile.id, now), expirePunishments(supabase, profile.id, now)]);
 }
 
 async function evaluateClosedDays(supabase: SupabaseClient, profile: Profile, now: Date) {
