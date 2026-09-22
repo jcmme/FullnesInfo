@@ -107,7 +107,7 @@ export default async function PunishmentsPage() {
 
       <Section title="Cómo funciona">
         <ol className="card list-decimal space-y-2 py-4 pl-9 pr-5 footnote text-ink-2 marker:font-semibold marker:text-ink">
-          <li>Si un día cierra sin una nota de {profile.min_words} palabras, te toca girar la ruleta. Si no la giras, en 24 h se gira sola.</li>
+          <li>Si un día cierra sin sumar {profile.min_words} palabras entre tus notas, te toca girar la ruleta. Si no la giras, en 24 h se gira sola.</li>
           <li>Cada día fallado seguido sube el nivel: más repeticiones o más kilómetros.</li>
           <li>Tienes 48 h para empezar un castigo. Al empezarlo corre su ventana (por ejemplo, 100 lagartijas en 4 h).</li>
           <li>Si no lo empiezas o no lo terminas a tiempo, aparece el mismo castigo un nivel más arriba.</li>

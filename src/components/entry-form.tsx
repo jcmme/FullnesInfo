@@ -282,7 +282,7 @@ export function EntryForm({ minWords, items, initialItemId, mystery }: Props) {
         </button>
         {!enough && words > 0 && (
           <p className="caption mt-2 text-center text-ink-2">
-            Se guarda, pero el día cuenta hasta que una nota llegue a {minWords} palabras.
+            Se guarda y se suma a lo que ya escribiste hoy.
           </p>
         )}
       </div>

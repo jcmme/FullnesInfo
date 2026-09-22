@@ -95,7 +95,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
                       : overview.todayFrozen
                         ? "Este día no rompe tu racha. Aun así puedes registrar algo."
                         : overview.todayWords > 0
-                          ? `Tu nota más larga aún no llega a ${profile.min_words} palabras. Agrega otra o amplíala.`
+                          ? `Llevas ${formatNumber(overview.todayWords)} de ${profile.min_words} palabras. Todas tus notas del día suman.`
                           : `Consume algo que te haga crecer y escribe al menos ${profile.min_words} palabras sobre ello.`}
                   </p>
                 </div>

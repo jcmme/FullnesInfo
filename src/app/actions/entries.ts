@@ -27,8 +27,8 @@ export async function createEntry(_prev: EntryFormState, formData: FormData): Pr
   const day = todayKey(profile);
   const wordCount = countWords(note);
 
-  const { data: before } = await supabase.from("day_totals").select("best_words").eq("user_id", userId).eq("day", day).maybeSingle();
-  const wasDone = (before?.best_words ?? 0) >= profile.min_words;
+  const { data: before } = await supabase.from("day_totals").select("words").eq("user_id", userId).eq("day", day).maybeSingle();
+  const wasDone = (before?.words ?? 0) >= profile.min_words;
 
   const { error } = await supabase.from("entries").insert({
     user_id: userId,

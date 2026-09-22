@@ -35,7 +35,7 @@ async function evaluateClosedDays(supabase: SupabaseClient, profile: Profile, no
   if (from < oldest) from = oldest;
 
   const [totals, freezes, failures] = await Promise.all([
-    supabase.from("day_totals").select("day, best_words").eq("user_id", profile.id).gte("day", from).lte("day", yesterday),
+    supabase.from("day_totals").select("day, words").eq("user_id", profile.id).gte("day", from).lte("day", yesterday),
     supabase.from("freezes").select("day").eq("user_id", profile.id).gte("day", from).lte("day", yesterday),
     supabase
       .from("failures")
@@ -46,7 +46,7 @@ async function evaluateClosedDays(supabase: SupabaseClient, profile: Profile, no
   ]);
 
   const qualified = new Set(
-    (totals.data ?? []).filter((t) => t.best_words >= profile.min_words).map((t) => t.day as string),
+    (totals.data ?? []).filter((t) => t.words >= profile.min_words).map((t) => t.day as string),
   );
   const frozen = new Set((freezes.data ?? []).map((f) => f.day as string));
   const existing = new Set((failures.data ?? []).map((f) => f.day as string));
@@ -155,7 +155,7 @@ export type Overview = {
 export async function getOverview(supabase: SupabaseClient, profile: Profile, now = new Date(), weeks = 18): Promise<Overview> {
   const today = todayKey(profile, now);
   const [totalsRes, freezesRes, failuresRes] = await Promise.all([
-    supabase.from("day_totals").select("day, words, best_words").eq("user_id", profile.id).order("day", { ascending: false }),
+    supabase.from("day_totals").select("day, words").eq("user_id", profile.id).order("day", { ascending: false }),
     supabase.from("freezes").select("day").eq("user_id", profile.id),
     supabase.from("failures").select("day, status").eq("user_id", profile.id).neq("status", "perdonado"),
   ]);
@@ -164,7 +164,7 @@ export async function getOverview(supabase: SupabaseClient, profile: Profile, no
   const qualified = new Set<string>();
   for (const t of totalsRes.data ?? []) {
     words.set(t.day, t.words);
-    if (t.best_words >= profile.min_words) qualified.add(t.day);
+    if (t.words >= profile.min_words) qualified.add(t.day);
   }
   const frozen = new Set((freezesRes.data ?? []).map((f) => f.day as string));
   const failed = new Set((failuresRes.data ?? []).map((f) => f.day as string));
