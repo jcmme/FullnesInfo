@@ -78,12 +78,23 @@ export function Roulette({
       controls.current = animate(rotation, far, { ease: "linear", duration: (360 * 20) / speed });
     }
 
-    const res = await spinFailure(failureId);
-    if ("error" in res || !res.punishment) {
+    // Si algo sale mal la ruleta frena y vuelve a poder girarse: nunca se queda dando vueltas.
+    const stall = (message: string) => {
       controls.current?.stop();
       controls.current = animate(rotation, rotation.get() + dir * 40, { type: "spring", bounce: 0, duration: 0.8 });
-      setError(("error" in res && res.error) || "No se pudo girar.");
+      setError(message);
       setPhase("idle");
+    };
+
+    let res: Awaited<ReturnType<typeof spinFailure>>;
+    try {
+      res = await spinFailure(failureId);
+    } catch {
+      stall("No se pudo conectar. Revisa tu internet e inténtalo otra vez.");
+      return;
+    }
+    if ("error" in res || !res.punishment) {
+      stall(("error" in res && res.error) || "No se pudo girar.");
       return;
     }
 
@@ -265,9 +276,13 @@ export function Roulette({
                 onClick={() => {
                   if (!window.confirm("¿Gastar un comodín en este día? No habrá castigo y no se puede deshacer.")) return;
                   startForgive(async () => {
-                    const res = await forgiveFailure(failureId);
-                    if (res?.error) setError(res.error);
-                    else router.refresh();
+                    try {
+                      const res = await forgiveFailure(failureId);
+                      if (res?.error) setError(res.error);
+                      else router.refresh();
+                    } catch {
+                      setError("No se pudo conectar. Revisa tu internet e inténtalo otra vez.");
+                    }
                   });
                 }}
                 className="btn btn-ghost mt-2"

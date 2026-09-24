@@ -122,6 +122,12 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
     if (edited) writeDraft(key, text);
   }, [key, text, edited]);
 
+  // El borrador se limpia cuando ya quedó guardado, no al enviar: si el guardado
+  // falla o se va el internet, tu texto sigue aquí cuando vuelvas.
+  useEffect(() => {
+    if (!edited && draft !== null && draft === (base?.note ?? "")) writeDraft(key, null);
+  }, [key, edited, draft, base]);
+
   const noteWords = countWords(text);
   const total = todayWords - (base?.words ?? 0) + noteWords;
   const enough = total >= minWords;
@@ -131,13 +137,7 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
   const title = subject.type === "otro" && !subject.noteId ? newTitle : subject.title;
 
   return (
-    <form
-      action={(fd) => {
-        writeDraft(key, null);
-        return action(fd);
-      }}
-      className="space-y-6"
-    >
+    <form action={action} className="space-y-6">
       {base && <input type="hidden" name="entryId" value={base.id} />}
       {item && <input type="hidden" name="itemId" value={item.id} />}
       {subject.type === "caja" && <input type="hidden" name="mysteryId" value={subject.mystery.id} />}

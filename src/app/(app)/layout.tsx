@@ -15,7 +15,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   const pending = (failures.count ?? 0) + (punishments.count ?? 0);
 
   return (
-    <div className="flex min-h-dvh">
+    <div className="app-shell flex min-h-dvh">
       {/* En la app instalada el contenido pasa bajo la hora y la batería: esta franja lo cubre. */}
       <div aria-hidden className="status-scrim md:hidden" />
       <ViewportGuard />

@@ -37,14 +37,30 @@ export function RulesForm({
 }) {
   const [state, action, pending] = useActionState(updateSettings, undefined);
   const zones = TIMEZONES.includes(timezone) ? TIMEZONES : [timezone, ...TIMEZONES];
+  // Los campos son controlados a propósito: al enviar, React vacía los formularios
+  // sin control y las reglas volvían a verse como estaban antes de tu cambio.
+  const [words, setWords] = useState(String(minWords));
+  const [freezesValue, setFreezes] = useState(String(freezes));
+  const [cutoff, setCutoff] = useState(String(cutoffHour));
+  const [zone, setZone] = useState(timezone);
   return (
     <form action={action} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="min_words" className="label">
-            Palabras mínimas por nota
+            Palabras mínimas al día
           </label>
-          <input id="min_words" name="min_words" type="number" min={10} max={500} defaultValue={minWords} className="field tabular" />
+          <input
+            id="min_words"
+            name="min_words"
+            type="number"
+            min={10}
+            max={500}
+            value={words}
+            onChange={(e) => setWords(e.target.value)}
+            className="field tabular"
+          />
+          <p className="caption mt-1 text-ink-2">Suman todas las notas que escribas ese día.</p>
         </div>
         <div>
           <label htmlFor="freezes_per_month" className="label">
@@ -56,7 +72,8 @@ export function RulesForm({
             type="number"
             min={0}
             max={5}
-            defaultValue={freezes}
+            value={freezesValue}
+            onChange={(e) => setFreezes(e.target.value)}
             className="field tabular"
           />
         </div>
@@ -66,7 +83,13 @@ export function RulesForm({
           <label htmlFor="cutoff_hour" className="label">
             El día cierra a las
           </label>
-          <select id="cutoff_hour" name="cutoff_hour" defaultValue={String(cutoffHour)} className="field tabular">
+          <select
+            id="cutoff_hour"
+            name="cutoff_hour"
+            value={cutoff}
+            onChange={(e) => setCutoff(e.target.value)}
+            className="field tabular"
+          >
             {CUTOFFS.map((c) => (
               <option key={c} value={String(c)}>
                 {formatCutoff(c)}
@@ -78,7 +101,7 @@ export function RulesForm({
           <label htmlFor="timezone" className="label">
             Zona horaria
           </label>
-          <select id="timezone" name="timezone" defaultValue={timezone} className="field">
+          <select id="timezone" name="timezone" value={zone} onChange={(e) => setZone(e.target.value)} className="field">
             {zones.map((z) => (
               <option key={z} value={z}>
                 {z.replace(/_/g, " ").replace("America/", "")}

@@ -96,7 +96,9 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
                 ) : (
                   <p className="headline">
                     {overview.todayWords > 0
-                      ? `Te faltan ${formatNumber(profile.min_words - overview.todayWords)} palabras`
+                      ? profile.min_words - overview.todayWords === 1
+                        ? "Te falta 1 palabra"
+                        : `Te faltan ${formatNumber(profile.min_words - overview.todayWords)} palabras`
                       : "Falta tu nota de hoy"}
                   </p>
                 )}

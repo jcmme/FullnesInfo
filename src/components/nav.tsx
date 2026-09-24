@@ -21,11 +21,18 @@ function isActive(pathname: string, href: string) {
 function Badge({ count }: { count: number }) {
   if (!count) return null;
   return (
-    <span className="absolute -top-1 left-1/2 ml-1.5 min-w-[1.125rem] rounded-full bg-bad px-1 text-center text-[0.6875rem] font-bold leading-[1.125rem] text-on-tint tabular">
+    // El número se lee aparte en la etiqueta del enlace; aquí sería "3Castigos".
+    <span
+      aria-hidden
+      className="absolute -top-1 left-1/2 ml-1.5 min-w-[1.125rem] rounded-full bg-bad px-1 text-center text-[0.6875rem] font-bold leading-[1.125rem] text-on-tint tabular"
+    >
       {count}
     </span>
   );
 }
+
+const tabLabel = (label: string, href: string, count: number) =>
+  href === "/castigos" && count ? `${label}, ${count} ${count === 1 ? "pendiente" : "pendientes"}` : undefined;
 
 /** Barra de pestañas flotante de vidrio en iPhone; barra lateral en iPad y Mac. */
 export function Nav({ punishmentCount }: { punishmentCount: number }) {
@@ -48,6 +55,7 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
                 <Link
                   href={href}
                   aria-current={active ? "page" : undefined}
+                  aria-label={tabLabel(label, href, punishmentCount)}
                   className={`press flex min-h-12 flex-col items-center justify-center gap-0.5 font-display ${
                     active ? "text-tint-ink" : "text-ink-2"
                   }`}
@@ -76,6 +84,7 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
               key={href}
               href={href}
               aria-current={active ? "page" : undefined}
+              aria-label={tabLabel(label, href, punishmentCount)}
               className={`press flex min-h-11 items-center gap-3 rounded-control px-3 font-medium transition-colors ${
                 active ? "bg-tint-soft text-tint-ink" : "text-ink-2 hover:bg-surface-2 hover:text-ink"
               }`}
@@ -83,7 +92,9 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
               <Icon size={22} weight={active ? "fill" : "regular"} aria-hidden />
               <span className="flex-1">{label}</span>
               {href === "/castigos" && punishmentCount > 0 && (
-                <span className="chip bg-bad text-on-tint">{punishmentCount}</span>
+                <span aria-hidden className="chip bg-bad text-on-tint">
+                  {punishmentCount}
+                </span>
               )}
             </Link>
           );
