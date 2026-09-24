@@ -18,8 +18,8 @@ export default async function ChooseAreasPage() {
       </div>
       <div className="px-4 md:px-8">
         <h1 className="title-large mt-1">¿Qué te late?</h1>
-        <p className="footnote mb-5 mt-1 text-pretty text-ink-2">
-          Elige nada más las áreas. Los temas te van a llegar solos, de sorpresa, sacados de lo que marques aquí.
+        <p className="footnote mb-4 mt-1 text-pretty text-ink-2">
+          Elige áreas. Los temas te llegan solos, de sorpresa, de lo que marques aquí.
         </p>
         <AreaPicker areas={AREA_LIST} counts={topicCounts()} initial={profile.areas ?? []} />
       </div>

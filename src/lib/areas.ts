@@ -19,7 +19,7 @@ export const AREA_LIST: Area[] = [
   { id: "trabajo", label: "Trabajo", hint: "Oficios, empresas, cómo se hacen las cosas" },
   { id: "tecnologia", label: "Tecnología", hint: "Internet, chips, la infraestructura invisible" },
   { id: "filosofia", label: "Filosofía", hint: "Las preguntas viejas que siguen abiertas" },
-  { id: "modelos", label: "Modelos mentales", hint: "Herramientas para pensar y decidir" },
+  { id: "modelos", label: "Modelos", hint: "Herramientas para pensar y decidir" },
   { id: "sociedad", label: "Sociedad", hint: "Poder, ciudades, cómo vivimos juntos" },
   { id: "cultura", label: "Cultura", hint: "Arte, música, cine, libros" },
   { id: "deporte", label: "Deporte", hint: "El cuerpo al límite y la estrategia" },

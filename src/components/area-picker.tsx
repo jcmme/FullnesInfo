@@ -26,7 +26,7 @@ export function AreaPicker({ areas, counts, initial }: { areas: Area[]; counts: 
 
   return (
     <div className="pb-28">
-      <ul className="grid grid-cols-2 gap-2.5">
+      <ul className="grid grid-cols-3 gap-2">
         {areas.map((a) => {
           const on = chosen.has(a.id);
           const pronto = !counts[a.id];
@@ -36,17 +36,16 @@ export function AreaPicker({ areas, counts, initial }: { areas: Area[]; counts: 
                 type="button"
                 aria-pressed={on}
                 onClick={() => toggle(a.id)}
-                className={`press flex min-h-[4.5rem] w-full flex-col justify-center gap-0.5 rounded-card px-3.5 py-3 text-left transition-colors ${
+                title={a.hint}
+                className={`press flex min-h-[3.5rem] w-full flex-col items-center justify-center gap-0.5 rounded-card px-2 py-2 text-center transition-colors ${
                   on ? "bg-tint text-on-tint" : "bg-surface"
                 }`}
               >
-                <span className="flex items-center gap-1.5 footnote font-semibold">
-                  {on && <Check size={14} weight="bold" aria-hidden />}
+                <span className="flex items-center gap-1 footnote font-semibold leading-tight">
+                  {on && <Check size={13} weight="bold" aria-hidden />}
                   {a.label}
                 </span>
-                <span className={`caption text-pretty ${on ? "opacity-80" : "text-ink-2"}`}>
-                  {pronto ? "Pronto" : a.hint}
-                </span>
+                {pronto && <span className={`caption leading-none ${on ? "opacity-75" : "text-ink-3"}`}>pronto</span>}
               </button>
             </li>
           );
