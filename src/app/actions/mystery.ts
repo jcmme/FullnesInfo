@@ -2,7 +2,8 @@
 
 import { revalidatePath } from "next/cache";
 import { getProfile, todayKey } from "@/lib/engine";
-import { drawTopic, getTopic } from "@/lib/mystery";
+import { areaOf } from "@/lib/areas";
+import { drawTopic, getTopic, TOPICS } from "@/lib/mystery";
 import { requireUser } from "@/lib/supabase/server";
 
 export async function openMysteryBox() {
@@ -21,7 +22,10 @@ export async function openMysteryBox() {
   if (existing) return { open: existing, topic: getTopic(existing.topic_id) ?? null };
 
   const { data: seenRows } = await supabase.from("mystery_opens").select("topic_id").eq("user_id", userId);
-  const topic = drawTopic(new Set((seenRows ?? []).map((r) => r.topic_id)));
+  // La caja saca de tus áreas; si todavía no eliges ninguna, de todo el catálogo.
+  const areas = profile.areas ?? [];
+  const pool = areas.length ? TOPICS.filter((t) => areas.includes(areaOf(t))) : TOPICS;
+  const topic = drawTopic(new Set((seenRows ?? []).map((r) => r.topic_id)), Math.random, pool);
   const { data, error } = await supabase
     .from("mystery_opens")
     .insert({ user_id: userId, topic_id: topic.id, rarity: topic.rarity, day: today })

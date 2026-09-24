@@ -32,8 +32,8 @@ export function getTopic(id: string): MysteryTopic | undefined {
   return TOPICS.find((t) => t.id === id);
 }
 
-/** Tira la rareza y elige un tema que no hayas visto. Si ya viste todos, vuelve a empezar. */
-export function drawTopic(seen: Set<string>, random = Math.random): MysteryTopic {
+/** Tira la rareza y elige un tema que no hayas visto, de tus áreas. Si ya viste todos, vuelve a empezar. */
+export function drawTopic(seen: Set<string>, random = Math.random, from: MysteryTopic[] = TOPICS): MysteryTopic {
   let roll = random();
   let rarity: Rarity = "comun";
   for (const [r, p] of ODDS) {
@@ -43,8 +43,9 @@ export function drawTopic(seen: Set<string>, random = Math.random): MysteryTopic
     }
     roll -= p;
   }
-  const unseen = TOPICS.filter((t) => !seen.has(t.id));
-  const pool = unseen.length ? unseen : TOPICS;
+  const base = from.length ? from : TOPICS;
+  const unseen = base.filter((t) => !seen.has(t.id));
+  const pool = unseen.length ? unseen : base;
   const sameRarity = pool.filter((t) => t.rarity === rarity);
   const candidates = sameRarity.length ? sameRarity : pool;
   return candidates[Math.floor(random() * candidates.length)];

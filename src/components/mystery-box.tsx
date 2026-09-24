@@ -21,13 +21,13 @@ function Box({ shaking, locked }: { shaking: boolean; locked: boolean }) {
   const reduce = useReducedMotion();
   return (
     <motion.div
-      className={`relative mx-auto h-56 w-60 ${locked ? "grayscale" : ""}`}
+      className={`relative mx-auto h-36 w-40 ${locked ? "grayscale" : ""}`}
       animate={shaking && !reduce ? { rotate: [0, -4, 4, -3, 3, 0] } : { rotate: 0 }}
       transition={shaking ? { duration: 0.55, repeat: Infinity, ease: "easeInOut" } : { type: "spring", bounce: 0, duration: 0.3 }}
       exit={reduce ? { opacity: 0 } : { opacity: 0, y: 24, scale: 0.9, transition: { duration: 0.35, delay: 0.15, ease: [0.16, 1, 0.3, 1] } }}
     >
       <div className="absolute inset-x-8 bottom-0 h-5 rounded-[50%] bg-ink/15 blur-md" />
-      <div className="absolute inset-x-5 bottom-3 top-[5.5rem] overflow-hidden rounded-[22px] bg-tint shadow-lift">
+      <div className="absolute inset-x-4 bottom-2 top-[3.5rem] overflow-hidden rounded-[18px] bg-tint shadow-lift">
         <div className="absolute inset-y-0 left-1/2 w-8 -translate-x-1/2 bg-on-tint/85" />
         <div className="absolute inset-x-0 top-0 h-3 bg-ink/10" />
       </div>
@@ -173,9 +173,9 @@ export function MysteryBox({
     <div className="relative">
       <AnimatePresence mode="wait">
         {!open || !topic ? (
-          <motion.div key="box" className="py-6 text-center" exit={{ opacity: 1 }}>
+          <motion.div key="box" className="card py-6 text-center" exit={{ opacity: 1 }}>
             <Box shaking={pending} locked={locked} />
-            <motion.div className="mt-8" exit={{ opacity: 0, transition: { duration: 0.15 } }}>
+            <motion.div className="mt-5 px-4" exit={{ opacity: 0, transition: { duration: 0.15 } }}>
               {locked ? (
                 <>
                   <p className="headline">La caja está bloqueada</p>
@@ -190,9 +190,9 @@ export function MysteryBox({
                 <>
                   <p className="headline">Un tema nuevo cada día</p>
                   <p className="footnote mx-auto mt-1 max-w-[36ch] text-ink-2">
-                    Algo que vale la pena entender. Investígalo, escribe lo que aprendiste y cuenta como tu registro del día.
+                    Algo que vale la pena entender, de tus áreas.
                   </p>
-                  <button type="button" onClick={handleOpen} disabled={pending} className="btn btn-primary btn-lg mt-5 min-w-44">
+                  <button type="button" onClick={handleOpen} disabled={pending} className="btn btn-primary btn-lg mt-4 min-w-44">
                     {pending ? "Abriendo…" : "Abrir la caja"}
                   </button>
                   {error && <p className="footnote mt-3 text-bad">{error}</p>}
