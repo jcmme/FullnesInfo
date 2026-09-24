@@ -37,8 +37,9 @@ const tabLabel = (label: string, href: string, count: number) =>
 /** Barra de pestañas flotante de vidrio en iPhone; barra lateral en iPad y Mac. */
 export function Nav({ punishmentCount }: { punishmentCount: number }) {
   const pathname = usePathname();
-  // Al escribir la nota la barra se esconde, como en las pantallas de redactar de iOS: más espacio para el texto.
-  const composing = pathname.startsWith("/registrar");
+  // Al escribir la nota o elegir temas la barra se esconde, como en las pantallas de
+  // redactar de iOS: la tarea manda y su botón de guardar se queda con el fondo.
+  const composing = pathname.startsWith("/registrar") || pathname.startsWith("/descubrir/elegir");
 
   return (
     <>
