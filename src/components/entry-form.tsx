@@ -26,6 +26,8 @@ export type TodayNote = {
   title: string;
   note: string;
   words: number;
+  /** false si la revisión la marcó como relleno: ahí sus palabras no suman. */
+  counts: boolean;
 };
 
 export type MysteryToday = { id: string; title: string; questions: string[] };
@@ -139,7 +141,7 @@ export function EntryForm({ minWords, items, mystery, topics, todayNotes, todayW
   }, [key, edited, draft, base]);
 
   const noteWords = countWords(text);
-  const total = todayWords - (base?.words ?? 0) + noteWords;
+  const total = todayWords - (base?.counts ? base.words : 0) + noteWords;
   const enough = total >= minWords;
   const prompts =
     subject.type === "caja" && subject.mystery.questions.length
@@ -160,12 +162,15 @@ export function EntryForm({ minWords, items, mystery, topics, todayNotes, todayW
       <input type="hidden" name="kind" value={item ? item.kind : subject.type === "caja" ? "caja" : subject.type === "tema" ? "tema" : "otro"} />
       {!(subject.type === "otro" && !subject.noteId) && <input type="hidden" name="title" value={title} />}
 
-      <fieldset>
+      {/* min-w-0: un fieldset no se encoge por defecto y el carrusel empujaría la página. */}
+      <fieldset className="min-w-0">
         <legend className="label">¿Sobre qué escribes?</legend>
         <div className="-mx-4 flex snap-x scroll-px-4 gap-2.5 overflow-x-auto px-4 pb-1 [scrollbar-width:none] md:-mx-8 md:scroll-px-8 md:px-8">
           {subjects.map((s) => {
             const selected = s.key === key;
-            const written = notesOf(s, todayNotes).reduce((sum, n) => sum + n.words, 0);
+            const notes = notesOf(s, todayNotes);
+            const written = notes.reduce((sum, n) => sum + (n.counts ? n.words : 0), 0);
+            const marked = notes.some((n) => !n.counts);
             return (
               <button
                 key={s.key}
@@ -203,6 +208,7 @@ export function EntryForm({ minWords, items, mystery, topics, todayNotes, todayW
                   {s.type === "otro" && !s.noteId ? "Otra cosa" : s.title}
                 </span>
                 {written > 0 && <span className="caption block px-1 text-ink-2 tabular">{written} palabras hoy</span>}
+                {marked && written === 0 && <span className="caption block px-1 text-bad">sin contar</span>}
               </button>
             );
           })}

@@ -23,7 +23,12 @@ async function FromWikipedia({ topicKey, query }: { topicKey: string; query: str
   return (
     <div className="card p-5">
       <p className="text-pretty">{wiki.extract}</p>
-      <a href={wiki.url} target="_blank" rel="noreferrer" className="press mt-3 flex items-center gap-1.5 footnote font-semibold text-tint-ink">
+      <a
+        href={wiki.url}
+        target="_blank"
+        rel="noreferrer"
+        className="press mt-2 flex min-h-11 items-center gap-1.5 footnote font-semibold text-tint-ink"
+      >
         Leerlo completo en Wikipedia
         <ArrowSquareOut size={14} aria-hidden />
       </a>

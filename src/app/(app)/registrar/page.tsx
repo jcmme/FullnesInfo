@@ -46,8 +46,10 @@ export default async function RegisterPage({
     title: e.title,
     note: e.note,
     words: e.word_count,
+    counts: e.counts,
   }));
-  const todayWords = todayNotes.reduce((sum, n) => sum + n.words, 0);
+  // Las notas que la revisión marcó no suman para el día.
+  const todayWords = todayNotes.reduce((sum, n) => sum + (n.counts ? n.words : 0), 0);
 
   const topic = mysteryRes.data ? getTopic(mysteryRes.data.topic_id) : undefined;
   const mystery: MysteryToday | null =
