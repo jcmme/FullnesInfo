@@ -3,51 +3,36 @@
 import { revalidatePath } from "next/cache";
 import { detectOrigin, extractYouTubeId, getYouTubeVideos } from "@/lib/media";
 import { requireUser } from "@/lib/supabase/server";
-import { customKey } from "@/lib/topics";
+import { AREA_LIST } from "@/lib/areas";
 import type { ItemKind } from "@/lib/types";
 
 export type InterestInput = { key: string; label: string; area: string };
 
-const MAX_INTERESTS = 60;
+/** Tus áreas: lo único que eliges. Se guardan de un jalón al terminar. */
+export async function saveAreas(areas: string[]) {
+  const { supabase, userId } = await requireUser();
+  const clean = [...new Set(areas.filter((a) => AREA_LIST.some((x) => x.id === a)))];
+  const { error } = await supabase.from("profiles").update({ areas: clean }).eq("id", userId);
+  if (error) return { error: "No se pudieron guardar tus áreas." };
+  revalidatePath("/", "layout");
+  return { ok: true, count: clean.length };
+}
 
 /**
- * Guarda tus temas de un jalón: se borran los que quitaste y se agregan los nuevos,
- * conservando el orden en que aparecen. Se llama una sola vez al terminar de elegir,
- * no en cada toque.
+ * Lo que decides sobre un tema sorpresa: guardarlo o pasarlo. Los pasados
+ * también se anotan, para que no te los vuelva a mostrar.
  */
-export async function saveInterests(chosen: InterestInput[]) {
+export async function decideTopic(input: InterestInput, status: "guardado" | "descartado") {
   const { supabase, userId } = await requireUser();
-
-  const clean: InterestInput[] = [];
-  const seen = new Set<string>();
-  for (const raw of chosen.slice(0, MAX_INTERESTS)) {
-    const label = String(raw.label ?? "").trim().slice(0, 120);
-    if (!label) continue;
-    const key = String(raw.key ?? "").trim() || customKey(label);
-    if (!key || key === "propio:" || seen.has(key)) continue;
-    seen.add(key);
-    clean.push({ key, label, area: String(raw.area ?? "propio").slice(0, 40) });
-  }
-
-  const { data: current, error: readError } = await supabase.from("interests").select("key").eq("user_id", userId);
-  if (readError) return { error: "No se pudieron leer tus temas. Intenta otra vez." };
-
-  const currentKeys = new Set((current ?? []).map((r) => r.key as string));
-  const removed = [...currentKeys].filter((k) => !seen.has(k));
-
-  if (removed.length) {
-    const { error } = await supabase.from("interests").delete().eq("user_id", userId).in("key", removed);
-    if (error) return { error: "No se pudieron quitar algunos temas." };
-  }
-
-  const rows = clean.map((c, i) => ({ user_id: userId, key: c.key, label: c.label, area: c.area, position: i }));
-  if (rows.length) {
-    const { error } = await supabase.from("interests").upsert(rows, { onConflict: "user_id,key" });
-    if (error) return { error: "No se pudieron guardar tus temas." };
-  }
-
-  revalidatePath("/", "layout");
-  return { ok: true, count: rows.length };
+  const label = input.label.trim().slice(0, 120);
+  if (!input.key || !label) return { error: "Ese tema viene incompleto." };
+  const { error } = await supabase.from("interests").upsert(
+    { user_id: userId, key: input.key, label, area: input.area.slice(0, 40), status, position: Date.now() % 100000 },
+    { onConflict: "user_id,key" },
+  );
+  if (error) return { error: "No se pudo guardar. Intenta otra vez." };
+  revalidatePath("/descubrir");
+  return { ok: true };
 }
 
 /**

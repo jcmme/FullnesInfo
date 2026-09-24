@@ -31,6 +31,7 @@ export type Profile = {
   start_day: string;
   evaluated_through: string | null;
   api_token: string;
+  areas: string[];
 };
 
 export type Item = {
@@ -75,13 +76,14 @@ export type Entry = {
   created_at: string;
 };
 
-/** Un tema que elegiste: del catálogo ('galeon-de-manila') o tuyo ('propio:…'). */
+/** Un tema que la app te propuso y tú decidiste guardar o pasar. */
 export type Interest = {
   id: string;
   key: string;
   label: string;
   area: string;
   position: number;
+  status: "guardado" | "descartado";
   read_at: string | null;
   created_at: string;
 };

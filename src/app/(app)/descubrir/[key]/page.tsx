@@ -4,7 +4,8 @@ import { Suspense } from "react";
 import { ArrowSquareOut, CaretLeft, PencilSimple } from "@phosphor-icons/react/ssr";
 import { Recommendation, TopicSearch } from "@/components/topic-sheet";
 import { getSession } from "@/lib/session";
-import { areaLabel, viewFor, wikipediaFor } from "@/lib/topics";
+import { areaLabelOf } from "@/lib/areas";
+import { viewFor, wikipediaFor } from "@/lib/topics";
 import type { Interest } from "@/lib/types";
 
 export const metadata = { title: "Tema" };
@@ -70,7 +71,7 @@ export default async function TopicPage({ params }: { params: Promise<{ key: str
 
       <div className="space-y-8 px-4 pb-4 md:px-8">
         <header>
-          <p className="footnote text-tint-ink">{areaLabel(view.area)}</p>
+          <p className="footnote text-tint-ink">{areaLabelOf(view.area)}</p>
           <h1 className="title-large mt-0.5 text-balance">{view.title}</h1>
           {pack ? (
             <>

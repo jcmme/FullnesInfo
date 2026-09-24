@@ -1,7 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import packsJson from "@/data/topic-packs.json";
 import { fetchWithTimeout } from "./fetch";
-import { AREAS, TOPICS } from "./mystery";
+import { TOPICS } from "./mystery";
 import type { Interest, MysteryTopic, TopicPack, WikiSummary } from "./types";
 
 /**
@@ -32,10 +32,6 @@ export function customKey(label: string): string {
     .replace(/^-+|-+$/g, "")
     .slice(0, 60);
   return CUSTOM_PREFIX + slug;
-}
-
-export function areaLabel(area: string): string {
-  return AREAS[area] ?? "Tuyo";
 }
 
 /** Lo que se necesita para pintar una ficha, venga de donde venga. */
