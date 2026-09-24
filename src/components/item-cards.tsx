@@ -20,7 +20,8 @@ function remainingText(item: Item) {
 export function ItemTile({ item }: { item: Item }) {
   const progress = progressOf(item);
   return (
-    <Link href={`/guardados/${item.id}`} className="press group block w-64 shrink-0 snap-start md:w-72">
+    // Sin precarga: en Guardados hay hasta 200 de estas y cada una sería un render del servidor.
+    <Link href={`/guardados/${item.id}`} prefetch={false} className="press group block w-64 shrink-0 snap-start md:w-72">
       <div className="relative">
         <Thumb src={item.thumbnail_url} kind={item.kind} className="aspect-video shadow-card" rounded="rounded-[18px]" />
         {progress > 0 && progress < 1 && (
@@ -42,7 +43,7 @@ export function ItemRow({ item, showStatus = false }: { item: Item; showStatus?:
   const progress = progressOf(item);
   const needsLink = item.status === "por_vincular";
   return (
-    <Link href={`/guardados/${item.id}`} className="press flex items-center gap-3 py-2.5">
+    <Link href={`/guardados/${item.id}`} prefetch={false} className="press flex items-center gap-3 py-2.5">
       <Thumb
         src={item.thumbnail_url}
         kind={item.kind}

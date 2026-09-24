@@ -170,7 +170,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
                 <ul className="divide-y hairline">
                   {entries.map((e) => (
                     <li key={e.id}>
-                      <Link href={`/registrar?nota=${e.id}`} className="press flex min-h-12 items-center gap-3 py-2.5">
+                      <Link href={`/registrar?nota=${e.id}`} prefetch={false} className="press flex min-h-12 items-center gap-3 py-2.5">
                         <span className="footnote min-w-0 flex-1 truncate">{e.title}</span>
                         <span className="caption shrink-0 tabular text-ink-2">{e.word_count} palabras</span>
                         <span className="caption shrink-0 font-semibold text-tint-ink">Seguir</span>

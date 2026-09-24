@@ -120,7 +120,7 @@ export default async function PunishmentsPage() {
           <ul className="card divide-y hairline px-4">
             {history.map((p) => (
               <li key={p.id}>
-                <Link href={`/castigos/${p.id}`} className="press flex items-center gap-3 py-3">
+                <Link href={`/castigos/${p.id}`} prefetch={false} className="press flex items-center gap-3 py-3">
                   {p.status === "cumplido" ? (
                     <CheckCircle size={22} weight="fill" className="shrink-0 text-ok" aria-hidden />
                   ) : (

@@ -16,7 +16,12 @@ export function TopicGrid({ topics }: { topics: TopicCardData[] }) {
     <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {topics.map((t) => (
         <li key={t.key}>
-          <Link href={`/descubrir/${encodeURIComponent(t.key)}`} className="press card flex h-full items-center gap-3 p-4">
+          {/* Sin precarga: son muchos enlaces y cada precarga es un render completo del servidor. */}
+          <Link
+            href={`/descubrir/${encodeURIComponent(t.key)}`}
+            prefetch={false}
+            className="press card flex h-full items-center gap-3 p-4"
+          >
             <span className="min-w-0 flex-1">
               <span className="headline block text-balance">{t.title}</span>
               <span className="caption mt-1 block text-ink-2">
