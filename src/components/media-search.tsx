@@ -362,7 +362,7 @@ export function MediaSearch({
               setQuery(q);
               if (results) void run(q, s);
             }}
-            className={`press min-h-9 rounded-full footnote font-semibold transition-colors ${
+            className={`press min-h-11 rounded-full footnote font-semibold transition-colors ${
               source === s ? "bg-surface text-ink shadow-card" : "text-ink-2"
             }`}
           >

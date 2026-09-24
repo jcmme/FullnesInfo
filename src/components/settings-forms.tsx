@@ -139,7 +139,7 @@ function CopyButton({ value, label }: { value: string; label: string }) {
           window.prompt("Copia manualmente:", value);
         }
       }}
-      className="btn btn-secondary min-h-10 px-3 footnote"
+      className="btn btn-secondary min-h-11 px-3.5 footnote"
     >
       {copied ? <Check size={16} weight="bold" aria-hidden /> : <Copy size={16} aria-hidden />}
       {copied ? "Copiado" : label}
@@ -164,7 +164,7 @@ export function TokenPanel({ token: initial, origin }: { token: string; origin: 
             type="button"
             onClick={() => setVisible((v) => !v)}
             aria-label={visible ? "Ocultar token" : "Mostrar token"}
-            className="btn btn-secondary min-h-10 px-3"
+            className="btn btn-secondary min-h-11 px-3.5"
           >
             {visible ? <EyeSlash size={18} aria-hidden /> : <Eye size={18} aria-hidden />}
           </button>
@@ -191,7 +191,7 @@ export function TokenPanel({ token: initial, origin }: { token: string; origin: 
               setVisible(true);
             });
           }}
-          className="btn btn-ghost min-h-10 px-3 footnote text-bad hover:bg-bad-soft"
+          className="btn btn-ghost min-h-11 px-3.5 footnote text-bad hover:bg-bad-soft"
         >
           Generar token nuevo
         </button>

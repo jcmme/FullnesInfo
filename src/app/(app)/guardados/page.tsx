@@ -79,7 +79,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
                 key={f.value}
                 href={hrefFor(f.value)}
                 aria-current={active ? "page" : undefined}
-                className={`press chip min-h-9 shrink-0 px-3.5 ${active ? "bg-ink text-bg" : "bg-surface-2 text-ink-2"}`}
+                className={`press chip min-h-11 shrink-0 px-4 ${active ? "bg-ink text-bg" : "bg-surface-2 text-ink-2"}`}
               >
                 {f.label}
                 {count > 0 && <span className={`tabular ${active ? "opacity-70" : "text-ink-3"}`}>{count}</span>}

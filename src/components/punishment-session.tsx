@@ -246,7 +246,7 @@ export function ActiveSession({
         <div className="mt-6 border-t hairline pt-4">
           <div className="flex items-center justify-between gap-3">
             <p className="headline">Registro</p>
-            <button type="button" onClick={undo} disabled={pending} className="btn btn-ghost min-h-9 px-2 footnote">
+            <button type="button" onClick={undo} disabled={pending} className="btn btn-ghost min-h-11 px-3 footnote">
               <ArrowCounterClockwise size={16} aria-hidden />
               Deshacer última
             </button>

@@ -154,7 +154,11 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
               <button
                 key={s.key}
                 type="button"
-                onClick={() => setKey(s.key)}
+                // Cambiar de tema limpia los minutos: eran de la nota anterior.
+                onClick={() => {
+                  setKey(s.key);
+                  setMinutes("");
+                }}
                 aria-pressed={selected}
                 className={`press w-36 shrink-0 snap-start rounded-card p-1.5 text-left transition-colors ${
                   selected ? "bg-tint-soft ring-2 ring-tint" : "bg-surface"
@@ -206,7 +210,7 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
           <button
             type="button"
             onClick={() => setPromptIndex((i) => (i + 1) % prompts.length)}
-            className="press flex min-h-9 items-center gap-1 caption font-semibold text-tint-ink"
+            className="press flex min-h-11 items-center gap-1 caption font-semibold text-tint-ink"
           >
             <ArrowsClockwise size={14} aria-hidden />
             Otra pregunta
@@ -263,9 +267,11 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
                     ¿En qué minuto te quedaste?
                   </label>
                   <input
+                    key={key}
                     id="progress"
                     name="progress"
-                    inputMode="numeric"
+                    // El teclado numérico de iPhone no trae dos puntos: para "1:23:45" hace falta el normal.
+                    inputMode="text"
                     placeholder={item.progress_seconds ? formatTimestamp(item.progress_seconds) : "1:23:45"}
                     className="field tabular"
                   />
@@ -276,6 +282,7 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
                     ¿En qué página vas?
                   </label>
                   <input
+                    key={key}
                     id="pages"
                     name="pages"
                     type="number"
@@ -287,7 +294,7 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
                 </div>
               )}
               <label className="flex min-h-11 items-center gap-2 footnote font-semibold">
-                <input type="checkbox" name="finished" className="size-5 accent-[var(--tint)]" />
+                <input key={key} type="checkbox" name="finished" className="size-5 accent-[var(--tint)]" />
                 Lo terminé
               </label>
             </div>
@@ -302,7 +309,7 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
                   type="button"
                   aria-pressed={minutes === m}
                   onClick={() => setMinutes(minutes === m ? "" : m)}
-                  className={`press chip min-h-9 px-3.5 tabular ${minutes === m ? "bg-tint text-on-tint" : "bg-surface-2 text-ink-2"}`}
+                  className={`press chip min-h-11 px-4 tabular ${minutes === m ? "bg-tint text-on-tint" : "bg-surface-2 text-ink-2"}`}
                 >
                   {m} min
                 </button>

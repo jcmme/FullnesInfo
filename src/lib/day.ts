@@ -69,6 +69,11 @@ export function formatDayLong(key: string): string {
   return longDate("UTC").format(new Date(`${key}T12:00:00Z`));
 }
 
+/** Fecha corta de un instante, con tu reloj: un castigo de las 8 PM no se ve de mañana. */
+export function formatStampShort(iso: string, timezone: string): string {
+  return new Intl.DateTimeFormat("es-MX", { timeZone: timezone, day: "numeric", month: "short" }).format(new Date(iso));
+}
+
 export function formatDayShort(key: string): string {
   return new Intl.DateTimeFormat("es-MX", { timeZone: "UTC", day: "numeric", month: "short" }).format(
     new Date(`${key}T12:00:00Z`),

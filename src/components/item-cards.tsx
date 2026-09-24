@@ -24,7 +24,7 @@ export function ItemTile({ item }: { item: Item }) {
       <div className="relative">
         <Thumb src={item.thumbnail_url} kind={item.kind} className="aspect-video shadow-card" rounded="rounded-[18px]" />
         {progress > 0 && progress < 1 && (
-          <div className="absolute inset-x-3 bottom-2.5 h-1 overflow-hidden rounded-full bg-white/35">
+          <div className="absolute inset-x-3 bottom-2.5 h-1 overflow-hidden rounded-full bg-black/35">
             <div className="h-full rounded-full bg-tint" style={{ width: `${Math.round(progress * 100)}%` }} />
           </div>
         )}

@@ -115,7 +115,7 @@ export function NewItemForm({ hasYouTube }: { hasYouTube: boolean }) {
                     role="radio"
                     aria-checked={mode === m}
                     onClick={() => saveMode(m)}
-                    className={`press min-h-9 rounded-full footnote font-semibold transition-colors ${
+                    className={`press min-h-11 rounded-full footnote font-semibold transition-colors ${
                       mode === m ? "bg-surface text-ink shadow-card" : "text-ink-2"
                     }`}
                   >
@@ -200,7 +200,7 @@ export function NewItemForm({ hasYouTube }: { hasYouTube: boolean }) {
                   setPicked(null);
                   setSearching(false);
                 }}
-                className={`press chip min-h-9 gap-1.5 px-3 ${kind === k ? "bg-tint text-on-tint" : "bg-surface-2 text-ink-2"}`}
+                className={`press chip min-h-11 gap-1.5 px-3.5 ${kind === k ? "bg-tint text-on-tint" : "bg-surface-2 text-ink-2"}`}
               >
                 <KindIcon size={16} aria-hidden />
                 {label}

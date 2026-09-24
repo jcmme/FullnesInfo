@@ -122,7 +122,8 @@ export function ProgressPanel({ item }: { item: Item }) {
                 autoFocus
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
-                inputMode="numeric"
+                // El teclado numérico de iPhone no trae dos puntos: para "1:23:45" hace falta el normal.
+                inputMode={isBook ? "numeric" : "text"}
                 placeholder={isBook ? "Página" : "1:23:45"}
                 className="field tabular"
               />

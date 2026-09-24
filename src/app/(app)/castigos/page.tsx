@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle, XCircle } from "@phosphor-icons/react/ssr";
 import { ProgressBar } from "@/components/media";
 import { PageHeader, Section } from "@/components/page-header";
 import { Roulette } from "@/components/roulette";
-import { formatCutoff, formatDayLong, formatDayShort, monthOf } from "@/lib/day";
+import { formatCutoff, formatDayLong, formatStampShort, monthOf } from "@/lib/day";
 import { formatNumber, formatRemaining } from "@/lib/format";
 import { getSession } from "@/lib/session";
 import type { Failure, Punishment } from "@/lib/types";
@@ -128,7 +128,7 @@ export default async function PunishmentsPage() {
                   )}
                   <span className="min-w-0 flex-1 footnote first-letter:uppercase">{p.title}</span>
                   <span className="caption shrink-0 text-ink-2">
-                    {formatDayShort((p.completed_at ?? p.created_at).slice(0, 10))}
+                    {formatStampShort(p.completed_at ?? p.created_at, profile.timezone)}
                   </span>
                 </Link>
               </li>
