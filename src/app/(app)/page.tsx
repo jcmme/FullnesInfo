@@ -5,6 +5,7 @@ import { DayRings } from "@/components/day-rings";
 import { FreezeTodayButton } from "@/components/freeze-button";
 import { Heatmap } from "@/components/heatmap";
 import { ItemRow, ItemTile } from "@/components/item-cards";
+import { NoteReview, type FlaggedNote } from "@/components/note-review";
 import { ProgressBar } from "@/components/media";
 import { PageHeader, Section } from "@/components/page-header";
 import { StreakNumber } from "@/components/streak";
@@ -12,6 +13,8 @@ import { formatDayLong, formatDayShort } from "@/lib/day";
 import { getOverview, todayKey } from "@/lib/engine";
 import { formatNumber, formatRemaining } from "@/lib/format";
 import { getTopic, RARITY_LABEL } from "@/lib/mystery";
+import { notMentioned } from "@/lib/review";
+import { getPack } from "@/lib/topics";
 import { getSession } from "@/lib/session";
 import type { Entry, Failure, Item, MysteryOpen, Punishment } from "@/lib/types";
 
@@ -40,6 +43,22 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
   const mystery = mysteryRes.data as MysteryOpen | null;
   const topic = mystery ? getTopic(mystery.topic_id) : undefined;
   const entries = (entriesRes.data ?? []) as Entry[];
+
+  // Las notas de hoy que la revisión marcó: se explican y, si no cuentan, se pueden apelar.
+  const flagged: FlaggedNote[] = entries
+    .filter((e) => e.review && e.review.verdict !== "ok")
+    .map((e) => {
+      const pack = e.topic_key ? getPack(e.topic_key) : undefined;
+      const questions = pack?.questions ?? (e.mystery_id && mystery?.id === e.mystery_id ? topic?.questions : undefined) ?? [];
+      const candidates = [...(pack?.facts.map((f) => f.text) ?? []), ...questions];
+      return {
+        id: e.id,
+        title: e.title,
+        counts: e.counts,
+        reasons: e.review?.reasons ?? [],
+        missed: notMentioned(e.note, candidates, 2),
+      };
+    });
 
   return (
     <>
@@ -136,6 +155,14 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
                 <p className="footnote mt-1 text-ink-2">tu récord</p>
               </div>
             </div>
+
+            {flagged.length > 0 && (
+              <div className="mt-4 space-y-3">
+                {flagged.map((f) => (
+                  <NoteReview key={f.id} note={f} />
+                ))}
+              </div>
+            )}
 
             {entries.length > 0 && (
               <div className="mt-4 rounded-card bg-surface px-4">
@@ -249,7 +276,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
         <aside className="min-w-0">
           <Section title="Caja de hoy">
             {topic ? (
-              <Link href="/caja" className="press card block p-5">
+              <Link href="/descubrir" className="press card block p-5">
                 <p className="title-2 text-balance">{topic.title}</p>
                 <p className="footnote mt-1 text-ink-2 text-pretty">{topic.hook}</p>
                 <p className="mt-3 flex items-center justify-between gap-3">
@@ -275,7 +302,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
                 <p className="footnote">La caja se abre cuando gires la ruleta de tus días fallados.</p>
               </div>
             ) : (
-              <Link href="/caja" className="press card flex items-center gap-4 p-5">
+              <Link href="/descubrir" className="press card flex items-center gap-4 p-5">
                 <span className="grid size-14 shrink-0 place-items-center rounded-control bg-tint-soft text-tint-ink">
                   <Gift size={30} weight="duotone" aria-hidden />
                 </span>

@@ -1,3 +1,5 @@
+import type { Review } from "./review";
+
 export type ItemKind = "video" | "podcast" | "libro" | "curso" | "articulo" | "documento" | "hilo" | "otro";
 export type ItemOrigin = "instagram" | "tiktok" | "youtube" | "threads" | "x" | "web" | "otro";
 export type ItemStatus = "por_vincular" | "pendiente" | "en_curso" | "terminado";
@@ -61,13 +63,55 @@ export type Entry = {
   day: string;
   item_id: string | null;
   mystery_id: string | null;
+  topic_key: string | null;
   kind: string;
   title: string;
   note: string;
   word_count: number;
   minutes: number | null;
+  /** false cuando la revisión la marcó como relleno y tú no has apelado. */
+  counts: boolean;
+  review: Review | null;
   created_at: string;
 };
+
+/** Un tema que elegiste: del catálogo ('galeon-de-manila') o tuyo ('propio:…'). */
+export type Interest = {
+  id: string;
+  key: string;
+  label: string;
+  area: string;
+  position: number;
+  read_at: string | null;
+  created_at: string;
+};
+
+export type TopicFact = { text: string; source: { title: string; url: string } };
+export type TopicMoment = { year: string; text: string };
+export type TopicTerm = { term: string; meaning: string };
+export type TopicLink = { title: string; why: string; url: string; author?: string; channel?: string; site?: string; id?: string };
+
+/**
+ * La ficha de un tema, investigada y escrita de antemano. Vive en
+ * src/data/topic-packs.json y solo se lee desde el servidor.
+ */
+export type TopicPack = {
+  id: string;
+  title: string;
+  area: string;
+  updated: string;
+  summary: string;
+  why: string;
+  facts: TopicFact[];
+  timeline: TopicMoment[];
+  terms: TopicTerm[];
+  questions: string[];
+  searchQuery: string;
+  recommendations: { books: TopicLink[]; videos: TopicLink[]; articles: TopicLink[] };
+};
+
+/** Lo que Wikipedia da para un tema que todavía no está investigado a fondo. */
+export type WikiSummary = { title: string; extract: string; url: string; thumbnail: string | null };
 
 export type MysteryTopic = {
   id: string;

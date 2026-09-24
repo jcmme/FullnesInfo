@@ -2,14 +2,14 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Barbell, BookmarksSimple, GearSix, Gift, SunHorizon, type Icon } from "@phosphor-icons/react";
+import { Barbell, BookmarksSimple, Compass, GearSix, SunHorizon, type Icon } from "@phosphor-icons/react";
 
 type Tab = { href: string; label: string; icon: Icon };
 
 const TABS: Tab[] = [
   { href: "/", label: "Hoy", icon: SunHorizon },
   { href: "/guardados", label: "Guardados", icon: BookmarksSimple },
-  { href: "/caja", label: "Caja", icon: Gift },
+  { href: "/descubrir", label: "Descubrir", icon: Compass },
   { href: "/castigos", label: "Castigos", icon: Barbell },
   { href: "/ajustes", label: "Ajustes", icon: GearSix },
 ];

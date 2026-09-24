@@ -1,6 +1,6 @@
 # Fuellness
 
-Panel personal de crecimiento: guardas lo que viste en Instagram o TikTok y la app encuentra el video original en YouTube; cada día registras lo que aprendiste; si no cumples antes de las 2:30 AM, gira la ruleta de castigos físicos. Además, una caja misteriosa con un tema nuevo para investigar cada día.
+Panel personal de crecimiento: guardas lo que viste en Instagram o TikTok y la app encuentra el video original en YouTube; cada día registras lo que aprendiste; si no cumples antes de las 2:30 AM, gira la ruleta de castigos físicos. Además, una caja misteriosa con un tema nuevo cada día y fichas investigadas de los temas que tú elijas.
 
 Hecho con Next.js 16, Supabase y Vercel. Se instala en iPhone, iPad y Mac como app (PWA).
 
@@ -70,6 +70,8 @@ npm run dev
 - **Si no cumples un castigo**, aparece el mismo reto un nivel arriba (o 25% más si ya estaba en nivel 4).
 - **Comodines**: 1 al mes por defecto. Se usan antes de que cierre el día o sobre un día fallado antes de girar la ruleta.
 - **La caja misteriosa** se bloquea mientras tengas ruletas pendientes.
+- **Tus temas** (Descubrir > Temas) tienen ficha propia: datos curiosos con su fuente, línea de tiempo, los términos del tema y qué ver o leer después. Los temas que todavía no están investigados muestran el resumen de Wikipedia.
+- **Cada nota se revisa** contra el material del que dice hablar. El relleno evidente (manazos en el teclado, la misma frase repetida, una nota copiada de otra del mismo día) no suma para el día, y se puede apelar con un toque. Escribir de otra cosa o copiar el material sí suma, pero te lo dice.
 
 No hay tareas programadas en el servidor: los días se evalúan cada vez que abres la app o que un Atajo consulta `/api/status`.
 
@@ -80,8 +82,10 @@ supabase/migrations/   esquema, seguridad por usuario (RLS) y vista de totales p
 src/lib/engine.ts      evaluación de días, rachas, fallos, castigos y escalamiento
 src/lib/challenges.ts  catálogo de castigos, niveles y planes sugeridos
 src/lib/media.ts       YouTube (búsqueda, duración, capítulos), Open Library, Apple Podcasts
-src/data/              150 temas de la caja misteriosa
-src/app/(app)/         pantallas: Hoy, Guardados, Caja, Castigos, Ajustes, Registrar
+src/lib/review.ts      revisión de notas (reglas, sin red ni IA) y qué te faltó del tema
+src/lib/topics.ts      fichas investigadas, tus temas y el respaldo de Wikipedia
+src/data/              150 temas de la caja misteriosa y las fichas de temas
+src/app/(app)/         pantallas: Hoy, Guardados, Descubrir, Castigos, Ajustes, Registrar
 src/app/api/           capture y status (para Atajos), search (para la app)
 ```
 

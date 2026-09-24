@@ -1,4 +1,6 @@
 import { headers } from "next/headers";
+import Link from "next/link";
+import { ArrowRight, Compass } from "@phosphor-icons/react/ssr";
 import { signOut } from "@/app/actions/auth";
 import { PageHeader, Section } from "@/components/page-header";
 import { RulesForm, TokenPanel } from "@/components/settings-forms";
@@ -42,6 +44,21 @@ export default async function SettingsPage() {
             Lo que registres después de medianoche y antes de las {formatCutoff(profile.cutoff_hour)} cuenta para el día anterior.
           </p>
         </div>
+      </Section>
+
+      <Section title="Tus temas">
+        <Link href="/descubrir/elegir" className="press card flex items-center gap-4 p-5">
+          <span className="grid size-12 shrink-0 place-items-center rounded-[14px] bg-tint-soft text-tint-ink">
+            <Compass size={26} aria-hidden />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="headline block">Elegir o cambiar tus temas</span>
+            <span className="footnote mt-0.5 block text-pretty text-ink-2">
+              De lo que elijas salen las fichas y las recomendaciones de Descubrir.
+            </span>
+          </span>
+          <ArrowRight size={20} className="shrink-0 text-ink-3" aria-hidden />
+        </Link>
       </Section>
 
       <Section title="Atajos de iPhone">

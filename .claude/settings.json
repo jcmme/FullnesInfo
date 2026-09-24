@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "deny": [
+      "Read(//Users/jcmme/repos jcmme/AFORO/**)",
+      "Edit(//Users/jcmme/repos jcmme/AFORO/**)",
+      "Write(//Users/jcmme/repos jcmme/AFORO/**)"
+    ]
+  }
+}

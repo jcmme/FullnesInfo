@@ -4,7 +4,11 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { getProfile, todayKey } from "@/lib/engine";
 import { countWords, parseTimestamp } from "@/lib/format";
+import { getTopic } from "@/lib/mystery";
+import { materialOf, reviewNote } from "@/lib/review";
 import { requireUser } from "@/lib/supabase/server";
+import { getPack } from "@/lib/topics";
+import type { Chapter } from "@/lib/types";
 
 export type EntryFormState = { error?: string } | undefined;
 
@@ -24,6 +28,7 @@ export async function saveEntry(_prev: EntryFormState, formData: FormData): Prom
   const entryId = String(formData.get("entryId") ?? "") || null;
   const itemId = String(formData.get("itemId") ?? "") || null;
   const mysteryId = String(formData.get("mysteryId") ?? "") || null;
+  const topicKey = String(formData.get("topicKey") ?? "") || null;
   const kind = String(formData.get("kind") ?? "otro");
   const title = String(formData.get("title") ?? "").trim();
   const note = String(formData.get("note") ?? "").trim();
@@ -37,20 +42,51 @@ export async function saveEntry(_prev: EntryFormState, formData: FormData): Prom
   const day = todayKey(profile);
   const wordCount = countWords(note);
 
-  const { data: before } = await supabase.from("day_totals").select("words").eq("user_id", userId).eq("day", day).maybeSingle();
-  const wordsBefore = before?.words ?? 0;
+  // Todo lo que hace falta, en una sola vuelta al servidor: las notas de hoy (que ya
+  // traen el total del día y la nota que estás continuando) y el material contra el
+  // que se revisa. Esto es lo que mantiene el guardado tan rápido como antes.
+  const [todayRes, itemRes, mysteryRes] = await Promise.all([
+    supabase.from("entries").select("id, note, word_count, minutes, counts, review").eq("user_id", userId).eq("day", day),
+    itemId
+      ? supabase.from("items").select("title, media_title, media_author, chapters").eq("id", itemId).eq("user_id", userId).maybeSingle()
+      : Promise.resolve({ data: null }),
+    mysteryId
+      ? supabase.from("mystery_opens").select("topic_id").eq("id", mysteryId).eq("user_id", userId).maybeSingle()
+      : Promise.resolve({ data: null }),
+  ]);
 
-  // Solo se continúan notas de hoy: un día que ya cerró no cambia.
-  const { data: existing } = entryId
-    ? await supabase.from("entries").select("id, word_count, minutes").eq("id", entryId).eq("user_id", userId).eq("day", day).maybeSingle()
-    : { data: null };
+  const todays = todayRes.data ?? [];
+  const existing = entryId ? todays.find((e) => e.id === entryId) : undefined;
   // La nota se abrió ayer y el día ya cerró: no se duplica su texto como nota nueva.
   if (entryId && !existing) return { error: "Esa nota ya cerró con el día anterior. Empieza una nota nueva para hoy." };
+  const wordsBefore = todays.reduce((sum, e) => sum + (e.counts ? e.word_count : 0), 0);
+
+  const item = itemRes.data as { title: string; media_title: string | null; media_author: string | null; chapters: Chapter[] } | null;
+  const boxTopic = mysteryRes.data ? getTopic(mysteryRes.data.topic_id) : undefined;
+  const pack = topicKey ? getPack(topicKey) : undefined;
+  const material = materialOf({
+    title: item?.media_title ?? item?.title ?? pack?.title ?? title,
+    author: item?.media_author,
+    chapters: item?.chapters,
+    topic: boxTopic
+      ? { title: boxTopic.title, hook: boxTopic.hook, why: boxTopic.why, questions: boxTopic.questions }
+      : pack
+        ? { title: pack.title, hook: pack.summary, why: pack.why, questions: pack.questions, terms: pack.terms.map((t) => t.term) }
+        : null,
+  });
+  const review = reviewNote({
+    note,
+    material,
+    sameDayNotes: todays.filter((e) => e.id !== entryId).map((e) => e.note),
+  });
+  // Si ya habías dicho "sí la escribí yo", esa nota no se vuelve a marcar.
+  const appealed = Boolean((existing?.review as { appealedAt?: string } | null)?.appealedAt);
+  const counts = appealed || review.verdict !== "basura";
 
   const { error } = existing
     ? await supabase
         .from("entries")
-        .update({ title: title.slice(0, 300), note, word_count: wordCount, minutes: minutes ?? existing.minutes })
+        .update({ title: title.slice(0, 300), note, word_count: wordCount, minutes: minutes ?? existing.minutes, review, counts })
         .eq("id", existing.id)
         .eq("user_id", userId)
     : await supabase.from("entries").insert({
@@ -58,11 +94,14 @@ export async function saveEntry(_prev: EntryFormState, formData: FormData): Prom
         day,
         item_id: itemId,
         mystery_id: mysteryId,
+        topic_key: topicKey,
         kind,
         title: title.slice(0, 300),
         note,
         word_count: wordCount,
         minutes,
+        review,
+        counts,
       });
   if (error) return { error: "No se pudo guardar. Revisa tu conexión e intenta otra vez." };
 
@@ -90,7 +129,7 @@ export async function saveEntry(_prev: EntryFormState, formData: FormData): Prom
   }
 
   revalidatePath("/", "layout");
-  const wordsAfter = wordsBefore - (existing?.word_count ?? 0) + wordCount;
+  const wordsAfter = wordsBefore - (existing?.counts ? existing.word_count : 0) + (counts ? wordCount : 0);
   const nowDone = wordsBefore < profile.min_words && wordsAfter >= profile.min_words;
   redirect(nowDone ? "/?cumplido=1" : "/");
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowsClockwise, CaretDown, CheckCircle, Gift, Plus } from "@phosphor-icons/react";
+import { ArrowsClockwise, CaretDown, CheckCircle, Compass, Gift, Plus } from "@phosphor-icons/react";
 import { useActionState, useEffect, useState, useSyncExternalStore } from "react";
 import { saveEntry } from "@/app/actions/entries";
 import { countWords, formatTimestamp } from "@/lib/format";
@@ -22,6 +22,7 @@ export type TodayNote = {
   id: string;
   itemId: string | null;
   mysteryId: string | null;
+  topicKey: string | null;
   title: string;
   note: string;
   words: number;
@@ -29,9 +30,12 @@ export type TodayNote = {
 
 export type MysteryToday = { id: string; title: string; questions: string[] };
 
+export type TopicToday = { key: string; title: string; questions: string[] };
+
 type Subject =
   | { key: string; type: "item"; item: Item; title: string }
   | { key: string; type: "caja"; mystery: MysteryToday; title: string }
+  | { key: string; type: "tema"; topicKey: string; title: string; questions: string[] }
   | { key: string; type: "otro"; noteId: string | null; title: string };
 
 /* Borrador por tema en este dispositivo: si cierras la app, no se pierde lo escrito. */
@@ -63,7 +67,9 @@ function notesOf(subject: Subject, notes: TodayNote[]): TodayNote[] {
       ? n.itemId === subject.item.id
       : subject.type === "caja"
         ? n.mysteryId === subject.mystery.id
-        : subject.noteId !== null && n.id === subject.noteId,
+        : subject.type === "tema"
+          ? n.topicKey === subject.topicKey
+          : subject.noteId !== null && n.id === subject.noteId,
   );
 }
 
@@ -77,18 +83,20 @@ type Props = {
   minWords: number;
   items: Item[];
   mystery: MysteryToday | null;
+  topics: TopicToday[];
   todayNotes: TodayNote[];
   todayWords: number;
   initialKey: string | null;
   initialNoteId: string | null;
 };
 
-export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, initialKey, initialNoteId }: Props) {
+export function EntryForm({ minWords, items, mystery, topics, todayNotes, todayWords, initialKey, initialNoteId }: Props) {
   const [state, action, pending] = useActionState(saveEntry, undefined);
 
   const subjects: Subject[] = [
     ...items.map((item): Subject => ({ key: `item:${item.id}`, type: "item", item, title: item.media_title ?? item.title })),
     ...(mystery ? [{ key: `caja:${mystery.id}`, type: "caja", mystery, title: mystery.title } as Subject] : []),
+    ...topics.map((t): Subject => ({ key: `tema:${t.key}`, type: "tema", topicKey: t.key, title: t.title, questions: t.questions })),
     ...todayNotes
       .filter((n) => !n.itemId && !n.mysteryId)
       .map((n): Subject => ({ key: `otro:${n.id}`, type: "otro", noteId: n.id, title: n.title })),
@@ -101,7 +109,9 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
       ? `item:${lastNote.itemId}`
       : lastNote.mysteryId
         ? `caja:${lastNote.mysteryId}`
-        : `otro:${lastNote.id}`
+        : lastNote.topicKey
+          ? `tema:${lastNote.topicKey}`
+          : `otro:${lastNote.id}`
     : null;
   const [key, setKey] = useState(
     [initialKey, lastKey, subjects[0]?.key].find((k) => k && subjects.some((s) => s.key === k)) ?? "otro:nuevo",
@@ -131,7 +141,12 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
   const noteWords = countWords(text);
   const total = todayWords - (base?.words ?? 0) + noteWords;
   const enough = total >= minWords;
-  const prompts = subject.type === "caja" && subject.mystery.questions.length ? subject.mystery.questions : PROMPTS;
+  const prompts =
+    subject.type === "caja" && subject.mystery.questions.length
+      ? subject.mystery.questions
+      : subject.type === "tema" && subject.questions.length
+        ? subject.questions
+        : PROMPTS;
   const item = subject.type === "item" ? subject.item : null;
   const isAv = item && (item.kind === "video" || item.kind === "podcast");
   const title = subject.type === "otro" && !subject.noteId ? newTitle : subject.title;
@@ -141,7 +156,8 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
       {base && <input type="hidden" name="entryId" value={base.id} />}
       {item && <input type="hidden" name="itemId" value={item.id} />}
       {subject.type === "caja" && <input type="hidden" name="mysteryId" value={subject.mystery.id} />}
-      <input type="hidden" name="kind" value={item ? item.kind : subject.type === "caja" ? "caja" : "otro"} />
+      {subject.type === "tema" && <input type="hidden" name="topicKey" value={subject.topicKey} />}
+      <input type="hidden" name="kind" value={item ? item.kind : subject.type === "caja" ? "caja" : subject.type === "tema" ? "tema" : "otro"} />
       {!(subject.type === "otro" && !subject.noteId) && <input type="hidden" name="title" value={title} />}
 
       <fieldset>
@@ -169,10 +185,18 @@ export function EntryForm({ minWords, items, mystery, todayNotes, todayWords, in
                 ) : (
                   <span
                     className={`grid aspect-video place-items-center rounded-[14px] ${
-                      s.type === "caja" ? "bg-surface-2 text-tint-ink" : "border-2 border-dashed border-line text-ink-2"
+                      s.type === "caja" || s.type === "tema"
+                        ? "bg-surface-2 text-tint-ink"
+                        : "border-2 border-dashed border-line text-ink-2"
                     }`}
                   >
-                    {s.type === "caja" ? <Gift size={28} aria-hidden /> : <Plus size={26} aria-hidden />}
+                    {s.type === "caja" ? (
+                      <Gift size={28} aria-hidden />
+                    ) : s.type === "tema" ? (
+                      <Compass size={28} aria-hidden />
+                    ) : (
+                      <Plus size={26} aria-hidden />
+                    )}
                   </span>
                 )}
                 <span className="caption mt-1.5 line-clamp-2 block px-1 font-semibold">
