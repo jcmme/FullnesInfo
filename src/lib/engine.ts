@@ -44,6 +44,8 @@ async function evaluateClosedDays(supabase: SupabaseClient, profile: Profile, no
       .gte("day", addDays(from, -4))
       .lte("day", yesterday),
   ]);
+  // Si una lectura falla no se escribe nada: un día sin datos no debe contar como fallado.
+  if (totals.error || freezes.error || failures.error) return;
 
   const qualified = new Set(
     (totals.data ?? []).filter((t) => t.words >= profile.min_words).map((t) => t.day as string),
@@ -62,9 +64,11 @@ async function evaluateClosedDays(supabase: SupabaseClient, profile: Profile, no
   }
 
   if (rows.length) {
-    await supabase.from("failures").upsert(rows, { onConflict: "user_id,day", ignoreDuplicates: true });
+    const { error } = await supabase.from("failures").upsert(rows, { onConflict: "user_id,day", ignoreDuplicates: true });
+    if (error) return;
   }
-  await supabase.from("profiles").update({ evaluated_through: yesterday }).eq("id", profile.id);
+  const { error } = await supabase.from("profiles").update({ evaluated_through: yesterday }).eq("id", profile.id);
+  if (error) return;
   profile.evaluated_through = yesterday;
 }
 
@@ -85,12 +89,17 @@ export async function assignPunishment(
   if (!claimed.data?.length) return null;
 
   const challenge = pickChallenge();
-  const { data } = await supabase
+  const { data, error } = await supabase
     .from("punishments")
     .insert({ user_id: userId, failure_id: failure.id, ...buildPunishment(challenge, failure.level, now) })
     .select("*")
     .single();
-  return (data as Punishment) ?? null;
+  if (error || !data) {
+    // Sin castigo el fallo vuelve a quedar pendiente para girar otra vez.
+    await supabase.from("failures").update({ status: "pendiente" }).eq("id", failure.id).eq("user_id", userId).eq("status", "castigo");
+    return null;
+  }
+  return data as Punishment;
 }
 
 async function autoAssignStaleFailures(supabase: SupabaseClient, userId: string, now: Date) {
@@ -126,9 +135,11 @@ async function expirePunishments(supabase: SupabaseClient, userId: string, now: 
       .eq("status", p.status)
       .select("id");
     if (!marked.data?.length) continue;
-    await supabase
+    const { error } = await supabase
       .from("punishments")
       .insert({ user_id: userId, failure_id: p.failure_id, parent_id: p.id, ...escalate(p, now) });
+    // Si no se pudo crear el siguiente castigo, este vuelve a su estado para reintentar después.
+    if (error) await supabase.from("punishments").update({ status: p.status }).eq("id", p.id).eq("status", "vencido");
   }
 }
 
@@ -157,17 +168,30 @@ export async function getOverview(supabase: SupabaseClient, profile: Profile, no
   const [totalsRes, freezesRes, failuresRes] = await Promise.all([
     supabase.from("day_totals").select("day, words").eq("user_id", profile.id).order("day", { ascending: false }),
     supabase.from("freezes").select("day").eq("user_id", profile.id),
-    supabase.from("failures").select("day, status").eq("user_id", profile.id).neq("status", "perdonado"),
+    supabase.from("failures").select("day, status").eq("user_id", profile.id),
   ]);
+
+  const frozen = new Set((freezesRes.data ?? []).map((f) => f.day as string));
+  const withFailure = new Set((failuresRes.data ?? []).map((f) => f.day as string));
+  const failed = new Set((failuresRes.data ?? []).filter((f) => f.status !== "perdonado").map((f) => f.day as string));
+
+  // Un día cerrado conserva el veredicto que recibió: si se evaluó sin fallo, sigue cumplido
+  // aunque después subas el mínimo de palabras. Hoy usa el mínimo actual.
+  const closedOk = (d: string, w: number) =>
+    Boolean(profile.evaluated_through) &&
+    d !== today &&
+    d <= profile.evaluated_through! &&
+    d >= profile.start_day &&
+    w > 0 &&
+    !withFailure.has(d) &&
+    !frozen.has(d);
 
   const words = new Map<string, number>();
   const qualified = new Set<string>();
   for (const t of totalsRes.data ?? []) {
     words.set(t.day, t.words);
-    if (t.words >= profile.min_words) qualified.add(t.day);
+    if (t.words >= profile.min_words || closedOk(t.day, t.words)) qualified.add(t.day);
   }
-  const frozen = new Set((freezesRes.data ?? []).map((f) => f.day as string));
-  const failed = new Set((failuresRes.data ?? []).map((f) => f.day as string));
 
   // Racha actual: cuenta hacia atrás desde hoy (si ya cumpliste) o desde ayer.
   const todayDone = qualified.has(today);

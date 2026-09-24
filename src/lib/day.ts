@@ -1,19 +1,23 @@
 /**
- * Un "día" de FullnesInfo no termina a medianoche: termina a la hora de corte
+ * Un "día" de Fuellness no termina a medianoche: termina a la hora de corte
  * (2:30 AM por defecto; admite medias horas, 2.5 = 2:30). Registrar a las 2:00
  * cuenta para el día anterior. Los días se representan como claves "YYYY-MM-DD".
  */
 
-const HOUR = 3_600_000;
-
+/** Se calcula con el reloj local: con horario de verano el corte sigue siendo a la misma hora. */
 export function dayKey(date: Date, timezone: string, cutoffHour: number): string {
-  const shifted = new Date(date.getTime() - cutoffHour * HOUR);
-  return new Intl.DateTimeFormat("en-CA", {
+  const parts = new Intl.DateTimeFormat("en-US", {
     timeZone: timezone,
     year: "numeric",
     month: "2-digit",
     day: "2-digit",
-  }).format(shifted);
+    hour: "numeric",
+    minute: "numeric",
+    hourCycle: "h23",
+  }).formatToParts(date);
+  const get = (type: string) => Number(parts.find((p) => p.type === type)?.value ?? 0);
+  const key = `${String(get("year")).padStart(4, "0")}-${String(get("month")).padStart(2, "0")}-${String(get("day")).padStart(2, "0")}`;
+  return get("hour") * 60 + get("minute") < Math.round(cutoffHour * 60) ? addDays(key, -1) : key;
 }
 
 export function addDays(key: string, amount: number): string {

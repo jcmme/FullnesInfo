@@ -102,13 +102,19 @@ export async function updateProgress(itemId: string, input: { timestamp?: string
   const { supabase, userId } = await requireUser();
   const update: Record<string, unknown> = { updated_at: new Date().toISOString() };
   const seconds = input.seconds ?? (input.timestamp ? parseTimestamp(input.timestamp) : null);
-  if (seconds !== null && seconds !== undefined) update.progress_seconds = Math.max(0, Math.round(seconds));
-  if (input.pages !== undefined && Number.isFinite(input.pages)) update.progress_pages = Math.max(0, Math.round(input.pages));
+  // Límites: 30 días de reproducción y 100,000 páginas.
+  if (typeof seconds === "number" && Number.isFinite(seconds)) {
+    update.progress_seconds = Math.min(60 * 60 * 24 * 30, Math.max(0, Math.round(seconds)));
+  }
+  if (typeof input.pages === "number" && Number.isFinite(input.pages)) {
+    update.progress_pages = Math.min(100_000, Math.max(0, Math.round(input.pages)));
+  }
   if (Object.keys(update).length === 1) return { error: "Formato no válido. Usa 1:23:45 o 45:10." };
 
   const { data: current } = await supabase.from("items").select("status").eq("id", itemId).eq("user_id", userId).single();
   if (current?.status === "pendiente") update.status = "en_curso";
-  await supabase.from("items").update(update).eq("id", itemId).eq("user_id", userId);
+  const { error } = await supabase.from("items").update(update).eq("id", itemId).eq("user_id", userId);
+  if (error) return { error: "No se pudo guardar el avance." };
   revalidatePath("/", "layout");
   return { ok: true };
 }
