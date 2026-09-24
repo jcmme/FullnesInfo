@@ -9,7 +9,7 @@ export default function LoginPage() {
         <div className="mb-8 text-center">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/apple-icon" alt="" width={72} height={72} className="mx-auto rounded-[18px] shadow-lift" />
-          <h1 className="title-large mt-5">FullnesInfo</h1>
+          <h1 className="title-large mt-5">Fuellness</h1>
           <p className="footnote mt-1 text-ink-2">Aprende algo cada día. Si no, hay consecuencias.</p>
         </div>
         <LoginForm />

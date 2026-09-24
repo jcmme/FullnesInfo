@@ -2,10 +2,10 @@ import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: { default: "FullnesInfo", template: "%s · FullnesInfo" },
+  title: { default: "Fuellness", template: "%s · Fuellness" },
   description: "Tu biblioteca de aprendizaje, tu hábito diario y sus consecuencias.",
-  applicationName: "FullnesInfo",
-  appleWebApp: { capable: true, title: "Fullnes", statusBarStyle: "default" },
+  applicationName: "Fuellness",
+  appleWebApp: { capable: true, title: "Fuellness", statusBarStyle: "default" },
   formatDetection: { telephone: false },
 };
 

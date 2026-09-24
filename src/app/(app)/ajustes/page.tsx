@@ -51,11 +51,11 @@ export default async function SettingsPage() {
           <div className="border-t hairline pt-5">
             <h3 className="headline">Guardar desde Instagram en dos toques</h3>
             <p className="footnote mb-3 mt-1 text-ink-2">
-              En un reel: Compartir, luego “Guardar en Fullnes”. Escribes el nombre y la app busca el original en YouTube.
+              En un reel: Compartir, luego “Guardar en Fuellness”. Escribes el nombre y la app busca el original en YouTube.
             </p>
             <Steps
               items={[
-                <>Abre la app <B>Atajos</B>, toca <B>+</B> y nómbralo “Guardar en Fullnes”.</>,
+                <>Abre la app <B>Atajos</B>, toca <B>+</B> y nómbralo “Guardar en Fuellness”.</>,
                 <>Toca el ícono de información <B>(i)</B> y activa <B>Mostrar en la hoja de compartir</B>. En tipos, deja solo <B>URL</B> y <B>Texto</B>.</>,
                 <>Agrega <B>Solicitar entrada</B> (texto) con la pregunta “¿Cómo se llama o de qué trata?”.</>,
                 <>Agrega <B>Obtener contenido de URL</B> con la URL para guardar. Método <B>POST</B>. Encabezado <B>Authorization</B> con valor “Bearer ” más tu token. Cuerpo <B>JSON</B>: clave <B>title</B> = Entrada proporcionada; clave <B>url</B> = Entrada del atajo.</>,

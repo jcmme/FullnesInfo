@@ -2,7 +2,7 @@
 
 ## What it is
 
-FullnesInfo is a single-user personal growth panel. It exists because the owner saves clips on Instagram and never finds them again. The core loop:
+Fuellness is a single-user personal growth panel. It exists because the owner saves clips on Instagram and never finds them again. The core loop:
 
 1. **Capture**: type the name of a clip (or share it from iOS) and the app finds the original long-form video on YouTube (also books via Open Library and podcasts via Apple Podcasts), with thumbnail, duration and chapters.
 2. **Consume and reflect daily**: every day before the cutoff (2:30 AM, adjustable in Ajustes), log what you consumed; the words of all the day's notes add up to the goal (50 by default), and today's notes can be reopened and continued. Long videos are tracked by resume position and chapters.

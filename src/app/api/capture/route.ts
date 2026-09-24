@@ -4,7 +4,7 @@ import { profileFromToken } from "@/lib/token-auth";
 import type { MediaResult } from "@/lib/types";
 
 /**
- * Captura desde el menú Compartir de iOS (Atajo "Guardar en Fullnes").
+ * Captura desde el menú Compartir de iOS (Atajo "Guardar en Fuellness").
  * Recibe el nombre que escribiste y el link del reel; busca el video original
  * en YouTube y deja las opciones listas para que elijas con un toque.
  */

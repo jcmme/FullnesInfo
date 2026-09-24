@@ -175,7 +175,7 @@ async function fetchBooks(query: string, max: number): Promise<MediaResult[]> {
     fields: "key,title,author_name,cover_i,first_publish_year,number_of_pages_median",
   });
   const res = await fetch(`https://openlibrary.org/search.json?${qs}`, {
-    headers: { "User-Agent": "FullnesInfo/1.0 (uso personal)" },
+    headers: { "User-Agent": "Fuellness/1.0 (uso personal)" },
     cache: "no-store",
   });
   if (!res.ok) throw new Error(`Open Library respondió ${res.status}.`);

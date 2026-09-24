@@ -1,4 +1,4 @@
-# FullnesInfo
+# Fuellness
 
 Panel personal de crecimiento: guardas lo que viste en Instagram o TikTok y la app encuentra el video original en YouTube; cada día registras lo que aprendiste; si no cumples antes de las 2:30 AM, gira la ruleta de castigos físicos. Además, una caja misteriosa con un tema nuevo para investigar cada día.
 
@@ -49,7 +49,7 @@ La cuota gratuita alcanza para unas 100 búsquedas al día. Libros (Open Library
 
 En la app, **Ajustes > Atajos de iPhone** tiene tu token y los pasos para dos Atajos:
 
-- **Guardar en Fullnes:** desde el menú Compartir de Instagram. Escribes el nombre y la app busca el original.
+- **Guardar en Fuellness:** desde el menú Compartir de Instagram. Escribes el nombre y la app busca el original.
 - **Recordatorio de las 8:15 AM:** una automatización que te dice qué tienes pendiente. Hay una segunda opcional a las 10:30 PM que solo avisa si falta tu registro.
 
 ## Desarrollo local

@@ -68,7 +68,7 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
         aria-label="Secciones"
         className="sticky top-0 hidden h-dvh w-60 shrink-0 flex-col gap-1 border-r hairline bg-surface-2/60 px-3 pt-8 md:flex lg:w-64"
       >
-        <p className="mb-6 px-3 font-display text-xl font-bold tracking-[-0.02em]">FullnesInfo</p>
+        <p className="mb-6 px-3 font-display text-xl font-bold tracking-[-0.02em]">Fuellness</p>
         {TABS.map(({ href, label, icon: Icon }) => {
           const active = isActive(pathname, href);
           return (

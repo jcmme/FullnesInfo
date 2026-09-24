@@ -1,4 +1,4 @@
--- FullnesInfo: esquema inicial.
+-- Fuellness: esquema inicial.
 -- Ejecutar completo en Supabase > SQL Editor.
 
 -- Perfil y reglas del juego ------------------------------------------------

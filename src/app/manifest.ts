@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "FullnesInfo",
-    short_name: "Fullnes",
+    name: "Fuellness",
+    short_name: "Fuellness",
     description: "Tu biblioteca de aprendizaje, tu hábito diario y sus consecuencias.",
     start_url: "/",
     display: "standalone",

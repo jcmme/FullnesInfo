@@ -232,7 +232,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
                 <div className="card p-5">
                   <p className="headline">Aquí aparece lo que guardas</p>
                   <p className="footnote mt-1 max-w-[46ch] text-ink-2">
-                    Escribe el nombre del video que viste en Instagram y FullnesInfo busca el original en YouTube, con su
+                    Escribe el nombre del video que viste en Instagram y Fuellness busca el original en YouTube, con su
                     miniatura, duración y capítulos.
                   </p>
                   <Link href="/guardados/nuevo" className="btn btn-secondary mt-4">
