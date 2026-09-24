@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Barbell, BookmarksSimple, Compass, GearSix, SunHorizon, type Icon } from "@phosphor-icons/react";
 
 type Tab = { href: string; label: string; icon: Icon };
@@ -37,6 +37,14 @@ const tabLabel = (label: string, href: string, count: number) =>
 /** Barra de pestañas flotante de vidrio en iPhone; barra lateral en iPad y Mac. */
 export function Nav({ punishmentCount }: { punishmentCount: number }) {
   const pathname = usePathname();
+  const router = useRouter();
+  /*
+   * Sin precarga automática: cada enlace precargado es un render completo del
+   * servidor, y con 5 pestañas eran 5 pantallas de más cada vez que abrías una.
+   * En su lugar se precarga al apoyar el dedo, que da unos 150 ms de ventaja
+   * sobre el toque, que es justo lo que hace falta para que se sienta inmediato.
+   */
+  const warm = (href: string) => () => router.prefetch(href);
   // Al escribir la nota o elegir temas la barra se esconde, como en las pantallas de
   // redactar de iOS: la tarea manda y su botón de guardar se queda con el fondo.
   const composing = pathname.startsWith("/registrar") || pathname.startsWith("/descubrir/elegir");
@@ -55,6 +63,8 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
               <li key={href}>
                 <Link
                   href={href}
+                  prefetch={false}
+                  onPointerDown={warm(href)}
                   aria-current={active ? "page" : undefined}
                   aria-label={tabLabel(label, href, punishmentCount)}
                   className={`press flex min-h-12 flex-col items-center justify-center gap-0.5 font-display ${
@@ -84,6 +94,8 @@ export function Nav({ punishmentCount }: { punishmentCount: number }) {
             <Link
               key={href}
               href={href}
+              prefetch={false}
+              onPointerEnter={warm(href)}
               aria-current={active ? "page" : undefined}
               aria-label={tabLabel(label, href, punishmentCount)}
               className={`press flex min-h-11 items-center gap-3 rounded-control px-3 font-medium transition-colors ${
