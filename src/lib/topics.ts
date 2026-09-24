@@ -27,7 +27,7 @@ export function customKey(label: string): string {
   const slug = label
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "")
     .slice(0, 60);
@@ -66,8 +66,7 @@ export function viewFor(interest: Pick<Interest, "key" | "label" | "area">): Top
 
 const WIKI = "https://es.wikipedia.org";
 
-type WikiSearch = { pages?: { key: string; title: string; description?: string | null }[] };
-type WikiPage = { title: string; extract?: string; content_urls?: { desktop?: { page?: string } }; thumbnail?: { source?: string } };
+type WikiPage = { title: string; extract?: string; fullurl?: string; thumbnail?: { source?: string } };
 
 /** Un mes: Wikipedia no cambia tan rápido y así la ficha abre al instante. */
 const WIKI_TTL_MS = 30 * 24 * 3_600_000;
@@ -105,35 +104,40 @@ export async function wikipediaFor(
   return summary;
 }
 
-/** Resumen de Wikipedia en español. Devuelve null si no hay nada decente. */
+/**
+ * Resumen de Wikipedia en español, en una sola llamada. Antes eran dos seguidas
+ * (buscar y luego traer el texto) y eso hacía esperar el doble. Si algo falla
+ * devuelve null y la ficha se pinta igual, sin esta parte.
+ */
 export async function fetchWikipedia(query: string): Promise<WikiSummary | null> {
+  const params = new URLSearchParams({
+    action: "query",
+    format: "json",
+    formatversion: "2",
+    generator: "search",
+    gsrsearch: query,
+    gsrlimit: "1",
+    prop: "extracts|pageimages|info",
+    exintro: "1",
+    explaintext: "1",
+    inprop: "url",
+    pithumbsize: "400",
+  });
   try {
-    const res = await fetchWithTimeout(
-      `${WIKI}/w/rest.php/v1/search/page?q=${encodeURIComponent(query)}&limit=1`,
-      "Wikipedia",
-      { headers: { "User-Agent": "Fuellness/1.0 (uso personal)" } },
-    );
+    const res = await fetchWithTimeout(`${WIKI}/w/api.php?${params}`, "Wikipedia", {
+      headers: { "User-Agent": "Fuellness/1.0 (uso personal)" },
+    });
     if (!res.ok) return null;
-    const found = (await res.json()) as WikiSearch;
-    const first = found.pages?.[0];
-    if (!first) return null;
-
-    const page = await fetchWithTimeout(
-      `${WIKI}/api/rest_v1/page/summary/${encodeURIComponent(first.key)}`,
-      "Wikipedia",
-      { headers: { "User-Agent": "Fuellness/1.0 (uso personal)" } },
-    );
-    if (!page.ok) return null;
-    const data = (await page.json()) as WikiPage;
-    if (!data.extract) return null;
+    const data = (await res.json()) as { query?: { pages?: WikiPage[] } };
+    const page = data.query?.pages?.[0];
+    if (!page?.extract) return null;
     return {
-      title: data.title,
-      extract: data.extract,
-      url: data.content_urls?.desktop?.page ?? `${WIKI}/wiki/${encodeURIComponent(first.key)}`,
-      thumbnail: data.thumbnail?.source ?? null,
+      title: page.title,
+      extract: page.extract.slice(0, 1200),
+      url: page.fullurl ?? `${WIKI}/wiki/${encodeURIComponent(page.title)}`,
+      thumbnail: page.thumbnail?.source ?? null,
     };
   } catch {
-    // Sin internet o Wikipedia caída: la ficha se pinta igual, sin esta parte.
     return null;
   }
 }

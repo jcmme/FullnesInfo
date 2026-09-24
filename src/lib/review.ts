@@ -60,7 +60,7 @@ function normalize(word: string): string {
   const base = word
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]/g, "");
   if (base.length > 5 && base.endsWith("es")) return base.slice(0, -2);
   if (base.length > 4 && base.endsWith("s")) return base.slice(0, -1);
