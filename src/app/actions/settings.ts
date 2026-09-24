@@ -46,7 +46,9 @@ export async function updateSettings(_prev: SettingsState, formData: FormData): 
 export async function regenerateToken() {
   const { supabase, userId } = await requireUser();
   const token = crypto.randomUUID().replace(/-/g, "") + crypto.randomUUID().replace(/-/g, "");
-  await supabase.from("profiles").update({ api_token: token }).eq("id", userId);
+  const { error } = await supabase.from("profiles").update({ api_token: token }).eq("id", userId);
+  // Sin esto, un error dejaba la pantalla mostrando un token que no sirve para nada.
+  if (error) return { error: "No se pudo generar el token. Intenta otra vez." };
   revalidatePath("/ajustes");
   return { token };
 }

@@ -22,7 +22,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
 
   let query = supabase.from("items").select("*").eq("user_id", userId).order("updated_at", { ascending: false }).limit(200);
   if (filter !== "todos") query = query.eq("status", filter);
-  const term = q.trim().replace(/[%,()]/g, " ");
+  const term = q.trim().replace(/[%,()*\\"]/g, " ").slice(0, 80);
   if (term) query = query.or(`title.ilike.%${term}%,media_title.ilike.%${term}%,media_author.ilike.%${term}%,note.ilike.%${term}%`);
 
   const [{ data }, countsRes] = await Promise.all([

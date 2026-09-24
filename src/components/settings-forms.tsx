@@ -127,6 +127,7 @@ function CopyButton({ value, label }: { value: string; label: string }) {
 export function TokenPanel({ token: initial, origin }: { token: string; origin: string }) {
   const [token, setToken] = useState(initial);
   const [visible, setVisible] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [pending, start] = useTransition();
   return (
     <div className="space-y-4">
@@ -158,6 +159,11 @@ export function TokenPanel({ token: initial, origin }: { token: string; origin: 
             if (!window.confirm("¿Generar un token nuevo? Tus Atajos actuales dejarán de funcionar hasta que pegues el nuevo.")) return;
             start(async () => {
               const res = await regenerateToken();
+              if (!res.token) {
+                setError(res.error ?? "No se pudo generar el token.");
+                return;
+              }
+              setError(null);
               setToken(res.token);
               setVisible(true);
             });
@@ -167,6 +173,11 @@ export function TokenPanel({ token: initial, origin }: { token: string; origin: 
           Generar token nuevo
         </button>
       </div>
+      {error && (
+        <p role="alert" className="footnote text-bad">
+          {error}
+        </p>
+      )}
     </div>
   );
 }

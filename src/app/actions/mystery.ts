@@ -27,7 +27,17 @@ export async function openMysteryBox() {
     .insert({ user_id: userId, topic_id: topic.id, rarity: topic.rarity, day: today })
     .select("*")
     .single();
-  if (error || !data) return { error: "No se pudo abrir la caja. Intenta otra vez." };
+  if (error || !data) {
+    // Dos toques seguidos: la caja del día ya se abrió, se devuelve esa misma.
+    const { data: justOpened } = await supabase
+      .from("mystery_opens")
+      .select("*")
+      .eq("user_id", userId)
+      .eq("day", today)
+      .maybeSingle();
+    if (justOpened) return { open: justOpened, topic: getTopic(justOpened.topic_id) ?? null };
+    return { error: "No se pudo abrir la caja. Intenta otra vez." };
+  }
   revalidatePath("/", "layout");
   return { open: data, topic };
 }

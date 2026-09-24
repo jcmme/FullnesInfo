@@ -40,8 +40,20 @@ export async function forgiveFailure(failureId: string) {
   const used = await freezesUsedIn(supabase, userId, monthOf(failure.day));
   if (used >= profile.freezes_per_month) return { error: "Ya usaste los comodines de ese mes." };
 
-  await supabase.from("freezes").insert({ user_id: userId, day: failure.day });
-  await supabase.from("failures").update({ status: "perdonado" }).eq("id", failureId).eq("status", "pendiente");
+  const { error: freezeError } = await supabase.from("freezes").insert({ user_id: userId, day: failure.day });
+  if (freezeError) return { error: "Ese día ya tiene comodín." };
+  const { data: forgiven } = await supabase
+    .from("failures")
+    .update({ status: "perdonado" })
+    .eq("id", failureId)
+    .eq("user_id", userId)
+    .eq("status", "pendiente")
+    .select("id");
+  // Si mientras tanto ya se había girado la ruleta, el comodín no se gasta.
+  if (!forgiven?.length) {
+    await supabase.from("freezes").delete().eq("user_id", userId).eq("day", failure.day);
+    return { error: "Ese día ya tiene castigo asignado." };
+  }
   revalidatePath("/", "layout");
   return { ok: true };
 }
@@ -64,17 +76,25 @@ export async function startPunishment(id: string) {
   const { data: p } = await supabase.from("punishments").select("*").eq("id", id).eq("user_id", userId).single();
   if (!p || p.status !== "asignado") return { error: "Este castigo ya empezó o terminó." };
   const now = new Date();
+  // El plazo para empezar ya venció: no se abre la ventana, el castigo sube de nivel solo.
+  if (p.start_by && now > new Date(p.start_by)) {
+    return { error: "Se venció el plazo para empezar este castigo. Actualiza la página." };
+  }
   const due = new Date(now.getTime() + Number(p.window_hours ?? 4) * 3_600_000);
-  await supabase
+  const { data: started } = await supabase
     .from("punishments")
     .update({ status: "en_curso", started_at: now.toISOString(), due_at: due.toISOString() })
     .eq("id", id)
-    .eq("status", "asignado");
+    .eq("user_id", userId)
+    .eq("status", "asignado")
+    .select("id");
+  if (!started?.length) return { error: "Este castigo ya empezó o terminó." };
   revalidatePath("/", "layout");
   return { ok: true };
 }
 
-async function recompute(supabase: Awaited<ReturnType<typeof requireUser>>["supabase"], p: Punishment) {
+/** Vuelve a sumar los registros. No revive un castigo que ya se venció mientras tanto. */
+async function recompute(supabase: Awaited<ReturnType<typeof requireUser>>["supabase"], userId: string, p: Punishment) {
   const { data: logs } = await supabase.from("punishment_logs").select("amount").eq("punishment_id", p.id);
   const progress = (logs ?? []).reduce((acc, l) => acc + Number(l.amount), 0);
   const done = progress >= Number(p.target);
@@ -85,7 +105,9 @@ async function recompute(supabase: Awaited<ReturnType<typeof requireUser>>["supa
       status: done ? "cumplido" : "en_curso",
       completed_at: done ? new Date().toISOString() : null,
     })
-    .eq("id", p.id);
+    .eq("id", p.id)
+    .eq("user_id", userId)
+    .in("status", ["en_curso", "cumplido"]);
   return { progress, done };
 }
 
@@ -97,7 +119,7 @@ export async function logPunishment(id: string, amount: number) {
   if (p.due_at && new Date() > new Date(p.due_at)) return { error: "Se acabó el tiempo de este castigo." };
 
   await supabase.from("punishment_logs").insert({ user_id: userId, punishment_id: id, amount });
-  const result = await recompute(supabase, p as Punishment);
+  const result = await recompute(supabase, userId, p as Punishment);
   revalidatePath("/", "layout");
   return result;
 }
@@ -115,8 +137,8 @@ export async function undoLastLog(id: string) {
     .limit(1)
     .maybeSingle();
   if (!last) return { error: "No hay nada que deshacer." };
-  await supabase.from("punishment_logs").delete().eq("id", last.id);
-  const result = await recompute(supabase, p as Punishment);
+  await supabase.from("punishment_logs").delete().eq("id", last.id).eq("user_id", userId);
+  const result = await recompute(supabase, userId, p as Punishment);
   revalidatePath("/", "layout");
   return result;
 }

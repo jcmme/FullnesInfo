@@ -256,7 +256,9 @@ export function suggestPlans(p: Pick<Punishment, "challenge_id" | "target" | "un
   ];
 
   if (p.unit === "reps") {
-    const emomSet = Math.max(5, Math.round(set * 0.6));
+    // Los bloques de 10 min tienen que caber en la ventana: si no, cada bloque lleva más.
+    const maxRounds = Math.max(1, Math.floor((windowMin * 0.8) / 10));
+    const emomSet = Math.max(5, Math.round(set * 0.6), Math.ceil(p.target / maxRounds));
     const emomRounds = Math.ceil(p.target / emomSet);
     plans.push({
       label: "Cada 10 min",

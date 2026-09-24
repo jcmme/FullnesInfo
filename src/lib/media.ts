@@ -1,5 +1,23 @@
 import type { Chapter, MediaResult } from "./types";
 
+/**
+ * Ninguna búsqueda deja la pantalla esperando para siempre: ocho segundos y se rinde
+ * con un mensaje claro, en vez de quedarse colgada hasta que el servidor corte.
+ */
+const TIMEOUT_MS = 8_000;
+
+async function fetchWithTimeout(url: string, service: string, init?: RequestInit): Promise<Response> {
+  try {
+    return await fetch(url, { ...init, cache: "no-store", signal: AbortSignal.timeout(TIMEOUT_MS) });
+  } catch (err) {
+    const name = err instanceof Error ? err.name : "";
+    if (name === "TimeoutError" || name === "AbortError") {
+      throw new Error(`${service} tardó demasiado en responder. Intenta otra vez.`);
+    }
+    throw new Error(`No se pudo conectar con ${service}.`);
+  }
+}
+
 /* YouTube ----------------------------------------------------------------- */
 
 const YT_API = "https://www.googleapis.com/youtube/v3";
@@ -8,16 +26,20 @@ export function hasYouTubeKey(): boolean {
   return Boolean(process.env.YOUTUBE_API_KEY);
 }
 
+/** Un id de YouTube son exactamente 11 caracteres; lo demás no se consulta. */
+const YT_ID = /^[\w-]{11}$/;
+const asId = (value: string | null | undefined) => (value && YT_ID.test(value) ? value : null);
+
 export function extractYouTubeId(input: string): string | null {
   try {
     const url = new URL(input.trim());
     const host = url.hostname.replace(/^www\.|^m\./, "");
-    if (host === "youtu.be") return url.pathname.slice(1, 12) || null;
+    if (host === "youtu.be") return asId(url.pathname.slice(1, 12));
     if (host === "youtube.com" || host === "music.youtube.com") {
-      const v = url.searchParams.get("v");
+      const v = asId(url.searchParams.get("v"));
       if (v) return v;
       const match = url.pathname.match(/^\/(?:shorts|embed|live)\/([\w-]{11})/);
-      return match?.[1] ?? null;
+      return asId(match?.[1]);
     }
   } catch {
     // no es URL
@@ -76,7 +98,7 @@ async function ytFetch<T>(path: string, params: Record<string, string>): Promise
   const key = process.env.YOUTUBE_API_KEY;
   if (!key) throw new Error("Falta YOUTUBE_API_KEY en las variables de entorno.");
   const qs = new URLSearchParams({ ...params, key });
-  const res = await fetch(`${YT_API}/${path}?${qs}`, { cache: "no-store" });
+  const res = await fetchWithTimeout(`${YT_API}/${path}?${qs}`, "YouTube");
   if (!res.ok) {
     const body = await res.text();
     if (res.status === 403 && body.includes("quota")) {
@@ -174,9 +196,8 @@ async function fetchBooks(query: string, max: number): Promise<MediaResult[]> {
     limit: String(max),
     fields: "key,title,author_name,cover_i,first_publish_year,number_of_pages_median",
   });
-  const res = await fetch(`https://openlibrary.org/search.json?${qs}`, {
+  const res = await fetchWithTimeout(`https://openlibrary.org/search.json?${qs}`, "Open Library", {
     headers: { "User-Agent": "Fuellness/1.0 (uso personal)" },
-    cache: "no-store",
   });
   if (!res.ok) throw new Error(`Open Library respondió ${res.status}.`);
   const data = (await res.json()) as { docs: OlDoc[] };
@@ -214,7 +235,7 @@ export async function searchPodcasts(query: string, max = 8): Promise<MediaResul
     limit: String(max),
     country: "MX",
   });
-  const res = await fetch(`https://itunes.apple.com/search?${qs}`, { cache: "no-store" });
+  const res = await fetchWithTimeout(`https://itunes.apple.com/search?${qs}`, "Apple Podcasts");
   if (!res.ok) throw new Error(`Apple Podcasts respondió ${res.status}.`);
   const data = (await res.json()) as { results: ItunesEpisode[] };
   return data.results.map((e) => ({

@@ -25,6 +25,7 @@ export async function GET(request: NextRequest) {
   if (pendingSpins) parts.push(`Tienes ${pendingSpins === 1 ? "una ruleta" : `${pendingSpins} ruletas`} por girar.`);
   if (active.length) parts.push(`Castigo pendiente: ${active[0].title}${active.length > 1 ? ` y ${active.length - 1} más` : ""}.`);
   if (overview.todayDone) parts.push(`Hoy ya cumpliste. Racha: ${overview.streak} ${overview.streak === 1 ? "día" : "días"}.`);
+  else if (overview.todayFrozen) parts.push("Hoy usaste comodín: no cuenta y tu racha sigue a salvo.");
   else
     parts.push(
       overview.streak > 0
@@ -37,6 +38,7 @@ export async function GET(request: NextRequest) {
     ok: true,
     day: overview.today,
     done: overview.todayDone,
+    frozen: overview.todayFrozen,
     words: overview.todayWords,
     minWords: profile.min_words,
     streak: overview.streak,
