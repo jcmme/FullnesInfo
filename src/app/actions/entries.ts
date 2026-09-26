@@ -10,7 +10,11 @@ import { requireUser } from "@/lib/supabase/server";
 import { getPack } from "@/lib/topics";
 import type { Chapter } from "@/lib/types";
 
-export type EntryFormState = { error?: string } | undefined;
+/**
+ * Con `stay` en el formulario la nota se guarda sin sacarte de donde escribes, y
+ * en vez de mandarte a Hoy te devuelve cómo quedó el día para decírtelo ahí mismo.
+ */
+export type EntryFormState = { error?: string; saved?: { words: number; done: boolean; counts: boolean } } | undefined;
 
 /** Límites del avance: 30 días de reproducción y 100,000 páginas. */
 const MAX_SECONDS = 60 * 60 * 24 * 30;
@@ -130,6 +134,7 @@ export async function saveEntry(_prev: EntryFormState, formData: FormData): Prom
 
   revalidatePath("/", "layout");
   const wordsAfter = wordsBefore - (existing?.counts ? existing.word_count : 0) + (counts ? wordCount : 0);
+  if (formData.get("stay") === "1") return { saved: { words: wordsAfter, done: wordsAfter >= profile.min_words, counts } };
   const nowDone = wordsBefore < profile.min_words && wordsAfter >= profile.min_words;
   redirect(nowDone ? "/?cumplido=1" : "/");
 }

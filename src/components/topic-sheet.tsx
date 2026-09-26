@@ -2,10 +2,10 @@
 
 import { ArrowSquareOut, BookOpen, Check, FilmSlate, MagnifyingGlass, Newspaper, Plus } from "@phosphor-icons/react";
 import { useState, useTransition } from "react";
-import { createItem } from "@/app/actions/items";
 import { saveLink } from "@/app/actions/topics";
 import type { ItemKind, MediaResult, TopicLink } from "@/lib/types";
 import { MediaSearch } from "./media-search";
+import { SavedMedia, saveWithoutLeaving } from "./saved-media";
 
 const ICON = { libro: BookOpen, video: FilmSlate, articulo: Newspaper } as const;
 
@@ -52,29 +52,35 @@ export function Recommendation({ link, kind, topicTitle }: { link: TopicLink; ki
   );
 }
 
-/** Buscar más sobre el tema, con la misma búsqueda de siempre. */
+/** Buscar más sobre el tema. Lo que guardes se queda aquí, listo para verlo. */
 export function TopicSearch({ query, title }: { query: string; title: string }) {
   const [open, setOpen] = useState(false);
-  const [, start] = useTransition();
+  const [picked, setPicked] = useState<{ result: MediaResult; itemId: string } | null>(null);
+  const [saving, start] = useTransition();
 
-  const save = (r: MediaResult) => {
-    const fd = new FormData();
-    fd.set("title", title);
-    fd.set("kind", r.provider === "openlibrary" ? "libro" : r.provider === "itunes" ? "podcast" : "video");
-    fd.set("note", `Sobre ${title}`);
-    fd.set("media", JSON.stringify(r));
+  const save = (r: MediaResult) =>
     start(async () => {
-      await createItem(undefined, fd);
+      const itemId = await saveWithoutLeaving(r, title, `Sobre ${title}`);
+      if (!itemId) return;
+      setPicked({ result: r, itemId });
+      setOpen(false);
     });
-  };
 
-  if (!open) {
-    return (
-      <button type="button" onClick={() => setOpen(true)} className="btn btn-secondary w-full">
-        <MagnifyingGlass size={18} aria-hidden />
-        Buscar más sobre esto
-      </button>
-    );
-  }
-  return <MediaSearch initialQuery={query} sourceQueries={{ libro: title, podcast: title }} autoSearch onPick={save} />;
+  return (
+    <div className="space-y-3">
+      {picked && <SavedMedia result={picked.result} itemId={picked.itemId} />}
+      {open ? (
+        saving ? (
+          <p className="footnote text-ink-2">Guardando…</p>
+        ) : (
+          <MediaSearch initialQuery={query} sourceQueries={{ libro: title, podcast: title }} autoSearch onPick={save} />
+        )
+      ) : (
+        <button type="button" onClick={() => setOpen(true)} className="btn btn-secondary w-full">
+          <MagnifyingGlass size={18} aria-hidden />
+          {picked ? "Buscar otro" : "Buscar más sobre esto"}
+        </button>
+      )}
+    </div>
+  );
 }

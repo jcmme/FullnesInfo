@@ -4,11 +4,13 @@ import { Clock, Lock, MagnifyingGlass, PencilSimple } from "@phosphor-icons/reac
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { useState, useTransition } from "react";
-import { createItem } from "@/app/actions/items";
 import { openMysteryBox } from "@/app/actions/mystery";
 import { AREAS, RARITY_LABEL } from "@/lib/mystery";
+import type { TodayNote } from "@/lib/notes";
 import type { MediaResult, MysteryOpen, MysteryTopic, Rarity } from "@/lib/types";
 import { MediaSearch } from "./media-search";
+import { NoteComposer, notesOf, type ComposerSubject } from "./note-composer";
+import { kindOf, SavedMedia, saveWithoutLeaving } from "./saved-media";
 
 const RARITY_STYLE: Record<Rarity, { chip: string; wash: string; ring: string }> = {
   comun: { chip: "bg-surface-2 text-ink-2", wash: "bg-surface-2", ring: "" },
@@ -51,22 +53,40 @@ function Box({ shaking, locked }: { shaking: boolean; locked: boolean }) {
   );
 }
 
-function TopicCard({ topic, open, animate }: { topic: MysteryTopic; open: MysteryOpen; animate: boolean }) {
+function TopicCard({ topic, open, animate, minWords, todayNotes, todayWords }: {
+  topic: MysteryTopic;
+  open: MysteryOpen;
+  animate: boolean;
+  minWords: number;
+  todayNotes: TodayNote[];
+  todayWords: number;
+}) {
   const reduce = useReducedMotion();
   const [searching, setSearching] = useState(false);
   const [saving, start] = useTransition();
+  /** Lo que guardaste desde aquí: se queda en esta pantalla, listo para verlo. */
+  const [picked, setPicked] = useState<{ result: MediaResult; itemId: string } | null>(null);
   const style = RARITY_STYLE[topic.rarity];
 
-  const save = (r: MediaResult) => {
-    const fd = new FormData();
-    fd.set("title", topic.title);
-    fd.set("kind", r.provider === "openlibrary" ? "libro" : r.provider === "itunes" ? "podcast" : "video");
-    fd.set("note", `Caja misteriosa: ${topic.hook}`);
-    fd.set("media", JSON.stringify(r));
-    start(async () => {
-      await createItem(undefined, fd);
-    });
+  const subject: ComposerSubject = {
+    key: `caja:${open.id}`,
+    kind: picked ? kindOf(picked.result) : "caja",
+    title: topic.title,
+    mysteryId: open.id,
+    itemId: picked?.itemId,
+    questions: topic.questions,
   };
+  const [writing, setWriting] = useState(() => notesOf(subject, todayNotes).length > 0);
+
+  // El video se queda aquí, en la caja, en vez de mandarte a la biblioteca.
+  const save = (r: MediaResult) =>
+    start(async () => {
+      const itemId = await saveWithoutLeaving(r, topic.title, `Caja misteriosa: ${topic.hook}`);
+      if (!itemId) return;
+      setPicked({ result: r, itemId });
+      setSearching(false);
+      setWriting(true);
+    });
 
   return (
     <motion.div
@@ -111,17 +131,19 @@ function TopicCard({ topic, open, animate }: { topic: MysteryTopic; open: Myster
         <div className="mt-6 flex flex-wrap gap-2">
           <button type="button" onClick={() => setSearching((s) => !s)} className="btn btn-secondary">
             <MagnifyingGlass size={18} aria-hidden />
-            {searching ? "Ocultar búsqueda" : "Buscar videos"}
+            {searching ? "Ocultar búsqueda" : picked ? "Buscar otro" : "Buscar videos"}
           </button>
-          <Link href={`/registrar?mystery=${open.id}`} className="btn btn-primary">
-            <PencilSimple size={18} aria-hidden />
-            {open.status === "investigada" ? "Agregar otra nota" : "Registrar lo que aprendí"}
-          </Link>
+          {!writing && (
+            <button type="button" onClick={() => setWriting(true)} className="btn btn-primary">
+              <PencilSimple size={18} aria-hidden />
+              {open.status === "investigada" ? "Agregar otra nota" : "Registrar lo que aprendí"}
+            </button>
+          )}
         </div>
 
         {searching && (
           <div className="mt-5 border-t hairline pt-5">
-            <p className="footnote mb-3 text-ink-2">Toca un resultado para guardarlo en tu biblioteca y verlo ahí.</p>
+            <p className="footnote mb-3 text-ink-2">Toca un resultado y se queda aquí mismo para verlo.</p>
             {saving ? (
               <p className="footnote text-ink-2">Guardando…</p>
             ) : (
@@ -134,6 +156,18 @@ function TopicCard({ topic, open, animate }: { topic: MysteryTopic; open: Myster
             )}
           </div>
         )}
+
+        {picked && (
+          <div className="mt-5 border-t hairline pt-5">
+            <SavedMedia result={picked.result} itemId={picked.itemId} />
+          </div>
+        )}
+
+        {writing && (
+          <div className="mt-6 border-t hairline pt-6">
+            <NoteComposer stay subject={subject} minWords={minWords} todayNotes={todayNotes} todayWords={todayWords} />
+          </div>
+        )}
       </article>
     </motion.div>
   );
@@ -144,11 +178,17 @@ export function MysteryBox({
   initialTopic,
   locked,
   cutoffLabel,
+  minWords,
+  todayNotes,
+  todayWords,
 }: {
   initialOpen: MysteryOpen | null;
   initialTopic: MysteryTopic | null;
   locked: boolean;
   cutoffLabel: string;
+  minWords: number;
+  todayNotes: TodayNote[];
+  todayWords: number;
 }) {
   const [open, setOpen] = useState<MysteryOpen | null>(initialOpen);
   const [topic, setTopic] = useState<MysteryTopic | null>(initialTopic);
@@ -202,7 +242,7 @@ export function MysteryBox({
           </motion.div>
         ) : (
           <motion.div key="topic" initial={false}>
-            <TopicCard topic={topic} open={open} animate={justOpened} />
+            <TopicCard topic={topic} open={open} animate={justOpened} minWords={minWords} todayNotes={todayNotes} todayWords={todayWords} />
             <p className="caption mt-4 text-center text-ink-2">Mañana después de las {cutoffLabel} hay otra caja.</p>
           </motion.div>
         )}

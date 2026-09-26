@@ -1,12 +1,15 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { ArrowSquareOut, CaretLeft, PencilSimple } from "@phosphor-icons/react/ssr";
+import { ArrowSquareOut, CaretLeft } from "@phosphor-icons/react/ssr";
+import { NoteComposer } from "@/components/note-composer";
 import { Recommendation, TopicSearch } from "@/components/topic-sheet";
 import { getSession } from "@/lib/session";
 import { areaLabelOf } from "@/lib/areas";
+import { todayKey } from "@/lib/engine";
+import { notesOfToday, wordsOfToday } from "@/lib/notes";
 import { viewFor, wikipediaFor } from "@/lib/topics";
-import type { Interest } from "@/lib/types";
+import type { Entry, Interest } from "@/lib/types";
 
 export const metadata = { title: "Tema" };
 
@@ -50,10 +53,14 @@ function WikiSkeleton() {
 export default async function TopicPage({ params }: { params: Promise<{ key: string }> }) {
   const { key: raw } = await params;
   const key = decodeURIComponent(raw);
-  const { supabase, userId } = await getSession();
+  const { supabase, userId, profile, now } = await getSession();
 
-  const { data } = await supabase.from("interests").select("*").eq("user_id", userId).eq("key", key).maybeSingle();
+  const [{ data }, entriesRes] = await Promise.all([
+    supabase.from("interests").select("*").eq("user_id", userId).eq("key", key).maybeSingle(),
+    supabase.from("entries").select("*").eq("user_id", userId).eq("day", todayKey(profile, new Date(now))).order("created_at"),
+  ]);
   const interest = data as Interest | null;
+  const todayNotes = notesOfToday((entriesRes.data ?? []) as Entry[]);
   const view = viewFor(interest ?? { key, label: key.replace(/^propio:/, "").replace(/-/g, " "), area: "propio" });
   if (!interest && !view.pack && !view.catalog) notFound();
 
@@ -165,14 +172,15 @@ export default async function TopicPage({ params }: { params: Promise<{ key: str
           </section>
         )}
 
-        <section className="space-y-3">
-          <TopicSearch query={view.query} title={view.title} />
-          <Link href={`/registrar?tema=${encodeURIComponent(key)}`} className="btn btn-primary btn-lg w-full">
-            <PencilSimple size={20} aria-hidden />
-            Escribir sobre esto
-          </Link>
+        <TopicSearch query={view.query} title={view.title} />
+
+        <section>
+          <h2 className="title-2">Escribe lo que te llevas</h2>
+          <p className="footnote mb-4 mt-0.5 text-pretty text-ink-2">
+            Aquí mismo, junto al tema. Lo que escribas cuenta para hoy.
+          </p>
           {questions.length > 0 && (
-            <div className="rounded-card bg-surface p-4">
+            <div className="mb-5 rounded-card bg-surface p-4">
               <p className="label">Para arrancar</p>
               <ul className="space-y-1.5">
                 {questions.map((q, i) => (
@@ -183,6 +191,13 @@ export default async function TopicPage({ params }: { params: Promise<{ key: str
               </ul>
             </div>
           )}
+          <NoteComposer
+            stay
+            subject={{ key: `tema:${key}`, kind: "tema", title: view.title, topicKey: key, questions }}
+            minWords={profile.min_words}
+            todayNotes={todayNotes}
+            todayWords={wordsOfToday(todayNotes)}
+          />
         </section>
       </div>
     </div>

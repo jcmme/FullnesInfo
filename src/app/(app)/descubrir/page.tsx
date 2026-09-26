@@ -8,23 +8,27 @@ import { areaLabelOf, areaOf, surprisesFor } from "@/lib/areas";
 import { formatCutoff } from "@/lib/day";
 import { todayKey } from "@/lib/engine";
 import { getTopic } from "@/lib/mystery";
+import { notesOfToday, wordsOfToday } from "@/lib/notes";
 import { getSession } from "@/lib/session";
 import { getPack } from "@/lib/topics";
-import type { Interest, MysteryOpen } from "@/lib/types";
+import type { Entry, Interest, MysteryOpen } from "@/lib/types";
 
 export const metadata = { title: "Descubrir" };
 
 export default async function DiscoverPage() {
   const { supabase, userId, profile } = await getSession();
   const today = todayKey(profile);
-  const [opensRes, failuresRes, interestsRes] = await Promise.all([
+  const [opensRes, failuresRes, interestsRes, entriesRes] = await Promise.all([
     supabase.from("mystery_opens").select("*").eq("user_id", userId).eq("day", today).maybeSingle(),
     supabase.from("failures").select("id", { count: "exact", head: true }).eq("user_id", userId).eq("status", "pendiente"),
     supabase.from("interests").select("*").eq("user_id", userId).order("position", { ascending: false }),
+    supabase.from("entries").select("*").eq("user_id", userId).eq("day", today).order("created_at"),
   ]);
   const todayOpen = opensRes.data as MysteryOpen | null;
   const interests = (interestsRes.data ?? []) as Interest[];
   const areas = profile.areas ?? [];
+  // La nota de la caja se escribe dentro de la caja: necesita el total del día.
+  const todayNotes = notesOfToday((entriesRes.data ?? []) as Entry[]);
 
   // Los que ya decidiste no vuelven a salir de sorpresa.
   const decided = new Set(interests.map((i) => i.key));
@@ -69,6 +73,9 @@ export default async function DiscoverPage() {
             initialTopic={todayOpen ? getTopic(todayOpen.topic_id) ?? null : null}
             locked={(failuresRes.count ?? 0) > 0 && !todayOpen}
             cutoffLabel={formatCutoff(profile.cutoff_hour)}
+            minWords={profile.min_words}
+            todayNotes={todayNotes}
+            todayWords={wordsOfToday(todayNotes)}
           />
         </div>
       </Section>

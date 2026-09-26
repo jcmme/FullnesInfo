@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { CaretLeft } from "@phosphor-icons/react/ssr";
-import { EntryForm, type MysteryToday, type TodayNote, type TopicToday } from "@/components/entry-form";
+import { EntryForm, type MysteryToday, type TopicToday } from "@/components/entry-form";
 import { todayKey } from "@/lib/engine";
 import { getTopic } from "@/lib/mystery";
+import { notesOfToday, subjectKeyOf, wordsOfToday } from "@/lib/notes";
 import { getSession } from "@/lib/session";
 import { getPack } from "@/lib/topics";
 import type { Entry, Interest, Item } from "@/lib/types";
@@ -12,7 +13,7 @@ export const metadata = { title: "Tu nota" };
 export default async function RegisterPage({
   searchParams,
 }: {
-  searchParams: Promise<{ item?: string; mystery?: string; nota?: string; nuevo?: string; tema?: string }>;
+  searchParams: Promise<{ nota?: string; nuevo?: string }>;
 }) {
   const { supabase, userId, profile, now } = await getSession();
   const params = await searchParams;
@@ -31,67 +32,31 @@ export default async function RegisterPage({
     supabase.from("interests").select("*").eq("user_id", userId).order("position"),
   ]);
 
-  let items = (itemsRes.data ?? []) as Item[];
-  if (params.item && !items.some((i) => i.id === params.item)) {
-    const { data } = await supabase.from("items").select("*").eq("user_id", userId).eq("id", params.item).maybeSingle();
-    if (data) items = [data as Item, ...items];
-  }
-
-  const entries = (entriesRes.data ?? []) as Entry[];
-  const todayNotes: TodayNote[] = entries.map((e) => ({
-    id: e.id,
-    itemId: e.item_id,
-    mysteryId: e.mystery_id,
-    topicKey: e.topic_key,
-    title: e.title,
-    note: e.note,
-    words: e.word_count,
-    counts: e.counts,
-  }));
-  // Las notas que la revisión marcó no suman para el día.
-  const todayWords = todayNotes.reduce((sum, n) => sum + (n.counts ? n.words : 0), 0);
+  const items = (itemsRes.data ?? []) as Item[];
+  const todayNotes = notesOfToday((entriesRes.data ?? []) as Entry[]);
+  const todayWords = wordsOfToday(todayNotes);
 
   const topic = mysteryRes.data ? getTopic(mysteryRes.data.topic_id) : undefined;
   const mystery: MysteryToday | null =
     topic && mysteryRes.data ? { id: mysteryRes.data.id as string, title: topic.title, questions: topic.questions } : null;
 
-  // Solo salen como tema el que abriste desde su ficha y los que ya tienen nota de hoy:
-  // la lista de sujetos se queda corta y fácil de recorrer.
+  // Como temas solo salen los que ya tienen nota de hoy: escribir de un tema nuevo
+  // se hace en su ficha, junto al material. Aquí se continúan.
   const interests = (interestsRes.data ?? []) as Interest[];
-  const openKeys = new Set([params.tema, ...todayNotes.map((n) => n.topicKey)].filter(Boolean) as string[]);
-  const topics: TopicToday[] = interests
-    .filter((i) => openKeys.has(i.key))
-    .map((i) => {
-      const pack = getPack(i.key);
-      const catalog = getTopic(i.key);
-      return {
-        key: i.key,
-        title: pack?.title ?? catalog?.title ?? i.label,
-        questions: pack?.questions ?? catalog?.questions ?? [],
-      };
-    });
+  const openKeys = new Set(todayNotes.map((n) => n.topicKey).filter(Boolean) as string[]);
+  const topics: TopicToday[] = [...openKeys].map((key) => {
+    const pack = getPack(key);
+    const catalog = getTopic(key);
+    return {
+      key,
+      title: pack?.title ?? catalog?.title ?? interests.find((i) => i.key === key)?.label ?? key.replace(/^propio:/, "").replace(/-/g, " "),
+      questions: pack?.questions ?? catalog?.questions ?? [],
+    };
+  });
 
+  // ?nota= continúa esa nota; ?nuevo= empieza otra.
   const fromNote = params.nota ? todayNotes.find((n) => n.id === params.nota) : undefined;
-  const noteKey = fromNote
-    ? fromNote.itemId
-      ? `item:${fromNote.itemId}`
-      : fromNote.mysteryId
-        ? `caja:${fromNote.mysteryId}`
-        : fromNote.topicKey
-          ? `tema:${fromNote.topicKey}`
-          : `otro:${fromNote.id}`
-    : null;
-  // ?nota= continúa esa nota; ?item=, ?mystery= y ?tema= abren ese tema; ?nuevo= empieza otra.
-  const initialKey = params.nuevo
-    ? "otro:nuevo"
-    : (noteKey ??
-      (params.item
-        ? `item:${params.item}`
-        : params.tema && topics.some((t) => t.key === params.tema)
-          ? `tema:${params.tema}`
-          : params.mystery && mystery?.id === params.mystery
-            ? `caja:${mystery.id}`
-            : null));
+  const initialKey = params.nuevo ? "otro:nuevo" : fromNote ? subjectKeyOf(fromNote) : null;
 
   return (
     <div className="mx-auto max-w-2xl pt-safe">

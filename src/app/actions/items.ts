@@ -48,7 +48,8 @@ function parseMedia(raw: FormDataEntryValue | null): MediaResult | null {
   }
 }
 
-export type ItemFormState = { error?: string } | undefined;
+/** Con `stay` en el formulario el guardado no te mueve: devuelve el id y ya. */
+export type ItemFormState = { error?: string; id?: string } | undefined;
 
 export async function createItem(_prev: ItemFormState, formData: FormData): Promise<ItemFormState> {
   const { supabase, userId } = await requireUser();
@@ -83,6 +84,9 @@ export async function createItem(_prev: ItemFormState, formData: FormData): Prom
   if (error || !data) return { error: "No se pudo guardar. Intenta otra vez." };
 
   revalidatePath("/", "layout");
+  // Si lo guardaste desde la caja o desde la ficha de un tema, te quedas ahí: el
+  // video aparece en esa misma pantalla en vez de mandarte a la biblioteca.
+  if (formData.get("stay") === "1") return { id: data.id as string };
   redirect(`/guardados/${data.id}`);
 }
 

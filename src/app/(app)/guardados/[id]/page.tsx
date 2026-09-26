@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowSquareOut, CaretLeft, InstagramLogo, LinkSimple, TiktokLogo } from "@phosphor-icons/react/ssr";
-import { ItemActions, LinkPanel, ProgressPanel, StaticCover, YouTubePlayer } from "@/components/item-detail";
+import { ItemActions, LinkPanel, ProgressPanel, StaticCover } from "@/components/item-detail";
 import { KIND_META, ORIGIN_LABEL, STATUS_LABEL } from "@/components/media";
+import { NoteComposer } from "@/components/note-composer";
+import { YouTubePlayer } from "@/components/youtube-player";
 import { formatDayShort } from "@/lib/day";
+import { todayKey } from "@/lib/engine";
 import { formatDuration, formatTimestamp } from "@/lib/format";
+import { notesOfToday, wordsOfToday } from "@/lib/notes";
 import { getSession } from "@/lib/session";
 import type { Entry, Item } from "@/lib/types";
 
@@ -17,14 +21,18 @@ const PROVIDER_LINK: Record<string, string> = {
 
 export default async function ItemPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
-  const { supabase, userId } = await getSession();
-  const [{ data }, entriesRes] = await Promise.all([
+  const { supabase, userId, profile, now } = await getSession();
+  const today = todayKey(profile, new Date(now));
+  const [{ data }, entriesRes, todayRes] = await Promise.all([
     supabase.from("items").select("*").eq("user_id", userId).eq("id", id).maybeSingle(),
     supabase.from("entries").select("*").eq("user_id", userId).eq("item_id", id).order("created_at", { ascending: false }),
+    supabase.from("entries").select("*").eq("user_id", userId).eq("day", today).order("created_at"),
   ]);
   if (!data) notFound();
   const item = data as Item;
   const entries = (entriesRes.data ?? []) as Entry[];
+  // Lo que llevas hoy en todas tus notas: el editor necesita el total del día.
+  const todayNotes = notesOfToday((todayRes.data ?? []) as Entry[]);
   const linked = Boolean(item.media_provider);
   const isYouTube = item.media_provider === "youtube" && item.media_id;
   const OriginIcon = item.origin === "instagram" ? InstagramLogo : item.origin === "tiktok" ? TiktokLogo : LinkSimple;
@@ -81,9 +89,10 @@ export default async function ItemPage({ params }: { params: Promise<{ id: strin
           </div>
 
           <div className="flex flex-wrap gap-2">
-            <Link href={`/registrar?item=${item.id}`} className="btn btn-primary">
+            {/* La nota está en esta misma pantalla: el botón solo te baja a ella. */}
+            <a href="#nota" className="btn btn-primary md:hidden">
               Registrar lo que vi
-            </Link>
+            </a>
             {openUrl && (
               <a href={openUrl} target="_blank" rel="noreferrer" className="btn btn-secondary">
                 <ArrowSquareOut size={18} aria-hidden />
@@ -109,6 +118,20 @@ export default async function ItemPage({ params }: { params: Promise<{ id: strin
         </div>
 
         <div className="min-w-0 space-y-5">
+          <section aria-labelledby="nota-titulo" id="nota" className="scroll-mt-4">
+            <h2 id="nota-titulo" className="title-2">
+              Escribe lo que te llevas
+            </h2>
+            <p className="footnote mb-4 mt-0.5 text-pretty text-ink-2">Aquí mismo, sin salir del video. Lo que escribas cuenta para hoy.</p>
+            <NoteComposer
+              stay
+              subject={{ key: `item:${item.id}`, kind: item.kind, title: item.media_title ?? item.title, itemId: item.id, item }}
+              minWords={profile.min_words}
+              todayNotes={todayNotes}
+              todayWords={wordsOfToday(todayNotes)}
+            />
+          </section>
+
           {item.status !== "por_vincular" && <ProgressPanel item={item} />}
 
           <section aria-labelledby="notas" className="card p-5">
