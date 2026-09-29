@@ -71,7 +71,7 @@ npm run dev
 - **Comodines**: 1 al mes por defecto. Se usan antes de que cierre el día o sobre un día fallado antes de girar la ruleta.
 - **La caja misteriosa** se bloquea mientras tengas ruletas pendientes.
 - **Tus temas** (los que marcaste "me interesa") tienen ficha propia: datos curiosos con su fuente, línea de tiempo, los términos del tema y qué ver o leer después. Los temas que todavía no están investigados muestran el resumen de Wikipedia. Las fichas escritas viven en `src/data/topic-packs.json` y cada dato lleva su fuente.
-- **Datos curiosos** en Descubrir: tres datos al día sacados de las fichas de tus temas, o de tus áreas si todavía no guardas ninguno. Cambian cada día, no en cada carga.
+- **Datos curiosos** en Hoy: tres datos al día sacados de las fichas de tus temas, o de tus áreas si todavía no guardas ninguno. Cambian cada día, no en cada carga.
 - Un tema se **completa** cuando escribes tu nota sobre él (o lo marcas terminado a mano): se sale de Tus temas y se queda en Completados.
 - **Cada nota se revisa** contra el material del que dice hablar. El relleno evidente (manazos en el teclado, la misma frase repetida, una nota copiada de otra del mismo día) no suma para el día, y se puede apelar con un toque. Escribir de otra cosa o copiar el material sí suma, pero te lo dice.
 

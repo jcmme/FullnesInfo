@@ -34,3 +34,17 @@ test("las áreas del catálogo no quedan vacías", () => {
   );
   assert.deepEqual(vacias, []);
 });
+
+test("ninguna ficha queda a medias", () => {
+  for (const p of PACKS) {
+    assert.ok(p.summary.length > 80 && p.why.length > 60, `${p.id}: resumen o motivo muy cortos`);
+    assert.ok(p.timeline.length >= 3, `${p.id}: línea de tiempo muy corta`);
+    assert.ok(p.terms.length >= 3, `${p.id}: faltan términos`);
+    assert.ok(p.questions.length >= 3, `${p.id}: faltan preguntas`);
+    const r = p.recommendations;
+    assert.ok(r.videos.length >= 1, `${p.id}: sin nada que ver`);
+    for (const link of [...r.videos, ...r.books, ...r.articles]) {
+      assert.ok(link.title && link.why && /^https:\/\//.test(link.url), `${p.id}: recomendación incompleta`);
+    }
+  }
+});

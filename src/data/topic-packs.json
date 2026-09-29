@@ -94,8 +94,36 @@
     ],
     "searchQuery": "galeón de Manila historia plata Acapulco",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "El Galeón de Manila: cuando España conectó Asia y América",
+          "channel": "España Legendaria",
+          "why": "Documental de una hora que te da la ruta completa, con el detalle del comercio y de la vida a bordo.",
+          "id": "u_HPk5WQ5aY",
+          "url": "https://www.youtube.com/watch?v=u_HPk5WQ5aY"
+        },
+        {
+          "title": "Andrés de Urdaneta y el tornaviaje",
+          "channel": "Crónicas de la Historia",
+          "why": "Se concentra en el problema difícil: cómo regresar. Media hora y queda claro por qué nadie lo lograba.",
+          "id": "a9_0LZhnYTM",
+          "url": "https://www.youtube.com/watch?v=a9_0LZhnYTM"
+        }
+      ],
+      "books": [
+        {
+          "title": "El galeón de Manila",
+          "author": "Manuel Lozano Leyva",
+          "why": "Un físico contando la ruta como aventura técnica y humana, en español y sin tecnicismos.",
+          "url": "https://openlibrary.org/works/OL24029901W"
+        },
+        {
+          "title": "The Manila Galleon",
+          "author": "William Lytle Schurz",
+          "why": "El clásico del tema desde 1939. Denso, pero es la fuente de la que beben casi todos los demás.",
+          "url": "https://openlibrary.org/works/OL181025W"
+        }
+      ],
       "articles": []
     }
   },
@@ -194,8 +222,30 @@
     ],
     "searchQuery": "colapso edad de bronce pueblos del mar 1177",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "El colapso de la Edad del Bronce",
+          "channel": "Platón con Salvavidas",
+          "why": "Ordena las causas una por una en vez de quedarse con la de los pueblos del mar.",
+          "id": "wkzcPzvQqs8",
+          "url": "https://www.youtube.com/watch?v=wkzcPzvQqs8"
+        },
+        {
+          "title": "1177 a.C.: el año en que la civilización colapsó",
+          "channel": "El Custodio",
+          "why": "Documental largo y narrativo, bueno para tenerlo de fondo y quedarte con el panorama.",
+          "id": "ztse7S-Jh9M",
+          "url": "https://www.youtube.com/watch?v=ztse7S-Jh9M"
+        }
+      ],
+      "books": [
+        {
+          "title": "1177 B.C.: The Year Civilization Collapsed",
+          "author": "Eric H. Cline",
+          "why": "El libro que puso el tema de moda. Es el arqueólogo que más ha insistido en que fueron muchas causas juntas.",
+          "url": "https://openlibrary.org/works/OL17323768W"
+        }
+      ],
       "articles": []
     }
   },
@@ -294,8 +344,30 @@
     ],
     "searchQuery": "Mansa Musa imperio de Malí oro Tombuctú",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Mansa Musa: el verdadero rey Midas",
+          "channel": "Historia Incomprendida",
+          "why": "Veinte minutos con el contexto del imperio, no solo la anécdota del oro.",
+          "id": "GGOk9YmGYbE",
+          "url": "https://www.youtube.com/watch?v=GGOk9YmGYbE"
+        },
+        {
+          "title": "Mansa Musa y el oro que cambió la Edad Media",
+          "channel": "Crónicas de la Historia",
+          "why": "Explica cómo el oro de Malí movía la economía del Mediterráneo.",
+          "id": "p0zQb5snWUM",
+          "url": "https://www.youtube.com/watch?v=p0zQb5snWUM"
+        }
+      ],
+      "books": [
+        {
+          "title": "Mansa Musa and the Empire of Mali",
+          "author": "P. James Oliver",
+          "why": "Corto y centrado en las fuentes árabes de la época, que es de donde sale casi todo lo que sabemos.",
+          "url": "https://openlibrary.org/works/OL24777292W"
+        }
+      ],
       "articles": []
     }
   },
@@ -394,9 +466,44 @@
     ],
     "searchQuery": "descubrimiento penicilina Fleming Florey producción",
     "recommendations": {
-      "books": [],
-      "videos": [],
-      "articles": []
+      "videos": [
+        {
+          "title": "El accidente que salvó millones de vidas",
+          "channel": "Karen Sánchez",
+          "why": "Cuenta la historia completa, incluida la parte de Oxford que casi siempre se salta.",
+          "id": "D7ADh_KIqUM",
+          "url": "https://www.youtube.com/watch?v=D7ADh_KIqUM"
+        },
+        {
+          "title": "Florey y Chain: la penicilina no habría existido sin ellos",
+          "channel": "Historia de los medicamentos",
+          "why": "Le da su lugar a los dos que hicieron el trabajo pesado después de Fleming.",
+          "id": "ueNUKRwpvRM",
+          "url": "https://www.youtube.com/watch?v=ueNUKRwpvRM"
+        }
+      ],
+      "books": [
+        {
+          "title": "El hombre de la penicilina",
+          "author": "Jhon Rowland",
+          "why": "Biografía clásica de Fleming, en español, escrita cuando el tema todavía era reciente.",
+          "url": "https://openlibrary.org/works/OL34824335W"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Discurso Nobel de Alexander Fleming (1945)",
+          "site": "nobelprize.org",
+          "why": "Aquí lees, en sus palabras, la advertencia sobre resistencia que todos ignoraron.",
+          "url": "https://www.nobelprize.org/prizes/medicine/1945/fleming/lecture/"
+        },
+        {
+          "title": "Resistencia a los antimicrobianos",
+          "site": "Organización Mundial de la Salud",
+          "why": "El estado actual del problema que Fleming previó en 1945.",
+          "url": "https://www.who.int/es/news-room/fact-sheets/detail/antimicrobial-resistance"
+        }
+      ]
     }
   },
   {
@@ -494,8 +601,30 @@
     ],
     "searchQuery": "CRISPR Cas9 edición genética Doudna",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "¿Cómo hacer edición genética con CRISPR?",
+          "channel": "La Hiperactina",
+          "why": "La mejor explicación en español del mecanismo, con dibujos y sin diluirlo.",
+          "id": "UaxrYWCyLdY",
+          "url": "https://www.youtube.com/watch?v=UaxrYWCyLdY"
+        },
+        {
+          "title": "CRISPR: qué es y cómo funciona",
+          "channel": "Clases Manuel de las Heras",
+          "why": "Veinte minutos más técnicos, para cuando ya entendiste la idea y quieres el detalle.",
+          "id": "2S87KHRXjSk",
+          "url": "https://www.youtube.com/watch?v=2S87KHRXjSk"
+        }
+      ],
+      "books": [
+        {
+          "title": "A Crack in Creation",
+          "author": "Jennifer A. Doudna",
+          "why": "Lo escribe la persona que ganó el Nobel por esto, incluidas sus propias dudas éticas.",
+          "url": "https://openlibrary.org/works/OL17765779W"
+        }
+      ],
       "articles": []
     }
   },
@@ -590,8 +719,23 @@
     ],
     "searchQuery": "tectónica de placas deriva continental evidencia",
     "recommendations": {
+      "videos": [
+        {
+          "title": "Tectónica de placas, completo",
+          "channel": "Geología activa",
+          "why": "Un geólogo explicando el modelo entero, con mapas y ejemplos reales.",
+          "id": "HXY6b2x_lec",
+          "url": "https://www.youtube.com/watch?v=HXY6b2x_lec"
+        },
+        {
+          "title": "Las fuerzas más destructivas de la Tierra",
+          "channel": "Nat Geo en Español",
+          "why": "Documental de National Geographic sobre lo que pasa en los bordes de las placas.",
+          "id": "_n2UZT4Avnw",
+          "url": "https://www.youtube.com/watch?v=_n2UZT4Avnw"
+        }
+      ],
       "books": [],
-      "videos": [],
       "articles": []
     }
   },
@@ -686,9 +830,38 @@
     ],
     "searchQuery": "Voyager disco de oro sonda interestelar",
     "recommendations": {
-      "books": [],
-      "videos": [],
-      "articles": []
+      "videos": [
+        {
+          "title": "Sondas Voyager: el viaje más lejano de la humanidad",
+          "channel": "Astro Documentales",
+          "why": "Documental completo de hora y media con toda la misión, de los planetas al espacio interestelar.",
+          "id": "S-2wTR-MwNc",
+          "url": "https://www.youtube.com/watch?v=S-2wTR-MwNc"
+        },
+        {
+          "title": "Descifré el disco dorado de la NASA",
+          "channel": "Idor",
+          "why": "Trece minutos dedicados al disco: qué trae y cómo está codificado para que alguien lo pueda leer.",
+          "id": "375HXrGD0n8",
+          "url": "https://www.youtube.com/watch?v=375HXrGD0n8"
+        }
+      ],
+      "books": [
+        {
+          "title": "Un punto azul pálido",
+          "author": "Carl Sagan",
+          "why": "Sagan escribiendo sobre la foto que él mismo pidió tomar. Es el texto que le da sentido a toda la misión.",
+          "url": "https://openlibrary.org/works/OL2950948W"
+        }
+      ],
+      "articles": [
+        {
+          "title": "Misión Voyager",
+          "site": "NASA",
+          "why": "La página oficial: dónde están hoy y qué instrumentos siguen encendidos.",
+          "url": "https://science.nasa.gov/mission/voyager/"
+        }
+      ]
     }
   },
   {
@@ -782,8 +955,23 @@
     ],
     "searchQuery": "hipótesis del gran impacto origen de la Luna Theia",
     "recommendations": {
+      "videos": [
+        {
+          "title": "¿Cómo se formó la Luna?",
+          "channel": "Planeta Antiguo",
+          "why": "Repasa las hipótesis que se propusieron antes y por qué se cayeron.",
+          "id": "zYe3vo88ewU",
+          "url": "https://www.youtube.com/watch?v=zYe3vo88ewU"
+        },
+        {
+          "title": "Theia: el impacto que cambió a la Tierra",
+          "channel": "física fit",
+          "why": "Ocho minutos directos al grano si solo quieres entender el choque.",
+          "id": "81VeleBwc9Y",
+          "url": "https://www.youtube.com/watch?v=81VeleBwc9Y"
+        }
+      ],
       "books": [],
-      "videos": [],
       "articles": []
     }
   },
@@ -878,8 +1066,23 @@
     ],
     "searchQuery": "micorrizas red bosque hongos árboles",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Micorrizas: la simbiosis entre hongos y plantas",
+          "channel": "Extensión IFICC",
+          "why": "Charla de una investigadora, con la biología real y sin el envoltorio poético.",
+          "id": "4xKsLqMKCaQ",
+          "url": "https://www.youtube.com/watch?v=4xKsLqMKCaQ"
+        }
+      ],
+      "books": [
+        {
+          "title": "Finding the Mother Tree",
+          "author": "Suzanne Simard",
+          "why": "La autora del hallazgo original contando su propia investigación. Léelo sabiendo que es su versión, la más discutida.",
+          "url": "https://openlibrary.org/works/OL23768406W"
+        }
+      ],
       "articles": []
     }
   },
@@ -974,8 +1177,23 @@
     ],
     "searchQuery": "tardígrado criptobiosis resistencia espacio",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Encontré el animal más resistente del mundo",
+          "channel": "Curiosidades con Mike",
+          "why": "Los busca y los graba al microscopio: ves el paso de tun a animal activo.",
+          "id": "mY4YdocYfJM",
+          "url": "https://www.youtube.com/watch?v=mY4YdocYfJM"
+        }
+      ],
+      "books": [
+        {
+          "title": "Water Bears: The Biology of Tardigrades",
+          "author": "Ralph O. Schill",
+          "why": "El libro de referencia científica si quieres pasar de la curiosidad a la biología en serio.",
+          "url": "https://openlibrary.org/works/OL22056430W"
+        }
+      ],
       "articles": []
     }
   },
@@ -1070,8 +1288,30 @@
     ],
     "searchQuery": "nixtamalización maíz cal pelagra niacina",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Nixtamalización",
+          "channel": "Biodiversidad Mexicana",
+          "why": "De la CONABIO: el proceso explicado con el contexto del maíz mexicano.",
+          "id": "Hhteef-4Kwk",
+          "url": "https://www.youtube.com/watch?v=Hhteef-4Kwk"
+        },
+        {
+          "title": "Proceso de nixtamalización con maíz blanco",
+          "channel": "Cocinando con Lauren",
+          "why": "Verlo hacerse en una cocina normal, paso por paso, con las proporciones.",
+          "id": "NG4yr3Ax5R4",
+          "url": "https://www.youtube.com/watch?v=NG4yr3Ax5R4"
+        }
+      ],
+      "books": [
+        {
+          "title": "El maíz en México",
+          "author": "Enrique Vela",
+          "why": "Panorama del maíz mexicano: variedades, historia y técnicas, muy visual.",
+          "url": "https://openlibrary.org/works/OL31858701W"
+        }
+      ],
       "articles": []
     }
   },
@@ -1158,8 +1398,30 @@
     ],
     "searchQuery": "reacción de Maillard dorado sabor cocina",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Reacciones de pardeamiento: Maillard y caramelización",
+          "channel": "Cocina ConCiencia",
+          "why": "Justo la distinción que casi todos confunden, explicada con química clara.",
+          "id": "JJ0k3Sf6psk",
+          "url": "https://www.youtube.com/watch?v=JJ0k3Sf6psk"
+        },
+        {
+          "title": "La reacción de Maillard y la comida doradita",
+          "channel": "Bernardo Borkenztain",
+          "why": "Un químico llevándolo a la cocina de todos los días.",
+          "id": "8SDuIXTvFs0",
+          "url": "https://www.youtube.com/watch?v=8SDuIXTvFs0"
+        }
+      ],
+      "books": [
+        {
+          "title": "La cocina y los alimentos",
+          "author": "Harold McGee",
+          "why": "La enciclopedia de la ciencia de la cocina. Si te gusta entender por qué, este libro se queda contigo años.",
+          "url": "https://openlibrary.org/works/OL17803656W"
+        }
+      ],
       "articles": []
     }
   },
@@ -1250,8 +1512,30 @@
     ],
     "searchQuery": "línea de ensamble Ford cinco dólares día",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "Henry Ford y el fordismo",
+          "channel": "Mentes Emprendedoras",
+          "why": "La línea de montaje con sus números y sus consecuencias sociales.",
+          "id": "D-h2DmkcdTo",
+          "url": "https://www.youtube.com/watch?v=D-h2DmkcdTo"
+        },
+        {
+          "title": "La innovación: Ford T y su sistema de producción",
+          "channel": "Adriana Tub",
+          "why": "Se enfoca en el sistema, no en el personaje.",
+          "id": "FpnQ5hftN0Y",
+          "url": "https://www.youtube.com/watch?v=FpnQ5hftN0Y"
+        }
+      ],
+      "books": [
+        {
+          "title": "My Life and Work",
+          "author": "Henry Ford",
+          "why": "Ford explicando su propio sistema en 1922. Léelo como documento de época, no como verdad.",
+          "url": "https://openlibrary.org/works/OL4418043W"
+        }
+      ],
       "articles": []
     }
   },
@@ -1342,8 +1626,16 @@
     ],
     "searchQuery": "maratón 42.195 origen Londres 1908 Filípides",
     "recommendations": {
+      "videos": [
+        {
+          "title": "La historia real detrás de los 42.195 km",
+          "channel": "Guido Camargo",
+          "why": "Catorce minutos que desarman la leyenda y cuentan lo de Londres 1908.",
+          "id": "NDXDm1wq7IA",
+          "url": "https://www.youtube.com/watch?v=NDXDm1wq7IA"
+        }
+      ],
       "books": [],
-      "videos": [],
       "articles": []
     }
   },
@@ -1438,8 +1730,30 @@
     ],
     "searchQuery": "mecanismo de Anticitera engranes eclipses",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "El mecanismo de Anticitera",
+          "channel": "Museo Arqueológico Nacional de España",
+          "why": "Conferencia de museo: la fuente más seria que vas a encontrar en español sobre el tema.",
+          "id": "8jYgB435RRU",
+          "url": "https://www.youtube.com/watch?v=8jYgB435RRU"
+        },
+        {
+          "title": "¿Un ordenador de hace 2,000 años?",
+          "channel": "The Wild Project",
+          "why": "Un arqueólogo contándolo en conversación, para entrar al tema sin conferencia.",
+          "id": "aZeZcxxwINo",
+          "url": "https://www.youtube.com/watch?v=aZeZcxxwINo"
+        }
+      ],
+      "books": [
+        {
+          "title": "A Portable Cosmos",
+          "author": "Alexander Jones",
+          "why": "El estudio moderno más completo: qué hacía el mecanismo y qué significaba para los griegos.",
+          "url": "https://openlibrary.org/works/OL20050825W"
+        }
+      ],
       "articles": []
     }
   },
@@ -1534,8 +1848,30 @@
     ],
     "searchQuery": "GPS satélites trilateración relatividad",
     "recommendations": {
-      "books": [],
-      "videos": [],
+      "videos": [
+        {
+          "title": "GPS, ¿cómo funciona?",
+          "channel": "Sabin Ingeniería Civil",
+          "why": "Ocho minutos con la trilateración explicada con dibujos, que es el corazón del asunto.",
+          "id": "BOoY4rDRf0s",
+          "url": "https://www.youtube.com/watch?v=BOoY4rDRf0s"
+        },
+        {
+          "title": "Por qué tu GPS necesita la relatividad",
+          "channel": "Lógica del Universo",
+          "why": "La parte que casi nadie cuenta: los dos efectos relativistas y su corrección.",
+          "id": "lyB-mD4vRyw",
+          "url": "https://www.youtube.com/watch?v=lyB-mD4vRyw"
+        }
+      ],
+      "books": [
+        {
+          "title": "GPS",
+          "author": "Paul E. Ceruzzi",
+          "why": "Historia del sistema, de proyecto militar a infraestructura de la que depende todo.",
+          "url": "https://openlibrary.org/works/OL20186793W"
+        }
+      ],
       "articles": []
     }
   },
@@ -1626,8 +1962,1408 @@
     ],
     "searchQuery": "efecto placebo nocebo naloxona doble ciego",
     "recommendations": {
+      "videos": [
+        {
+          "title": "¿Qué tan poderoso es el efecto placebo?",
+          "channel": "CuriosaMente",
+          "why": "Nueve minutos en español claro, con los límites bien puestos.",
+          "id": "wSd_fKzrCsw",
+          "url": "https://www.youtube.com/watch?v=wSd_fKzrCsw"
+        },
+        {
+          "title": "Los misteriosos efectos nocebo y placebo",
+          "channel": "Antroporama",
+          "why": "Mete el nocebo, que es la mitad que casi siempre se ignora.",
+          "id": "_bG-ltXQnpg",
+          "url": "https://www.youtube.com/watch?v=_bG-ltXQnpg"
+        }
+      ],
+      "books": [
+        {
+          "title": "Mala ciencia",
+          "author": "Ben Goldacre",
+          "why": "Un médico explicando cómo se leen los ensayos y por qué el placebo obliga al doble ciego.",
+          "url": "https://openlibrary.org/works/OL16814010W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "peste-negra-feudalismo",
+    "title": "La Peste Negra y el fin del feudalismo",
+    "area": "historia",
+    "updated": "2026-09-29",
+    "summary": "Entre 1347 y 1352 la peste mató a una parte enorme de Europa. Al quedar menos gente para trabajar la tierra, el trabajo se volvió escaso y caro, y el arreglo social que ataba al campesino a un señor empezó a romperse.",
+    "why": "Es el caso más claro de cómo una catástrofe puede mejorar la posición de los de abajo, y de cómo los de arriba responden con leyes para impedirlo.",
+    "facts": [
+      {
+        "text": "Llegó a Europa en 1347 por el puerto de Mesina, en barcos que venían del Mar Negro. En cinco años había recorrido el continente entero.",
+        "source": {
+          "title": "Wikipedia: Peste negra",
+          "url": "https://es.wikipedia.org/wiki/Peste_negra"
+        }
+      },
+      {
+        "text": "Murió entre un tercio y la mitad de la población europea. Ninguna guerra ha hecho algo parecido en tan poco tiempo.",
+        "source": {
+          "title": "Wikipedia: Peste negra",
+          "url": "https://es.wikipedia.org/wiki/Peste_negra"
+        }
+      },
+      {
+        "text": "Con menos trabajadores, los salarios subieron. En Inglaterra el rey respondió en 1351 con una ley que prohibía pagar más de lo que se pagaba antes de la peste.",
+        "source": {
+          "title": "Wikipedia: Peste negra",
+          "url": "https://es.wikipedia.org/wiki/Peste_negra"
+        }
+      },
+      {
+        "text": "Esa presión terminó en revueltas. La de 1381 en Inglaterra llegó a tomar Londres.",
+        "source": {
+          "title": "Wikipedia: Rebelión de Wat Tyler",
+          "url": "https://es.wikipedia.org/wiki/Rebeli%C3%B3n_de_Wat_Tyler"
+        }
+      },
+      {
+        "text": "En 2011 se recuperó el genoma de la bacteria Yersinia pestis del esqueleto de víctimas de la peste en Londres. Hasta entonces la identidad del germen se discutía.",
+        "source": {
+          "title": "Wikipedia: Yersinia pestis",
+          "url": "https://es.wikipedia.org/wiki/Yersinia_pestis"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1347",
+        "text": "La peste entra a Europa por Mesina."
+      },
+      {
+        "year": "1348",
+        "text": "Llega a París, Londres y buena parte de Italia."
+      },
+      {
+        "year": "1351",
+        "text": "Inglaterra intenta congelar los salarios por ley."
+      },
+      {
+        "year": "1381",
+        "text": "Revuelta campesina en Inglaterra."
+      },
+      {
+        "year": "2011",
+        "text": "Se secuencia el genoma de la bacteria a partir de restos medievales."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Yersinia pestis",
+        "meaning": "La bacteria que causa la peste."
+      },
+      {
+        "term": "Siervo",
+        "meaning": "Campesino atado a la tierra de un señor, sin libertad de irse."
+      },
+      {
+        "term": "Bubón",
+        "meaning": "La inflamación de los ganglios que da nombre a la peste bubónica."
+      },
+      {
+        "term": "Feudalismo",
+        "meaning": "El sistema de obligaciones entre señor y campesino que la peste ayudó a desarmar."
+      }
+    ],
+    "questions": [
+      "¿Por qué menos gente significó más poder para el campesino?",
+      "¿Qué hicieron los señores para evitarlo y por qué falló?",
+      "¿Qué crisis reciente cambió quién tiene poder de negociar?"
+    ],
+    "searchQuery": "peste negra siglo XIV consecuencias feudalismo",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "La Peste Negra: origen, consecuencias y cómo terminó",
+          "channel": "Pero eso es otra Historia",
+          "why": "Diecinueve minutos bien documentados, con las consecuencias sociales y no solo el horror.",
+          "id": "MKwrwdBWyg4",
+          "url": "https://www.youtube.com/watch?v=MKwrwdBWyg4"
+        },
+        {
+          "title": "La Peste Negra: la peor catástrofe de la Edad Media",
+          "channel": "Rose Bennet",
+          "why": "Documental largo para el contexto completo del siglo XIV.",
+          "id": "bh3B3ckU_Tw",
+          "url": "https://www.youtube.com/watch?v=bh3B3ckU_Tw"
+        }
+      ],
+      "books": [
+        {
+          "title": "La peste negra",
+          "author": "Captivating History",
+          "why": "Repaso corto y ordenado si quieres la historia completa sin meterte a un tratado.",
+          "url": "https://openlibrary.org/works/OL24825886W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "agujeros-negros",
+    "title": "Los agujeros negros",
+    "area": "ciencia",
+    "updated": "2026-09-29",
+    "summary": "Una región donde la gravedad es tan intensa que nada, ni la luz, puede salir. Se predijeron en papel a partir de las ecuaciones de Einstein mucho antes de que nadie creyera que existían de verdad.",
+    "why": "Son el laboratorio donde la relatividad y la física cuántica se contradicen. Ahí está el problema abierto más grande de la física.",
+    "facts": [
+      {
+        "text": "El horizonte de sucesos no es una pared ni una superficie física. Es el punto a partir del cual ya no hay regreso posible.",
+        "source": {
+          "title": "Wikipedia: Agujero negro",
+          "url": "https://es.wikipedia.org/wiki/Agujero_negro"
+        }
+      },
+      {
+        "text": "La primera imagen de uno se publicó en 2019: el agujero negro de la galaxia M87, fotografiado juntando radiotelescopios de todo el planeta.",
+        "source": {
+          "title": "Wikipedia: Telescopio del Horizonte de Sucesos",
+          "url": "https://es.wikipedia.org/wiki/Telescopio_del_Horizonte_de_Sucesos"
+        }
+      },
+      {
+        "text": "En 2015 se detectó por primera vez la fusión de dos agujeros negros, no con luz sino con ondas en el espacio-tiempo.",
+        "source": {
+          "title": "Wikipedia: LIGO",
+          "url": "https://es.wikipedia.org/wiki/LIGO"
+        }
+      },
+      {
+        "text": "Hawking demostró en 1974 que no son del todo negros: emiten radiación y, en tiempos larguísimos, se evaporan.",
+        "source": {
+          "title": "Wikipedia: Radiación de Hawking",
+          "url": "https://es.wikipedia.org/wiki/Radiaci%C3%B3n_de_Hawking"
+        }
+      },
+      {
+        "text": "El Nobel de Física 2020 premió el trabajo sobre agujeros negros, incluida la demostración de que hay uno supermasivo en el centro de nuestra galaxia.",
+        "source": {
+          "title": "Wikipedia: Sagitario A*",
+          "url": "https://es.wikipedia.org/wiki/Sagitario_A*"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1915",
+        "text": "Einstein publica la relatividad general."
+      },
+      {
+        "year": "1916",
+        "text": "Schwarzschild encuentra la solución que describe un agujero negro."
+      },
+      {
+        "year": "1974",
+        "text": "Hawking predice que emiten radiación."
+      },
+      {
+        "year": "2015",
+        "text": "LIGO detecta la fusión de dos agujeros negros."
+      },
+      {
+        "year": "2019",
+        "text": "Primera imagen, la del agujero negro de M87."
+      },
+      {
+        "year": "2022",
+        "text": "Primera imagen del de nuestra propia galaxia."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Horizonte de sucesos",
+        "meaning": "El límite a partir del cual nada puede salir."
+      },
+      {
+        "term": "Singularidad",
+        "meaning": "El punto donde las ecuaciones dejan de tener sentido."
+      },
+      {
+        "term": "Radiación de Hawking",
+        "meaning": "La emisión que los hace evaporarse muy lentamente."
+      },
+      {
+        "term": "Onda gravitacional",
+        "meaning": "Una vibración del espacio-tiempo que viaja a la velocidad de la luz."
+      }
+    ],
+    "questions": [
+      "¿Qué significa que la luz no pueda salir?",
+      "¿Por qué son el punto donde chocan la relatividad y lo cuántico?",
+      "¿Qué te incomoda más: lo que hay dentro o que no podamos saberlo?"
+    ],
+    "searchQuery": "agujeros negros horizonte de sucesos explicación",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "Hoy sí que vas a entender los agujeros negros",
+          "channel": "Date un Vlog",
+          "why": "El mejor punto medio en español: riguroso y todavía entendible.",
+          "id": "cs2kyXC-zDw",
+          "url": "https://www.youtube.com/watch?v=cs2kyXC-zDw"
+        },
+        {
+          "title": "Cómo entender la imagen del agujero negro",
+          "channel": "Veritasium en español",
+          "why": "Explica qué estás viendo en esa foto, que no es lo que parece.",
+          "id": "Do2A8626oBc",
+          "url": "https://www.youtube.com/watch?v=Do2A8626oBc"
+        }
+      ],
+      "books": [
+        {
+          "title": "Historia del tiempo",
+          "author": "Stephen Hawking",
+          "why": "El clásico de divulgación, escrito por quien descubrió que se evaporan.",
+          "url": "https://openlibrary.org/works/OL1892617W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "dunning-kruger",
+    "title": "El efecto Dunning-Kruger",
+    "area": "psicologia",
+    "updated": "2026-09-29",
+    "summary": "El estudio original de 1999 encontró que la gente con peor desempeño en una prueba se calificaba a sí misma muy por encima de su resultado real. La idea popular, que los incompetentes se creen genios, es una caricatura de lo que se midió.",
+    "why": "Es el caso perfecto para aprender a leer un estudio: el hallazgo existe, la interpretación popular está mal, y la crítica estadística es seria.",
+    "facts": [
+      {
+        "text": "El estudio nació de un robo: un hombre asaltó bancos con la cara untada de jugo de limón, convencido de que lo volvía invisible para las cámaras.",
+        "source": {
+          "title": "Wikipedia: Efecto Dunning-Kruger",
+          "url": "https://es.wikipedia.org/wiki/Efecto_Dunning-Kruger"
+        }
+      },
+      {
+        "text": "Lo que se midió no fue que los peores se creyeran expertos, sino que se colocaban en promedio cerca del medio de la tabla estando abajo.",
+        "source": {
+          "title": "Wikipedia: Efecto Dunning-Kruger",
+          "url": "https://es.wikipedia.org/wiki/Efecto_Dunning-Kruger"
+        }
+      },
+      {
+        "text": "Varios críticos han mostrado que una parte del patrón aparece incluso con datos generados al azar, por regresión a la media y error de medición.",
+        "source": {
+          "title": "Wikipedia: Regresión a la media",
+          "url": "https://es.wikipedia.org/wiki/Regresi%C3%B3n_a_la_media"
+        }
+      },
+      {
+        "text": "La gráfica que circula en internet, con el 'pico de la estupidez' y el 'valle de la desesperación', no viene del estudio. Es un invento posterior.",
+        "source": {
+          "title": "Wikipedia: Efecto Dunning-Kruger",
+          "url": "https://es.wikipedia.org/wiki/Efecto_Dunning-Kruger"
+        }
+      },
+      {
+        "text": "La idea central sí se sostiene: para saber qué tan mal lo estás haciendo necesitas justo la habilidad que te falta.",
+        "source": {
+          "title": "Wikipedia: Metacognición",
+          "url": "https://es.wikipedia.org/wiki/Metacognici%C3%B3n"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1995",
+        "text": "McArthur Wheeler asalta bancos con jugo de limón en la cara."
+      },
+      {
+        "year": "1999",
+        "text": "Kruger y Dunning publican el estudio en Cornell."
+      },
+      {
+        "year": "2000",
+        "text": "El trabajo recibe el premio Ig Nobel."
+      },
+      {
+        "year": "2016 en adelante",
+        "text": "Se publican críticas estadísticas y replicaciones con resultados mixtos."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Metacognición",
+        "meaning": "Saber qué tanto sabes. Es la habilidad que falla aquí."
+      },
+      {
+        "term": "Regresión a la media",
+        "meaning": "La tendencia de los valores extremos a acercarse al promedio al medir otra vez."
+      },
+      {
+        "term": "Autoevaluación",
+        "meaning": "Calificarte a ti mismo, que es lo que el estudio comparó con el desempeño real."
+      },
+      {
+        "term": "Percentil",
+        "meaning": "Tu lugar en una escala de 100 respecto a los demás."
+      }
+    ],
+    "questions": [
+      "¿Qué midió el estudio de verdad?",
+      "¿Por qué la versión popular es tan atractiva?",
+      "¿En qué área te calificarías alto sin tener con qué compararte?"
+    ],
+    "searchQuery": "efecto Dunning-Kruger explicación crítica",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "El efecto Dunning-Kruger",
+          "channel": "Ram Talks",
+          "why": "Media hora que entra al estudio real y no solo al meme.",
+          "id": "5WJI3XwOLEI",
+          "url": "https://www.youtube.com/watch?v=5WJI3XwOLEI"
+        },
+        {
+          "title": "Burros que se creen sabios",
+          "channel": "Roxana Kreimer",
+          "why": "Una filósofa revisando el efecto y sus límites.",
+          "id": "lgor53riM7c",
+          "url": "https://www.youtube.com/watch?v=lgor53riM7c"
+        }
+      ],
+      "books": [
+        {
+          "title": "Pensar rápido, pensar despacio",
+          "author": "Daniel Kahneman",
+          "why": "El libro que te da el marco completo de los sesgos, con Dunning-Kruger como una pieza más.",
+          "url": "https://openlibrary.org/works/OL15992072W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "interes-compuesto",
+    "title": "El interés compuesto",
+    "area": "economia",
+    "updated": "2026-09-29",
+    "summary": "Ganar interés sobre el interés que ya ganaste. Cambia el crecimiento de línea recta a curva, y esa curva es casi plana al principio y brutal al final. Funciona igual de bien en tu contra cuando debes.",
+    "why": "Es la razón por la que empezar temprano vence a ahorrar mucho, y por la que una deuda pequeña con tasa alta se vuelve impagable.",
+    "facts": [
+      {
+        "text": "Con la regla del 72 lo calculas de cabeza: divide 72 entre la tasa anual y sabes en cuántos años se duplica tu dinero.",
+        "source": {
+          "title": "Wikipedia: Interés compuesto",
+          "url": "https://es.wikipedia.org/wiki/Inter%C3%A9s_compuesto"
+        }
+      },
+      {
+        "text": "La curva casi no se mueve los primeros años. Por eso la mayoría abandona antes de que empiece a servir.",
+        "source": {
+          "title": "Wikipedia: Interés compuesto",
+          "url": "https://es.wikipedia.org/wiki/Inter%C3%A9s_compuesto"
+        }
+      },
+      {
+        "text": "Funciona igual con las deudas. Una tarjeta de crédito compone contra ti todos los meses, y por eso el saldo mínimo casi no baja el capital.",
+        "source": {
+          "title": "Wikipedia: Tarjeta de crédito",
+          "url": "https://es.wikipedia.org/wiki/Tarjeta_de_cr%C3%A9dito"
+        }
+      },
+      {
+        "text": "Las comisiones también se componen. Una diferencia de un punto porcentual anual se come una parte enorme del total en treinta años.",
+        "source": {
+          "title": "Wikipedia: Fondo de inversión",
+          "url": "https://es.wikipedia.org/wiki/Fondo_de_inversi%C3%B3n"
+        }
+      },
+      {
+        "text": "La inflación es interés compuesto en reversa sobre tu dinero guardado: cada año compra un poco menos, y ese poco se acumula.",
+        "source": {
+          "title": "Wikipedia: Inflación",
+          "url": "https://es.wikipedia.org/wiki/Inflaci%C3%B3n"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "siglo XVII",
+        "text": "La matemática del interés compuesto ya se usa en banca y seguros."
+      },
+      {
+        "year": "1494",
+        "text": "Pacioli difunde la regla del 72 en su tratado de aritmética."
+      },
+      {
+        "year": "hoy",
+        "text": "Es la base del ahorro para el retiro y también de la trampa de las tarjetas."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Capitalización",
+        "meaning": "La frecuencia con que el interés se suma al capital: mensual, anual."
+      },
+      {
+        "term": "Regla del 72",
+        "meaning": "Atajo para estimar en cuántos años se duplica algo."
+      },
+      {
+        "term": "Rendimiento anualizado",
+        "meaning": "El crecimiento promedio por año, ya compuesto."
+      },
+      {
+        "term": "Capital",
+        "meaning": "El dinero original, antes de intereses."
+      }
+    ],
+    "questions": [
+      "¿Por qué el tiempo pesa más que el monto?",
+      "¿Dónde está el interés compuesto trabajando en tu contra ahorita?",
+      "¿Qué decisión de hoy te va a cobrar o pagar en veinte años?"
+    ],
+    "searchQuery": "interés compuesto cómo funciona finanzas personales",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "Dame 10 minutos y entenderás el interés compuesto",
+          "channel": "Andres Garza",
+          "why": "Diez minutos con ejemplos numéricos claros, sin venderte nada.",
+          "id": "vYh-mrrziLA",
+          "url": "https://www.youtube.com/watch?v=vYh-mrrziLA"
+        },
+        {
+          "title": "Interés simple contra interés compuesto",
+          "channel": "Andres Garza",
+          "why": "La comparación lado a lado, que es donde se ve la diferencia real.",
+          "id": "JK3mFKT8nss",
+          "url": "https://www.youtube.com/watch?v=JK3mFKT8nss"
+        }
+      ],
+      "books": [
+        {
+          "title": "La psicología del dinero",
+          "author": "Morgan Housel",
+          "why": "Menos fórmulas y más comportamiento: por qué la gente abandona justo antes de que sirva.",
+          "url": "https://openlibrary.org/works/OL21640039W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "estoicismo-dicotomia-de-control",
+    "title": "El estoicismo y la dicotomía de control",
+    "area": "filosofia",
+    "updated": "2026-09-29",
+    "summary": "La idea central del estoicismo práctico: separa lo que depende de ti de lo que no, y pon tu esfuerzo solo en lo primero. Lo formuló Epicteto, que empezó su vida como esclavo.",
+    "why": "Es la herramienta filosófica que más se usa hoy sin saber de dónde viene. Está en la raíz de la terapia cognitiva moderna.",
+    "facts": [
+      {
+        "text": "El Enquiridión abre con eso: hay cosas que dependen de nosotros y cosas que no. Todo lo demás del libro sale de esa frase.",
+        "source": {
+          "title": "Wikipedia: Enquiridión",
+          "url": "https://es.wikipedia.org/wiki/Enquiridi%C3%B3n"
+        }
+      },
+      {
+        "text": "Epicteto fue esclavo en Roma y quedó cojo. Enseñaba que la libertad no es de circunstancias sino de juicio.",
+        "source": {
+          "title": "Wikipedia: Epicteto",
+          "url": "https://es.wikipedia.org/wiki/Epicteto"
+        }
+      },
+      {
+        "text": "Él no escribió nada. Lo que leemos lo tomó en notas su alumno Arriano, como los apuntes de un estudiante.",
+        "source": {
+          "title": "Wikipedia: Epicteto",
+          "url": "https://es.wikipedia.org/wiki/Epicteto"
+        }
+      },
+      {
+        "text": "Las Meditaciones de Marco Aurelio eran su diario privado. El emperador más poderoso del mundo se recordaba a sí mismo lo que no controlaba.",
+        "source": {
+          "title": "Wikipedia: Meditaciones",
+          "url": "https://es.wikipedia.org/wiki/Meditaciones"
+        }
+      },
+      {
+        "text": "Los fundadores de la terapia cognitivo-conductual reconocieron su deuda con los estoicos: no son los hechos, es el juicio sobre los hechos.",
+        "source": {
+          "title": "Wikipedia: Terapia cognitivo-conductual",
+          "url": "https://es.wikipedia.org/wiki/Terapia_cognitivo-conductual"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "siglo III a.C.",
+        "text": "Zenón funda el estoicismo en Atenas."
+      },
+      {
+        "year": "siglo I d.C.",
+        "text": "Epicteto enseña en Roma y después en Nicópolis."
+      },
+      {
+        "year": "c. 125 d.C.",
+        "text": "Arriano recoge sus enseñanzas en el Enquiridión."
+      },
+      {
+        "year": "c. 175 d.C.",
+        "text": "Marco Aurelio escribe sus Meditaciones en campaña."
+      },
+      {
+        "year": "siglo XX",
+        "text": "La terapia cognitiva retoma la idea del juicio sobre los hechos."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Dicotomía del control",
+        "meaning": "La división entre lo que depende de ti y lo que no."
+      },
+      {
+        "term": "Enquiridión",
+        "meaning": "El manual corto de Epicteto recogido por Arriano."
+      },
+      {
+        "term": "Apatía estoica",
+        "meaning": "No es indiferencia: es no ser arrastrado por las pasiones."
+      },
+      {
+        "term": "Virtud",
+        "meaning": "Para un estoico, lo único verdaderamente bueno, y lo único que sí controlas."
+      }
+    ],
+    "questions": [
+      "¿Qué queda de tu lado en el problema que traes hoy?",
+      "¿En qué se diferencia esto de la resignación?",
+      "¿Qué gastas en cosas que no dependen de ti?"
+    ],
+    "searchQuery": "estoicismo dicotomía del control Epicteto",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "17 lecciones de Epicteto",
+          "channel": "El Jardín Estoico",
+          "why": "Media hora sobre Epicteto, con la dicotomía del control en el centro.",
+          "id": "wdtAgy1lQ9c",
+          "url": "https://www.youtube.com/watch?v=wdtAgy1lQ9c"
+        },
+        {
+          "title": "La dicotomía del control estoica",
+          "channel": "Pepe García El Estoico",
+          "why": "Siete minutos directos si quieres la herramienta y no la historia.",
+          "id": "xPn7UScAkQQ",
+          "url": "https://www.youtube.com/watch?v=xPn7UScAkQQ"
+        }
+      ],
+      "books": [
+        {
+          "title": "Enquiridión",
+          "author": "Epicteto",
+          "why": "El manual original. Son unas cuantas páginas y se lee en una sentada.",
+          "url": "https://openlibrary.org/works/OL16233356W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "aprendizaje-profundo-redes-neuronales",
+    "title": "Cómo aprenden las redes neuronales",
+    "area": "tecnologia",
+    "updated": "2026-09-29",
+    "summary": "Una red neuronal es una pila de operaciones numéricas con millones de parámetros ajustables. Aprender significa corregir esos números poco a poco para que el error baje. No hay comprensión adentro: hay ajuste.",
+    "why": "Es la tecnología detrás de casi todo lo que hoy llaman inteligencia artificial. Entender el mecanismo te quita tanto el miedo mágico como la fe ciega.",
+    "facts": [
+      {
+        "text": "La idea tiene casi 70 años: el perceptrón de Rosenblatt es de 1958 y ya aprendía a clasificar con ejemplos.",
+        "source": {
+          "title": "Wikipedia: Perceptrón",
+          "url": "https://es.wikipedia.org/wiki/Perceptr%C3%B3n"
+        }
+      },
+      {
+        "text": "Un libro de Minsky y Papert en 1969 mostró los límites del perceptrón simple y el campo se quedó casi congelado por años.",
+        "source": {
+          "title": "Wikipedia: Perceptrón",
+          "url": "https://es.wikipedia.org/wiki/Perceptr%C3%B3n"
+        }
+      },
+      {
+        "text": "Lo que lo revivió fue la retropropagación: una forma de repartir la culpa del error entre todos los parámetros y corregirlos a la vez.",
+        "source": {
+          "title": "Wikipedia: Propagación hacia atrás",
+          "url": "https://es.wikipedia.org/wiki/Propagaci%C3%B3n_hacia_atr%C3%A1s"
+        }
+      },
+      {
+        "text": "El despegue moderno tiene fecha: en 2012 una red llamada AlexNet ganó una competencia de reconocimiento de imágenes por un margen enorme.",
+        "source": {
+          "title": "Wikipedia: Red neuronal artificial",
+          "url": "https://es.wikipedia.org/wiki/Red_neuronal_artificial"
+        }
+      },
+      {
+        "text": "El Nobel de Física 2024 se dio por el trabajo fundacional en redes neuronales. Una técnica de computación premiada en física.",
+        "source": {
+          "title": "Wikipedia: Aprendizaje profundo",
+          "url": "https://es.wikipedia.org/wiki/Aprendizaje_profundo"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1958",
+        "text": "Rosenblatt construye el perceptrón."
+      },
+      {
+        "year": "1969",
+        "text": "Minsky y Papert muestran sus límites y llega el invierno de la IA."
+      },
+      {
+        "year": "1986",
+        "text": "Se populariza la retropropagación y las redes con capas ocultas."
+      },
+      {
+        "year": "2012",
+        "text": "AlexNet gana ImageNet y arranca el auge actual."
+      },
+      {
+        "year": "2024",
+        "text": "El Nobel de Física premia el trabajo fundacional en redes neuronales."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Perceptrón",
+        "meaning": "La neurona artificial más simple: suma entradas y decide."
+      },
+      {
+        "term": "Retropropagación",
+        "meaning": "El método para repartir el error y ajustar todos los parámetros."
+      },
+      {
+        "term": "Función de pérdida",
+        "meaning": "El número que mide qué tan mal lo está haciendo la red."
+      },
+      {
+        "term": "Gradiente",
+        "meaning": "La dirección en la que hay que mover cada parámetro para bajar el error."
+      }
+    ],
+    "questions": [
+      "¿Qué significa exactamente que una red 'aprenda'?",
+      "¿Por qué el campo se detuvo casi veinte años?",
+      "¿Qué le pedirías a una máquina que ajusta números sin entender?"
+    ],
+    "searchQuery": "cómo aprenden las redes neuronales explicación",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "¿Qué es una red neuronal?",
+          "channel": "3Blue1Brown Español",
+          "why": "El mejor video que existe sobre el tema, con la intuición visual de cada capa.",
+          "id": "jKCQsndqEGQ",
+          "url": "https://www.youtube.com/watch?v=jKCQsndqEGQ"
+        },
+        {
+          "title": "Cómo funcionan las redes neuronales",
+          "channel": "Ringa Tech",
+          "why": "En español y con código, para pasar de la idea a verlo correr.",
+          "id": "CU24iC3grq8",
+          "url": "https://www.youtube.com/watch?v=CU24iC3grq8"
+        }
+      ],
       "books": [],
-      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "sueno-consolidacion-memoria",
+    "title": "El sueño y la consolidación de la memoria",
+    "area": "cuerpo",
+    "updated": "2026-09-29",
+    "summary": "Mientras duermes, el cerebro repite la actividad del día y va pasando lo aprendido a un almacenamiento más estable. Dormir no es tiempo muerto entre jornadas: es parte del aprendizaje.",
+    "why": "Explica por qué desvelarse para estudiar es contraproducente y por qué el mismo esfuerzo rinde distinto según cómo duermas.",
+    "facts": [
+      {
+        "text": "En 1994 se registró en ratas cómo el hipocampo repite durante el sueño, en orden y a mayor velocidad, las secuencias de neuronas que se activaron durante el día.",
+        "source": {
+          "title": "Wikipedia: Consolidación de la memoria",
+          "url": "https://es.wikipedia.org/wiki/Consolidaci%C3%B3n_de_la_memoria"
+        }
+      },
+      {
+        "text": "Esa repetición pasa el recuerdo del hipocampo, que es rápido y temporal, a la corteza, que es lenta y duradera.",
+        "source": {
+          "title": "Wikipedia: Hipocampo",
+          "url": "https://es.wikipedia.org/wiki/Hipocampo_(anatom%C3%ADa)"
+        }
+      },
+      {
+        "text": "El sueño profundo trae ráfagas cortas de actividad llamadas husos, y su cantidad se asocia con cuánto retienes de lo aprendido.",
+        "source": {
+          "title": "Wikipedia: Huso del sueño",
+          "url": "https://es.wikipedia.org/wiki/Huso_del_sue%C3%B1o"
+        }
+      },
+      {
+        "text": "El sueño REM se relaciona sobre todo con la memoria emocional y con habilidades de procedimiento, las que se aprenden haciendo.",
+        "source": {
+          "title": "Wikipedia: Sueño REM",
+          "url": "https://es.wikipedia.org/wiki/Sue%C3%B1o_REM"
+        }
+      },
+      {
+        "text": "Dormir también limpia: en 2013 se describió cómo el cerebro dormido aumenta el flujo que arrastra desechos metabólicos.",
+        "source": {
+          "title": "Wikipedia: Sistema glinfático",
+          "url": "https://es.wikipedia.org/wiki/Sistema_glinf%C3%A1tico"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1953",
+        "text": "Aserinsky y Kleitman describen el sueño REM."
+      },
+      {
+        "year": "1994",
+        "text": "Se registra la repetición de secuencias neuronales durante el sueño."
+      },
+      {
+        "year": "2013",
+        "text": "Se describe el sistema glinfático y la limpieza durante el sueño."
+      },
+      {
+        "year": "hoy",
+        "text": "Se estudia cómo reforzar la consolidación con sonidos durante el sueño profundo."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Hipocampo",
+        "meaning": "La estructura que forma recuerdos nuevos, rápido y de manera temporal."
+      },
+      {
+        "term": "Husos de sueño",
+        "meaning": "Ráfagas breves de actividad del sueño profundo ligadas a la memoria."
+      },
+      {
+        "term": "REM",
+        "meaning": "La fase de movimientos oculares rápidos, donde ocurren los sueños vívidos."
+      },
+      {
+        "term": "Sistema glinfático",
+        "meaning": "La vía por la que el cerebro elimina desechos, más activa al dormir."
+      }
+    ],
+    "questions": [
+      "¿Qué pasa con lo que estudiaste si no duermes esa noche?",
+      "¿Qué hace el sueño profundo y qué hace el REM?",
+      "¿Cómo se ve tu semana si dormir fuera parte del trabajo?"
+    ],
+    "searchQuery": "sueño y memoria consolidación neurociencia",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "Neurobiología del aprendizaje y la memoria",
+          "channel": "La pizarra de Noe",
+          "why": "Veinte minutos con el mecanismo, dibujado paso por paso.",
+          "id": "GouOH2-44jU",
+          "url": "https://www.youtube.com/watch?v=GouOH2-44jU"
+        },
+        {
+          "title": "Dormir y aprender: neurobiología del sueño",
+          "channel": "Canal UnADM",
+          "why": "Conferencia universitaria completa si quieres el detalle serio.",
+          "id": "0TPEC82Uz20",
+          "url": "https://www.youtube.com/watch?v=0TPEC82Uz20"
+        }
+      ],
+      "books": [
+        {
+          "title": "Por qué dormimos",
+          "author": "Matthew Walker",
+          "why": "El libro más conocido del tema. Léelo sabiendo que algunas de sus cifras han recibido críticas fuertes.",
+          "url": "https://openlibrary.org/works/OL20168133W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "imprenta-gutenberg",
+    "title": "La imprenta de Gutenberg",
+    "area": "cultura",
+    "updated": "2026-09-29",
+    "summary": "Gutenberg no inventó el tipo móvil: en Asia ya existía. Lo que armó alrededor de 1450 fue el sistema completo, tipos metálicos fundidos, tinta de base aceite y una prensa adaptada, que hacía práctico imprimir en cantidad.",
+    "why": "Es el caso clásico de que innovar casi nunca es inventar una pieza, sino juntar piezas existentes hasta que el conjunto funciona.",
+    "facts": [
+      {
+        "text": "En Corea ya se imprimía con tipos móviles de metal: el Jikji, de 1377, es anterior a Gutenberg por casi 80 años.",
+        "source": {
+          "title": "Wikipedia: Jikji",
+          "url": "https://es.wikipedia.org/wiki/Jikji"
+        }
+      },
+      {
+        "text": "Su Biblia de 42 líneas salió alrededor de 1455. Se calcula que se hicieron unos 180 ejemplares y hoy sobreviven menos de 50.",
+        "source": {
+          "title": "Wikipedia: Biblia de Gutenberg",
+          "url": "https://es.wikipedia.org/wiki/Biblia_de_Gutenberg"
+        }
+      },
+      {
+        "text": "La clave técnica fue poder fundir miles de letras idénticas e intercambiables con una aleación que no se deformara.",
+        "source": {
+          "title": "Wikipedia: Tipos móviles",
+          "url": "https://es.wikipedia.org/wiki/Tipos_m%C3%B3viles"
+        }
+      },
+      {
+        "text": "En los primeros cincuenta años se imprimieron millones de ejemplares en Europa. A esos libros tempranos se les llama incunables.",
+        "source": {
+          "title": "Wikipedia: Incunable",
+          "url": "https://es.wikipedia.org/wiki/Incunable"
+        }
+      },
+      {
+        "text": "Gutenberg perdió el taller en un juicio con su socio Fust justo cuando la Biblia estaba lista. El invento le sobrevivió, el negocio no.",
+        "source": {
+          "title": "Wikipedia: Johannes Gutenberg",
+          "url": "https://es.wikipedia.org/wiki/Johannes_Gutenberg"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1377",
+        "text": "Se imprime el Jikji en Corea con tipos móviles de metal."
+      },
+      {
+        "year": "c. 1450",
+        "text": "Gutenberg monta su taller en Maguncia."
+      },
+      {
+        "year": "c. 1455",
+        "text": "Aparece la Biblia de 42 líneas."
+      },
+      {
+        "year": "1455",
+        "text": "Fust gana el juicio y se queda con el taller."
+      },
+      {
+        "year": "1500",
+        "text": "Termina la era de los incunables con millones de libros ya impresos."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Tipo móvil",
+        "meaning": "Cada letra suelta, fundida en metal y reutilizable."
+      },
+      {
+        "term": "Incunable",
+        "meaning": "Libro impreso en Europa antes de 1501."
+      },
+      {
+        "term": "Prensa de tornillo",
+        "meaning": "La máquina que aplicaba presión pareja, adaptada de la prensa de vino."
+      },
+      {
+        "term": "Tipografía",
+        "meaning": "El arte de componer texto con tipos."
+      }
+    ],
+    "questions": [
+      "¿Qué inventó realmente y qué juntó?",
+      "¿Por qué en Europa despegó y en Asia no de la misma forma?",
+      "¿Qué tecnología de hoy es una combinación y no un invento?"
+    ],
+    "searchQuery": "imprenta de Gutenberg revolución historia",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "La imprenta: el invento que revolucionó la comunicación",
+          "channel": "Bully Magnets",
+          "why": "Trece minutos con el contexto y el impacto, bien documentado.",
+          "id": "370FyS_f1fI",
+          "url": "https://www.youtube.com/watch?v=370FyS_f1fI"
+        },
+        {
+          "title": "Gutenberg, documental completo",
+          "channel": "A. L. DOCUMENTAL",
+          "why": "Casi una hora sobre el personaje y su taller.",
+          "id": "4UmP1VQHTYQ",
+          "url": "https://www.youtube.com/watch?v=4UmP1VQHTYQ"
+        }
+      ],
+      "books": [
+        {
+          "title": "La galaxia Gutenberg",
+          "author": "Marshall McLuhan",
+          "why": "El ensayo que discute qué le hizo la imprenta a nuestra forma de pensar, no solo de leer.",
+          "url": "https://openlibrary.org/works/OL16244342W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "paradoja-de-fermi",
+    "title": "La paradoja de Fermi",
+    "area": "espacio",
+    "updated": "2026-09-29",
+    "summary": "El universo es viejo y enorme, y bastaría una civilización un poco más antigua que la nuestra para haber colonizado la galaxia en unos millones de años. Pero no vemos a nadie. Eso es la paradoja.",
+    "why": "Cada respuesta posible dice algo sobre nuestro propio futuro, y algunas son bastante malas.",
+    "facts": [
+      {
+        "text": "La frase salió en una comida en Los Álamos, en 1950. Fermi hizo cuentas mentales y preguntó: ¿dónde está todo el mundo?",
+        "source": {
+          "title": "Wikipedia: Paradoja de Fermi",
+          "url": "https://es.wikipedia.org/wiki/Paradoja_de_Fermi"
+        }
+      },
+      {
+        "text": "En 1961 Drake escribió una ecuación para estimar cuántas civilizaciones deberían existir. Sirve menos para calcular que para ordenar lo que no sabemos.",
+        "source": {
+          "title": "Wikipedia: Ecuación de Drake",
+          "url": "https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Drake"
+        }
+      },
+      {
+        "text": "La idea del gran filtro dice que algo impide que la vida llegue a expandirse. Lo importante es si ese filtro ya lo pasamos o todavía nos falta.",
+        "source": {
+          "title": "Wikipedia: Gran filtro",
+          "url": "https://es.wikipedia.org/wiki/Gran_filtro"
+        }
+      },
+      {
+        "text": "Si encontráramos vida microbiana en Marte sería mala noticia para esta lógica: significaría que empezar a vivir es fácil y el filtro está más adelante.",
+        "source": {
+          "title": "Wikipedia: Gran filtro",
+          "url": "https://es.wikipedia.org/wiki/Gran_filtro"
+        }
+      },
+      {
+        "text": "Después de décadas de búsqueda sistemática de señales, no hay ninguna confirmada. La señal Wow de 1977 sigue siendo la única anomalía famosa.",
+        "source": {
+          "title": "Wikipedia: SETI",
+          "url": "https://es.wikipedia.org/wiki/SETI"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1950",
+        "text": "Fermi hace la pregunta en Los Álamos."
+      },
+      {
+        "year": "1960",
+        "text": "Drake hace la primera búsqueda de radio dirigida."
+      },
+      {
+        "year": "1961",
+        "text": "Se formula la ecuación de Drake."
+      },
+      {
+        "year": "1977",
+        "text": "Se capta la señal Wow, nunca repetida."
+      },
+      {
+        "year": "1998",
+        "text": "Robin Hanson formula la idea del gran filtro."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Ecuación de Drake",
+        "meaning": "Una forma de ordenar los factores que determinarían cuántas civilizaciones hay."
+      },
+      {
+        "term": "Gran filtro",
+        "meaning": "El obstáculo que impediría a la vida llegar a expandirse por la galaxia."
+      },
+      {
+        "term": "SETI",
+        "meaning": "La búsqueda sistemática de señales de inteligencia extraterrestre."
+      },
+      {
+        "term": "Zona habitable",
+        "meaning": "La distancia a una estrella donde puede haber agua líquida."
+      }
+    ],
+    "questions": [
+      "¿Qué explicaciones del silencio te parecen más débiles?",
+      "¿Por qué encontrar vida simple en Marte sería mala noticia?",
+      "¿Cambiaría algo en tu vida saber que estamos solos?"
+    ],
+    "searchQuery": "paradoja de Fermi gran filtro",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "La paradoja de Fermi y el gran filtro",
+          "channel": "Pol Bertran",
+          "why": "Diecinueve minutos que recorren las hipótesis una por una, con criterio.",
+          "id": "dAPaqp-hwaA",
+          "url": "https://www.youtube.com/watch?v=dAPaqp-hwaA"
+        },
+        {
+          "title": "El gran filtro",
+          "channel": "En Pocas Palabras",
+          "why": "El video que mejor explica por qué encontrar vida simple sería mala noticia.",
+          "id": "dkqPimkfhNE",
+          "url": "https://www.youtube.com/watch?v=dkqPimkfhNE"
+        }
+      ],
+      "books": [
+        {
+          "title": "If the Universe Is Teeming with Aliens, Where Is Everybody?",
+          "author": "Stephen Webb",
+          "why": "Recorre decenas de soluciones propuestas, una por capítulo, y las evalúa.",
+          "url": "https://openlibrary.org/works/OL1976706W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "gobekli-tepe",
+    "title": "Göbekli Tepe",
+    "area": "misterios",
+    "updated": "2026-09-29",
+    "summary": "Un conjunto de círculos de pilares de piedra tallada en el sur de Turquía, de hace unos 11,600 años. Lo levantó gente que todavía no sembraba ni tenía cerámica ni rueda. Y después lo enterraron a propósito.",
+    "why": "Pone en duda el orden que se enseñaba: primero agricultura, luego excedente, luego templos. Aquí el santuario parece ir primero.",
+    "facts": [
+      {
+        "text": "Sus pilares en forma de T llegan a medir cinco metros y pesar varias toneladas, con relieves de zorros, escorpiones y aves.",
+        "source": {
+          "title": "Wikipedia: Göbekli Tepe",
+          "url": "https://es.wikipedia.org/wiki/G%C3%B6bekli_Tepe"
+        }
+      },
+      {
+        "text": "Es anterior a la cerámica, a la rueda, a la metalurgia y a la escritura. Lo construyeron cazadores recolectores.",
+        "source": {
+          "title": "Wikipedia: Göbekli Tepe",
+          "url": "https://es.wikipedia.org/wiki/G%C3%B6bekli_Tepe"
+        }
+      },
+      {
+        "text": "Los recintos no se abandonaron: se rellenaron deliberadamente. Por eso se conservaron tan bien.",
+        "source": {
+          "title": "Wikipedia: Göbekli Tepe",
+          "url": "https://es.wikipedia.org/wiki/G%C3%B6bekli_Tepe"
+        }
+      },
+      {
+        "text": "Klaus Schmidt excavó el sitio desde 1995 y propuso que la necesidad de alimentar a los constructores pudo empujar la domesticación de plantas, no al revés.",
+        "source": {
+          "title": "Wikipedia: Neolítico precerámico A",
+          "url": "https://es.wikipedia.org/wiki/Neol%C3%ADtico_precer%C3%A1mico_A"
+        }
+      },
+      {
+        "text": "Solo se ha excavado una parte pequeña. Los estudios geofísicos indican que hay muchos más recintos bajo tierra.",
+        "source": {
+          "title": "Wikipedia: Göbekli Tepe",
+          "url": "https://es.wikipedia.org/wiki/G%C3%B6bekli_Tepe"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 9600 a.C.",
+        "text": "Se levantan los primeros recintos circulares."
+      },
+      {
+        "year": "c. 8000 a.C.",
+        "text": "El sitio se rellena y se abandona."
+      },
+      {
+        "year": "1963",
+        "text": "Un sondeo lo registra sin entender qué es."
+      },
+      {
+        "year": "1995",
+        "text": "Klaus Schmidt empieza la excavación sistemática."
+      },
+      {
+        "year": "2018",
+        "text": "La UNESCO lo declara Patrimonio de la Humanidad."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Neolítico precerámico",
+        "meaning": "La etapa anterior a la alfarería, cuando empieza la vida sedentaria."
+      },
+      {
+        "term": "Pilar en T",
+        "meaning": "El elemento característico del sitio, probablemente una figura humana estilizada."
+      },
+      {
+        "term": "Tell",
+        "meaning": "Montículo artificial formado por ocupaciones sucesivas."
+      },
+      {
+        "term": "Geofísica",
+        "meaning": "Métodos para ver bajo tierra sin excavar."
+      }
+    ],
+    "questions": [
+      "¿Qué orden entre agricultura y religión se creía antes?",
+      "¿Por qué enterrar algo que costó tanto trabajo?",
+      "¿Qué idea tuya sobre el pasado tendrías que revisar?"
+    ],
+    "searchQuery": "Göbekli Tepe templo neolítico cazadores recolectores",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "Göbekli Tepe: calaveras y depredadores en el primer templo",
+          "channel": "Raquel de la Morena",
+          "why": "Una arqueóloga contando el sitio con la evidencia en la mano, sin misterios inventados.",
+          "id": "y5uD1Whdn4Q",
+          "url": "https://www.youtube.com/watch?v=y5uD1Whdn4Q"
+        },
+        {
+          "title": "El primer templo prehistórico",
+          "channel": "Fundación Palarq",
+          "why": "Ocho minutos de una fundación de arqueología, corto y serio.",
+          "id": "Hcl2Klnx4a4",
+          "url": "https://www.youtube.com/watch?v=Hcl2Klnx4a4"
+        }
+      ],
+      "books": [
+        {
+          "title": "Göbekli Tepe",
+          "author": "Klaus Schmidt",
+          "why": "Lo escribe el arqueólogo que lo excavó durante veinte años.",
+          "url": "https://openlibrary.org/works/OL32838441W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "teoria-ventanas-rotas",
+    "title": "La teoría de las ventanas rotas",
+    "area": "sociedad",
+    "updated": "2026-09-29",
+    "summary": "Un artículo de 1982 propuso que el desorden visible, ventanas rotas, grafiti, basura, manda la señal de que a nadie le importa, y eso invita al delito serio. Se volvió política pública en Nueva York en los noventa.",
+    "why": "Es el mejor ejemplo de una idea intuitiva y poderosa cuya evidencia causal nunca fue sólida, y del costo humano de aplicarla como si lo fuera.",
+    "facts": [
+      {
+        "text": "La metáfora viene de un experimento de Philip Zimbardo: dejó coches abandonados en dos barrios y observó qué pasaba cuando ya estaban dañados.",
+        "source": {
+          "title": "Wikipedia: Teoría de las ventanas rotas",
+          "url": "https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_ventanas_rotas"
+        }
+      },
+      {
+        "text": "Wilson y Kelling publicaron la idea en The Atlantic en 1982. Nueva York la adoptó como política en los noventa.",
+        "source": {
+          "title": "Wikipedia: Teoría de las ventanas rotas",
+          "url": "https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_ventanas_rotas"
+        }
+      },
+      {
+        "text": "El crimen bajó mucho en Nueva York en esa década. También bajó al mismo tiempo en ciudades que no aplicaron nada parecido, y ese es el problema para atribuirle el mérito.",
+        "source": {
+          "title": "Wikipedia: Teoría de las ventanas rotas",
+          "url": "https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_ventanas_rotas"
+        }
+      },
+      {
+        "text": "Estudios posteriores que intentaron aislar el efecto encontraron poco o ningún vínculo causal entre perseguir faltas menores y reducir delitos graves.",
+        "source": {
+          "title": "Wikipedia: Teoría de las ventanas rotas",
+          "url": "https://es.wikipedia.org/wiki/Teor%C3%ADa_de_las_ventanas_rotas"
+        }
+      },
+      {
+        "text": "El costo recayó en barrios pobres: detenciones masivas por faltas mínimas y deterioro de la relación entre policía y comunidad.",
+        "source": {
+          "title": "Wikipedia: Tolerancia cero",
+          "url": "https://es.wikipedia.org/wiki/Tolerancia_cero"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1969",
+        "text": "Zimbardo hace el experimento de los coches abandonados."
+      },
+      {
+        "year": "1982",
+        "text": "Wilson y Kelling publican el artículo en The Atlantic."
+      },
+      {
+        "year": "1994",
+        "text": "Nueva York adopta la tolerancia cero como política."
+      },
+      {
+        "year": "2006 en adelante",
+        "text": "Varias evaluaciones cuestionan la relación causal."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Tolerancia cero",
+        "meaning": "Perseguir toda falta, por pequeña que sea, como política."
+      },
+      {
+        "term": "Desorden",
+        "meaning": "El deterioro visible que la teoría considera detonante."
+      },
+      {
+        "term": "Causalidad",
+        "meaning": "La diferencia entre que dos cosas ocurran juntas y que una cause la otra."
+      },
+      {
+        "term": "Correlación espuria",
+        "meaning": "Cuando dos cosas suben o bajan juntas por una tercera causa."
+      }
+    ],
+    "questions": [
+      "¿Por qué la caída del crimen en Nueva York no prueba la teoría?",
+      "¿Qué costos tuvo aplicarla?",
+      "¿Qué idea tuya crees que es cierta solo porque suena lógica?"
+    ],
+    "searchQuery": "teoría de las ventanas rotas criminología crítica",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "La teoría de las ventanas rotas explicada",
+          "channel": "Mario Alonso Puig",
+          "why": "Quince minutos con la idea y la metáfora bien contadas.",
+          "id": "_2Ce60WRpQ4",
+          "url": "https://www.youtube.com/watch?v=_2Ce60WRpQ4"
+        },
+        {
+          "title": "La teoría de las ventanas rotas",
+          "channel": "Justicia mx",
+          "why": "Versión corta desde el mundo de la justicia, con su aplicación práctica.",
+          "id": "OLjU1QH0Y6k",
+          "url": "https://www.youtube.com/watch?v=OLjU1QH0Y6k"
+        }
+      ],
+      "books": [
+        {
+          "title": "Fixing Broken Windows",
+          "author": "George L. Kelling",
+          "why": "Lo escribe uno de los autores originales. Es la defensa de la idea, útil para conocerla de primera mano.",
+          "url": "https://openlibrary.org/works/OL923292W"
+        }
+      ],
+      "articles": []
+    }
+  },
+  {
+    "id": "ley-de-goodhart",
+    "title": "La ley de Goodhart",
+    "area": "modelos-mentales",
+    "updated": "2026-09-29",
+    "summary": "Cuando una medida se convierte en objetivo, deja de ser una buena medida. La gente optimiza el número, no la cosa que el número representaba.",
+    "why": "Te explica de golpe por qué tantos sistemas bien intencionados producen resultados absurdos, en tu trabajo y en las políticas públicas.",
+    "facts": [
+      {
+        "text": "Goodhart la formuló en 1975 hablando de política monetaria británica, sobre indicadores que dejaban de servir en cuanto el banco central los ponía como meta.",
+        "source": {
+          "title": "Wikipedia: Ley de Goodhart",
+          "url": "https://es.wikipedia.org/wiki/Ley_de_Goodhart"
+        }
+      },
+      {
+        "text": "La versión que todos citan no es suya: es la redacción que Marilyn Strathern le dio en 1997.",
+        "source": {
+          "title": "Wikipedia: Ley de Goodhart",
+          "url": "https://es.wikipedia.org/wiki/Ley_de_Goodhart"
+        }
+      },
+      {
+        "text": "El efecto cobra es su caso extremo: pagar por cobras muertas hizo que la gente criara cobras para cobrar la recompensa.",
+        "source": {
+          "title": "Wikipedia: Efecto cobra",
+          "url": "https://es.wikipedia.org/wiki/Efecto_cobra"
+        }
+      },
+      {
+        "text": "Hay una versión hermana, la ley de Campbell, formulada para indicadores sociales y educativos.",
+        "source": {
+          "title": "Wikipedia: Ley de Campbell",
+          "url": "https://es.wikipedia.org/wiki/Ley_de_Campbell"
+        }
+      },
+      {
+        "text": "No se arregla eligiendo una mejor métrica: se atenúa usando varias a la vez y vigilando lo que no quieres que se rompa.",
+        "source": {
+          "title": "Wikipedia: Incentivo perverso",
+          "url": "https://es.wikipedia.org/wiki/Incentivo_perverso"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1975",
+        "text": "Charles Goodhart enuncia la observación en un trabajo sobre política monetaria."
+      },
+      {
+        "year": "1979",
+        "text": "La formulación empieza a circular como 'ley de Goodhart'."
+      },
+      {
+        "year": "1997",
+        "text": "Marilyn Strathern escribe la versión corta que hoy se cita en todos lados."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Métrica sustituta",
+        "meaning": "El número que usas porque no puedes medir directamente lo que te importa."
+      },
+      {
+        "term": "Incentivo perverso",
+        "meaning": "Un premio que produce justo lo contrario de lo que buscabas."
+      },
+      {
+        "term": "Ley de Campbell",
+        "meaning": "La misma idea aplicada a indicadores sociales y educativos."
+      },
+      {
+        "term": "Efecto cobra",
+        "meaning": "El caso extremo donde el incentivo crea el problema que quería resolver."
+      }
+    ],
+    "questions": [
+      "¿Qué mides en tu trabajo que ya se volvió el objetivo?",
+      "¿Por qué cambiar de métrica no basta?",
+      "¿Qué se rompió la última vez que alguien optimizó un número?"
+    ],
+    "searchQuery": "ley de Goodhart métrica objetivo incentivo",
+    "recommendations": {
+      "videos": [
+        {
+          "title": "La ley de Goodhart",
+          "channel": "SinRodeos",
+          "why": "Trece minutos con la idea y varios casos concretos.",
+          "id": "c2r4Eba4k6I",
+          "url": "https://www.youtube.com/watch?v=c2r4Eba4k6I"
+        },
+        {
+          "title": "La ley de Goodhart explicada con casos reales",
+          "channel": "Behind The Queue",
+          "why": "Wells Fargo, un hospital y un call center: tres formas distintas de romper el mismo sistema.",
+          "id": "uhuuKIWvSco",
+          "url": "https://www.youtube.com/watch?v=uhuuKIWvSco"
+        }
+      ],
+      "books": [],
       "articles": []
     }
   }

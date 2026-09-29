@@ -9,12 +9,13 @@ import { NoteReview, type FlaggedNote } from "@/components/note-review";
 import { ProgressBar } from "@/components/media";
 import { PageHeader, Section } from "@/components/page-header";
 import { StreakNumber } from "@/components/streak";
+import { FactList } from "@/components/topic-grid";
 import { formatDayLong, formatDayShort } from "@/lib/day";
 import { getOverview, todayKey } from "@/lib/engine";
 import { formatNumber, formatRemaining } from "@/lib/format";
 import { getTopic, RARITY_LABEL } from "@/lib/mystery";
 import { notMentioned } from "@/lib/review";
-import { getPack } from "@/lib/topics";
+import { factsOfDay, getPack } from "@/lib/topics";
 import { getSession } from "@/lib/session";
 import type { Entry, Failure, Item, MysteryOpen, Punishment } from "@/lib/types";
 
@@ -23,7 +24,8 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
   const { cumplido } = await searchParams;
   const today = todayKey(profile, new Date(now));
 
-  const [overview, failuresRes, punishmentsRes, inProgressRes, toLinkRes, mysteryRes, entriesRes, allItemsRes] = await Promise.all([
+  const [overview, failuresRes, punishmentsRes, inProgressRes, toLinkRes, mysteryRes, entriesRes, allItemsRes, interestsRes] =
+    await Promise.all([
     getOverview(supabase, profile),
     supabase.from("failures").select("*").eq("user_id", userId).eq("status", "pendiente").order("day"),
     supabase.from("punishments").select("*").eq("user_id", userId).in("status", ["asignado", "en_curso"]).order("created_at"),
@@ -32,6 +34,7 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
     supabase.from("mystery_opens").select("*").eq("user_id", userId).eq("day", today).maybeSingle(),
     supabase.from("entries").select("*").eq("user_id", userId).eq("day", today).order("created_at"),
     supabase.from("items").select("id", { count: "exact", head: true }).eq("user_id", userId),
+    supabase.from("interests").select("key").eq("user_id", userId).neq("status", "descartado"),
   ]);
 
   const failures = (failuresRes.data ?? []) as Failure[];
@@ -43,6 +46,12 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
   const mystery = mysteryRes.data as MysteryOpen | null;
   const topic = mystery ? getTopic(mystery.topic_id) : undefined;
   const entries = (entriesRes.data ?? []) as Entry[];
+  // Datos curiosos del día: de las fichas de tus temas, o de tus áreas si no tienes ninguno.
+  const facts = factsOfDay(
+    (interestsRes.data ?? []).map((i) => i.key as string),
+    profile.areas ?? [],
+    today,
+  );
 
   // Las notas de hoy que la revisión marcó: se explican y, si no cuentan, se pueden apelar.
   const flagged: FlaggedNote[] = entries
@@ -313,6 +322,12 @@ export default async function TodayPage({ searchParams }: { searchParams: Promis
               </Link>
             )}
           </Section>
+
+          {facts.length > 0 && (
+            <Section title="Datos curiosos">
+              <FactList facts={facts} />
+            </Section>
+          )}
 
           <Section title="Últimas 18 semanas">
             <div className="card p-4">

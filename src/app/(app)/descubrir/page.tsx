@@ -3,14 +3,14 @@ import { ArrowRight, Compass, SlidersHorizontal } from "@phosphor-icons/react/ss
 import { MysteryBox } from "@/components/mystery-box";
 import { PageHeader, Section } from "@/components/page-header";
 import { TopicDeck, type DeckTopic } from "@/components/topic-deck";
-import { FactList, TopicGrid } from "@/components/topic-grid";
+import { TopicGrid } from "@/components/topic-grid";
 import { areaLabelOf, areaOf, surprisesFor } from "@/lib/areas";
 import { formatCutoff } from "@/lib/day";
 import { todayKey } from "@/lib/engine";
 import { getTopic } from "@/lib/mystery";
 import { notesOfToday, wordsOfToday } from "@/lib/notes";
 import { getSession } from "@/lib/session";
-import { factsOfDay, getPack } from "@/lib/topics";
+import { getPack } from "@/lib/topics";
 import type { Entry, Interest, MysteryOpen } from "@/lib/types";
 
 export const metadata = { title: "Descubrir" };
@@ -51,7 +51,6 @@ export default async function DiscoverPage() {
     deep: Boolean(getPack(i.key)),
   });
   const pending = mine.filter((i) => !i.read_at).map(cardOf);
-  const facts = factsOfDay(mine.map((i) => i.key), areas, today);
   const done = mine
     .filter((i) => i.read_at)
     .sort((a, b) => (b.read_at ?? "").localeCompare(a.read_at ?? ""))
@@ -110,12 +109,6 @@ export default async function DiscoverPage() {
       {pending.length > 0 && (
         <Section title="Tus temas" className="mt-8">
           <TopicGrid topics={pending} />
-        </Section>
-      )}
-
-      {facts.length > 0 && (
-        <Section title="Datos curiosos" className="mt-8">
-          <FactList facts={facts} />
         </Section>
       )}
 

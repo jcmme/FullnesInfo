@@ -47,7 +47,7 @@ export function TopicGrid({ topics, done = false }: { topics: TopicCardData[]; d
 /** Datos curiosos del día, sacados de las fichas de tus temas. */
 export function FactList({ facts }: { facts: PickedFact[] }) {
   return (
-    <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+    <ul className="grid gap-3">
       {facts.map((f) => (
         <li key={f.topicKey} className="card flex flex-col p-4">
           <p className="text-pretty">{f.text}</p>
