@@ -132,6 +132,17 @@ export async function saveEntry(_prev: EntryFormState, formData: FormData): Prom
     await supabase.from("mystery_opens").update({ status: "investigada" }).eq("id", mysteryId).eq("user_id", userId);
   }
 
+  // Escribir tu nota es terminar el tema: se sale de "Tus temas" y se va a
+  // Completados. Si ya estaba terminado se respeta la fecha en que lo cerraste.
+  if (topicKey) {
+    await supabase
+      .from("interests")
+      .update({ read_at: new Date().toISOString() })
+      .eq("user_id", userId)
+      .eq("key", topicKey)
+      .is("read_at", null);
+  }
+
   revalidatePath("/", "layout");
   const wordsAfter = wordsBefore - (existing?.counts ? existing.word_count : 0) + (counts ? wordCount : 0);
   if (formData.get("stay") === "1") return { saved: { words: wordsAfter, done: wordsAfter >= profile.min_words, counts } };

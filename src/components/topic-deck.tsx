@@ -10,22 +10,29 @@ export type DeckTopic = { key: string; title: string; hook: string; area: string
 
 /**
  * Los temas llegan de sorpresa, uno a la vez. Nunca tienes que pensar cuál
- * buscar: solo dices si te late o pasas. La tarjeta avanza en el momento y el
- * guardado va por detrás, para que no se sienta ninguna espera.
+ * buscar: solo dices si te interesa o pasas. La tarjeta avanza en el momento y
+ * el guardado va por detrás, para que no se sienta ninguna espera.
  */
 export function TopicDeck({ topics }: { topics: DeckTopic[] }) {
   const router = useRouter();
   const reduce = useReducedMotion();
+  // La baraja se reparte una sola vez, al entrar. El servidor vuelve a barajar en
+  // cada render (los temas salen al azar del pozo), así que leer la lista nueva a
+  // media baraja te cambiaba la carta sola y te saltaba temas sin preguntarte.
+  const [deck] = useState(topics);
   const [i, setI] = useState(0);
   const [, start] = useTransition();
-  const topic = topics[i];
+  const topic = deck[i];
 
   const decide = (status: "guardado" | "descartado") => {
     if (!topic) return;
+    const last = i + 1 >= deck.length;
     setI((n) => n + 1);
     start(async () => {
       await decideTopic({ key: topic.key, label: topic.title, area: topic.area }, status);
-      if (i + 1 >= topics.length) router.refresh();
+      // Una sola recarga al final: así "Tus temas" ya trae los que guardaste, y
+      // cada decisión no cuesta un render completo de la pantalla.
+      if (last) router.refresh();
     });
   };
 
@@ -66,12 +73,12 @@ export function TopicDeck({ topics }: { topics: DeckTopic[] }) {
           Paso
         </button>
         <button type="button" onClick={() => decide("guardado")} className="btn btn-primary btn-lg">
-          Me late
+          Me interesa
           <ArrowRight size={18} weight="bold" aria-hidden />
         </button>
       </div>
       <p className="caption mt-2 text-center text-ink-2 tabular">
-        {i + 1} de {topics.length} de hoy
+        {i + 1} de {deck.length} de hoy
       </p>
     </div>
   );

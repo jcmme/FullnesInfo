@@ -41,15 +41,20 @@ export default async function DiscoverPage() {
     areaLabel: areaLabelOf(areaOf(t)),
   }));
 
-  const mine = interests
-    .filter((i) => i.status !== "descartado")
-    .map((i) => ({
-      key: i.key,
-      title: getPack(i.key)?.title ?? getTopic(i.key)?.title ?? i.label,
-      area: areaLabelOf(i.area),
-      deep: Boolean(getPack(i.key)),
-      read: Boolean(i.read_at),
-    }));
+  // Los que dijiste que te interesan. Los que ya cerraste (escribiste tu nota o
+  // los marcaste terminados) se salen de la lista y viven en Completados.
+  const mine = interests.filter((i) => i.status !== "descartado");
+  const cardOf = (i: Interest) => ({
+    key: i.key,
+    title: getPack(i.key)?.title ?? getTopic(i.key)?.title ?? i.label,
+    area: areaLabelOf(i.area),
+    deep: Boolean(getPack(i.key)),
+  });
+  const pending = mine.filter((i) => !i.read_at).map(cardOf);
+  const done = mine
+    .filter((i) => i.read_at)
+    .sort((a, b) => (b.read_at ?? "").localeCompare(a.read_at ?? ""))
+    .map(cardOf);
 
   return (
     <>
@@ -101,9 +106,19 @@ export default async function DiscoverPage() {
         </Section>
       )}
 
-      {mine.length > 0 && (
+      {pending.length > 0 && (
         <Section title="Tus temas" className="mt-8">
-          <TopicGrid topics={mine} />
+          <TopicGrid topics={pending} />
+        </Section>
+      )}
+
+      {done.length > 0 && (
+        <Section
+          title="Completados"
+          className="mt-8"
+          action={<span className="caption text-ink-2 tabular">{done.length}</span>}
+        >
+          <TopicGrid topics={done} done />
         </Section>
       )}
     </>

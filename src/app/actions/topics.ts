@@ -21,6 +21,10 @@ export async function saveAreas(areas: string[]) {
 /**
  * Lo que decides sobre un tema sorpresa: guardarlo o pasarlo. Los pasados
  * también se anotan, para que no te los vuelva a mostrar.
+ *
+ * A propósito no recarga la pantalla: la baraja avanza sola y recargar en cada
+ * decisión, además de costar un render completo, te barajaba las cartas que
+ * seguían. La lista de tus temas se pone al día cuando la baraja se acaba.
  */
 export async function decideTopic(input: InterestInput, status: "guardado" | "descartado") {
   const { supabase, userId } = await requireUser();
@@ -31,7 +35,6 @@ export async function decideTopic(input: InterestInput, status: "guardado" | "de
     { onConflict: "user_id,key" },
   );
   if (error) return { error: "No se pudo guardar. Intenta otra vez." };
-  revalidatePath("/descubrir");
   return { ok: true };
 }
 
@@ -88,10 +91,18 @@ export async function saveLink(input: { title: string; url: string; kind: ItemKi
   return { ok: true, id: data.id as string };
 }
 
-/** Marca que ya leíste la ficha de un tema. */
-export async function markTopicRead(key: string) {
+/**
+ * Dar un tema por terminado (o regresarlo a la lista). Terminado se sale de
+ * "Tus temas" y vive en Completados; escribir tu nota lo termina solo.
+ */
+export async function setTopicDone(key: string, done: boolean) {
   const { supabase, userId } = await requireUser();
-  await supabase.from("interests").update({ read_at: new Date().toISOString() }).eq("user_id", userId).eq("key", key);
+  await supabase
+    .from("interests")
+    .update({ read_at: done ? new Date().toISOString() : null })
+    .eq("user_id", userId)
+    .eq("key", key);
+  revalidatePath("/descubrir");
 }
 
 /**

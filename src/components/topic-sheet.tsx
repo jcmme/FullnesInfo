@@ -1,8 +1,9 @@
 "use client";
 
-import { ArrowSquareOut, BookOpen, Check, FilmSlate, MagnifyingGlass, Newspaper, Plus } from "@phosphor-icons/react";
+import { ArrowSquareOut, BookOpen, Check, CheckCircle, FilmSlate, MagnifyingGlass, Newspaper, Plus } from "@phosphor-icons/react";
+import { useRouter } from "next/navigation";
 import { useState, useTransition } from "react";
-import { saveLink } from "@/app/actions/topics";
+import { saveLink, setTopicDone } from "@/app/actions/topics";
 import type { ItemKind, MediaResult, TopicLink } from "@/lib/types";
 import { MediaSearch } from "./media-search";
 import { SavedMedia, saveWithoutLeaving } from "./saved-media";
@@ -82,5 +83,45 @@ export function TopicSearch({ query, title }: { query: string; title: string }) 
         </button>
       )}
     </div>
+  );
+}
+
+/**
+ * Cerrar un tema a mano, para cuando lo leíste y ya. Escribir tu nota también lo
+ * cierra: esto es para el día que no quieras escribir de él.
+ */
+export function TopicDone({ topicKey, done }: { topicKey: string; done: boolean }) {
+  const router = useRouter();
+  const [pending, start] = useTransition();
+
+  if (done) {
+    return (
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <p className="flex items-center gap-1.5 footnote text-ink-2">
+          <CheckCircle size={18} weight="fill" className="text-ok" aria-hidden />
+          Lo tienes en Completados.
+        </p>
+        <button
+          type="button"
+          disabled={pending}
+          onClick={() => start(async () => { await setTopicDone(topicKey, false); router.refresh(); })}
+          className="btn btn-ghost px-2"
+        >
+          Regresarlo a tus temas
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      disabled={pending}
+      onClick={() => start(async () => { await setTopicDone(topicKey, true); router.push("/descubrir"); })}
+      className="btn btn-secondary w-full"
+    >
+      <Check size={18} weight="bold" aria-hidden />
+      {pending ? "Guardando…" : "Ya terminé este tema"}
+    </button>
   );
 }

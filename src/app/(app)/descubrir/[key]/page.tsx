@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { Suspense } from "react";
 import { ArrowSquareOut, CaretLeft } from "@phosphor-icons/react/ssr";
 import { NoteComposer } from "@/components/note-composer";
-import { Recommendation, TopicSearch } from "@/components/topic-sheet";
+import { Recommendation, TopicDone, TopicSearch } from "@/components/topic-sheet";
 import { getSession } from "@/lib/session";
 import { areaLabelOf } from "@/lib/areas";
 import { todayKey } from "@/lib/engine";
@@ -199,6 +199,8 @@ export default async function TopicPage({ params }: { params: Promise<{ key: str
             todayWords={wordsOfToday(todayNotes)}
           />
         </section>
+
+        {interest && <TopicDone topicKey={key} done={Boolean(interest.read_at)} />}
       </div>
     </div>
   );
