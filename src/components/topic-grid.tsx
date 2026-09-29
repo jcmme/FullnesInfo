@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "@phosphor-icons/react/ssr";
+import { ArrowRight, ArrowSquareOut, CheckCircle } from "@phosphor-icons/react/ssr";
+import type { PickedFact } from "@/lib/topics";
 
 export type TopicCardData = {
   key: string;
@@ -37,6 +38,28 @@ export function TopicGrid({ topics, done = false }: { topics: TopicCardData[]; d
             </span>
             {!done && <ArrowRight size={18} className="shrink-0 text-ink-3" aria-hidden />}
           </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** Datos curiosos del día, sacados de las fichas de tus temas. */
+export function FactList({ facts }: { facts: PickedFact[] }) {
+  return (
+    <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {facts.map((f) => (
+        <li key={f.topicKey} className="card flex flex-col p-4">
+          <p className="text-pretty">{f.text}</p>
+          <div className="mt-3 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
+            <Link href={`/descubrir/${encodeURIComponent(f.topicKey)}`} prefetch={false} className="press caption font-semibold text-tint-ink">
+              {f.topicTitle}
+            </Link>
+            <a href={f.source.url} target="_blank" rel="noreferrer" className="press inline-flex items-center gap-1 caption text-ink-2">
+              {f.source.title}
+              <ArrowSquareOut size={11} aria-hidden />
+            </a>
+          </div>
         </li>
       ))}
     </ul>

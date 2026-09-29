@@ -2248,5 +2248,725 @@
       "¿Qué conflicto no resuelto en tu propia vida podría beneficiarse de un proceso de reparación directa en vez de solo ganar o perder?"
     ],
     "minutes": 20
+  },
+  {
+    "id": "voyager-mensaje-interestelar",
+    "title": "Las Voyager y el disco de oro",
+    "hook": "¿Qué le mandarías a alguien que va a abrir tu mensaje dentro de 40,000 años?",
+    "why": "Dos sondas de los años 70 ya salieron del sistema solar llevando un disco con sonidos y música de la Tierra. Es lo más lejos que ha llegado algo hecho por humanos.",
+    "area": "espacio",
+    "rarity": "legendaria",
+    "searchQuery": "Voyager disco de oro sonda interestelar",
+    "questions": [
+      "¿Qué decisiones tuvieron que tomar para elegir qué iba en el disco?",
+      "¿Por qué siguen funcionando después de casi 50 años?",
+      "¿Qué pondrías tú en un mensaje que va a durar más que tu civilización?"
+    ],
+    "minutes": 30
+  },
+  {
+    "id": "materia-oscura",
+    "title": "La materia oscura",
+    "hook": "¿Por qué las galaxias giran como si pesaran cinco veces más de lo que vemos?",
+    "why": "El 85% de la materia del universo no emite luz y no sabemos qué es. Toda la física que conoces describe apenas la minoría visible.",
+    "area": "espacio",
+    "rarity": "rara",
+    "searchQuery": "materia oscura evidencia galaxias",
+    "questions": [
+      "¿Qué observación hizo pensar que falta masa?",
+      "¿Qué candidatos hay para explicarla y por qué ninguno convence?",
+      "¿Cómo te sientes con que la mayor parte del universo sea desconocida?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "paradoja-de-fermi",
+    "title": "La paradoja de Fermi",
+    "hook": "Si el universo es tan viejo y tan grande, ¿dónde está todo el mundo?",
+    "why": "Ordena las respuestas posibles al silencio del cosmos, y cada una dice algo incómodo sobre nuestro propio futuro.",
+    "area": "espacio",
+    "rarity": "rara",
+    "searchQuery": "paradoja de Fermi gran filtro",
+    "questions": [
+      "¿Qué es el gran filtro y por qué importa si está adelante o atrás de nosotros?",
+      "¿Qué explicaciones del silencio te parecen más débiles?",
+      "¿Cambiaría algo en tu vida saber que estamos solos?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "radiacion-fondo-cosmico",
+    "title": "La radiación de fondo de microondas",
+    "hook": "¿Sabías que parte de la estática de una tele vieja era luz del universo recién nacido?",
+    "why": "Es la foto más antigua que existe: la luz que quedó libre 380,000 años después del Big Bang, y sus manchas explican dónde se formaron las galaxias.",
+    "area": "espacio",
+    "rarity": "comun",
+    "searchQuery": "radiación de fondo de microondas cosmología",
+    "questions": [
+      "¿Por qué esa luz sigue llegando hoy y no se acabó?",
+      "¿Qué nos dicen sus pequeñas diferencias de temperatura?",
+      "¿Qué se siente mirar algo de hace 13,800 millones de años?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "telescopio-james-webb",
+    "title": "El telescopio James Webb",
+    "hook": "¿Cómo se despliega en el espacio un espejo que no cabía en ningún cohete?",
+    "why": "Trescientos cuarenta y cuatro pasos tenían que salir perfectos, sin nadie que pudiera repararlo, a un millón y medio de kilómetros de aquí.",
+    "area": "espacio",
+    "rarity": "comun",
+    "searchQuery": "telescopio espacial James Webb infrarrojo",
+    "questions": [
+      "¿Por qué observa en infrarrojo y no en luz visible?",
+      "¿Qué ve que Hubble no podía ver?",
+      "¿Qué proyecto tuyo aguantaría no poder corregirse después?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "origen-de-la-luna",
+    "title": "El origen de la Luna",
+    "hook": "¿Qué pasó cuando un planeta del tamaño de Marte chocó contra la Tierra?",
+    "why": "La Luna probablemente es un pedazo nuestro, y sin ella el eje de la Tierra se bambolearía tanto que el clima sería otro.",
+    "area": "espacio",
+    "rarity": "comun",
+    "searchQuery": "hipótesis del gran impacto origen de la Luna Theia",
+    "questions": [
+      "¿Qué evidencia en las rocas apoya el gran impacto?",
+      "¿Qué le hace la Luna a las mareas y al eje terrestre?",
+      "¿Qué otras cosas de tu vida diaria dependen de un accidente antiguo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "cinturon-de-kuiper",
+    "title": "El cinturón de Kuiper",
+    "hook": "¿Por qué Plutón dejó de ser planeta sin haber cambiado en nada?",
+    "why": "Más allá de Neptuno hay miles de mundos helados. Descubrirlos obligó a redefinir qué cuenta como planeta.",
+    "area": "espacio",
+    "rarity": "comun",
+    "searchQuery": "cinturón de Kuiper Plutón planeta enano",
+    "questions": [
+      "¿Qué criterio nuevo dejó fuera a Plutón?",
+      "¿Qué guardan esos cuerpos helados sobre el sistema solar joven?",
+      "¿Cuándo vale la pena cambiar una definición que ya todos usaban?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "basura-espacial-kessler",
+    "title": "La basura espacial y el síndrome de Kessler",
+    "hook": "¿Y si un choque en órbita nos dejara sin internet satelital por décadas?",
+    "why": "Hay millones de fragmentos dando vueltas a 28,000 km/h. Pasado cierto punto, los choques se alimentan entre ellos.",
+    "area": "espacio",
+    "rarity": "comun",
+    "searchQuery": "basura espacial síndrome de Kessler órbita baja",
+    "questions": [
+      "¿Por qué un tornillo en órbita es tan peligroso como una bala?",
+      "¿Qué se está haciendo para limpiar o evitar más basura?",
+      "¿Qué otras cosas usas a diario que dependen de satélites?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "red-de-micorrizas",
+    "title": "La red de hongos bajo el bosque",
+    "hook": "¿Sabías que los árboles de un bosque están conectados por una red de hongos?",
+    "why": "Bajo tus pies hay una red que intercambia azúcares y señales entre árboles. Cambia por completo la idea del bosque como competencia pura.",
+    "area": "naturaleza",
+    "rarity": "legendaria",
+    "searchQuery": "micorrizas red bosque hongos árboles",
+    "questions": [
+      "¿Qué gana el hongo y qué gana el árbol en ese trato?",
+      "¿Qué tan probado está que los árboles se 'ayuden' y qué es exageración?",
+      "¿Qué redes invisibles sostienen tu vida diaria?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "migracion-monarca",
+    "title": "La migración de la mariposa monarca",
+    "hook": "¿Cómo llega a un bosque de Michoacán una mariposa que nunca estuvo ahí?",
+    "why": "El viaje toma varias generaciones: la que sale de Canadá no es la que llega a México, y aun así no se pierden.",
+    "area": "naturaleza",
+    "rarity": "rara",
+    "searchQuery": "migración mariposa monarca Michoacán generaciones",
+    "questions": [
+      "¿Cómo se orientan sin haber hecho el viaje antes?",
+      "¿Qué está poniendo en riesgo la migración?",
+      "¿Qué se hereda sin que nadie lo enseñe, en la naturaleza y en tu familia?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "lobos-de-yellowstone",
+    "title": "Los lobos de Yellowstone",
+    "hook": "¿Puede un depredador cambiar el curso de un río?",
+    "why": "Reintroducir lobos movió a los venados, dejó crecer los sauces, regresaron los castores y el río cambió de forma. Es el ejemplo clásico de cascada trófica, con todo y sus exageraciones.",
+    "area": "naturaleza",
+    "rarity": "rara",
+    "searchQuery": "lobos Yellowstone cascada trófica reintroducción",
+    "questions": [
+      "¿Qué parte de la historia está bien documentada y qué parte se infló?",
+      "¿Qué es una cascada trófica?",
+      "¿Dónde has visto que quitar una pieza chica descompuso todo un sistema?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "corrientes-oceanicas-circulacion",
+    "title": "La cinta transportadora del océano",
+    "hook": "¿Por qué Londres, que está más al norte que Quebec, no se congela?",
+    "why": "Una corriente de agua salada y fría mueve calor por todo el planeta. Si se frena, el clima de continentes enteros cambia.",
+    "area": "naturaleza",
+    "rarity": "comun",
+    "searchQuery": "circulación termohalina AMOC corriente del Golfo",
+    "questions": [
+      "¿Qué mueve esa circulación: temperatura, sal o las dos?",
+      "¿Qué pasaría si el deshielo la debilita?",
+      "¿Qué sistemas lentos de tu vida se notan solo cuando fallan?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "arrecifes-y-blanqueamiento",
+    "title": "Los arrecifes y el blanqueamiento",
+    "hook": "¿Sabías que un coral blanco no está muerto todavía, está hambriento?",
+    "why": "El coral vive de un alga que lo alimenta. Con el calor la expulsa, pierde el color y si no regresa, se muere.",
+    "area": "naturaleza",
+    "rarity": "comun",
+    "searchQuery": "blanqueamiento de coral zooxantelas arrecife",
+    "questions": [
+      "¿Qué relación tienen el coral y el alga que vive dentro?",
+      "¿Cuánto calor y por cuánto tiempo hace falta para blanquearlo?",
+      "¿Qué depende de los arrecifes además de los peces?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "tardigrados",
+    "title": "Los tardígrados",
+    "hook": "¿Qué animal aguanta el vacío del espacio y vive en el musgo de tu banqueta?",
+    "why": "Se secan hasta casi no tener agua, apagan su metabolismo y esperan años. Enseñan otra forma de estar vivo.",
+    "area": "naturaleza",
+    "rarity": "comun",
+    "searchQuery": "tardígrado criptobiosis resistencia",
+    "questions": [
+      "¿Qué es la criptobiosis y cómo protege sus células?",
+      "¿Qué no aguantan, a pesar de su fama?",
+      "¿Qué te gustaría poder pausar y retomar igual que ellos?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "polinizadores-en-riesgo",
+    "title": "Los polinizadores y tu plato",
+    "hook": "¿Qué desaparece de tu despensa si desaparecen las abejas?",
+    "why": "Cerca de tres de cada cuatro cultivos que comemos dependen en algo de un polinizador. No es solo miel: es café, cacao, almendra, calabaza.",
+    "area": "naturaleza",
+    "rarity": "comun",
+    "searchQuery": "polinizadores declive cultivos abejas",
+    "questions": [
+      "¿Qué cultivos dependen más y cuáles no dependen nada?",
+      "¿Qué está causando el declive: pesticidas, pérdida de hábitat, enfermedades?",
+      "¿Qué comida de tu semana pasada existió gracias a un insecto?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "fuego-y-semillas",
+    "title": "Los bosques que necesitan quemarse",
+    "hook": "¿Qué árbol tiene piñas que solo abren con el calor de un incendio?",
+    "why": "Algunos ecosistemas evolucionaron con el fuego. Apagar todos los incendios durante décadas es justo lo que prepara los incendios monstruosos.",
+    "area": "naturaleza",
+    "rarity": "comun",
+    "searchQuery": "serotinia pirofitas régimen de fuego bosque",
+    "questions": [
+      "¿Qué es una especie pirófita y cómo aprovecha el fuego?",
+      "¿Por qué apagar todo incendio salió caro?",
+      "¿Qué problema tuyo empeoró por evitar siempre lo incómodo?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "nixtamalizacion",
+    "title": "La nixtamalización",
+    "hook": "¿Por qué quien comía maíz sin cal se enfermaba y en México no?",
+    "why": "Cocer el maíz con cal libera la niacina y mejora su proteína. Europa adoptó el maíz sin la técnica y llegó la pelagra.",
+    "area": "comida",
+    "rarity": "legendaria",
+    "searchQuery": "nixtamalización maíz cal pelagra niacina",
+    "questions": [
+      "¿Qué le hace la cal al grano, químicamente?",
+      "¿Qué pasó en el sur de Europa y Estados Unidos al copiar el maíz sin la técnica?",
+      "¿Qué saber tradicional de tu casa resultó tener una razón sólida?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "reaccion-de-maillard",
+    "title": "La reacción de Maillard",
+    "hook": "¿Por qué lo dorado sabe a algo y lo hervido no?",
+    "why": "Azúcares y aminoácidos reaccionan con calor y crean cientos de compuestos de sabor. Explica el pan, el café, la carne sellada y el chocolate.",
+    "area": "comida",
+    "rarity": "rara",
+    "searchQuery": "reacción de Maillard dorado sabor cocina",
+    "questions": [
+      "¿En qué se diferencia de la caramelización?",
+      "¿Por qué la humedad frena el dorado?",
+      "¿Qué cambiarías de tu forma de cocinar sabiendo esto?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "fermentacion-alimentos",
+    "title": "La fermentación",
+    "hook": "¿Cómo convertimos en técnica lo que en realidad es comida echándose a perder?",
+    "why": "Pan, queso, cerveza, pulque, kimchi, salsa de soya: todo es microbios trabajando a nuestro favor, y fue conservación antes que sabor.",
+    "area": "comida",
+    "rarity": "rara",
+    "searchQuery": "fermentación alimentos microbios conservación",
+    "questions": [
+      "¿Qué hace un microbio fermentador con el azúcar?",
+      "¿Por qué la fermentación conserva la comida?",
+      "¿Qué fermentado comes sin pensar que lo es?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "gluten-y-la-masa",
+    "title": "El gluten y por qué la masa sube",
+    "hook": "¿Qué tiene la harina de trigo que no tiene ninguna otra?",
+    "why": "Dos proteínas forman una red elástica que atrapa el gas de la levadura. Sin esa red, el pan es una piedra.",
+    "area": "comida",
+    "rarity": "comun",
+    "searchQuery": "gluten gliadina glutenina masa panadería",
+    "questions": [
+      "¿Qué hace el amasado con esas proteínas?",
+      "¿Cómo se hace pan sin gluten y qué se sustituye?",
+      "¿Qué otra cosa de tu vida funciona por una red invisible que sostiene aire?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "boveda-semillas-svalbard",
+    "title": "La bóveda de semillas de Svalbard",
+    "hook": "¿Por qué hay un búnker en el Ártico lleno de semillas de todo el mundo?",
+    "why": "Es el respaldo de la comida humana. Ya se usó una vez: Siria pidió de regreso sus semillas durante la guerra.",
+    "area": "comida",
+    "rarity": "comun",
+    "searchQuery": "bóveda global de semillas Svalbard banco genético",
+    "questions": [
+      "¿De qué se protege exactamente ese respaldo?",
+      "¿Por qué la diversidad de variedades importa tanto?",
+      "¿Qué respaldas tú y qué no tiene copia?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "umami-quinto-sabor",
+    "title": "El umami",
+    "hook": "¿Cómo tardamos casi un siglo en aceptar un sabor que todos ya conocían?",
+    "why": "Un químico japonés lo aisló en 1908 y Occidente lo reconoció hasta los años 2000, cuando encontraron el receptor en la lengua.",
+    "area": "comida",
+    "rarity": "comun",
+    "searchQuery": "umami glutamato Ikeda quinto sabor",
+    "questions": [
+      "¿Qué moléculas lo provocan y en qué alimentos abundan?",
+      "¿Por qué tardó tanto en aceptarse?",
+      "¿Qué otra cosa obvia crees que todavía no tiene nombre?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "cadena-de-frio",
+    "title": "La cadena de frío",
+    "hook": "¿Qué invento le dio a la humanidad más comida que cualquier semilla nueva?",
+    "why": "Refrigerar cambió qué se puede comer, dónde y en qué mes. También cambió las ciudades, el comercio y hasta las vacunas.",
+    "area": "comida",
+    "rarity": "comun",
+    "searchQuery": "cadena de frío refrigeración historia alimentos",
+    "questions": [
+      "¿Qué se comía antes de poder refrigerar?",
+      "¿Qué pasa cuando la cadena se rompe una sola vez?",
+      "¿Qué parte de tu dieta desaparecería sin refrigeración?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "monocultivo-hambruna-papa",
+    "title": "El monocultivo y la hambruna de la papa",
+    "hook": "¿Cómo un hongo mató a un millón de personas en Irlanda?",
+    "why": "Casi toda la papa irlandesa era la misma variedad, es decir, clones. Lo que mataba a una mataba a todas.",
+    "area": "comida",
+    "rarity": "comun",
+    "searchQuery": "gran hambruna irlandesa papa monocultivo tizón",
+    "questions": [
+      "¿Por qué un cultivo genéticamente igual es tan frágil?",
+      "¿Qué papel tuvo la política británica además del hongo?",
+      "¿Qué monocultivos hay hoy, en la comida o fuera de ella?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "linea-de-ensamble-ford",
+    "title": "La línea de ensamble",
+    "hook": "¿Por qué Ford duplicó el sueldo de sus obreros cuando nadie se lo pedía?",
+    "why": "Bajó el armado de un coche de 12 horas a 93 minutos, pero la rotación de personal se volvió insoportable. El salario de 5 dólares fue la solución a un problema que él mismo creó.",
+    "area": "trabajo",
+    "rarity": "legendaria",
+    "searchQuery": "línea de ensamble Ford cinco dólares día",
+    "questions": [
+      "¿Qué ganó y qué perdió el obrero con la línea?",
+      "¿Por qué subir el sueldo le salió barato?",
+      "¿Qué parte de tu trabajo se parece a una línea de ensamble?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "sistema-toyota",
+    "title": "El sistema de producción Toyota",
+    "hook": "¿Qué empresa le dio a cualquier obrero el poder de detener toda la fábrica?",
+    "why": "Justo a tiempo, cero inventario y el derecho de parar la línea al ver un defecto. Es el origen de casi todo lo que hoy se llama 'lean' o 'ágil'.",
+    "area": "trabajo",
+    "rarity": "rara",
+    "searchQuery": "sistema de producción Toyota justo a tiempo jidoka",
+    "questions": [
+      "¿Qué es el jidoka y por qué confiar en el obrero era radical?",
+      "¿Qué riesgos trae no tener inventario?",
+      "¿Qué desperdicio hay en tu forma de trabajar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "jornada-de-ocho-horas",
+    "title": "La jornada de ocho horas",
+    "hook": "¿Quién decidió que un día de trabajo son ocho horas y por qué esa cifra?",
+    "why": "No salió de un estudio: salió de décadas de huelgas, con muertos de por medio. Ocho de trabajo, ocho de descanso, ocho de lo que quieras.",
+    "area": "trabajo",
+    "rarity": "rara",
+    "searchQuery": "jornada de ocho horas movimiento obrero historia",
+    "questions": [
+      "¿De dónde salió exactamente la consigna?",
+      "¿Qué evidencia hay hoy sobre horas trabajadas y productividad?",
+      "¿Cuántas horas de las tuyas producen de verdad?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "ley-de-parkinson",
+    "title": "La ley de Parkinson",
+    "hook": "¿Por qué una tarea de una hora se lleva justo el día que le diste?",
+    "why": "El trabajo se expande hasta llenar el tiempo disponible. Lo escribió un historiador naval observando burocracias que crecían sin más trabajo que hacer.",
+    "area": "trabajo",
+    "rarity": "comun",
+    "searchQuery": "ley de Parkinson tiempo burocracia",
+    "questions": [
+      "¿Qué observó Parkinson en la marina británica?",
+      "¿Qué pasa si acortas los plazos a propósito?",
+      "¿Qué tarea tuya se infló sin razón?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "principio-de-peter",
+    "title": "El principio de Peter",
+    "hook": "¿Por qué tu mejor ingeniero se vuelve un mal jefe?",
+    "why": "Se asciende por desempeño en el puesto actual, no por aptitud para el siguiente. Así todo mundo sube hasta su nivel de incompetencia.",
+    "area": "trabajo",
+    "rarity": "comun",
+    "searchQuery": "principio de Peter ascensos incompetencia",
+    "questions": [
+      "¿Qué supuesto sobre los ascensos está mal?",
+      "¿Qué alternativas existen a subir de puesto para premiar a alguien?",
+      "¿Has visto a alguien perder lo que hacía bien al ascender?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "gremios-medievales",
+    "title": "Los gremios medievales",
+    "hook": "¿Cómo se aprendía un oficio cuando no existían ni escuelas ni currículums?",
+    "why": "Aprendiz, oficial y maestro: un sistema que enseñaba, controlaba la calidad y también cerraba la entrada a los de fuera.",
+    "area": "trabajo",
+    "rarity": "comun",
+    "searchQuery": "gremios medievales aprendiz oficial maestro",
+    "questions": [
+      "¿Qué garantizaba el gremio y a quién dejaba fuera?",
+      "¿Qué queda de eso en las profesiones de hoy?",
+      "¿Cómo aprendiste tú lo que sabes hacer?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "contenedor-de-carga",
+    "title": "El contenedor que cambió el mundo",
+    "hook": "¿Qué caja de metal hizo más por la globalización que cualquier tratado?",
+    "why": "Estandarizar la caja bajó el costo de mover algo por mar más del 90%. Por eso tu teléfono se arma en un continente y se usa en otro.",
+    "area": "trabajo",
+    "rarity": "comun",
+    "searchQuery": "contenedor intermodal Malcom McLean contenerización",
+    "questions": [
+      "¿Qué costaba tanto antes: el barco o cargarlo?",
+      "¿Qué oficios desaparecieron en los puertos?",
+      "¿Qué estandarización invisible usas todos los días?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "reuniones-y-costo-oculto",
+    "title": "El costo oculto de las reuniones",
+    "hook": "¿Cuánto cuesta esa junta si multiplicas los sueldos por la hora?",
+    "why": "El costo visible es el tiempo. El invisible es el trabajo fragmentado: recuperar la concentración después de una interrupción toma bastante más de lo que crees.",
+    "area": "trabajo",
+    "rarity": "comun",
+    "searchQuery": "costo de las reuniones trabajo fragmentado concentración",
+    "questions": [
+      "¿Qué dice la evidencia sobre recuperar la concentración tras interrumpirte?",
+      "¿Qué junta tuya podría ser un mensaje?",
+      "¿Cómo se ve tu semana partida en bloques?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "maraton-origen-y-42km",
+    "title": "El maratón y sus 42 kilómetros",
+    "hook": "¿Por qué el maratón mide 42.195 y no un número redondo?",
+    "why": "La distancia la fijó la familia real británica en 1908 para que la meta quedara frente a su palco. La historia de Filípides, además, probablemente nunca pasó.",
+    "area": "deporte",
+    "rarity": "rara",
+    "searchQuery": "maratón 42.195 origen Londres 1908 Filípides",
+    "questions": [
+      "¿Qué tanto hay de leyenda en la historia del mensajero griego?",
+      "¿Por qué se quedó esa distancia para siempre?",
+      "¿Qué reglas de tu vida heredaste sin saber de dónde salieron?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "vo2-max-y-resistencia",
+    "title": "El VO2 máx",
+    "hook": "¿Qué número predice mejor tu esperanza de vida que casi cualquier análisis de sangre?",
+    "why": "Es cuánto oxígeno puede usar tu cuerpo por minuto. Se entrena, baja con la edad y se asocia fuertemente con vivir más.",
+    "area": "deporte",
+    "rarity": "rara",
+    "searchQuery": "VO2 máx capacidad aeróbica mortalidad",
+    "questions": [
+      "¿Qué limita el VO2 máx: el corazón, la sangre o el músculo?",
+      "¿Cómo se entrena de verdad y en cuánto tiempo cambia?",
+      "¿Qué tan en forma estás para tu edad?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "moneyball-estadistica",
+    "title": "Moneyball y la estadística",
+    "hook": "¿Cómo un equipo pobre le ganó a uno que gastaba tres veces más?",
+    "why": "Oakland compró lo que el mercado no sabía valorar. Es el caso clásico de cómo una métrica mejor vence al ojo del experto.",
+    "area": "deporte",
+    "rarity": "comun",
+    "searchQuery": "Moneyball sabermetría Billy Beane",
+    "questions": [
+      "¿Qué métrica estaba subvaluada y por qué?",
+      "¿Qué pasó cuando todos copiaron el método?",
+      "¿Qué mides mal en algo que te importa?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "kenia-corredores-de-fondo",
+    "title": "Por qué Kenia domina el fondo",
+    "hook": "¿Cómo un solo grupo de un país gana casi todos los maratones del mundo?",
+    "why": "Se mezclan altitud, economía, cultura del entrenamiento y biomecánica. Ninguna explicación sola alcanza, y la genética es la parte que más se exagera.",
+    "area": "deporte",
+    "rarity": "comun",
+    "searchQuery": "corredores kenianos kalenjin altitud dominio fondo",
+    "questions": [
+      "¿Qué papel real tiene la altura?",
+      "¿Qué explicaciones se han descartado o exagerado?",
+      "¿Qué ventaja tuya viene de tu entorno y no de tu talento?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "dopaje-y-control",
+    "title": "El dopaje y el gato contra el ratón",
+    "hook": "¿Cómo se gana un Tour de Francia durante siete años y no sale un solo positivo?",
+    "why": "Las pruebas siempre van atrás de los métodos. El pasaporte biológico cambió la estrategia: ya no busca la sustancia, busca que tu propia sangre cambie.",
+    "area": "deporte",
+    "rarity": "comun",
+    "searchQuery": "dopaje pasaporte biológico EPO control antidopaje",
+    "questions": [
+      "¿Qué hace la EPO en el cuerpo?",
+      "¿Qué cambió el pasaporte biológico?",
+      "¿Dónde está el límite entre ayudar al cuerpo y hacer trampa?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "entrenar-en-altura",
+    "title": "Entrenar en altura",
+    "hook": "¿Sirve de algo irse a entrenar a 2,500 metros?",
+    "why": "La sangre se adapta, pero entrenas más lento. De ahí la estrategia de vivir alto y entrenar bajo.",
+    "area": "deporte",
+    "rarity": "comun",
+    "searchQuery": "entrenamiento en altitud vivir alto entrenar bajo",
+    "questions": [
+      "¿Qué le pasa a la sangre en altura?",
+      "¿Por qué entrenar arriba puede ser contraproducente?",
+      "¿Qué adaptación tuya vino de un ambiente difícil?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "fibras-musculares",
+    "title": "Fibras rápidas y fibras lentas",
+    "hook": "¿Por qué el mismo entrenamiento hace campeón a uno y lesiona al otro?",
+    "why": "Tienes dos tipos de fibra con proporciones distintas a las de tu vecino. Explica quién sirve para el sprint y quién para el fondo.",
+    "area": "deporte",
+    "rarity": "comun",
+    "searchQuery": "fibras musculares tipo I tipo II entrenamiento",
+    "questions": [
+      "¿Qué diferencia a una fibra lenta de una rápida?",
+      "¿Cuánto se puede cambiar esa proporción entrenando?",
+      "¿Para qué esfuerzo estás hecho tú?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "juegos-olimpicos-antiguos",
+    "title": "Los Juegos Olímpicos antiguos",
+    "hook": "¿Sabías que los juegos originales duraron mil años y eran una fiesta religiosa?",
+    "why": "No había medallas, ni plata, ni segundo lugar, y las ciudades en guerra hacían tregua para competir. El Comité Olímpico moderno inventó buena parte de la tradición.",
+    "area": "deporte",
+    "rarity": "comun",
+    "searchQuery": "juegos olímpicos antiguos Olimpia tregua",
+    "questions": [
+      "¿Qué se ganaba realmente al vencer?",
+      "¿Qué del ritual moderno es invención del siglo XX?",
+      "¿Qué tradición tuya es más nueva de lo que parece?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "manuscrito-voynich",
+    "title": "El manuscrito Voynich",
+    "hook": "¿Y si el libro más estudiado por criptógrafos no dijera nada?",
+    "why": "Seiscientos años, un idioma que nadie reconoce y plantas que no existen. Ni la NSA ni los mejores descifradores han podido con él.",
+    "area": "misterios",
+    "rarity": "legendaria",
+    "searchQuery": "manuscrito Voynich criptografía sin descifrar",
+    "questions": [
+      "¿Qué sabemos con certeza: edad, tinta, pergamino?",
+      "¿Qué argumentos hay a favor de que sea un fraude?",
+      "¿Cómo distingues un misterio real de uno inventado?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "mecanismo-de-anticitera",
+    "title": "El mecanismo de Anticitera",
+    "hook": "¿Cómo apareció una computadora de engranes en un naufragio de hace 2,000 años?",
+    "why": "Predecía eclipses y posiciones de planetas. No hubo nada de esa complejidad otra vez sino hasta mil años después.",
+    "area": "misterios",
+    "rarity": "rara",
+    "searchQuery": "mecanismo de Anticitera engranes eclipses",
+    "questions": [
+      "¿Qué calculaba exactamente y con qué precisión?",
+      "¿Por qué se perdió ese conocimiento?",
+      "¿Qué se está perdiendo hoy sin que nos demos cuenta?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "gobekli-tepe",
+    "title": "Göbekli Tepe",
+    "hook": "¿Y si construimos templos antes que ciudades, y no al revés?",
+    "why": "Un santuario de piedra de hace 11,000 años, levantado por gente que todavía no sembraba. Le da la vuelta al orden que se enseñaba.",
+    "area": "misterios",
+    "rarity": "rara",
+    "searchQuery": "Göbekli Tepe templo neolítico cazadores recolectores",
+    "questions": [
+      "¿Qué se creía antes sobre el orden entre agricultura y religión?",
+      "¿Qué evidencia hay de quién lo construyó?",
+      "¿Qué idea tuya sobre el pasado tendrías que revisar?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "lineas-de-nazca",
+    "title": "Las líneas de Nazca",
+    "hook": "¿Para quién dibujas figuras que solo se ven completas desde el cielo?",
+    "why": "Kilómetros de figuras en el desierto peruano, hechas quitando piedras. Las explicaciones serias hablan de agua y ritual, no de extraterrestres.",
+    "area": "misterios",
+    "rarity": "comun",
+    "searchQuery": "líneas de Nazca geoglifos Perú",
+    "questions": [
+      "¿Cómo se trazaron sin verlas desde arriba?",
+      "¿Qué hipótesis tienen más apoyo arqueológico?",
+      "¿Por qué nos atraen tanto las explicaciones fantásticas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "senal-wow",
+    "title": "La señal Wow!",
+    "hook": "¿Qué fue esa señal de 72 segundos que llegó una vez y nunca se repitió?",
+    "why": "En 1977 un radiotelescopio captó algo justo en la frecuencia donde se esperaría un mensaje. Nadie ha vuelto a oírla ni ha explicado el origen con certeza.",
+    "area": "misterios",
+    "rarity": "comun",
+    "searchQuery": "señal Wow 1977 radiotelescopio SETI",
+    "questions": [
+      "¿Por qué esa frecuencia era la 'esperada'?",
+      "¿Qué explicaciones naturales se han propuesto?",
+      "¿Qué harías con una prueba que no se puede repetir?"
+    ],
+    "minutes": 15
+  },
+  {
+    "id": "escritura-del-indo",
+    "title": "La escritura del valle del Indo",
+    "hook": "¿Cómo lees a una civilización de millones de personas que no puedes leer?",
+    "why": "Miles de inscripciones cortas, cero textos largos, cero piedra de Rosetta. Ni siquiera hay acuerdo en si es escritura.",
+    "area": "misterios",
+    "rarity": "comun",
+    "searchQuery": "escritura del Indo sin descifrar Harappa",
+    "questions": [
+      "¿Por qué las inscripciones cortas complican tanto el descifre?",
+      "¿Qué se necesitaría para resolverlo?",
+      "¿Qué de nuestra época sería ilegible dentro de 4,000 años?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "colapso-maya-clasico",
+    "title": "El colapso maya clásico",
+    "hook": "¿Por qué se vaciaron ciudades enteras mientras la gente maya seguía ahí?",
+    "why": "Sequía, guerra, agotamiento del suelo y decisiones políticas. El 'misterio' se disolvió en muchas causas a la vez, y la idea de desaparición es falsa.",
+    "area": "misterios",
+    "rarity": "comun",
+    "searchQuery": "colapso maya clásico sequía ciudades",
+    "questions": [
+      "¿Qué evidencia hay de sequías prolongadas?",
+      "¿Por qué decir que 'desaparecieron' es incorrecto?",
+      "¿Qué colapsos de hoy se explicarían con varias causas juntas?"
+    ],
+    "minutes": 20
+  },
+  {
+    "id": "moai-de-rapa-nui",
+    "title": "Cómo movieron los moái",
+    "hook": "¿Cómo mueves 80 toneladas de piedra sin rueda, sin metal y sin animales?",
+    "why": "La hipótesis de que 'caminaban', meciéndolos con cuerdas, se probó en campo y funcionó. También cambia la historia del supuesto ecocidio de la isla.",
+    "area": "misterios",
+    "rarity": "comun",
+    "searchQuery": "moái Rapa Nui transporte caminando ecocidio",
+    "questions": [
+      "¿Qué experimentos se han hecho para moverlos?",
+      "¿Qué tan sólida es la versión del ecocidio?",
+      "¿Qué explicación cómoda has aceptado sin revisarla?"
+    ],
+    "minutes": 20
   }
 ]

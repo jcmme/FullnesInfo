@@ -1,1 +1,1634 @@
-[]
+[
+  {
+    "id": "galeon-de-manila",
+    "title": "El Galeón de Manila",
+    "area": "historia",
+    "updated": "2026-09-29",
+    "summary": "Durante 250 años, uno o dos barcos al año unieron Acapulco con Manila. Llevaban plata mexicana y traían seda, porcelana y especias de toda Asia. Fue la primera ruta comercial regular que conectó América, Asia y Europa en un solo circuito.",
+    "why": "La globalización no empezó con internet ni con los contenedores. Empezó con plata de Zacatecas pagando seda en Beijing, y con el mango y el tamarindo llegando a México en la bodega de un barco.",
+    "facts": [
+      {
+        "text": "La ruta funcionó de 1565 a 1815: 250 años de servicio casi ininterrumpido, la línea comercial regular más larga que ha existido.",
+        "source": {
+          "title": "Wikipedia: Galeón de Manila",
+          "url": "https://es.wikipedia.org/wiki/Gale%C3%B3n_de_Manila"
+        }
+      },
+      {
+        "text": "El problema no era llegar a Asia sino regresar. Andrés de Urdaneta resolvió el tornaviaje en 1565 subiendo al norte hasta encontrar la corriente de Kuroshio, que empuja de vuelta hacia California.",
+        "source": {
+          "title": "Wikipedia: Andrés de Urdaneta",
+          "url": "https://es.wikipedia.org/wiki/Andr%C3%A9s_de_Urdaneta"
+        }
+      },
+      {
+        "text": "La moneda del comercio era el real de a ocho, acuñado con plata mexicana y peruana. Circuló como dinero corriente en China durante siglos: fue la primera divisa global.",
+        "source": {
+          "title": "Wikipedia: Real de a ocho",
+          "url": "https://es.wikipedia.org/wiki/Real_de_a_ocho"
+        }
+      },
+      {
+        "text": "El tornaviaje duraba de cuatro a seis meses sin escalas. El escorbuto mataba a una parte grande de la tripulación en cada travesía.",
+        "source": {
+          "title": "Wikipedia: Galeón de Manila",
+          "url": "https://es.wikipedia.org/wiki/Gale%C3%B3n_de_Manila"
+        }
+      },
+      {
+        "text": "La ruta trajo a México el mango, el tamarindo y la palma de coco de Asia, y llevó para allá el chile, el camote y el jitomate. Buena parte de lo que crees mexicano llegó en esos barcos, y al revés.",
+        "source": {
+          "title": "Wikipedia: Intercambio colombino",
+          "url": "https://es.wikipedia.org/wiki/Intercambio_colombino"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1521",
+        "text": "Magallanes llega a Filipinas y muere ahí. España sabe cómo ir, no cómo volver."
+      },
+      {
+        "year": "1565",
+        "text": "Urdaneta encuentra la ruta de regreso. Nace la línea Acapulco-Manila."
+      },
+      {
+        "year": "1571",
+        "text": "Se funda Manila como puerto español en Asia."
+      },
+      {
+        "year": "1587",
+        "text": "El corsario inglés Thomas Cavendish captura el galeón Santa Ana frente a Baja California."
+      },
+      {
+        "year": "1815",
+        "text": "Sale el último galeón. La guerra de independencia de México corta la ruta."
+      },
+      {
+        "year": "1821",
+        "text": "México se independiza y el circuito de la plata se acaba para siempre."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Tornaviaje",
+        "meaning": "La ruta de regreso de Manila a Acapulco, al norte, aprovechando las corrientes del Pacífico."
+      },
+      {
+        "term": "Real de a ocho",
+        "meaning": "Moneda de plata española de ocho reales, aceptada como dinero en Asia y América durante siglos."
+      },
+      {
+        "term": "Kuroshio",
+        "meaning": "Corriente cálida del Pacífico que empuja del Japón hacia América y hacía posible el regreso."
+      },
+      {
+        "term": "Nao de China",
+        "meaning": "Como se le decía en México al galeón y a su cargamento."
+      }
+    ],
+    "questions": [
+      "¿Qué productos y culturas se mezclaron gracias a esta ruta?",
+      "¿Por qué la plata mexicana terminó siendo la moneda más usada en Asia?",
+      "¿Qué conexiones globales de tu día a día se parecen a esa red antigua?"
+    ],
+    "searchQuery": "galeón de Manila historia plata Acapulco",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "colapso-edad-de-bronce",
+    "title": "El colapso de la Edad de Bronce",
+    "area": "historia",
+    "updated": "2026-09-29",
+    "summary": "Entre 1200 y 1150 antes de Cristo cayeron casi al mismo tiempo casi todas las potencias del Mediterráneo oriental: el imperio hitita, los palacios micénicos, Ugarit, el comercio del cobre y el estaño. Egipto aguantó, pero salió mutilado.",
+    "why": "Es el ejemplo mejor documentado de cómo un sistema muy conectado se cae entero. Nadie tuvo una sola causa: fue sequía, migración, guerra y dependencia comercial, todo encimado.",
+    "facts": [
+      {
+        "text": "La escritura misma desapareció. Grecia perdió el lineal B y pasó unos 400 años sin escribir nada: la llamada edad oscura griega.",
+        "source": {
+          "title": "Wikipedia: Lineal B",
+          "url": "https://es.wikipedia.org/wiki/Lineal_B"
+        }
+      },
+      {
+        "text": "Las últimas cartas de Ugarit se conservaron porque el incendio que destruyó la ciudad coció las tablillas de arcilla. Una de ellas pide ayuda y dice que los barcos enemigos ya quemaron las ciudades.",
+        "source": {
+          "title": "Wikipedia: Ugarit",
+          "url": "https://es.wikipedia.org/wiki/Ugarit"
+        }
+      },
+      {
+        "text": "El bronce necesita cobre y estaño, y el estaño venía de muy lejos, hasta de Afganistán. Cuando las rutas se rompieron, la tecnología militar de todos se quedó sin materia prima.",
+        "source": {
+          "title": "Wikipedia: Edad del Bronce",
+          "url": "https://es.wikipedia.org/wiki/Edad_del_Bronce"
+        }
+      },
+      {
+        "text": "Ramsés III dejó grabada en Medinet Habu su batalla contra los 'pueblos del mar' alrededor de 1177 antes de Cristo. Egipto ganó, pero nunca volvió a ser lo que era.",
+        "source": {
+          "title": "Wikipedia: Pueblos del mar",
+          "url": "https://es.wikipedia.org/wiki/Pueblos_del_mar"
+        }
+      },
+      {
+        "text": "Los núcleos de polen del Mar Muerto y de Chipre muestran una sequía larga justo en esas décadas. No explica todo, pero encaja con el resto.",
+        "source": {
+          "title": "Wikipedia: Colapso de la Edad del Bronce Final",
+          "url": "https://es.wikipedia.org/wiki/Colapso_de_la_Edad_del_Bronce_Final"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 1250 a.C.",
+        "text": "Los palacios micénicos empiezan a fortificarse: algo los tenía nerviosos."
+      },
+      {
+        "year": "c. 1200 a.C.",
+        "text": "Hattusa, la capital hitita, es abandonada y quemada."
+      },
+      {
+        "year": "c. 1190 a.C.",
+        "text": "Ugarit es destruida. Sus últimas cartas quedan cocidas en el incendio."
+      },
+      {
+        "year": "1177 a.C.",
+        "text": "Ramsés III rechaza a los pueblos del mar en el delta del Nilo."
+      },
+      {
+        "year": "c. 1100 a.C.",
+        "text": "Desaparece el lineal B. Empieza la edad oscura griega."
+      },
+      {
+        "year": "c. 800 a.C.",
+        "text": "Grecia vuelve a escribir, ahora con el alfabeto fenicio."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Pueblos del mar",
+        "meaning": "Grupos de origen discutido que atacaron Egipto y el Levante en esas décadas."
+      },
+      {
+        "term": "Lineal B",
+        "meaning": "La escritura de los palacios micénicos, usada sobre todo para llevar cuentas."
+      },
+      {
+        "term": "Sistema palacial",
+        "meaning": "Economía centralizada donde el palacio almacena y reparte casi todo."
+      },
+      {
+        "term": "Edad oscura griega",
+        "meaning": "Los siglos sin escritura ni grandes construcciones entre los micénicos y la Grecia clásica."
+      }
+    ],
+    "questions": [
+      "¿Qué causas se juntaron y cuál crees que pesó más?",
+      "¿Por qué un sistema tan conectado se volvió tan frágil?",
+      "¿Qué dependencia tuya se parece a la del estaño?"
+    ],
+    "searchQuery": "colapso edad de bronce pueblos del mar 1177",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "mansa-musa-mali",
+    "title": "Mansa Musa y el Imperio de Malí",
+    "area": "historia",
+    "updated": "2026-09-29",
+    "summary": "Mansa Musa gobernó Malí en el siglo XIV, cuando ese imperio controlaba las minas de oro que alimentaban al mundo mediterráneo. Su peregrinación a La Meca en 1324 fue tan ostentosa que quedó registrada del Cairo a Europa.",
+    "why": "Cambia la imagen del África medieval: no era periferia, era el centro del oro y de un circuito de universidades y manuscritos.",
+    "facts": [
+      {
+        "text": "Regaló y gastó tanto oro en El Cairo que el metal se devaluó ahí durante años. Es de los pocos casos documentados de una persona moviendo el precio de una materia prima con su equipaje.",
+        "source": {
+          "title": "Wikipedia: Mansa Musa",
+          "url": "https://es.wikipedia.org/wiki/Mansa_Musa"
+        }
+      },
+      {
+        "text": "En el Atlas Catalán de 1375, hecho en Mallorca, aparece dibujado con corona y una pepita de oro en la mano. Europa lo conocía de oídas y lo puso en su mapa del mundo.",
+        "source": {
+          "title": "Wikipedia: Atlas catalán",
+          "url": "https://es.wikipedia.org/wiki/Atlas_catal%C3%A1n"
+        }
+      },
+      {
+        "text": "De regreso trajo eruditos y arquitectos. Tombuctú se volvió un centro de copia y venta de manuscritos, un negocio tan bueno como el del oro.",
+        "source": {
+          "title": "Wikipedia: Tombuctú",
+          "url": "https://es.wikipedia.org/wiki/Tombuct%C3%BA"
+        }
+      },
+      {
+        "text": "El comercio transahariano cambiaba oro por sal, y en el Sahel la sal llegó a valer casi lo mismo que el oro por su escasez.",
+        "source": {
+          "title": "Wikipedia: Comercio transahariano",
+          "url": "https://es.wikipedia.org/wiki/Comercio_transahariano"
+        }
+      },
+      {
+        "text": "Las cifras sobre su fortuna que circulan hoy en internet son inventadas: no existen cuentas de la época para calcularlas. Lo documentado es el efecto en el mercado del oro, no un número.",
+        "source": {
+          "title": "Wikipedia: Mansa Musa",
+          "url": "https://es.wikipedia.org/wiki/Mansa_Musa"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1312",
+        "text": "Mansa Musa llega al trono de Malí."
+      },
+      {
+        "year": "1324",
+        "text": "Sale en peregrinación a La Meca con una caravana enorme."
+      },
+      {
+        "year": "1325",
+        "text": "Su paso por El Cairo deprime el precio del oro en la región."
+      },
+      {
+        "year": "c. 1327",
+        "text": "Se levanta la mezquita Djinguereber en Tombuctú."
+      },
+      {
+        "year": "c. 1337",
+        "text": "Muere Mansa Musa."
+      },
+      {
+        "year": "1375",
+        "text": "El Atlas Catalán lo dibuja como el rey del oro."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Sahel",
+        "meaning": "La franja entre el Sahara y la sabana, donde estaba el corazón de Malí."
+      },
+      {
+        "term": "Transahariano",
+        "meaning": "El comercio que cruzaba el desierto con caravanas de camellos."
+      },
+      {
+        "term": "Tombuctú",
+        "meaning": "Ciudad de Malí, centro de comercio y de manuscritos."
+      },
+      {
+        "term": "Mansa",
+        "meaning": "Título del gobernante en el imperio de Malí: algo como rey de reyes."
+      }
+    ],
+    "questions": [
+      "¿Qué hacía posible ese comercio a través de un desierto?",
+      "¿Por qué Europa sabía de él pero no había ido nunca?",
+      "¿Qué otra parte de la historia crees que te enseñaron como periferia?"
+    ],
+    "searchQuery": "Mansa Musa imperio de Malí oro Tombuctú",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "descubrimiento-penicilina",
+    "title": "El descubrimiento accidental de la penicilina",
+    "area": "ciencia",
+    "updated": "2026-09-29",
+    "summary": "Fleming volvió de vacaciones en 1928 y encontró una placa contaminada por un hongo que había matado a las bacterias alrededor. No pudo purificar la sustancia y la dejó como curiosidad. Doce años después, otro equipo la convirtió en medicina.",
+    "why": "Es la historia real de cómo funciona la ciencia: el hallazgo afortunado vale poco sin los años de trabajo aburrido que lo vuelven útil.",
+    "facts": [
+      {
+        "text": "Fleming publicó en 1929 y casi nadie le hizo caso. La penicilina era inestable y no sabía extraerla en cantidad útil.",
+        "source": {
+          "title": "Wikipedia: Alexander Fleming",
+          "url": "https://es.wikipedia.org/wiki/Alexander_Fleming"
+        }
+      },
+      {
+        "text": "El primer paciente tratado, el policía Albert Alexander, mejoró de forma espectacular. Se acabó la penicilina disponible en todo Oxford y murió.",
+        "source": {
+          "title": "Wikipedia: Penicilina",
+          "url": "https://es.wikipedia.org/wiki/Penicilina"
+        }
+      },
+      {
+        "text": "Para el Día D hacía falta producción masiva. La cepa que lo permitió salió de un melón mohoso comprado en un mercado de Peoria, Illinois.",
+        "source": {
+          "title": "Wikipedia: Penicilina",
+          "url": "https://es.wikipedia.org/wiki/Penicilina"
+        }
+      },
+      {
+        "text": "Fleming, Florey y Chain compartieron el Nobel en 1945. El del hallazgo y los dos del trabajo pesado.",
+        "source": {
+          "title": "Wikipedia: Howard Florey",
+          "url": "https://es.wikipedia.org/wiki/Howard_Florey"
+        }
+      },
+      {
+        "text": "En su discurso del Nobel, Fleming ya advirtió que usar dosis insuficientes crearía bacterias resistentes. La resistencia a antibióticos estaba prevista desde el día uno.",
+        "source": {
+          "title": "Wikipedia: Resistencia a antibióticos",
+          "url": "https://es.wikipedia.org/wiki/Resistencia_a_los_antibi%C3%B3ticos"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1928",
+        "text": "Fleming ve el hongo que limpió su placa de estafilococos."
+      },
+      {
+        "year": "1929",
+        "text": "Publica el hallazgo. Pasa casi desapercibido."
+      },
+      {
+        "year": "1940",
+        "text": "Florey y Chain, en Oxford, logran purificarla y probarla en ratones."
+      },
+      {
+        "year": "1941",
+        "text": "Albert Alexander mejora y muere al agotarse la droga."
+      },
+      {
+        "year": "1943",
+        "text": "Estados Unidos arranca la producción industrial."
+      },
+      {
+        "year": "1945",
+        "text": "Nobel compartido, y la primera advertencia pública sobre resistencia."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Penicillium",
+        "meaning": "El género de hongos del que sale la penicilina."
+      },
+      {
+        "term": "Antibiótico",
+        "meaning": "Sustancia que mata bacterias o les impide crecer, sin dañar a tus células."
+      },
+      {
+        "term": "Resistencia antimicrobiana",
+        "meaning": "Cuando la bacteria sobrevive al medicamento que antes la mataba."
+      },
+      {
+        "term": "Cepa",
+        "meaning": "Una variante concreta de un microorganismo, con sus propias características."
+      }
+    ],
+    "questions": [
+      "¿Qué faltó entre el hallazgo de 1928 y la medicina de 1941?",
+      "¿Por qué la advertencia sobre resistencia se ignoró tanto tiempo?",
+      "¿Qué hallazgo tuyo dejaste sin desarrollar por no ver para qué servía?"
+    ],
+    "searchQuery": "descubrimiento penicilina Fleming Florey producción",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "crispr-edicion-genetica",
+    "title": "CRISPR y la edición genética",
+    "area": "ciencia",
+    "updated": "2026-09-29",
+    "summary": "CRISPR es el sistema inmune de las bacterias: guardan pedazos del ADN de los virus que las atacaron para reconocerlos después. En 2012 se demostró que ese mecanismo se puede programar para cortar cualquier secuencia de ADN, en cualquier ser vivo.",
+    "why": "Es la primera vez que editar genes es barato y rápido. Eso lo pone al alcance de cualquier laboratorio, para bien y para mal.",
+    "facts": [
+      {
+        "text": "Las repeticiones raras en el ADN bacteriano se vieron desde 1987, sin entender para qué servían. Tardaron casi 20 años en darse cuenta de que eran un archivo de virus.",
+        "source": {
+          "title": "Wikipedia: CRISPR",
+          "url": "https://es.wikipedia.org/wiki/CRISPR"
+        }
+      },
+      {
+        "text": "Doudna y Charpentier recibieron el Nobel de Química 2020, apenas ocho años después del trabajo clave. Muy pocas veces el premio llega tan rápido.",
+        "source": {
+          "title": "Wikipedia: Premio Nobel de Química",
+          "url": "https://es.wikipedia.org/wiki/Anexo:Premio_Nobel_de_Qu%C3%ADmica"
+        }
+      },
+      {
+        "text": "En 2018 He Jiankui anunció las primeras bebés con genoma editado. Fue condenado a tres años de cárcel en China y la comunidad científica lo rechazó de forma unánime.",
+        "source": {
+          "title": "Wikipedia: He Jiankui",
+          "url": "https://es.wikipedia.org/wiki/He_Jiankui"
+        }
+      },
+      {
+        "text": "En 2023 se aprobó el primer tratamiento con CRISPR, para la anemia falciforme. Edita células del propio paciente fuera del cuerpo y se las regresa.",
+        "source": {
+          "title": "Wikipedia: Anemia de células falciformes",
+          "url": "https://es.wikipedia.org/wiki/Anemia_de_c%C3%A9lulas_falciformes"
+        }
+      },
+      {
+        "text": "La diferencia moral está entre editar células somáticas, que mueren contigo, y editar la línea germinal, que pasa a tus hijos y a los suyos.",
+        "source": {
+          "title": "Wikipedia: Terapia génica",
+          "url": "https://es.wikipedia.org/wiki/Terapia_g%C3%A9nica"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1987",
+        "text": "Se describen secuencias repetidas raras en el ADN de una bacteria."
+      },
+      {
+        "year": "2005",
+        "text": "Se propone que son un registro de virus: un sistema inmune."
+      },
+      {
+        "year": "2012",
+        "text": "Doudna y Charpentier muestran que Cas9 se puede dirigir con una guía de ARN."
+      },
+      {
+        "year": "2018",
+        "text": "He Jiankui edita embriones humanos y desata una crisis ética."
+      },
+      {
+        "year": "2020",
+        "text": "Nobel de Química para Doudna y Charpentier."
+      },
+      {
+        "year": "2023",
+        "text": "Se aprueba el primer tratamiento CRISPR para anemia falciforme."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Cas9",
+        "meaning": "La proteína que corta el ADN en el punto que le indiques."
+      },
+      {
+        "term": "ARN guía",
+        "meaning": "La secuencia corta que lleva a Cas9 al lugar exacto del genoma."
+      },
+      {
+        "term": "Línea germinal",
+        "meaning": "Las células que pasan a tu descendencia. Editarlas cambia a las generaciones siguientes."
+      },
+      {
+        "term": "Fuera de objetivo",
+        "meaning": "Cortes en lugares parecidos pero equivocados del genoma."
+      }
+    ],
+    "questions": [
+      "¿Por qué importa tanto que sea barato y no solo que funcione?",
+      "¿Dónde pondrías el límite entre curar y mejorar?",
+      "¿Qué tecnología de hoy te gustaría que se regulara antes y no después?"
+    ],
+    "searchQuery": "CRISPR Cas9 edición genética Doudna",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "tectonica-de-placas",
+    "title": "La tectónica de placas",
+    "area": "ciencia",
+    "updated": "2026-09-29",
+    "summary": "La superficie de la Tierra está partida en placas rígidas que se mueven unos centímetros al año sobre un manto que fluye. Explica de un solo golpe los sismos, los volcanes, las montañas y por qué hay fósiles iguales en África y Sudamérica.",
+    "why": "Es el mejor ejemplo de una idea correcta rechazada durante 50 años por no tener un mecanismo. La evidencia no bastó: hacía falta explicar cómo.",
+    "facts": [
+      {
+        "text": "Wegener propuso la deriva continental en 1912 y fue rechazado con dureza. Tenía las pruebas, no tenía el motor.",
+        "source": {
+          "title": "Wikipedia: Alfred Wegener",
+          "url": "https://es.wikipedia.org/wiki/Alfred_Wegener"
+        }
+      },
+      {
+        "text": "Lo que lo cambió todo fue el fondo del mar: bandas magnéticas simétricas a los dos lados de la dorsal atlántica, como un código de barras que se repite en espejo.",
+        "source": {
+          "title": "Wikipedia: Expansión del fondo oceánico",
+          "url": "https://es.wikipedia.org/wiki/Expansi%C3%B3n_del_fondo_oce%C3%A1nico"
+        }
+      },
+      {
+        "text": "Las placas se mueven a la velocidad a la que te crecen las uñas, entre 2 y 10 centímetros al año. Multiplica eso por millones de años.",
+        "source": {
+          "title": "Wikipedia: Tectónica de placas",
+          "url": "https://es.wikipedia.org/wiki/Tect%C3%B3nica_de_placas"
+        }
+      },
+      {
+        "text": "El Himalaya sigue creciendo porque la India sigue empujando contra Asia desde hace unos 50 millones de años.",
+        "source": {
+          "title": "Wikipedia: Himalaya",
+          "url": "https://es.wikipedia.org/wiki/Himalaya"
+        }
+      },
+      {
+        "text": "Casi todos los sismos y volcanes del mundo caen en las orillas de las placas. El cinturón de fuego del Pacífico es literalmente el borde de varias.",
+        "source": {
+          "title": "Wikipedia: Cinturón de Fuego del Pacífico",
+          "url": "https://es.wikipedia.org/wiki/Cintur%C3%B3n_de_Fuego_del_Pac%C3%ADfico"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1912",
+        "text": "Wegener propone la deriva continental. La comunidad lo rechaza."
+      },
+      {
+        "year": "1929",
+        "text": "Arthur Holmes sugiere la convección del manto como motor."
+      },
+      {
+        "year": "1960",
+        "text": "Hess propone la expansión del fondo oceánico."
+      },
+      {
+        "year": "1963",
+        "text": "Vine y Matthews leen las bandas magnéticas del fondo del mar."
+      },
+      {
+        "year": "1968",
+        "text": "La teoría queda armada y aceptada como tectónica de placas."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Dorsal oceánica",
+        "meaning": "La cordillera submarina donde nace corteza nueva."
+      },
+      {
+        "term": "Subducción",
+        "meaning": "Cuando una placa se mete debajo de otra y se hunde en el manto."
+      },
+      {
+        "term": "Paleomagnetismo",
+        "meaning": "El magnetismo fósil de las rocas, que registra la dirección del campo terrestre."
+      },
+      {
+        "term": "Convección",
+        "meaning": "El movimiento de material caliente que sube y frío que baja, el motor del sistema."
+      }
+    ],
+    "questions": [
+      "¿Por qué no bastaba con la evidencia de los fósiles y las costas?",
+      "¿Qué tuvo que inventarse primero para poder ver el fondo del mar?",
+      "¿Qué idea tuya está esperando un mecanismo que la explique?"
+    ],
+    "searchQuery": "tectónica de placas deriva continental evidencia",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "voyager-mensaje-interestelar",
+    "title": "Las Voyager y el disco de oro",
+    "area": "espacio",
+    "updated": "2026-09-29",
+    "summary": "Dos sondas lanzadas en 1977 aprovecharon un alineamiento de planetas que ocurre cada 175 años. Siguen mandando datos décadas después, ya fuera de la burbuja del Sol, y cada una lleva un disco de oro con sonidos, música e imágenes de la Tierra.",
+    "why": "Es el objeto humano más lejano y el mensaje más largo que hemos escrito: está hecho para alguien que quizá lo abra dentro de decenas de miles de años.",
+    "facts": [
+      {
+        "text": "El disco lleva saludos en 55 idiomas, sonidos de la Tierra e imágenes, además de música que va de Bach a Chuck Berry y a un son huasteco mexicano.",
+        "source": {
+          "title": "Wikipedia: Disco de oro de las Voyager",
+          "url": "https://es.wikipedia.org/wiki/Disco_de_oro_de_las_Voyager"
+        }
+      },
+      {
+        "text": "No usan paneles solares: tan lejos del Sol no sirven. Funcionan con calor de plutonio, y por eso van apagando instrumentos uno por uno conforme se enfría.",
+        "source": {
+          "title": "Wikipedia: Generador termoeléctrico de radioisótopos",
+          "url": "https://es.wikipedia.org/wiki/Generador_termoel%C3%A9ctrico_de_radiois%C3%B3topos"
+        }
+      },
+      {
+        "text": "La señal de la Voyager 1 tarda más de 20 horas en llegar a la Tierra, viajando a la velocidad de la luz.",
+        "source": {
+          "title": "Wikipedia: Voyager 1",
+          "url": "https://es.wikipedia.org/wiki/Voyager_1"
+        }
+      },
+      {
+        "text": "En 1990, a petición de Carl Sagan, la Voyager 1 volteó la cámara hacia atrás y tomó el 'punto azul pálido': la Tierra como un pixel.",
+        "source": {
+          "title": "Wikipedia: Un punto azul pálido",
+          "url": "https://es.wikipedia.org/wiki/Un_punto_azul_p%C3%A1lido"
+        }
+      },
+      {
+        "text": "En 2012 la Voyager 1 cruzó la heliopausa, el borde donde el viento del Sol ya no manda. Es lo más lejos que ha llegado algo hecho por humanos.",
+        "source": {
+          "title": "Wikipedia: Heliosfera",
+          "url": "https://es.wikipedia.org/wiki/Heliosfera"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1977",
+        "text": "Se lanzan Voyager 2 y Voyager 1, con semanas de diferencia."
+      },
+      {
+        "year": "1979-1989",
+        "text": "Sobrevuelan Júpiter, Saturno, Urano y Neptuno."
+      },
+      {
+        "year": "1990",
+        "text": "La Voyager 1 toma el punto azul pálido y apaga sus cámaras."
+      },
+      {
+        "year": "2012",
+        "text": "La Voyager 1 entra al espacio interestelar."
+      },
+      {
+        "year": "2018",
+        "text": "La Voyager 2 también cruza la heliopausa."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Heliopausa",
+        "meaning": "El límite donde el viento solar se frena contra el medio interestelar."
+      },
+      {
+        "term": "Asistencia gravitatoria",
+        "meaning": "Usar la gravedad de un planeta para acelerar sin gastar combustible."
+      },
+      {
+        "term": "Generador de radioisótopos",
+        "meaning": "Fuente de energía que aprovecha el calor del decaimiento del plutonio."
+      },
+      {
+        "term": "Unidad astronómica",
+        "meaning": "La distancia de la Tierra al Sol, la regla con la que se mide el sistema solar."
+      }
+    ],
+    "questions": [
+      "¿Qué decisiones tuvieron que tomar para elegir qué iba en el disco?",
+      "¿Por qué siguen funcionando después de tantos años?",
+      "¿Qué pondrías tú en un mensaje que va a durar más que tu civilización?"
+    ],
+    "searchQuery": "Voyager disco de oro sonda interestelar",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "origen-de-la-luna",
+    "title": "El origen de la Luna",
+    "area": "espacio",
+    "updated": "2026-09-29",
+    "summary": "La explicación con más apoyo es que hace unos 4,500 millones de años un cuerpo del tamaño de Marte chocó contra la Tierra joven. Los escombros quedaron en órbita y se juntaron hasta formar la Luna.",
+    "why": "La Luna no es una compañera cualquiera: estabiliza el eje de la Tierra y frena su giro. Buena parte de lo que hace habitable este planeta viene de un accidente.",
+    "facts": [
+      {
+        "text": "Al cuerpo que chocó se le llama Theia. No queda nada de él como objeto: se fundió con la Tierra y con lo que hoy es la Luna.",
+        "source": {
+          "title": "Wikipedia: Hipótesis del gran impacto",
+          "url": "https://es.wikipedia.org/wiki/Hip%C3%B3tesis_del_gran_impacto"
+        }
+      },
+      {
+        "text": "Las rocas que trajeron los Apolo tienen una composición de isótopos de oxígeno casi idéntica a la terrestre. Eso es un problema para el modelo, porque se esperaría más rastro del impactor.",
+        "source": {
+          "title": "Wikipedia: Hipótesis del gran impacto",
+          "url": "https://es.wikipedia.org/wiki/Hip%C3%B3tesis_del_gran_impacto"
+        }
+      },
+      {
+        "text": "Las misiones Apolo dejaron espejos en la superficie. Disparando láser desde la Tierra sabemos que la Luna se aleja unos 3.8 centímetros cada año.",
+        "source": {
+          "title": "Wikipedia: Experimento láser de alcance lunar",
+          "url": "https://es.wikipedia.org/wiki/Experimento_l%C3%A1ser_de_alcance_lunar"
+        }
+      },
+      {
+        "text": "Ese alejamiento tiene un precio: frena el giro de la Tierra. Los días se alargan poco a poco, y en el pasado remoto duraban muchas horas menos.",
+        "source": {
+          "title": "Wikipedia: Rotación de la Tierra",
+          "url": "https://es.wikipedia.org/wiki/Rotaci%C3%B3n_de_la_Tierra"
+        }
+      },
+      {
+        "text": "Sin la Luna, la inclinación del eje terrestre oscilaría mucho más, y con ella el clima. La estabilidad de las estaciones le debe algo al choque.",
+        "source": {
+          "title": "Wikipedia: Luna",
+          "url": "https://es.wikipedia.org/wiki/Luna"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "hace 4,500 Ma",
+        "text": "Un cuerpo del tamaño de Marte choca contra la Tierra en formación."
+      },
+      {
+        "year": "1969",
+        "text": "El Apolo 11 deja el primer retrorreflector en la superficie."
+      },
+      {
+        "year": "1975",
+        "text": "Hartmann y Davis formulan la hipótesis del gran impacto."
+      },
+      {
+        "year": "1984",
+        "text": "Una conferencia en Kona la vuelve la explicación estándar."
+      },
+      {
+        "year": "hoy",
+        "text": "La medición con láser sigue confirmando el alejamiento año con año."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Theia",
+        "meaning": "El nombre que se le dio al cuerpo que chocó contra la Tierra."
+      },
+      {
+        "term": "Retrorreflector",
+        "meaning": "Espejo que devuelve la luz exactamente por donde llegó."
+      },
+      {
+        "term": "Isótopos de oxígeno",
+        "meaning": "Variantes del oxígeno cuya proporción funciona como huella digital de un cuerpo."
+      },
+      {
+        "term": "Momento angular",
+        "meaning": "La cantidad de giro del sistema, que cualquier modelo del impacto debe explicar."
+      }
+    ],
+    "questions": [
+      "¿Qué evidencia apoya el gran impacto y cuál lo complica?",
+      "¿Qué le hace la Luna a las mareas y al eje terrestre?",
+      "¿Qué otras cosas de tu vida dependen de un accidente antiguo?"
+    ],
+    "searchQuery": "hipótesis del gran impacto origen de la Luna Theia",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "red-de-micorrizas",
+    "title": "La red de hongos bajo el bosque",
+    "area": "naturaleza",
+    "updated": "2026-09-29",
+    "summary": "Casi todas las plantas terrestres viven asociadas a hongos en sus raíces. El hongo le pasa a la planta agua y fósforo, y la planta le paga con azúcares. Esa red conecta árboles distintos bajo tierra.",
+    "why": "Es una sociedad de hace 400 millones de años sin la cual las plantas probablemente no habrían salido del agua. También es un caso vivo de cómo un hallazgo real se convierte en mito popular.",
+    "facts": [
+      {
+        "text": "Alrededor del 90% de las plantas terrestres tienen micorrizas. No es una rareza: es la regla.",
+        "source": {
+          "title": "Wikipedia: Micorriza",
+          "url": "https://es.wikipedia.org/wiki/Micorriza"
+        }
+      },
+      {
+        "text": "Los primeros fósiles de plantas terrestres ya traen hongos en las raíces. La colonización de la tierra firme fue en equipo.",
+        "source": {
+          "title": "Wikipedia: Micorriza",
+          "url": "https://es.wikipedia.org/wiki/Micorriza"
+        }
+      },
+      {
+        "text": "Suzanne Simard mostró en 1997 que el carbono pasa entre abedules y abetos a través de la red. Ese trabajo dio origen al término 'wood wide web'.",
+        "source": {
+          "title": "Wikipedia: Suzanne Simard",
+          "url": "https://es.wikipedia.org/wiki/Suzanne_Simard"
+        }
+      },
+      {
+        "text": "La versión popular de árboles madre que 'cuidan' a sus crías está muy por delante de la evidencia. Revisiones recientes señalan que los datos no sostienen esa lectura.",
+        "source": {
+          "title": "Wikipedia: Micorriza",
+          "url": "https://es.wikipedia.org/wiki/Micorriza"
+        }
+      },
+      {
+        "text": "El hongo no es caridad: hay intercambio, hay cobro y hay también plantas que se cuelgan de la red sin dar nada a cambio.",
+        "source": {
+          "title": "Wikipedia: Simbiosis",
+          "url": "https://es.wikipedia.org/wiki/Simbiosis"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "hace 450 Ma",
+        "text": "Las plantas colonizan la tierra firme junto con hongos."
+      },
+      {
+        "year": "1885",
+        "text": "Albert Bernhard Frank acuña el término micorriza."
+      },
+      {
+        "year": "1997",
+        "text": "Simard publica en Nature la transferencia de carbono entre árboles."
+      },
+      {
+        "year": "1997",
+        "text": "Nature titula 'the wood wide web' y la idea se vuelve popular."
+      },
+      {
+        "year": "2023",
+        "text": "Una revisión crítica cuestiona cuánto de la historia popular está probado."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Micorriza",
+        "meaning": "La asociación entre un hongo y la raíz de una planta."
+      },
+      {
+        "term": "Red micorrízica común",
+        "meaning": "La red de hongos que conecta raíces de varias plantas a la vez."
+      },
+      {
+        "term": "Simbiosis",
+        "meaning": "Relación estrecha entre dos especies, no necesariamente amistosa."
+      },
+      {
+        "term": "Fósforo",
+        "meaning": "Nutriente difícil de absorber para la raíz y fácil para el hongo."
+      }
+    ],
+    "questions": [
+      "¿Qué gana cada parte en ese trato?",
+      "¿Qué está probado y qué es exageración en la idea del bosque solidario?",
+      "¿Qué redes invisibles sostienen tu vida diaria?"
+    ],
+    "searchQuery": "micorrizas red bosque hongos árboles",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "tardigrados",
+    "title": "Los tardígrados",
+    "area": "naturaleza",
+    "updated": "2026-09-29",
+    "summary": "Miden medio milímetro, tienen ocho patas y viven en el musgo de tu banqueta. Cuando su entorno se seca, expulsan casi toda su agua, se encogen en una bolita y apagan el metabolismo hasta que vuelva el agua.",
+    "why": "Enseñan que estar vivo no es una sola cosa. Hay estados intermedios donde no hay metabolismo y aun así no hay muerte.",
+    "facts": [
+      {
+        "text": "En criptobiosis pierden casi toda su agua corporal y se convierten en una bolita llamada tun. Así pueden esperar años.",
+        "source": {
+          "title": "Wikipedia: Criptobiosis",
+          "url": "https://es.wikipedia.org/wiki/Criptobiosis"
+        }
+      },
+      {
+        "text": "En 2007 unos tardígrados fueron expuestos al vacío y a la radiación del espacio en órbita baja, y varios sobrevivieron. Son el primer animal del que se sabe eso.",
+        "source": {
+          "title": "Wikipedia: Tardigrada",
+          "url": "https://es.wikipedia.org/wiki/Tardigrada"
+        }
+      },
+      {
+        "text": "Su genoma incluye una proteína llamada Dsup que se pega al ADN y lo protege de la radiación.",
+        "source": {
+          "title": "Wikipedia: Tardigrada",
+          "url": "https://es.wikipedia.org/wiki/Tardigrada"
+        }
+      },
+      {
+        "text": "Su fama de indestructibles tiene trampa: aguantan esos extremos deshidratados, no activos. Un tardígrado hidratado es frágil como cualquier otro bicho.",
+        "source": {
+          "title": "Wikipedia: Tardigrada",
+          "url": "https://es.wikipedia.org/wiki/Tardigrada"
+        }
+      },
+      {
+        "text": "En 2019 la sonda israelí Beresheet se estrelló en la Luna llevando tardígrados deshidratados a bordo.",
+        "source": {
+          "title": "Wikipedia: Beresheet",
+          "url": "https://es.wikipedia.org/wiki/Beresheet"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1773",
+        "text": "Goeze los describe y los llama ositos de agua."
+      },
+      {
+        "year": "1922",
+        "text": "Se documenta su resistencia a temperaturas extremas en estado seco."
+      },
+      {
+        "year": "2007",
+        "text": "La misión TARDIS los expone al espacio abierto."
+      },
+      {
+        "year": "2016",
+        "text": "Se secuencia su genoma y aparece la proteína Dsup."
+      },
+      {
+        "year": "2019",
+        "text": "La sonda Beresheet se estrella en la Luna con tardígrados a bordo."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Criptobiosis",
+        "meaning": "Estado sin metabolismo detectable del que se puede volver a la vida."
+      },
+      {
+        "term": "Tun",
+        "meaning": "La forma encogida y deshidratada que adoptan para esperar."
+      },
+      {
+        "term": "Dsup",
+        "meaning": "Proteína que protege su ADN del daño por radiación."
+      },
+      {
+        "term": "Anhidrobiosis",
+        "meaning": "La criptobiosis provocada específicamente por la falta de agua."
+      }
+    ],
+    "questions": [
+      "¿Qué hace la criptobiosis con sus células?",
+      "¿Qué no aguantan, a pesar de su fama?",
+      "¿Qué te gustaría poder pausar y retomar igual que ellos?"
+    ],
+    "searchQuery": "tardígrado criptobiosis resistencia espacio",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "nixtamalizacion",
+    "title": "La nixtamalización",
+    "area": "comida",
+    "updated": "2026-09-29",
+    "summary": "Cocer el maíz en agua con cal y dejarlo reposar. Eso ablanda el grano, le quita la cáscara y cambia su química: libera vitaminas que el maíz crudo no te deja aprovechar. Es la base de la tortilla y tiene unos 3,500 años.",
+    "why": "Es la prueba más clara de que una técnica tradicional puede ser nutrición avanzada. Europa copió el maíz sin copiar la técnica, y le costó epidemias.",
+    "facts": [
+      {
+        "text": "La palabra viene del náhuatl: nixtli, cenizas, y tamalli, masa.",
+        "source": {
+          "title": "Wikipedia: Nixtamalización",
+          "url": "https://es.wikipedia.org/wiki/Nixtamalizaci%C3%B3n"
+        }
+      },
+      {
+        "text": "La cal libera la niacina (vitamina B3), que en el maíz sin tratar está ligada y tu cuerpo no puede absorber.",
+        "source": {
+          "title": "Wikipedia: Niacina",
+          "url": "https://es.wikipedia.org/wiki/Niacina"
+        }
+      },
+      {
+        "text": "También agrega calcio al grano. Una tortilla aporta calcio que el maíz por sí solo no tiene.",
+        "source": {
+          "title": "Wikipedia: Nixtamalización",
+          "url": "https://es.wikipedia.org/wiki/Nixtamalizaci%C3%B3n"
+        }
+      },
+      {
+        "text": "Cuando el maíz llegó a Europa sin la técnica, aparecieron epidemias de pelagra en España, Italia y después en el sur de Estados Unidos. Donde se comía nixtamalizado, no.",
+        "source": {
+          "title": "Wikipedia: Pelagra",
+          "url": "https://es.wikipedia.org/wiki/Pelagra"
+        }
+      },
+      {
+        "text": "Durante décadas se creyó que la pelagra era una infección. Joseph Goldberger demostró que era la dieta, y aun así le costó años convencer a los demás.",
+        "source": {
+          "title": "Wikipedia: Pelagra",
+          "url": "https://es.wikipedia.org/wiki/Pelagra"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 1500 a.C.",
+        "text": "Hay evidencia arqueológica de nixtamalización en Mesoamérica."
+      },
+      {
+        "year": "siglo XVI",
+        "text": "El maíz llega a Europa sin la técnica que lo acompañaba."
+      },
+      {
+        "year": "siglo XVIII",
+        "text": "Se describe la pelagra en el sur de Europa."
+      },
+      {
+        "year": "1914",
+        "text": "Goldberger demuestra que la pelagra es un problema de dieta."
+      },
+      {
+        "year": "1937",
+        "text": "Se identifica la niacina como la vitamina que faltaba."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Nixtamal",
+        "meaning": "El maíz ya cocido con cal y reposado, listo para moler."
+      },
+      {
+        "term": "Cal",
+        "meaning": "Hidróxido de calcio, el álcali que hace la reacción."
+      },
+      {
+        "term": "Niacina",
+        "meaning": "Vitamina B3. Sin ella aparece la pelagra."
+      },
+      {
+        "term": "Pelagra",
+        "meaning": "Enfermedad por falta de niacina: piel, digestión y mente se deterioran."
+      }
+    ],
+    "questions": [
+      "¿Qué le hace la cal al grano?",
+      "¿Por qué copiar el alimento sin la técnica salió tan caro?",
+      "¿Qué saber tradicional de tu casa resultó tener una razón sólida?"
+    ],
+    "searchQuery": "nixtamalización maíz cal pelagra niacina",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "reaccion-de-maillard",
+    "title": "La reacción de Maillard",
+    "area": "comida",
+    "updated": "2026-09-29",
+    "summary": "Cuando calientas un alimento que tiene azúcares y proteínas, ambos reaccionan y crean cientos de compuestos nuevos de color y aroma. Eso es lo dorado del pan, del café tostado, de la carne sellada y de la cebolla caramelizada.",
+    "why": "Explica de un jalón por qué lo dorado sabe a algo y lo hervido no, y te da control sobre el sabor en vez de recetas memorizadas.",
+    "facts": [
+      {
+        "text": "La describió el médico francés Louis-Camille Maillard en 1912, estudiando química de proteínas, no cocina.",
+        "source": {
+          "title": "Wikipedia: Reacción de Maillard",
+          "url": "https://es.wikipedia.org/wiki/Reacci%C3%B3n_de_Maillard"
+        }
+      },
+      {
+        "text": "Necesita calor y poca agua. Mientras haya agua libre, la superficie no pasa de 100 grados y no se dora: por eso lo hervido nunca se tuesta.",
+        "source": {
+          "title": "Wikipedia: Reacción de Maillard",
+          "url": "https://es.wikipedia.org/wiki/Reacci%C3%B3n_de_Maillard"
+        }
+      },
+      {
+        "text": "No es lo mismo que la caramelización. Esa solo necesita azúcar; Maillard necesita además aminoácidos.",
+        "source": {
+          "title": "Wikipedia: Caramelización",
+          "url": "https://es.wikipedia.org/wiki/Caramelizaci%C3%B3n"
+        }
+      },
+      {
+        "text": "De la misma reacción, en alimentos con almidón y mucho calor, sale acrilamida, un compuesto que se vigila por salud. Lo muy tostado no es gratis.",
+        "source": {
+          "title": "Wikipedia: Acrilamida",
+          "url": "https://es.wikipedia.org/wiki/Acrilamida"
+        }
+      },
+      {
+        "text": "La reacción también ocurre despacio en tu cuerpo, entre azúcares y proteínas, y sus productos se usan como marcador en diabetes.",
+        "source": {
+          "title": "Wikipedia: Glicación",
+          "url": "https://es.wikipedia.org/wiki/Glicaci%C3%B3n"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1912",
+        "text": "Maillard publica la reacción entre azúcares y aminoácidos."
+      },
+      {
+        "year": "1953",
+        "text": "John Hodge ordena el mecanismo en etapas y lo vuelve utilizable."
+      },
+      {
+        "year": "2002",
+        "text": "Se detecta acrilamida en alimentos tostados y arranca la investigación sobre su riesgo."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Azúcar reductor",
+        "meaning": "El tipo de azúcar que puede reaccionar con un aminoácido. La glucosa lo es."
+      },
+      {
+        "term": "Caramelización",
+        "meaning": "El dorado que ocurre solo con azúcar, sin proteína de por medio."
+      },
+      {
+        "term": "Acrilamida",
+        "meaning": "Compuesto que aparece al tostar mucho alimentos con almidón."
+      },
+      {
+        "term": "Pardeamiento",
+        "meaning": "El nombre general del oscurecimiento de un alimento."
+      }
+    ],
+    "questions": [
+      "¿En qué se diferencia de la caramelización?",
+      "¿Por qué la humedad frena el dorado?",
+      "¿Qué cambiarías de tu forma de cocinar sabiendo esto?"
+    ],
+    "searchQuery": "reacción de Maillard dorado sabor cocina",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "linea-de-ensamble-ford",
+    "title": "La línea de ensamble",
+    "area": "trabajo",
+    "updated": "2026-09-29",
+    "summary": "En 1913 Ford dejó de mover a los obreros hacia el coche y empezó a mover el coche hacia los obreros. El armado de un chasis bajó de más de doce horas a hora y media. Un año después duplicó el salario, porque nadie aguantaba el trabajo nuevo.",
+    "why": "Es el origen del trabajo moderno y de su problema central: la eficiencia se paga con el significado de lo que haces.",
+    "facts": [
+      {
+        "text": "La línea móvil redujo el armado del chasis de unas doce horas y media a alrededor de hora y media.",
+        "source": {
+          "title": "Wikipedia: Ford Modelo T",
+          "url": "https://es.wikipedia.org/wiki/Ford_Modelo_T"
+        }
+      },
+      {
+        "text": "En 1913 la rotación de personal en Ford llegó a niveles absurdos: había que contratar a muchísima gente para mantener la plantilla. El trabajo se había vuelto insoportable.",
+        "source": {
+          "title": "Wikipedia: Cadena de montaje",
+          "url": "https://es.wikipedia.org/wiki/Cadena_de_montaje"
+        }
+      },
+      {
+        "text": "En enero de 1914 Ford anunció cinco dólares al día, más del doble de lo normal. No fue generosidad: era más barato que seguir contratando y entrenando.",
+        "source": {
+          "title": "Wikipedia: Henry Ford",
+          "url": "https://es.wikipedia.org/wiki/Henry_Ford"
+        }
+      },
+      {
+        "text": "El precio del Modelo T bajó de varios cientos de dólares a poco más de doscientos en los años veinte. El mismo obrero podía comprar el coche que armaba.",
+        "source": {
+          "title": "Wikipedia: Ford Modelo T",
+          "url": "https://es.wikipedia.org/wiki/Ford_Modelo_T"
+        }
+      },
+      {
+        "text": "Lo del 'cualquier color mientras sea negro' tenía razón técnica: el esmalte negro secaba más rápido y era el único que le seguía el paso a la línea.",
+        "source": {
+          "title": "Wikipedia: Ford Modelo T",
+          "url": "https://es.wikipedia.org/wiki/Ford_Modelo_T"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1908",
+        "text": "Sale el Ford Modelo T."
+      },
+      {
+        "year": "1913",
+        "text": "Se instala la línea de ensamble móvil en Highland Park."
+      },
+      {
+        "year": "1914",
+        "text": "Ford anuncia el salario de cinco dólares al día."
+      },
+      {
+        "year": "1927",
+        "text": "Termina la producción del Modelo T tras unos 15 millones de unidades."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Fordismo",
+        "meaning": "Producción en masa de un producto estandarizado con obreros bien pagados que también son consumidores."
+      },
+      {
+        "term": "Rotación de personal",
+        "meaning": "Qué tanto se va la gente y hay que reemplazarla."
+      },
+      {
+        "term": "Economía de escala",
+        "meaning": "Que el costo por unidad baje conforme produces más."
+      },
+      {
+        "term": "Estandarización",
+        "meaning": "Hacer todas las piezas iguales e intercambiables."
+      }
+    ],
+    "questions": [
+      "¿Qué ganó y qué perdió el obrero con la línea?",
+      "¿Por qué subir el sueldo le salió barato a Ford?",
+      "¿Qué parte de tu trabajo se parece a una línea de ensamble?"
+    ],
+    "searchQuery": "línea de ensamble Ford cinco dólares día",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "maraton-origen-y-42km",
+    "title": "El maratón y sus 42 kilómetros",
+    "area": "deporte",
+    "updated": "2026-09-29",
+    "summary": "La distancia oficial no viene de Grecia: se fijó en los Juegos de Londres de 1908 para que la carrera empezara en el castillo de Windsor y terminara frente al palco real. Esos 42.195 kilómetros se volvieron ley en 1921.",
+    "why": "Es un buen recordatorio de que muchas tradiciones que se sienten antiguas son inventos recientes, y de lo poco que hace falta para que un número arbitrario se vuelva sagrado.",
+    "facts": [
+      {
+        "text": "En el primer maratón olímpico, Atenas 1896, la distancia era de unos 40 kilómetros. No había una medida fija.",
+        "source": {
+          "title": "Wikipedia: Maratón",
+          "url": "https://es.wikipedia.org/wiki/Marat%C3%B3n"
+        }
+      },
+      {
+        "text": "En Londres 1908 la carrera midió 26 millas y 385 yardas, es decir 42.195 kilómetros, por dónde empezaba y dónde terminaba.",
+        "source": {
+          "title": "Wikipedia: Maratón",
+          "url": "https://es.wikipedia.org/wiki/Marat%C3%B3n"
+        }
+      },
+      {
+        "text": "La federación internacional adoptó esa distancia como oficial en 1921, y ya nadie la movió.",
+        "source": {
+          "title": "Wikipedia: Maratón",
+          "url": "https://es.wikipedia.org/wiki/Marat%C3%B3n"
+        }
+      },
+      {
+        "text": "La historia del mensajero que corrió de Maratón a Atenas y cayó muerto la cuenta Luciano unos 600 años después. Heródoto, mucho más cercano en el tiempo, cuenta otra cosa: Filípides corrió a Esparta, unos 240 kilómetros, y siguió vivo.",
+        "source": {
+          "title": "Wikipedia: Filípides",
+          "url": "https://es.wikipedia.org/wiki/Fil%C3%ADpides"
+        }
+      },
+      {
+        "text": "En 1908 Dorando Pietri entró primero al estadio, se desplomó varias veces y fue descalificado porque los jueces lo ayudaron a cruzar la meta.",
+        "source": {
+          "title": "Wikipedia: Dorando Pietri",
+          "url": "https://es.wikipedia.org/wiki/Dorando_Pietri"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "490 a.C.",
+        "text": "Batalla de Maratón, el hecho histórico detrás de la leyenda."
+      },
+      {
+        "year": "siglo II d.C.",
+        "text": "Luciano cuenta la versión del mensajero que muere al llegar."
+      },
+      {
+        "year": "1896",
+        "text": "Primer maratón olímpico en Atenas, de unos 40 kilómetros."
+      },
+      {
+        "year": "1908",
+        "text": "Londres fija los 42.195 por conveniencia de la familia real."
+      },
+      {
+        "year": "1921",
+        "text": "La distancia se vuelve el estándar oficial mundial."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Filípides",
+        "meaning": "El corredor griego de la leyenda. Las fuentes no coinciden en lo que hizo."
+      },
+      {
+        "term": "Hemerodromo",
+        "meaning": "Los mensajeros griegos entrenados para correr distancias largas."
+      },
+      {
+        "term": "Maratón",
+        "meaning": "Tanto la planicie donde fue la batalla como la carrera que la conmemora."
+      }
+    ],
+    "questions": [
+      "¿Qué tanto hay de leyenda en la historia del mensajero?",
+      "¿Por qué se quedó esa distancia para siempre?",
+      "¿Qué reglas de tu vida heredaste sin saber de dónde salieron?"
+    ],
+    "searchQuery": "maratón 42.195 origen Londres 1908 Filípides",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "mecanismo-de-anticitera",
+    "title": "El mecanismo de Anticitera",
+    "area": "misterios",
+    "updated": "2026-09-29",
+    "summary": "Unos buzos de esponjas encontraron en 1901 un naufragio griego con estatuas y un bulto de bronce corroído. Ese bulto resultó ser una máquina de engranes de más de dos mil años que calculaba las posiciones del Sol, la Luna y los planetas.",
+    "why": "No hay nada de complejidad parecida en el registro histórico hasta los relojes astronómicos europeos, más de mil años después. Es la prueba de que el conocimiento se pierde.",
+    "facts": [
+      {
+        "text": "Tiene al menos 30 engranes de bronce y se le calculan unos 2,100 años de antigüedad.",
+        "source": {
+          "title": "Wikipedia: Mecanismo de Anticitera",
+          "url": "https://es.wikipedia.org/wiki/Mecanismo_de_Anticitera"
+        }
+      },
+      {
+        "text": "Predecía eclipses usando el ciclo de Saros, un patrón de 18 años que repite la geometría entre Sol, Luna y Tierra.",
+        "source": {
+          "title": "Wikipedia: Saros",
+          "url": "https://es.wikipedia.org/wiki/Saros"
+        }
+      },
+      {
+        "text": "Uno de sus diales marcaba en qué año tocaban los juegos panhelénicos, incluidos los Olímpicos. Era calendario astronómico y social a la vez.",
+        "source": {
+          "title": "Wikipedia: Mecanismo de Anticitera",
+          "url": "https://es.wikipedia.org/wiki/Mecanismo_de_Anticitera"
+        }
+      },
+      {
+        "text": "En 2005 y 2006, la tomografía computarizada permitió leer unos 2,000 caracteres de texto escondidos dentro del bloque corroído: un instructivo.",
+        "source": {
+          "title": "Wikipedia: Mecanismo de Anticitera",
+          "url": "https://es.wikipedia.org/wiki/Mecanismo_de_Anticitera"
+        }
+      },
+      {
+        "text": "Reproducía incluso el movimiento irregular de la Luna, que va más rápido en una parte de su órbita, con un ingenioso par de engranes montados uno sobre otro.",
+        "source": {
+          "title": "Wikipedia: Mecanismo de Anticitera",
+          "url": "https://es.wikipedia.org/wiki/Mecanismo_de_Anticitera"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "c. 100 a.C.",
+        "text": "Se construye el mecanismo en el mundo griego."
+      },
+      {
+        "year": "1901",
+        "text": "Buzos de esponjas encuentran el naufragio frente a la isla de Anticitera."
+      },
+      {
+        "year": "1902",
+        "text": "Valerios Stais se da cuenta de que el bulto tiene engranes."
+      },
+      {
+        "year": "1974",
+        "text": "Derek de Solla Price publica el primer estudio serio del mecanismo."
+      },
+      {
+        "year": "2006",
+        "text": "La tomografía revela el texto interno y el detalle de los engranes."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Saros",
+        "meaning": "Ciclo de unos 18 años tras el cual los eclipses se repiten casi igual."
+      },
+      {
+        "term": "Engrane diferencial",
+        "meaning": "Arreglo de engranes que combina dos movimientos en uno."
+      },
+      {
+        "term": "Tomografía",
+        "meaning": "Técnica de rayos X que reconstruye el interior de un objeto sin abrirlo."
+      },
+      {
+        "term": "Epiciclo",
+        "meaning": "Modelo antiguo donde un astro gira en un círculo que a su vez gira."
+      }
+    ],
+    "questions": [
+      "¿Qué calculaba exactamente y con qué precisión?",
+      "¿Por qué se perdió ese conocimiento?",
+      "¿Qué se está perdiendo hoy sin que nos demos cuenta?"
+    ],
+    "searchQuery": "mecanismo de Anticitera engranes eclipses",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "satelites-gps",
+    "title": "Los satélites y el GPS",
+    "area": "tecnologia",
+    "updated": "2026-09-29",
+    "summary": "Una constelación de satélites manda la hora exacta de un reloj atómico. Tu teléfono escucha varias de esas señales, compara los retrasos y calcula dónde está. No transmite nada: solo oye.",
+    "why": "Es la infraestructura invisible que sostiene mapas, pagos, redes eléctricas y logística. Y solo funciona porque alguien tomó en serio la relatividad.",
+    "facts": [
+      {
+        "text": "Los satélites van a unos 20,200 kilómetros de altura, y siempre debe haber varios visibles desde cualquier punto de la Tierra.",
+        "source": {
+          "title": "Wikipedia: Sistema de posicionamiento global",
+          "url": "https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global"
+        }
+      },
+      {
+        "text": "Tu receptor no manda nada. Solo escucha, por eso el GPS funciona para un número ilimitado de aparatos a la vez.",
+        "source": {
+          "title": "Wikipedia: Sistema de posicionamiento global",
+          "url": "https://es.wikipedia.org/wiki/Sistema_de_posicionamiento_global"
+        }
+      },
+      {
+        "text": "Hacen falta cuatro satélites: tres para ubicarte en el espacio y uno más para corregir el reloj barato que trae tu teléfono.",
+        "source": {
+          "title": "Wikipedia: Trilateración",
+          "url": "https://es.wikipedia.org/wiki/Trilateraci%C3%B3n"
+        }
+      },
+      {
+        "text": "Los relojes en órbita corren distinto a los de la superficie por la relatividad. Sin corregir ese desfase, tu posición se iría acumulando kilómetros de error al día.",
+        "source": {
+          "title": "Wikipedia: Relatividad general",
+          "url": "https://es.wikipedia.org/wiki/Relatividad_general"
+        }
+      },
+      {
+        "text": "La señal civil estuvo degradada a propósito hasta el año 2000. Al apagar esa degradación, la precisión para todos mejoró de golpe.",
+        "source": {
+          "title": "Wikipedia: Disponibilidad selectiva",
+          "url": "https://es.wikipedia.org/wiki/Disponibilidad_selectiva"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1973",
+        "text": "Arranca el proyecto militar estadounidense."
+      },
+      {
+        "year": "1978",
+        "text": "Se lanza el primer satélite de la constelación."
+      },
+      {
+        "year": "1983",
+        "text": "Tras el derribo del vuelo KAL 007, Estados Unidos anuncia acceso civil."
+      },
+      {
+        "year": "1995",
+        "text": "La constelación alcanza capacidad operativa completa."
+      },
+      {
+        "year": "2000",
+        "text": "Se apaga la degradación deliberada de la señal civil."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Trilateración",
+        "meaning": "Ubicarte midiendo distancias a varios puntos conocidos. No es triangulación."
+      },
+      {
+        "term": "Efeméride",
+        "meaning": "Los datos de la órbita que el satélite transmite sobre sí mismo."
+      },
+      {
+        "term": "Constelación",
+        "meaning": "El conjunto de satélites que trabajan juntos para dar cobertura."
+      },
+      {
+        "term": "Reloj atómico",
+        "meaning": "Reloj tan preciso que su error se mide en nanosegundos."
+      }
+    ],
+    "questions": [
+      "¿Por qué tu teléfono no necesita antena para transmitir?",
+      "¿Qué pasaría si la relatividad no se corrigiera?",
+      "¿Qué de tu vida se detendría sin esta infraestructura?"
+    ],
+    "searchQuery": "GPS satélites trilateración relatividad",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  },
+  {
+    "id": "efecto-placebo",
+    "title": "El efecto placebo",
+    "area": "psicologia",
+    "updated": "2026-09-29",
+    "summary": "Un tratamiento sin principio activo puede producir mejoras reales y medibles, sobre todo en dolor, náusea y ansiedad. No es imaginación: el cuerpo libera sus propias sustancias por la expectativa de estar siendo tratado.",
+    "why": "Entender el placebo te enseña a leer cualquier estudio, y te muestra cuánto de tu experiencia depende de lo que esperas que pase.",
+    "facts": [
+      {
+        "text": "La analgesia por placebo se puede bloquear con naloxona, el mismo medicamento que revierte la morfina. Eso demostró que el cuerpo estaba liberando sus propios opioides.",
+        "source": {
+          "title": "Wikipedia: Efecto placebo",
+          "url": "https://es.wikipedia.org/wiki/Efecto_placebo"
+        }
+      },
+      {
+        "text": "Existe el placebo abierto: en algunos estudios los pacientes mejoran aunque se les diga con todas sus letras que lo que toman es una pastilla sin medicina.",
+        "source": {
+          "title": "Wikipedia: Efecto placebo",
+          "url": "https://es.wikipedia.org/wiki/Efecto_placebo"
+        }
+      },
+      {
+        "text": "El nocebo es su gemelo malo: esperar efectos secundarios los produce. En los ensayos, el grupo de la pastilla falsa también reporta molestias.",
+        "source": {
+          "title": "Wikipedia: Efecto nocebo",
+          "url": "https://es.wikipedia.org/wiki/Efecto_nocebo"
+        }
+      },
+      {
+        "text": "El placebo actúa sobre síntomas que reportas, no sobre la enfermedad de fondo. No reduce un tumor ni baja una carga viral.",
+        "source": {
+          "title": "Wikipedia: Efecto placebo",
+          "url": "https://es.wikipedia.org/wiki/Efecto_placebo"
+        }
+      },
+      {
+        "text": "Por eso los ensayos se hacen a doble ciego: si el médico sabe quién recibe qué, lo transmite sin querer y el resultado se contamina.",
+        "source": {
+          "title": "Wikipedia: Ensayo clínico",
+          "url": "https://es.wikipedia.org/wiki/Ensayo_cl%C3%ADnico"
+        }
+      }
+    ],
+    "timeline": [
+      {
+        "year": "1955",
+        "text": "Beecher publica el trabajo que populariza el tema, después muy criticado por su método."
+      },
+      {
+        "year": "1978",
+        "text": "Levine y colegas bloquean la analgesia por placebo con naloxona."
+      },
+      {
+        "year": "2010",
+        "text": "Kaptchuk muestra mejoría con placebo declarado en colon irritable."
+      },
+      {
+        "year": "hoy",
+        "text": "Se estudia cómo aprovechar la expectativa sin engañar al paciente."
+      }
+    ],
+    "terms": [
+      {
+        "term": "Nocebo",
+        "meaning": "El efecto contrario: esperar daño y sentirlo de verdad."
+      },
+      {
+        "term": "Doble ciego",
+        "meaning": "Ni el paciente ni quien evalúa saben quién recibe el tratamiento real."
+      },
+      {
+        "term": "Placebo abierto",
+        "meaning": "Dar el placebo diciendo abiertamente que lo es."
+      },
+      {
+        "term": "Regresión a la media",
+        "meaning": "La tendencia de los síntomas extremos a mejorar solos, que se confunde con efecto del tratamiento."
+      }
+    ],
+    "questions": [
+      "¿Por qué la naloxona cambió la discusión?",
+      "¿En qué se distingue el placebo de la mejoría espontánea?",
+      "¿Dónde has sentido el efecto de esperar un resultado?"
+    ],
+    "searchQuery": "efecto placebo nocebo naloxona doble ciego",
+    "recommendations": {
+      "books": [],
+      "videos": [],
+      "articles": []
+    }
+  }
+]

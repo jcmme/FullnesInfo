@@ -155,7 +155,7 @@ export default async function TopicPage({ params }: { params: Promise<{ key: str
           </section>
         )}
 
-        {pack && (
+        {pack && pack.recommendations.videos.length + pack.recommendations.books.length + pack.recommendations.articles.length > 0 && (
           <section>
             <h2 className="label">Por dónde seguir</h2>
             <ul className="space-y-3">
