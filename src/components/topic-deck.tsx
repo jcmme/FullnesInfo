@@ -89,10 +89,12 @@ export function TopicDeck({ topics }: { topics: DeckTopic[] }) {
 
   return (
     <div>
-      <div className="relative overflow-x-clip">
+      {/* El pb le aparta lugar al canto: sin él, la lámina se salía de la caja y se
+          encimaba sobre los botones. */}
+      <div className={`relative overflow-x-clip ${siguiente ? "pb-2" : ""}`}>
         {/* El canto de la siguiente carta, para que el mazo se lea como mazo. Es
             una lámina y no la carta completa: así se ve igual mida lo que mida. */}
-        {siguiente && <div aria-hidden className="absolute inset-x-3 top-2.5 h-full rounded-card bg-surface-2" />}
+        {siguiente && <div aria-hidden className="card absolute inset-x-4 bottom-0 top-4 bg-surface-2" />}
 
         <AnimatePresence mode="wait">
           <motion.div
