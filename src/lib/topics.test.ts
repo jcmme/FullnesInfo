@@ -24,6 +24,8 @@ test("cada dato curioso trae fuente con enlace", () => {
     for (const f of p.facts) {
       assert.ok(f.text.length > 40, `dato muy corto en ${p.id}`);
       assert.ok(f.source.title && /^https:\/\//.test(f.source.url), `fuente incompleta en ${p.id}`);
+      // Wikipedia es el primer resultado de cualquier búsqueda: aquí se pide algo más fuerte.
+      assert.ok(!/wikipedia\.org/.test(f.source.url), `${p.id}: Wikipedia no cuenta como fuente de un dato`);
     }
   }
 });
