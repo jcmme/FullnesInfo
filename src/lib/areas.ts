@@ -1,3 +1,4 @@
+import { areaOf } from "./picks";
 import { TOPICS } from "./mystery";
 import type { MysteryTopic } from "./types";
 
@@ -26,14 +27,7 @@ export const AREA_LIST: Area[] = [
   { id: "misterios", label: "Misterios", hint: "Lo que nadie ha resuelto" },
 ];
 
-/** El catálogo viejo usaba otros nombres de área; aquí se traducen. */
-const FROM_OLD: Record<string, string> = {
-  psicologia: "mente",
-  economia: "dinero",
-  "modelos-mentales": "modelos",
-};
-
-export const areaOf = (topic: { area: string }): string => FROM_OLD[topic.area] ?? topic.area;
+export { areaOf } from "./picks";
 
 export const areaLabelOf = (id: string): string => AREA_LIST.find((a) => a.id === id)?.label ?? "Tuyo";
 

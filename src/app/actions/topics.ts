@@ -91,6 +91,12 @@ export async function saveLink(input: { title: string; url: string; kind: ItemKi
   return { ok: true, id: data.id as string };
 }
 
+/** Deshacer una decisión de la baraja: el tema vuelve a poder salir de sorpresa. */
+export async function forgetTopic(key: string) {
+  const { supabase, userId } = await requireUser();
+  await supabase.from("interests").delete().eq("user_id", userId).eq("key", key).is("read_at", null);
+}
+
 /**
  * Dar un tema por terminado (o regresarlo a la lista). Terminado se sale de
  * "Tus temas" y vive en Completados; escribir tu nota lo termina solo.

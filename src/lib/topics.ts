@@ -1,9 +1,9 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import packsJson from "@/data/topic-packs.json";
 import { fetchWithTimeout } from "./fetch";
-import { areaOf } from "./areas";
+import { pickChallenge, pickFacts } from "./picks";
 import { TOPICS } from "./mystery";
-import type { Interest, MysteryTopic, TopicFact, TopicPack, WikiSummary } from "./types";
+import type { Interest, MysteryTopic, TopicPack, WikiSummary } from "./types";
 
 /**
  * Las fichas investigadas. Se importan solo desde componentes de servidor: este
@@ -139,28 +139,14 @@ export async function fetchWikipedia(query: string): Promise<WikiSummary | null>
   }
 }
 
-/* Datos curiosos ----------------------------------------------------------- */
+/* Datos curiosos y reto del día -------------------------------------------- */
 
-export type PickedFact = TopicFact & { topicKey: string; topicTitle: string };
+export type { PickedFact, QuizOption, QuizRound } from "./picks";
 
-/** Número estable a partir de un texto. Misma entrada, mismo número, siempre. */
-function hash(text: string): number {
-  let h = 2166136261;
-  for (let i = 0; i < text.length; i++) h = Math.imul(h ^ text.charCodeAt(i), 16777619);
-  return Math.abs(h);
-}
+/** Datos curiosos del día, sacados de las fichas de tus temas. */
+export const factsOfDay = (keys: string[], areas: string[], day: string, max = 3) =>
+  pickFacts(PACKS, keys, areas, day, max);
 
-/**
- * Datos curiosos de tus temas: primero de los que guardaste, y si todavía no
- * guardas ninguno, de tus áreas. Uno por tema para que no se repita el mismo
- * asunto, y con semilla del día: cambian mañana, no en cada render.
- */
-export function factsOfDay(keys: string[], areas: string[], day: string, max = 3): PickedFact[] {
-  const mine = PACKS.filter((p) => keys.includes(p.id) && p.facts.length > 0);
-  const pool = mine.length > 0 ? mine : PACKS.filter((p) => areas.includes(areaOf(p)) && p.facts.length > 0);
-  return (pool.length > 0 ? pool : PACKS.filter((p) => p.facts.length > 0))
-    .map((p) => ({ p, n: hash(day + p.id) }))
-    .sort((a, b) => a.n - b.n)
-    .slice(0, max)
-    .map(({ p, n }) => ({ ...p.facts[n % p.facts.length], topicKey: p.id, topicTitle: p.title }));
-}
+/** El reto del día, armado con los datos que ya están escritos. */
+export const challengeOfDay = (keys: string[], areas: string[], day: string, rounds = 3) =>
+  pickChallenge(PACKS, keys, areas, day, rounds);

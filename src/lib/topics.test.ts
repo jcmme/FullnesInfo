@@ -3,6 +3,7 @@ import { test } from "node:test";
 import packs from "../data/topic-packs.json" with { type: "json" };
 import catalogo from "../data/mystery-topics.json" with { type: "json" };
 import type { MysteryTopic, TopicPack } from "./types";
+import { pickChallenge } from "./picks.ts";
 
 const PACKS = packs as TopicPack[];
 const TOPICS = catalogo as MysteryTopic[];
@@ -48,5 +49,31 @@ test("ninguna ficha queda a medias", () => {
     for (const link of [...r.videos, ...r.books, ...r.articles]) {
       assert.ok(link.title && link.why && /^https:\/\//.test(link.url), `${p.id}: recomendación incompleta`);
     }
+  }
+});
+
+test("el reto del día es estable y siempre tiene respuesta", () => {
+  const dia = "2026-09-30";
+  const keys = PACKS.slice(0, 5).map((p) => p.id);
+  const reto = pickChallenge(PACKS, keys, ["historia"], dia);
+  assert.equal(reto.length, 3);
+  assert.deepEqual(reto, pickChallenge(PACKS, keys, ["historia"], dia), "el mismo día debe dar el mismo reto");
+  assert.notDeepEqual(reto, pickChallenge(PACKS, keys, ["historia"], "2026-10-01"), "otro día, otro reto");
+
+  const vistos = new Set<string>();
+  for (const r of reto) {
+    assert.equal(r.options.length, 3);
+    assert.equal(new Set(r.options.map((o) => o.key)).size, 3, "las tres opciones son distintas");
+    assert.ok(r.options.some((o) => o.key === r.answer), "la respuesta correcta está entre las opciones");
+    assert.ok(r.fact.text.length > 40 && r.fact.source.url.startsWith("https://"));
+    assert.ok(!vistos.has(r.answer), "no se repite el tema entre rondas");
+    vistos.add(r.answer);
+  }
+});
+
+test("el reto prefiere tus temas cuando tienes suficientes", () => {
+  const keys = PACKS.slice(0, 4).map((p) => p.id);
+  for (const r of pickChallenge(PACKS, keys, [], "2026-09-30")) {
+    assert.ok(keys.includes(r.answer), "la respuesta sale de tus temas");
   }
 });
